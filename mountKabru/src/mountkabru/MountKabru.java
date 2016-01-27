@@ -38,7 +38,14 @@ public class MountKabru {
         System.out.println (plains.toString());
         
         Hero barbus = new Hero();
-        barbus.set
+        barbus.setHeroClassType("Nurse Maid");
+        barbus.setLevelOfHero(89);
+        barbus.setExperience(325802);
+        barbus.setStrength(67);
+        barbus.setMana(5);
+        
+        System.out.println(barbus.toString());
+        
         
         //create new object for eahc class
         //set values for each attribute

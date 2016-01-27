@@ -6,6 +6,7 @@
 package mountkabru;
 
 import model.Actor;
+import model.RandomEvent;
 
 /**
  *
@@ -25,6 +26,16 @@ public class MountKabru {
         dummy.setDefence(20);
         
         System.out.println(dummy.toString());
+        
+        RandomEvent plains = new RandomEvent();
+        plains.setMonsterEvent("breadMan");
+        plains.setWeirdEvent("mermaids");
+        plains.setGoldEvent(500);
+        plains.setBarKeeperEvent("welcome to Kabru");
+        plains.setBossEvent("plains Boss");
+        
+        System.out.println (plains.toString());
+        
         
         //create new object for eahc class
         //set values for each attribute

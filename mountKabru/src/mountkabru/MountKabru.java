@@ -6,6 +6,7 @@
 package mountkabru;
 
 import model.Actor;
+import model.Hero;
 import model.RandomEvent;
 
 /**
@@ -36,11 +37,12 @@ public class MountKabru {
         
         System.out.println (plains.toString());
         
+        Hero barbus = new Hero();
+        barbus.set
         
         //create new object for eahc class
         //set values for each attribute
         //call toStrings() function and print out contents of new object
         
-        //these are changes
-    }
+    }    
 }

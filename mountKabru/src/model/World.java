@@ -15,7 +15,7 @@ import java.util.Objects;
 public class World implements Serializable {
     
     private char rowCount;
-    private byte columnCount;
+    private int columnCount;
 
     public World() {
     }
@@ -28,19 +28,19 @@ public class World implements Serializable {
         this.rowCount = rowCount;
     }
 
-    public byte getColumnCount() {
+    public int getColumnCount() {
         return columnCount;
     }
 
-    public void setColumnCount(byte columnCount) {
+    public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + this.rowCount;
-        hash = 67 * hash + this.columnCount;
+        int hash = 5;
+        hash = 97 * hash + this.rowCount;
+        hash = 97 * hash + this.columnCount;
         return hash;
     }
 
@@ -59,7 +59,10 @@ public class World implements Serializable {
         if (this.rowCount != other.rowCount) {
             return false;
         }
-        return this.columnCount == other.columnCount;
+        if (this.columnCount != other.columnCount) {
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -68,5 +71,12 @@ public class World implements Serializable {
     }
     
     
+
+    
+    
+    
     
 }
+
+    
+    

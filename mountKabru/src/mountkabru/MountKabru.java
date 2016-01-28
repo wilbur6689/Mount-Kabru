@@ -51,6 +51,23 @@ public class MountKabru {
         
         Game newGame = new Game();
         newGame.setMain("game23");
+        
+        System.out.println(newGame.toString());
+        
+        World newWorld = new World();
+        newWorld.setRowCount('b');
+        newWorld.setColumnCount(2);
+                
+        System.out.println(newWorld.toString());
+        
+        Location currentLocation = new Location();
+        currentLocation.setRow('A');
+        currentLocation.setColumn(4);
+        currentLocation.setAreaExplored("A1, A2, A3");
+                
+        System.out.println(currentLocation.toString());     
+        
+        
         //create new object for eahc class
         //set values for each attribute
         //call toStrings() function and print out contents of new object

@@ -8,6 +8,9 @@ package mountkabru;
 import model.Actor;
 import model.Hero;
 import model.RandomEvent;
+import model.Game;
+import model.World;
+import model.Location;
 
 /**
  *
@@ -46,7 +49,8 @@ public class MountKabru {
         
         System.out.println(barbus.toString());
         
-        
+        Game newGame = new Game();
+        newGame.setMain("game23");
         //create new object for eahc class
         //set values for each attribute
         //call toStrings() function and print out contents of new object

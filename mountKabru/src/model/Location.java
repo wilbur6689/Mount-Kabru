@@ -14,26 +14,26 @@ import java.util.Objects;
  */
 public class Location implements Serializable {
     
-    private int row;
-    private int column;
+    private char row;
+    private byte column;
     private String areaExplored;
 
     public Location() {
     }
 
-    public int getRow() {
+    public char getRow() {
         return row;
     }
 
-    public void setRow(int row) {
+    public void setRow(char row) {
         this.row = row;
     }
 
-    public int getColumn() {
+    public byte getColumn() {
         return column;
     }
 
-    public void setColumn(int column) {
+    public void setColumn(byte column) {
         this.column = column;
     }
 
@@ -47,10 +47,10 @@ public class Location implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + this.row;
-        hash = 83 * hash + this.column;
-        hash = 83 * hash + Objects.hashCode(this.areaExplored);
+        int hash = 7;
+        hash = 41 * hash + this.row;
+        hash = 41 * hash + this.column;
+        hash = 41 * hash + Objects.hashCode(this.areaExplored);
         return hash;
     }
 
@@ -82,6 +82,8 @@ public class Location implements Serializable {
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", areaExplored=" + areaExplored + '}';
     }
+
+    
     
     
 }

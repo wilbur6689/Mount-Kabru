@@ -10,11 +10,10 @@ public class Inventory implements Serializable {
 
     private String weaponSlot;
     private String armorSlot;
-    private int heathPotionSlot;
+    private int healthPotionSlot;
     private int manaPotionSlot;
 
     public Inventory(){
-
     }
 
     public String getWeaponSlot() {
@@ -33,29 +32,29 @@ public class Inventory implements Serializable {
         this.armorSlot = armorSlot;
     }
 
-    public int getPotion1Slot() {
-        return heathPotionSlot;
+    public int getHealthPotionSlot() {
+        return healthPotionSlot;
     }
 
-    public void setPotion1Slot(int potion1Slot) {
-        this.heathPotionSlot = potion1Slot;
+    public void setHealthPotionSlot(int healthPotionSlot) {
+        this.healthPotionSlot = healthPotionSlot;
     }
 
-    public int getPotion2Slot() {
+    public int getManaPotionSlot() {
         return manaPotionSlot;
     }
 
-    public void setPotion2Slot(int potion2Slot) {
+    public void setManaPotionSlot(int manaPotionSlot) {
         this.manaPotionSlot = manaPotionSlot;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + Objects.hashCode(this.weaponSlot);
-        hash = 17 * hash + Objects.hashCode(this.armorSlot);
-        hash = 17 * hash + this.heathPotionSlot;
-        hash = 17 * hash + this.manaPotionSlot;
+        int hash = 3;
+        hash = 67 * hash + Objects.hashCode(this.weaponSlot);
+        hash = 67 * hash + Objects.hashCode(this.armorSlot);
+        hash = 67 * hash + this.healthPotionSlot;
+        hash = 67 * hash + this.manaPotionSlot;
         return hash;
     }
 
@@ -71,7 +70,7 @@ public class Inventory implements Serializable {
             return false;
         }
         final Inventory other = (Inventory) obj;
-        if (this.heathPotionSlot != other.heathPotionSlot) {
+        if (this.healthPotionSlot != other.healthPotionSlot) {
             return false;
         }
         if (this.manaPotionSlot != other.manaPotionSlot) {
@@ -80,16 +79,20 @@ public class Inventory implements Serializable {
         if (!Objects.equals(this.weaponSlot, other.weaponSlot)) {
             return false;
         }
-        return Objects.equals(this.armorSlot, other.armorSlot);
+        if (!Objects.equals(this.armorSlot, other.armorSlot)) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public String toString() {
-        return "Inventory{" + "weaponSlot=" + weaponSlot + ", armorSlot=" + armorSlot + ", potion1Slot=" + heathPotionSlot + ", potion2Slot=" + manaPotionSlot + '}';
+        return "Inventory{" + "weaponSlot=" + weaponSlot + ", armorSlot=" + armorSlot + ", healthPotionSlot=" + healthPotionSlot + ", manaPotionSlot=" + manaPotionSlot + '}';
     }
-    
-    
     
     
 
 }
+
+
+    

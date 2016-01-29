@@ -1,84 +1,95 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Created by badgerwaves on 1/27/16.
  */
 public class Inventory implements Serializable {
 
-    private int weaponSlot;
-    private int armorSlot;
-    private int potion1Slot;
-    private int potion2Slot;
+    private String weaponSlot;
+    private String armorSlot;
+    private int heathPotionSlot;
+    private int manaPotionSlot;
 
     public Inventory(){
 
     }
 
-
-    public int getWeaponSlot() {
+    public String getWeaponSlot() {
         return weaponSlot;
     }
 
-    public void setWeaponSlot(int weaponSlot) {
+    public void setWeaponSlot(String weaponSlot) {
         this.weaponSlot = weaponSlot;
     }
 
-    public int getArmorSlot() {
+    public String getArmorSlot() {
         return armorSlot;
     }
 
-    public void setArmorSlot(int armorSlot) {
+    public void setArmorSlot(String armorSlot) {
         this.armorSlot = armorSlot;
     }
 
     public int getPotion1Slot() {
-        return potion1Slot;
+        return heathPotionSlot;
     }
 
     public void setPotion1Slot(int potion1Slot) {
-        this.potion1Slot = potion1Slot;
+        this.heathPotionSlot = potion1Slot;
     }
 
     public int getPotion2Slot() {
-        return potion2Slot;
+        return manaPotionSlot;
     }
 
     public void setPotion2Slot(int potion2Slot) {
-        this.potion2Slot = potion2Slot;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Inventory inventory = (Inventory) o;
-
-        if (weaponSlot != inventory.weaponSlot) return false;
-        if (armorSlot != inventory.armorSlot) return false;
-        if (potion1Slot != inventory.potion1Slot) return false;
-        return potion2Slot == inventory.potion2Slot;
-
+        this.manaPotionSlot = manaPotionSlot;
     }
 
     @Override
     public int hashCode() {
-        int result = weaponSlot;
-        result = 31 * result + armorSlot;
-        result = 31 * result + potion1Slot;
-        result = 31 * result + potion2Slot;
-        return result;
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.weaponSlot);
+        hash = 17 * hash + Objects.hashCode(this.armorSlot);
+        hash = 17 * hash + this.heathPotionSlot;
+        hash = 17 * hash + this.manaPotionSlot;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Inventory other = (Inventory) obj;
+        if (this.heathPotionSlot != other.heathPotionSlot) {
+            return false;
+        }
+        if (this.manaPotionSlot != other.manaPotionSlot) {
+            return false;
+        }
+        if (!Objects.equals(this.weaponSlot, other.weaponSlot)) {
+            return false;
+        }
+        return Objects.equals(this.armorSlot, other.armorSlot);
     }
 
     @Override
     public String toString() {
-        return "Inventory{" +
-                "weaponSlot=" + weaponSlot +
-                ", armorSlot=" + armorSlot +
-                ", potion1Slot=" + potion1Slot +
-                ", potion2Slot=" + potion2Slot +
-                '}';
+        return "Inventory{" + "weaponSlot=" + weaponSlot + ", armorSlot=" + armorSlot + ", potion1Slot=" + heathPotionSlot + ", potion2Slot=" + manaPotionSlot + '}';
     }
+    
+    
+    
+    
+
 }

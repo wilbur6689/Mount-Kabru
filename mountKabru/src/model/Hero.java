@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 
-public class Hero implements Serializable {
+public class Hero extends Actor implements  Serializable  {
 
     private String heroClassType;
     private int levelOfHero;

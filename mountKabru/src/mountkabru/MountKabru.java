@@ -5,12 +5,7 @@
  */
 package mountkabru;
 
-import model.Actor;
-import model.Hero;
-import model.RandomEvent;
-import model.Game;
-import model.World;
-import model.Location;
+import model.*;
 
 /**
  *
@@ -65,10 +60,15 @@ public class MountKabru {
         currentLocation.setColumn(4);
         currentLocation.setAreaExplored("A1, A2, A3");
                 
-        System.out.println(currentLocation.toString());     
+        System.out.println(currentLocation.toString());
+
+        Inventory sword = new Inventory();
+        sword.setWeaponSlot(1);
+
+
         
         
-        //create new object for eahc class
+        //create new object for each class
         //set values for each attribute
         //call toStrings() function and print out contents of new object
         

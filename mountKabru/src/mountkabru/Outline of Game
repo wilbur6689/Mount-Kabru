@@ -30,11 +30,16 @@ Help - This allows the player to open the help menu for a detailed list of comma
 Exit - This will cause the program to quit.
 
 Help Menu
-There will be a help menu throughout the game in the various different menus. Each help menu will list the same options as the menu where the help menu was accessed. After listing the options it will give a brief explanation of each choice.
+There will be a help menu throughout the game in the various different menus. Each help menu will list the same options as
+ the menu where the help menu was accessed. After listing the options it will give a brief explanation of each choice.
 
 
 The Story -
-	Mount Kabru will be a Text-based RPG that will take players on an adventure through the lowest depths of the plains to the highest peaks in the mountains. The story begins at the top of the mountain where the player will meet an old wise being called the “Mysterious Master”. The player is then asked several questions by the Mysterious Master. Depending on what the player chooses,the answers will assign the player a class: warrior, paladin, wizard.  This way a player may slightly customize their character.
+	Mount Kabru will be a Text-based RPG that will take players on an adventure through the lowest depths of the plains
+ to the highest peaks in the mountains. The story begins at the top of the mountain where the player will meet an old wise 
+ being called the “Mysterious Master”. The player is then asked several questions by the Mysterious Master. Depending on what 
+ the player chooses,the answers will assign the player a class: warrior, paladin, wizard.  This way a player may slightly 
+ customize their character.
 
 Create a new Character:
 	Three questions
@@ -57,9 +62,15 @@ Paladin(half might, half will): Paladin, what color is the round side of a borge
 Wizard(all will): Wizard, The famous wizard RathMar the Conqueror had a famous spell book, what did he call this book?
 Player gives any answer. Response: RathMar was a hamster, you idiot.
 
-The player is then thrown down off the mountain into a town called Wilbur. The people of Wilbur have suffered much due to the wild lands surrounding the town. They know of an ancient folklore passed down through the generations that one individual will rise up and defend the town from the evil monsters. The player will wake up in the tavern, not knowing how he got there, and will talk to the barkeeper. The barkeeper will give the player some guidance and knowledge of how the game works. The player will then continue on his adventure, fulfilling his destiny.
+The player is then thrown down off the mountain into a town called Wilbur. The people of Wilbur have suffered much due to 
+the wild lands surrounding the town. They know of an ancient folklore passed down through the generations that one individual 
+will rise up and defend the town from the evil monsters. The player will wake up in the tavern, not knowing how he got there, 
+and will talk to the barkeeper. The barkeeper will give the player some guidance and knowledge of how the game works. 
+The player will then continue on his adventure, fulfilling his destiny.
 
-As the player goes on adventures, killing monsters, and leveling up his character, he will one day return to the top of the mountain to once again face the Mysterious Master. If the player is able to defeat the Mysterious Master, he will become the new master. As the new master, the player will find a new hero to protect the town of wilbur.
+As the player goes on adventures, killing monsters, and leveling up his character, he will one day return to the top 
+of the mountain to once again face the Mysterious Master. If the player is able to defeat the Mysterious Master, he will 
+become the new master. As the new master, the player will find a new hero to protect the town of wilbur.
 
 Game menu (town menu)
  	Welcome to the town of Kabru
@@ -133,7 +144,7 @@ Monsters have a chance to attack with poison
 Monster types: Flies, frogs, giant spiders, curupira, snakes, Manticore, black panthers, gators.
 
 High Forest -
-Monsters have high defence and average damage.
+Monsters have high defense and average damage.
 Monster types: Mountain Lion, Elves, Satyr, Centaurs, Dryad, leshy, Ent, werewolves,
 
 Mountain Peaks -
@@ -149,7 +160,8 @@ You enter the * location name * and feel ready for battle.
 [ I ] - Inventory
 [ R ] - Return to town
 
-Search for Monster: This option allows the player to look for a monster to kill. Killing monsters give the player experience points
+Search for Monster: This option allows the player to look for a monster to kill. Killing monsters give 
+                    the player experience points
 Use Potion: The player may select a potion from their inventory
 Inventory: Inventory Lists all of the Available Items
 Return To Town: This allows the player to return to town.
@@ -164,7 +176,8 @@ You have been attacked by a * monster name *. Prepare to attack or run away.
 
 
 Attack: The player makes a melee attack. the damage amount will be based on strength and attack.
-Defend: The player defends against an upcoming attack. This will increase the player's dexterity for this fight and will reset to the original when the fight is over.
+Defend: The player defends against an upcoming attack. This will increase the player's dexterity for
+        this fight and will reset to the original when the fight is over.
 
 Cast Spell: The player makes a spell attack. the damage amount will be based on mana and attack.
 Run away: Player takes a chance to run away. 60% chance of success.
@@ -201,18 +214,18 @@ else use this equation
 
 
 
-Maps (Adventure map)					      8
-								88      8      888
-		 			            /----------\	        888888 88 88888888
-A	8	       	Peak 		||    X    ||		88888888888888
-      8 888			    /--------------------------\
-B 	High Forest    ||    X      ||    X    ||    X     ||
-                /-------------------------------------------\
-C		Jungle |    X    ||    X     ||    X    ||    X    ||    X   ||
-        /-------------------------------------------------------------\
-D	 Plains	||    X   ||    X   ||    X     ||    X    ||    X    ||    X    ||    X    ||
-	/-----------------------------------------------------------------------------\
-		       1         2          3          4          5          6           7
+Maps (Adventure map)					                             8
+								         88 8       888
+		 			       /-----------\	        888888 88 88888888
+A	8	        	Peak           |     X     |		  88888888888888
+      8 888			    /-------------------------------\
+B 	               High Forest  |    X     ||    X    ||    X    |
+                           /----------------------------------------------------\
+C	   	   Jungle |    X   ||    X     ||    X    ||    X    ||    X    |
+                 /--------------------------------------------------------------------------\
+D	 Plains	|    X   ||    X   ||    X     ||    X    ||    X    ||    X    ||    X     |
+	/-----------------------------------------------------------------------------------------\
+		       1         2          3          4          5          6           7        |
 
 The map represents the mountain the player will be exploring. The X marks represent places that are not accessible to the player. As the player increases in level, more locations will be available for him to explore. The player will begin at the bottom left of the mountain and continue upwards from left to right. The player will enter the unlocked coordinates via using ex. A 2 The player will then travel to that location. The rest of the map that is not a navigable place will return will an error message and another prompt to travel. When a place unlocks it will clear the X and make it a V.
 

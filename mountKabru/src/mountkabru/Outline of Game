@@ -76,23 +76,10 @@ Game menu (town menu)
  	Welcome to the town of Kabru
 
 [ A ] - Adventure - for more information see the “Adventure” section.
-[ P ] - The Pit
 [ T ] - Tavern
-[ I ] - Inn
 [ B ] - Blacksmith
 [ H ] - Help Menu
 [ Q ] - Quit
-
-The Pit:
-This will be used by the player for training, gaining experience, and assigning a title to the player's name. All players will start out with the title “The Beginner”. Possible limit on the number of times a player can level up for every stage.
-
-[ T ] - Train
-[ H ] - Ask For help
-[ R ] - Return To Town
-
-Train: This allows the player to train to level up, this will cost shillings to accomplish
-Ask For Help: Brings up the help menu
-Return to Town: This allows the player to return to the town.
 
 The Tavern:
 The player can choose to accept or deny any quest. there may be anywhere from 2-4 quests available. Each quest will only be available for a certain level range, once the player advances past that level a new quest will replace it. (example: Quest #7 will only be available between character levels 6 and levels 9) Each quest will have a reward of shillings. The player may also go here and pay a small fee to sleep for the night. This will restore the health of the player to maximum. The player will also have the opportunity to buy Health and/or Mana potions that the player will be able to use out in the field of battle.
@@ -225,7 +212,7 @@ C	   	   Jungle |    X   ||    X     ||    X    ||    X    ||    X    |
                  /--------------------------------------------------------------------------\
 D	 Plains	|    X   ||    X   ||    X     ||    X    ||    X    ||    X    ||    X     |
 	/-----------------------------------------------------------------------------------------\
-		       1         2          3          4          5          6           7        |
+		     1         2          3          4          5          6           7        |
 
 The map represents the mountain the player will be exploring. The X marks represent places that are not accessible to the player. As the player increases in level, more locations will be available for him to explore. The player will begin at the bottom left of the mountain and continue upwards from left to right. The player will enter the unlocked coordinates via using ex. A 2 The player will then travel to that location. The rest of the map that is not a navigable place will return will an error message and another prompt to travel. When a place unlocks it will clear the X and make it a V.
 
@@ -498,9 +485,7 @@ Game menu (Town menu)
  	Welcome to the town of Kabru
 
 [ A ] - Adventure - for more information see the “Adventure” section.
-[ P ] - The Pit
 [ T ] - Tavern
-[ I ] - Inn
 [ B ] - Blacksmith
 [ H ] - Help Menu
 [ Q ] - Quit

@@ -13,10 +13,10 @@ public static String ownerResponse(int levelOfHero) {
     
     int respType = 0;
     int index;
-    String[] ownerSayingUseful = {"One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten"};
-    String[] ownerSayingFoolish = {"Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty"}; 
+    String[] ownerSaying = {"One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten", 
+            "Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty"}; 
      
-    String ownerSaying;
+    
      
     if (levelOfHero < 1) {
         return "-1";
@@ -39,15 +39,10 @@ public static String ownerResponse(int levelOfHero) {
     
     index = (int) (Math.random() * 10 + respType);
     
-    if (index < 11 ) {
-        ownerSaying = ownerSayingUseful[index];
-    
-    }
-    
-    else {
-        ownerSaying = ownerSayingFoolish[index];
-    }
-    return ownerSaying ;
+    String ownerResponse = ownerSaying[index];
+    System.out.println(ownerResponse);
+ 
+    return ownerResponse;
     
     
 

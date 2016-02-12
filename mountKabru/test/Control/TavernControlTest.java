@@ -23,10 +23,32 @@ public class TavernControlTest {
     @Test
     public void testOwnerResponse() {
         System.out.println("ownerResponse");
-        int levelOfHero = 5;
+        int levelOfHero = 25;
         String expResult = "";
         String result = TavernControl.ownerResponse(levelOfHero);
-        assertEquals(expResult, result);
+       
+        boolean found = false;
+        String[] testSaying = {"One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten", 
+            "Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty"};
+        
+        
+        for (int  i=0; i < testSaying.length; i++) {
+            if (result.equals(testSaying[i])) {
+                found = true;
+                break;
+            }
+            
+        }
+        
+            assertTrue(found);
+
+            fail ("you have failed");
+        
+        
+        
+        
+        
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("you have failed this city");
         

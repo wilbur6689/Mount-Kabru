@@ -40,7 +40,6 @@ public static String ownerResponse(int levelOfHero) {
     index = (int) (Math.random() * 10 + respType);
     
     String ownerResponse = ownerSaying[index];
-    System.out.println(ownerResponse);
  
     return ownerResponse;
     

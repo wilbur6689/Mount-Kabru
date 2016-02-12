@@ -13,8 +13,8 @@ public static String ownerResponse(int levelOfHero) {
     
     int respType = 0;
     int index;
-    String[] ownerSaying = {"One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten", 
-            "Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty"}; 
+    String[] ownerSaying = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", 
+            "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"}; 
      
     
      

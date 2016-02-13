@@ -6,6 +6,7 @@
 package Control;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -29,7 +30,7 @@ public class ActorControlTest {
         int expResult = 41;
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         assertEquals(expResult, result);
-        
+        System.out.println(result);
     }
     
        @Test
@@ -41,7 +42,7 @@ public class ActorControlTest {
         int expResult = -1;
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         assertEquals(expResult, result);
-        
+           System.out.println(result);
     }
     
        @Test
@@ -53,7 +54,7 @@ public class ActorControlTest {
         int expResult = -2;
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         assertEquals(expResult, result);
-        
+           System.out.println(result);
     }
     
        @Test
@@ -65,7 +66,7 @@ public class ActorControlTest {
         int expResult = -3;
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         assertEquals(expResult, result);
-        
+           System.out.println(result);
     }
        @Test
     public void testMeleeDamage5() {
@@ -76,6 +77,7 @@ public class ActorControlTest {
         int expResult = -4;
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         assertEquals(expResult, result);
+           System.out.println(result);
         
     }
     

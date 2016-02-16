@@ -9,29 +9,28 @@ public class ActorControl {
 
 
 
-		if (attack <5 ||  attack>100) {
+		if (attack <5 ||  attack > 100) {
+			if (attack > 100){
+				return -4;
+			}
 			return -1;
 		}
 
 		if (strength <2 || strength >100) {
+			if (strength > 100){
+				return -4;
+			}
 			return -2;
+
 		}
 
-		if (opponentDefense <5 || strength>100) {
+		if (opponentDefense <5 || opponentDefense>100) {
+			if (opponentDefense > 100){
+				return -4;
+			}
 			return -3;
 		}
 
-		if (opponentDefense > 100) {
-			return -4;
-		}
-                
-                if (attack > 100){
-                    return -4;
-                }
-                
-                if (strength >100){
-                    return - 4;
-                }
 
 		int meleeDamage =  attack + strength - opponentDefense;
 			System.out.println(meleeDamage);

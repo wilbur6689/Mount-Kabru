@@ -38,4 +38,38 @@ public class ActorControl {
 		return  meleeDamage;
 
 	}
+        
+        public static int  spellDamage(int attack, int mana, int opponentDefense){
+
+
+
+		if (attack <5 ||  attack > 100) {
+			if (attack > 100){
+				return -4;
+			}
+			return -1;
+		}
+
+		if (mana <2 || mana >100) {
+			if (mana > 100){
+				return -4;
+			}
+			return -2;
+
+		}
+
+		if (opponentDefense <5 || opponentDefense>100) {
+			if (opponentDefense > 100){
+				return -4;
+			}
+			return -3;
+		}
+
+
+		int manaDamage = (attack + mana - opponentDefense) + (int) (Math.random() * 10);
+			
+                        
+		return  manaDamage;
+
+	}
 }

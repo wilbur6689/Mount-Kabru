@@ -15,7 +15,7 @@ public class ActorControl {
 			}
 			return -1;
 		}
-
+  
 		if (strength <2 || strength >100) {
 			if (strength > 100){
 				return -4;

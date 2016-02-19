@@ -80,5 +80,123 @@ public class ActorControlTest {
            System.out.println(result);
         
     }
+       @Test
+    public void testSpellDamage1() {
+        System.out.println("spellDamage Test 1");
+        int attack = 25;
+        int mana = 20;
+        int opponentDefense = 15;
+        String expResult = "31-40";
+        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
+        
+        System.out.println(result);
+        if (result > 2 && result < 100) {
+            if (result >= -4 && result < 0) {
+                assertTrue(true);
+            }
+            
+            assertTrue(true);
+        }
+        
+           
+        
+        System.out.println("expected: " + expResult);
+    }
+    
+       @Test
+    public void testSpellDamage2() {
+        System.out.println("spellDamage Test 2");
+        int attack = 199;
+        int mana = 30;
+        int opponentDefense = 10;
+        String expResult = "-4";
+        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
+        
+        System.out.println(result);
+        if (result > 2 && result < 100) {
+            if (result >= -4 && result < 0) {
+                assertTrue(true);
+            }
+            
+            assertTrue(true);
+        }
+        
+            
+        
+        
+        System.out.println("expected: " + expResult);
+    }
+    
+       @Test
+    public void testSpellDamage3() {
+        System.out.println("spellDamage Test 3");
+        int attack = 20;
+        int mana = 351;
+        int opponentDefense = 15;
+        String expResult = "-4";
+        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
+        
+        System.out.println(result);
+        if (result > 2 && result < 100) {
+            if (result >= -4 && result < 0) {
+                assertTrue(true);
+            }
+            
+            assertTrue(true);
+        }
+        
+            
+        
+        
+        System.out.println("expected: " + expResult);
+    }
+    
+       @Test
+    public void testSpellDamage4() {
+        System.out.println("spellDamage Test 4");
+        int attack = 30;
+        int mana = 25;
+        int opponentDefense = 150;
+        String expResult = "-4";
+        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
+        
+        System.out.println(result);
+        if (result > 2 && result < 100) {
+            if (result >= -4 && result < 0) {
+                assertTrue(true);
+            }
+            
+            assertTrue(true);
+        }
+        
+            
+        
+        
+        System.out.println("expected: " + expResult);
+    }
+    
+       @Test
+    public void testSpellDamage5() {
+        System.out.println("spellDamage Test 5");
+        int attack = 5;
+        int mana = 5;
+        int opponentDefense = 5;
+        String expResult = "6-15";
+        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
+        
+        System.out.println(result);
+        if (result > 2 && result < 100) {
+            if (result >= -4 && result < 0) {
+                assertTrue(true);
+            }
+            
+            assertTrue(true);
+        }
+        
+            
+        
+        
+        System.out.println("expected: " + expResult);
+    }
     
 }

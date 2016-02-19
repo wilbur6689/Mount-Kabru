@@ -23,7 +23,7 @@ public class TavernControlTest {
     @Test
     public void testOwnerResponse() {
         System.out.println("ownerResponse");
-        int levelOfHero = 44;
+        int levelOfHero = 4;
         String expResult = "";
         String result = TavernControl.ownerResponse(levelOfHero);
        

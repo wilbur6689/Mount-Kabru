@@ -14,7 +14,7 @@ import mountkabru.MountKabru;
  */
 public class GameControl {
 
-    public static User createUser(String usersName) {
+    public static User createUser(String name) {
         
         
         if (name == null) {

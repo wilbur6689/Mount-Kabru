@@ -140,7 +140,10 @@ public class StartProgramView {
     }
 
     private void displayNextView() {
-        System.out.println("\n *** the displayNextView() funtion is working ***");
+        System.out.println("\n ====================================="
+                         + "\n Welcome to the game " + user.getName()
+                         + "\n"
+        );
         
     }
 }

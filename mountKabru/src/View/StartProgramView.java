@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.util.Scanner;
+
 /**
  *
  * @author wibur
@@ -27,12 +29,49 @@ public class StartProgramView {
     }
     
     private String getPlayersName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        /*
+
+        While valid value has not been entered
+          DISPLAY prompt Message
+          GET The value entered from Keyboard
+          Trim front and trailing blanks off of the name
+
+          IF the length of the value is blank THEN
+            DISPLAY "Invalid Value: The value cannot be blank"
+            CONTINUE
+          ENDIF
+
+          BREAK
+
+        ENDWHILE
+        RETURN name
+
+        */
+
+        Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
+        String value = ""; // Value to be Returned
+        boolean valid = false; // Initialize to not valid
+
+        while (!valid) { // Loop while an invalid value is enter
+          System.out.println ("\n" + this.promptMessage);
+
+          value = keyboard.nextLine(); //Get next line typed on keyboard
+          value = value.trim(); // trim off leading and trailing blanks
+
+          if (value.length() < 1){ //value is blank
+            System.out.println("\n Invalid value: Value can not be blank");
+            continue;
+          }
+          break; // end the loop
+
+        }
+
+      return value; // Return the value entered
     }
 
     private boolean doAction(String playersName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
+        System.out.println("\n**** doAction() called ***");
+        return true;
         }
     
 

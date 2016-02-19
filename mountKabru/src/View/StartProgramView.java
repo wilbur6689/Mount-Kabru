@@ -5,7 +5,9 @@
  */
 package View;
 
+import Control.GameControl;
 import java.util.Scanner;
+import model.User;
 
 /**
  *
@@ -70,12 +72,40 @@ public class StartProgramView {
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n**** doAction() called ***");
-        return true;
+        /*doAction(playersName): boolean
+            BEGIN
+             if the length of the playersName < 2 then
+             display “Invalid name: The name must be > 1 character”
+             return false
+
+             create Player with specified name
+             if unsuccessful then
+             display “Invalid name: The name is too short”
+             return false
+             display customized welcome message
+             display mainMenuView
+             return true
+            END */
+        
+        if (playersName.length() < 2) {
+            System.out.println("\nInvalid players name: " 
+                    + "The name must be greater than one character in length");
+            return false;
+        
         }
     
+        // Call createPlayer() control function
+        User user = GameControl.createPlayer(playersName);
+        
+        if (user == null) { //if unsuccessful
+            System. out.println("\nError creating the player.");
+            return false;
+        }
 
-    
+        this.displayNextView();
+        
+        return true;
+    }
        
            
 //To change body of generated methods, choose Tools | Templates.
@@ -107,5 +137,10 @@ public class StartProgramView {
         + "\n***************************************************"
         + "\n---------------------------------------------------" 
         );
+    }
+
+    private void displayNextView() {
+        System.out.println("\n *** the displayNextView() funtion is working ***");
+        
     }
 }

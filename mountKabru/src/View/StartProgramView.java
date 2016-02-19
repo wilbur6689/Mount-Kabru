@@ -95,7 +95,7 @@ public class StartProgramView {
         }
     
         // Call createPlayer() control function
-        User user = GameControl.createPlayer(playersName);
+        User user = GameControl.createUser(usersName);
         
         if (user == null) { //if unsuccessful
             System. out.println("\nError creating the player.");

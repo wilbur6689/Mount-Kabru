@@ -6,6 +6,7 @@
 package Control;
 
 import model.User;
+import mountkabru.MountKabru;
 
 /**
  *
@@ -13,9 +14,20 @@ import model.User;
  */
 public class GameControl {
 
-    public static User createPlayer(String playersName) {
-        System.out.println("\n *** createPlayer function is working ***");
-        return new User();
+    public static User createUser(String usersName) {
+        
+        
+        if (name == null) {
+            return null;
+        }
+        
+        User user = new User();
+        user.setName(name);
+        
+        MountKabru.setUser(user); //save the player
+        
+        
+        return user;
     }
     
 }

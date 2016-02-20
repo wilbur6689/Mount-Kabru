@@ -18,7 +18,7 @@ public class StartProgramView {
 
     public void displayStartProgramView() {
         
-        boolean done = false; //set flag to done
+       boolean done = false; //set flag to done
        do {
           //prompt for and get the players name
           String playersName = this.getPlayersName();
@@ -103,13 +103,25 @@ public class StartProgramView {
             return false;
         }
 
-        this.displayNextView();
+        this.displayNextView(player);
         
         return true;
     }
        
-           
-//To change body of generated methods, choose Tools | Templates.
+    private void displayNextView(Player player) {
+        System.out.println("\n ====================================="
+                         + "\n Welcome to the game " + player.getName()
+                         + "\n We hope you have a lot of fun!"
+                         + "\n ====================================="
+                         );
+        
+        //Create MainMenuView object
+        MainMenuView mainMenuView = new MainMenuView();
+                
+        //Display the main menu view
+        mainMenuView.displayMainMenuView();
+    }       
+
     
     
     private String promptMessage;
@@ -124,9 +136,6 @@ public class StartProgramView {
  
     }
     
-    
-    
-    
 
     public final void displayBanner() {
          
@@ -140,17 +149,5 @@ public class StartProgramView {
         );
     }
 
-    private void displayNextView() {
-        System.out.println("\n ====================================="
-                         + "\n Welcome to the game " 
-                         + "\n We hope you have a lot of fun!"
-                         + "\n ====================================="
-                         );
-        
-        //Create MainMenuView object
-        MainMenuView mainMenuView = new MainMenuView();
-                
-        //Display the main menu view
-        mainMenuView.displayMainMenuView();
-    }
+    
 }

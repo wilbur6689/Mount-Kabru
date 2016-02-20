@@ -106,7 +106,12 @@ public class MainMenuView {
     }
 
     private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
+        
+        // create helpHelpMenuView object
+        HelpMenuView helpMenuView = new HelpMenuView();
+        
+        //display the help menu view
+        helpMenuView.displayHelpMenuView();
     }
 
     

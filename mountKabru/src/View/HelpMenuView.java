@@ -23,7 +23,7 @@ public class HelpMenuView {
                 + "\nT - help with the town"
                 + "\nM - help with fighting monsters"
                 + "\nL - help with leveling up"
-                + "\nR - return to main menu"
+                + "\nQ - Quit to main menu"
                 + "\n--------------------------------------";
     }
     
@@ -84,8 +84,8 @@ public class HelpMenuView {
             case "L": //help menu
                 this.helpLevelingUp();
                 break;
-            case "R": //return to the main menu
-                this.returnToMain();
+            case "Q": //return to the main menu
+                this.quitToMain();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -111,7 +111,7 @@ public class HelpMenuView {
         System.out.println("*** helpLeveingUp function called ***");
     }
 
-    private void returnToMain() {
+    private void quitToMain() {
         System.out.println("*** returnToMain function called ***");
     }
 

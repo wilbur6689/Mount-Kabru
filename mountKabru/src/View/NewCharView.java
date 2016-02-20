@@ -22,7 +22,7 @@ public class NewCharView {
                 + "\n--------------------------------------"
                 + "\n1. If a large tree fell on you and you were trapped, would you:"
                 + "\n    [ M ] push with all your might?"
-                + "\nS - [ W ] user your will to think it away?"
+                + "\n    [ W ] user your will to think it away?"
                 + "\n"
                 + "\nQ - Quit"
                 + "\n--------------------------------------";

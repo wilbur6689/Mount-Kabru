@@ -143,7 +143,9 @@ public class StartProgramView {
         System.out.println(
         "\n____________________________________________________"
         + "\n***************************************************"
-        + "\n         ~~Welcome to Mount Kabru!!!!!~~           "  
+        + "\n         ~~Welcome to Mount Kabru!!!!!~~"
+        + "\n This game will challange your skills through "
+        + "\n patience, knowledge, and a little bit of luck"  
         + "\n***************************************************"
         + "\n---------------------------------------------------" 
         );

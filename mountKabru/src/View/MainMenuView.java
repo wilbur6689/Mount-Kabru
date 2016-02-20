@@ -53,7 +53,7 @@ public class MainMenuView {
         boolean valid = false; // Initialize to not valid
 
         while (!valid) { // Loop while an invalid value is enter
-          System.out.println ("\n" + this.promptMessage);
+          System.out.println ("\n" + this.menu);
 
           value = keyboard.nextLine(); //Get next line typed on keyboard
           value = value.trim(); // trim off leading and trailing blanks
@@ -68,9 +68,47 @@ public class MainMenuView {
       return value;
     }
 
-    private boolean doAction(String menuOption) {
-        System.out.println("\n*** doAction() Function Called ***");
-        return true;
+    private boolean doAction(String choice) {
+        
+        choice = choice.toUpperCase(); //convert choice to upper case
+        
+        switch (choice) {
+            case "N": // create and start a new game
+                this.startNewGame();
+                break;
+            case "L": // load players game
+                this.loadGame();
+                break;
+            case "S": //save a players game
+                this.saveGame();
+                break;
+            case "H": //help menu
+                this.displayHelpMenu();
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                
+                         
+        }
+        return false;
     }
+
+    private void startNewGame() {
+        System.out.println("*** startNewGame function called ***");
+    }
+
+    private void loadGame() {
+        System.out.println("*** loadGame function called ***");
+    }
+
+    private void saveGame() {
+        System.out.println("*** saveGame function called ***");
+    }
+
+    private void displayHelpMenu() {
+        System.out.println("*** displayHelpMenu function called ***");
+    }
+
+    
     
 }

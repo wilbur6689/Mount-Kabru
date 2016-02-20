@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Phill/Documents/NetBeansProjects/Mount-Kabru/mountKabru/src/model/Player.java</file>
+            <file>file:/C:/Users/Phill/Documents/NetBeansProjects/Mount-Kabru/mountKabru/src/View/HelpMenuView.java</file>
+            <file>file:/C:/Users/Phill/Documents/NetBeansProjects/Mount-Kabru/mountKabru/src/View/StartProgramView.java</file>
+            <file>file:/C:/Users/Phill/Documents/NetBeansProjects/Mount-Kabru/mountKabru/src/mountkabru/MountKabru.java</file>
+            <file>file:/C:/Users/Phill/Documents/NetBeansProjects/Mount-Kabru/mountKabru/src/View/MainMenuView.java</file>
+            <file>file:/C:/Users/Phill/Documents/NetBeansProjects/Mount-Kabru/mountKabru/src/Control/GameControl.java</file>
+        </group>
     </open-files>
 </project-private>

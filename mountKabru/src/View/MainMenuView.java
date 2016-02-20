@@ -94,7 +94,11 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
+        //Create newCharView object
+        NewCharView newCharView = new NewCharView();
+                
+        //Display the newCharView
+        newCharView.displayNewCharView();
     }
 
     private void loadGame() {

@@ -95,6 +95,26 @@ public class HelpMenuView {
         return false;
     }
 
+    private void helpNewGame() {
+        System.out.println("*** helpNewGame function called ***");
+    }
+
+    private void helpTown() {
+        System.out.println("*** helpTown function called ***");
+    }
+
+    private void helpMonster() {
+        System.out.println("*** helpMonster function called ***");
+    }
+
+    private void helpLevelingUp() {
+        System.out.println("*** helpLeveingUp function called ***");
+    }
+
+    private void returnToMain() {
+        System.out.println("*** returnToMain function called ***");
+    }
+
     
 
 }

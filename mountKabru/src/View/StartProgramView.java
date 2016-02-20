@@ -7,7 +7,8 @@ package View;
 
 import Control.GameControl;
 import java.util.Scanner;
-import model.User;
+import model.Player;
+
 
 /**
  *
@@ -21,7 +22,7 @@ public class StartProgramView {
        do {
           //prompt for and get the players name
           String playersName = this.getPlayersName();
-          if (playersName.toUpperCase().equals("Q"))  //User wants to quit
+          if (playersName.toUpperCase().equals("Q"))  //Player wants to quit
             return; //exit game 
           
           //do the requested action and display the next view
@@ -95,9 +96,9 @@ public class StartProgramView {
         }
     
         // Call createPlayer() control function
-        User user = GameControl.createUser(usersName);
+        Player player = GameControl.createPlayer(playersName);
         
-        if (user == null) { //if unsuccessful
+        if (player == null) { //if unsuccessful
             System. out.println("\nError creating the player.");
             return false;
         }
@@ -141,9 +142,15 @@ public class StartProgramView {
 
     private void displayNextView() {
         System.out.println("\n ====================================="
-                         + "\n Welcome to the game " + user.getName()
-                         + "\n"
-        );
+                         + "\n Welcome to the game " 
+                         + "\n We hope you have a lot of fun!"
+                         + "\n ====================================="
+                         );
         
+        //Create MainMenuView object
+        MainMenuView mainMenuView = new MainMenuView();
+                
+        //Display the main menu view
+        mainMenuView.displayMainMenuView();
     }
 }

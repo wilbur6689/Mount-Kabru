@@ -19,7 +19,7 @@ public class MountKabru {
      */
     
     private static Game currentGame = null;
-    private static User user = null;
+    private static Player player = null;
     
     public static void main(String[] args) {
         // TODO code application logic here
@@ -39,11 +39,11 @@ public class MountKabru {
         MountKabru.currentGame = currentGame;
     }
 
-    public static User getUser() {
-        return user;
+    public static Player getPlayer() {
+        return player;
     }
 
-    public static void setUser(User user) {
-        MountKabru.user = user;
+    public static void setPlayer(Player player) {
+        MountKabru.player = player;
     }
 }

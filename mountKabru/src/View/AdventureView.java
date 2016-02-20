@@ -96,18 +96,34 @@ public class AdventureView {
     }
 
     private void plainsAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //Create plains View object
+        PlainsView plainsView = new PlainsView();
+                
+        //Display the plains view
+        plainsView.displayPlainsView();
     }
 
     private void jungleAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //Create plains View object
+        JungleView jungleView = new JungleView();
+                
+        //Display the plains view
+        jungleView.displayJungleView();
     }
 
     private void forestAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //Create plains View object
+        DarkForestView darkForestView = new DarkForestView();
+                
+        //Display the plains view
+        darkForestView.displayForestView();
     }
 
     private void mountainAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //Create plains View object
+        HighMountainView highMountainView = new HighMountainView();
+                
+        //Display the plains view
+        highMountainView.displayMountainView();
     }
 }

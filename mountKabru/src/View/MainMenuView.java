@@ -18,7 +18,7 @@ public class MainMenuView {
     public MainMenuView() {
     this.menu = "\n"
                 + "\n--------------------------------------"
-                + "\n| Main Menu                          |"
+                + "\n|      Main Menu                     |"
                 + "\n--------------------------------------"
                 + "\nN - Start a new game"
                 + "\nL - Load Game"

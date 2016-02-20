@@ -19,15 +19,15 @@ public class HelpMenuView {
                 + "\n--------------------------------------"
                 + "\n| Help Menu                          |"
                 + "\n--------------------------------------"
-                + "\nN - how to Start a new game"
-                + "\nL - help with the town"
-                + "\nS - help with fighting monsters"
-                + "\nH - help with leveling up"
-                + "\nQ - return to main menu"
+                + "\nS - how to Start a new game"
+                + "\nT - help with the town"
+                + "\nM - help with fighting monsters"
+                + "\nL - help with leveling up"
+                + "\nR - return to main menu"
                 + "\n--------------------------------------";
     }
     
-    void displayMainMenuView() {
+    void displayHelpMenuView() {
           
        boolean done = false; //set flag to done
        do {
@@ -72,17 +72,20 @@ public class HelpMenuView {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "N": // create and start a new game
-                this.startNewGame();
+            case "S": // create and start a new game
+                this.helpNewGame();
                 break;
-            case "L": // load players game
-                this.loadGame();
+            case "T": // load players game
+                this.helpTown();
                 break;
-            case "S": //save a players game
-                this.saveGame();
+            case "M": //save a players game
+                this.helpMonster();
                 break;
-            case "H": //help menu
-                this.displayHelpMenu();
+            case "L": //help menu
+                this.helpLevelingUp();
+                break;
+            case "R": //return to the main menu
+                this.returnToMain();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -92,20 +95,6 @@ public class HelpMenuView {
         return false;
     }
 
-    private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
-    }
-
-    private void loadGame() {
-        System.out.println("*** loadGame function called ***");
-    }
-
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
-
-    private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
-    }
+    
 
 }

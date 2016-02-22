@@ -17,6 +17,10 @@ public class MountKabru {
     /**
      * @param args the command line arguments
      */
+    
+    private static Game currentGame = null;
+    private static Player player = null;
+    
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -26,4 +30,20 @@ public class MountKabru {
           
         
     }    
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        MountKabru.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        MountKabru.player = player;
+    }
 }

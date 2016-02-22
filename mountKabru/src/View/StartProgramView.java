@@ -7,7 +7,8 @@ package View;
 
 import Control.GameControl;
 import java.util.Scanner;
-import model.User;
+import model.Player;
+
 
 /**
  *
@@ -17,11 +18,11 @@ public class StartProgramView {
 
     public void displayStartProgramView() {
         
-        boolean done = false; //set flag to done
+       boolean done = false; //set flag to done
        do {
           //prompt for and get the players name
           String playersName = this.getPlayersName();
-          if (playersName.toUpperCase().equals("Q"))  //User wants to quit
+          if (playersName.toUpperCase().equals("Q"))  //Player wants to quit
             return; //exit game 
           
           //do the requested action and display the next view
@@ -95,20 +96,32 @@ public class StartProgramView {
         }
     
         // Call createPlayer() control function
-        User user = GameControl.createPlayer(playersName);
+        Player player = GameControl.createPlayer(playersName);
         
-        if (user == null) { //if unsuccessful
+        if (player == null) { //if unsuccessful
             System. out.println("\nError creating the player.");
             return false;
         }
 
-        this.displayNextView();
+        this.displayNextView(player);
         
         return true;
     }
        
-           
-//To change body of generated methods, choose Tools | Templates.
+    private void displayNextView(Player player) {
+        System.out.println("\n ====================================="
+                         + "\n Welcome to the game " + player.getName()
+                         + "\n We hope you have a lot of fun!"
+                         + "\n ====================================="
+                         );
+        
+        //Create MainMenuView object
+        MainMenuView mainMenuView = new MainMenuView();
+                
+        //Display the main menu view
+        mainMenuView.displayMainMenuView();
+    }       
+
     
     
     private String promptMessage;
@@ -123,9 +136,6 @@ public class StartProgramView {
  
     }
     
-    
-    
-    
 
     public final void displayBanner() {
          
@@ -133,14 +143,13 @@ public class StartProgramView {
         System.out.println(
         "\n____________________________________________________"
         + "\n***************************************************"
-        + "\n         ~~Welcome to Mount Kabru!!!!!~~           "  
+        + "\n         ~~Welcome to Mount Kabru!!!!!~~"
+        + "\n This game will challange your skills through "
+        + "\n patience, knowledge, and a little bit of luck"  
         + "\n***************************************************"
         + "\n---------------------------------------------------" 
         );
     }
 
-    private void displayNextView() {
-        System.out.println("\n *** the displayNextView() funtion is working ***");
-        
-    }
+    
 }

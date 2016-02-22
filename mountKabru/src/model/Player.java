@@ -5,12 +5,12 @@ import java.io.Serializable;
 /**
  * Created by Badgero1234 on 1/28/16.
  */
-public class User implements Serializable{
+public class Player implements Serializable{
 
     private String name;
 
 
-    public User(){
+    public Player(){
 
     }
 
@@ -28,9 +28,9 @@ public class User implements Serializable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        User user = (User) o;
+        Player player = (Player) o;
 
-        return name != null ? name.equals(user.name) : user.name == null;
+        return name != null ? name.equals(player.name) : player.name == null;
 
     }
 
@@ -41,7 +41,7 @@ public class User implements Serializable{
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Player{" +
                 "name='" + name + '\'' +
                 '}';
     }

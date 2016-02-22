@@ -49,7 +49,6 @@ public class TavernView {
 
     private String getTavernMenuOption() {
         
-    
         Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
         String value = ""; // Value to be Returned
         boolean valid = false; // Initialize to not valid
@@ -96,11 +95,24 @@ public class TavernView {
         return false;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     private void tavernOwner() {
-       int levelOfHero = 4;
+        
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("What level are you, hero?");
+        int levelOfHero = keyboard.nextInt();
+
         String result = TavernControl.ownerResponse(levelOfHero);
         System.out.println("\n*** You walk over to the Tavern Owner ***"
                          + "\n*** and ask him for advise:           ***"
+                         + "\n "
                          + "\n " + result);
     }
 

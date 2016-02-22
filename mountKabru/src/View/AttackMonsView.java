@@ -5,6 +5,8 @@
  */
 package View;
 
+import Control.ActorControl;
+import Control.TavernControl;
 import java.util.Scanner;
 
 /**
@@ -93,7 +95,13 @@ public class AttackMonsView {
     }
 
     private void attackMonster() {
-        System.out.println("\n*** You slap the monster making him angry  ***");
+        int attack = 35;
+        int strength = 23;
+        int opponentDefense = 17;
+        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+        System.out.println("\n*** You walk over to the monster      ***"
+                         + "\n*** and punch him in the gut          ***"
+                         + "\n*** You do " + result + " Damage    ***");
     }
 
     private void defendYourself() {
@@ -101,9 +109,13 @@ public class AttackMonsView {
     }
 
     private void castSpell() {
-        System.out.println("\n*** You begin to chant at the monster and he   ***"
-                         + "\n*** askes you 'why are you singing, you sound  ***"
-                         + "\n*** horrible?'                                 ***");
+        int attack = 50;
+        int mana = 30;
+        int opponentDefense = 10;
+        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
+        System.out.println("\n*** You walk over to the monster      ***"
+                         + "\n*** and cast fireball                 ***"
+                         + "\n*** You do " + result + " Damage    ***");
     }
 
 }

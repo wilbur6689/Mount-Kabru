@@ -5,6 +5,7 @@
  */
 package View;
 
+import Control.TavernControl;
 import java.util.Scanner;
 
 /**
@@ -96,7 +97,11 @@ public class TavernView {
     }
 
     private void tavernOwner() {
-        System.out.println("\n*** I dont know you, get away from me peasant ***");
+       int levelOfHero = 4;
+        String result = TavernControl.ownerResponse(levelOfHero);
+        System.out.println("\n*** You walk over to the Tavern Owner ***"
+                         + "\n*** and ask him for advise:           ***"
+                         + "\n " + result);
     }
 
     private void sleep() {

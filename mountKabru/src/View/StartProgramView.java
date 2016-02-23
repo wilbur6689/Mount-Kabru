@@ -124,7 +124,7 @@ public class StartProgramView {
 
     
     
-    private String promptMessage;
+    private final String promptMessage;
     
     
     public StartProgramView(){ 
@@ -141,13 +141,23 @@ public class StartProgramView {
          
          
         System.out.println(
-        "\n____________________________________________________"
-        + "\n***************************************************"
-        + "\n         ~~Welcome to Mount Kabru!!!!!~~"
-        + "\n This game will challange your skills through "
-        + "\n patience, knowledge, and a little bit of luck"  
-        + "\n***************************************************"
-        + "\n---------------------------------------------------" 
+          "\n______________________________________________________"
+        + "\n|****************************************************|"
+        + "\n|    88     888                __                    |"
+        + "\n|   88888  888888          ___/**i             88    |"
+        + "\n|    88888888888          /*******i          88888   |"
+        + "\n|   8888888888888        /*********i       88888888  |"
+        + "\n|                       /           i                |"
+        + "\n|             __       /             i___            |"
+        + "\n|            /  i     /                  i           |"
+        + "\n|           /    i___/                    i          |"
+        + "\n|       ___/                               i______   |"
+        + "\n|      /                                          i__|"
+        + "\n|     /       ~~Welcome to Mount Kabru!!!!!~~        |"
+        + "\n|    /  This game will challange your skills through |"
+        + "\n|   /   patience, knowledge, and a little bit of luck|"  
+        + "\n|****************************************************|"
+        + "\n|----------------------------------------------------|" 
         );
     }
 

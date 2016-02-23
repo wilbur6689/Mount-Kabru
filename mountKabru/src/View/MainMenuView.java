@@ -17,15 +17,24 @@ public class MainMenuView {
     
     public MainMenuView() {
     this.menu = "\n"
-                + "\n--------------------------------------"
-                + "\n|      Main Menu                     |"
-                + "\n--------------------------------------"
-                + "\nN - Start a new game"
-                + "\nL - Load Game"
-                + "\nS - Save Game"
-                + "\nH - Get Help on how to play the game"
-                + "\nQ - Quit"
-                + "\n--------------------------------------";
+                + "\n|----------------------------------------|"
+                + "\n|                                   ___  |"
+                + "\n|                _                 /   i |"
+                + "\n|             __|_|______         /     i|"
+                + "\n|   __       |      _ _  |    ___|       |"
+                + "\n|  /  `_     |  _  |_|_| |   |   |       |"
+                + "\n| |  _  |    | | | |_|_| |   |___|    _  |"
+                + "\n|_|_|_|_|____|_|_|_______|___|_|_|___|_|_|"
+                + "\n|                                        |"
+                + "\n|             ~~~Main Menu~~~            |"
+                + "\n|                                        |"
+                + "\n|----------------------------------------|"
+                + "\n   N - Start a new game"
+                + "\n   L - Load Game"
+                + "\n   S - Save Game"
+                + "\n   H - Get Help on how to play the game"
+                + "\n   Q - Quit"
+                + "\n------------------------------------------";
     }
     
     void displayMainMenuView() {

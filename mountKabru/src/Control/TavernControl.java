@@ -24,16 +24,16 @@ public static String ownerResponse(int levelOfHero) {
         , "You can only fight in the High Mountains if your are level 30 or higher"
         , "You can sleep in the tavern to restore your health"
         , "You can save your game in the main menu"
-            , "Eleven"
-            , "Twelve"
-            , "Thirteen"
-            , "Fourteen"
-            , "Fifteen"
-            , "Sixteen"
-            , "Seventeen"
-            , "Eighteen"
-            , "Nineteen"
-            , "Twenty"}; 
+        , "There are dishes in the bath! I hate you, go clean them, Pay your tab off!"
+        , "If I see a fish and it is gasping for breath who am I? YOU!!!"
+        , "I HATE YOUR FACE! "
+        , "Hey you, help an old man out, go jump off a bridge you hippy"
+        , "One fish, Two Fish, Red Fish, Blue Fish. I hate your fish!"
+        , "I don't Like you!!"
+        , "I love the smell of roses!"
+        , "BLAHHHHHHHHH! Who you looking at!?"
+        , "I am an old timer. But not as stupid as you!"
+        , "CheeseCake is good do you want some? TOO BAD! You cannot have any! IT'S all mine! HAHAHAHAHAHHAHAHAHAHAHAHAH"}; 
      
     
      

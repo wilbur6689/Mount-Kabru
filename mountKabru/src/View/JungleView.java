@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Phill
+ * @author Orson C Badger
  */
 public class JungleView {
     
@@ -17,17 +17,18 @@ public class JungleView {
     
     public JungleView() {
     this.jungleMenu = "\n"
-                + "\n---------------------------------------"
-                + "\n|  You run outside of town a          |"
-                + "\n|  ways and find the Jungle. You Put  |"
-                + "\n|  a mean look on your face           |"
-                + "\n|                                     |"
-                + "\n---------------------------------------"
-                + "\nM - search for a [M]onster"
-                + "\nP - use a [P]otion"
-                + "\nI - check your [I]nventory"
+                + "\n-------------------------------------------------------------------------|"
+                + "\n|  You run into a really dark forest like place                          |"
+                + "\n|  the only difference is it is so dang hot and muggy                    |"
+                + "\n|  the sweat begins to fall from your face. Why am I here?!              |"
+                + "\n|  you grip your weapon preparing to be slaughtered at any given moment. |"
+                + "\n-------------------------------------------------------------------------|"
+                + "\n"
+                + "\nM - Search for a [M]onster"
+                + "\nP - Use [P]otion"
+                + "\nI - Check [I]nventory"
                 + "\nQ - [Q]uit back to town"
-                + "\n--------------------------------------";
+                + "\n--------------------------------------------------------------------------";
     }
     
     void displayJungleView() {
@@ -86,7 +87,7 @@ public class JungleView {
                 break;
             
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                System.out.println("\n*** What ever you were trying to do failed epically! *** Try again");
                 
                          
         }
@@ -102,8 +103,8 @@ public class JungleView {
     }
 
     private void usePotion() {
-        System.out.println("\n*** you look into your potion pouch and  ***"
-                         + "\n*** remember you dont have any potions   ***");
+        System.out.println("\n*** you look into your potion pouch and    ***"
+                         + "\n*** remember you don't have any potions.   ***");
     }
 
     private void viewInventory() {

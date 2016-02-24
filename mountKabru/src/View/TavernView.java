@@ -111,7 +111,7 @@ public class TavernView {
 
         String result = TavernControl.ownerResponse(levelOfHero);
         System.out.println("\n*** You walk over to the Tavern Owner ***"
-                         + "\n*** and ask him for advise:           ***"
+                         + "\n*** and ask him for advice:           ***"
                          + "\n "
                          + "\n " + result);
     }
@@ -121,10 +121,15 @@ public class TavernView {
     }
 
     private void buyHealthPotion() {
-        System.out.println("\n *** Sorry, we are all out of health potions right now, come back later");
+        BuyHPotionView buypotion = new BuyHPotionView(); //CREATES A NEW HP POTION VIEW
+
+        buypotion.displayBuyHPotionView();
     }
 
     private void buyManaPotion() {
-        System.out.println("\n *** Sorry, we are all out of mana potions right now, come back later");
+       BuyMPotionView mPotion = new BuyMPotionView(); // CREATES A NEW MP POTION VIEW
+
+        mPotion.displayBuyMPotionView();
+
     }
 }

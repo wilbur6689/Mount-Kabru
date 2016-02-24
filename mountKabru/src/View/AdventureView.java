@@ -21,10 +21,10 @@ public class AdventureView {
                 + "\n|  You wander out of town and try to |"
                 + "\n|  decide where to fight next...     |"
                 + "\n--------------------------------------"
-                + "\nP - fight in the [P]lains"
-                + "\nJ - fight in the [J]ungle"
-                + "\nF - fight in the dark [F]orest"
-                + "\nM - fight in the high [M]ountains"
+                + "\nP - Fight in the [P]lains"
+                + "\nJ - Fight in the [J]ungle"
+                + "\nF - Fight in the dark [F]orest"
+                + "\nM - Fight in the high [M]ountains"
                 + "\nQ - [Q]uit"
                 + "\n--------------------------------------";
     }

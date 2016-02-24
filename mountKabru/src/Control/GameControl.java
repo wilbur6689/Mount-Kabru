@@ -5,6 +5,8 @@
  */
 package Control;
 
+import model.Actor;
+import model.Hero;
 import model.Player;
 import mountkabru.MountKabru;
 
@@ -23,11 +25,35 @@ public class GameControl {
         
         Player player = new Player();
         player.setName(name);
+       
         
         MountKabru.setPlayer(player); //save the player
         
         
         return player;
     }
+    
+    public static Hero createHero(String name, int attack) {
+        
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Hero hero = new Hero();
+        hero.setName(name);
+       
+        
+        MountKabru.setHero(hero); //save the hero
+        
+        
+        return hero;
+    }
+
+    public static void createNewGame(Actor actor) {
+        System.out.println("\n*** createNewGame function Called   ****");
+    }
+    
+    
     
 }

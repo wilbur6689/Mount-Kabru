@@ -5,7 +5,10 @@
  */
 package View;
 
+import Control.ActorControl;
+import Control.GameControl;
 import java.util.Scanner;
+import mountkabru.MountKabru;
 
 /**
  *
@@ -103,6 +106,8 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
+               
+
         //Create newCharView object
         NewCharView newCharView = new NewCharView();
                 

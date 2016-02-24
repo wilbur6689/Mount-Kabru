@@ -5,7 +5,9 @@
  */
 package View;
 
+import Control.GameControl;
 import java.util.Scanner;
+import model.Hero;
 
 /**
  *
@@ -13,10 +15,8 @@ import java.util.Scanner;
  */
 public class NewCharView {
     
-    private final String newCharMenu;
-    
-    public NewCharView() {
-    this.newCharMenu = "\n"
+    private String promptMessage;
+    private String addStats =  "\n"
                 + "\n--------------------------------------"
                 + "\n|      Create a New Character        |"
                 + "\n--------------------------------------"
@@ -26,6 +26,10 @@ public class NewCharView {
                 + "\n"
                 + "\nQ - Quit"
                 + "\n--------------------------------------";
+    
+    
+    public NewCharView() {
+    this.promptMessage = "what is your name, hero?"; 
     }
     
     void displayNewCharView() {
@@ -33,7 +37,7 @@ public class NewCharView {
        boolean done = false; //set flag to done
        do {
           //prompt for and get the players name
-          String menuOption = this.getNewCharMenuOption();
+          String menuOption = this.getUserInput();
           if (menuOption.toUpperCase().equals("Q"))  //Player wants to quit
             return; //exit game 
           
@@ -43,9 +47,8 @@ public class NewCharView {
        } while (!done);
     }
     
-    private String promptMessage;
 
-    private String getNewCharMenuOption() {
+    private String getUserInput() {
         
     
         Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
@@ -53,7 +56,7 @@ public class NewCharView {
         boolean valid = false; // Initialize to not valid
 
         while (!valid) { // Loop while an invalid value is enter
-          System.out.println ("\n" + this.newCharMenu);
+          System.out.println (this.promptMessage);
 
           value = keyboard.nextLine(); //Get next line typed on keyboard
           value = value.trim(); // trim off leading and trailing blanks
@@ -68,44 +71,42 @@ public class NewCharView {
       return value;
     }
 
-    private boolean doAction(String choice) {
+    private boolean doAction(String heroName) {
         
-        choice = choice.toUpperCase(); //convert choice to upper case
+        // create Hero
         
-        switch (choice) {
-            case "M": // create and start a new game
-                this.nextQuestionMight();
-                break;
-            case "W": // load players game
-                this.nextQuestionWill();
-                break;
-            
-            default:
-                System.out.println("\n*** Invalid selection *** Try again");
-                
-                         
+        Hero hero = new Hero(heroName, "Warrior", 1, 100, 5, 5);
+        
+        // ask questions
+        this.promptMessage = this.addStats;
+        String answer = this.getUserInput().toUpperCase();
+        
+        if (answer.equals("M")) {
+            hero.setStrength(10);
         }
+        else if (answer.equals("W")) {
+            hero.setMana(10);
+        }
+        else {
+            System.out.println("You entered an invalid responce, please try again");
+            return false;
+        }
+         
+        
+        GameControl.createNewGame(hero);
+        
+        // create and display game menu view
+        // create gameMenuView object
+        GameMenuView gameMenuView = new GameMenuView();
+        
+        //display the game Menu View 
+        gameMenuView.displayGameMenuView();
+
+       
         return false;
     }
 
-    private void nextQuestionMight() {
-        // create gameMenuView object
-        GameMenuView gameMenuView = new GameMenuView();
-        
-        //display the game Menu View 
-        gameMenuView.displayGameMenuView();
-    }
-
-    private void nextQuestionWill() {
-        
-        //In the future we will add more questions that will add stuff to the char
-
-        // create gameMenuView object
-        GameMenuView gameMenuView = new GameMenuView();
-        
-        //display the game Menu View 
-        gameMenuView.displayGameMenuView();
-    }
+    
 
     
 }

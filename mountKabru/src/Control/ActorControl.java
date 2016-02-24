@@ -1,10 +1,20 @@
 package Control;
 
+import model.Hero;
+
 /**
  * Created by badgerwaves on 2/10/16.
  */
 public class ActorControl {
 
+        public Hero newHero(String heroName) {
+            
+            Hero hero = new Hero(heroName, "Warrior", 1, 100, 5, 5);
+            
+            
+            return hero;
+        }
+    
 	public static int  meleeDamage(int attack, int strength, int opponentDefense){
 
 

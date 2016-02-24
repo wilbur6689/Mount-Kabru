@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public class Hero extends Actor implements  Serializable  {
 
+    private String heroName;
     private String heroClassType;
     private int levelOfHero;
     private int experience;
@@ -22,6 +23,23 @@ public class Hero extends Actor implements  Serializable  {
 
     }
 
+    public String getHeroName() {
+        return heroName;
+    }
+    
+    public void setHeroName(String heroName) {
+        this.heroName = heroName;
+    }
+
+    public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
+        this.heroName = heroName;
+        this.heroClassType = heroClassType;
+        this.levelOfHero = levelOfHero;
+        this.experience = experience;
+        this.mana = mana;
+        this.strength = strength;
+    }
+    
     public String getHeroClassType() {
         return heroClassType;
     }

@@ -102,6 +102,7 @@ public class StartProgramView {
             System. out.println("\nError creating the player.");
             return false;
         }
+        
 
         this.displayNextView(player);
         

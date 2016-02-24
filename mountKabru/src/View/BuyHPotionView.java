@@ -18,8 +18,8 @@ public class BuyHPotionView {
     public BuyHPotionView() {
         this.buyHPotionMenu = "\n"
                 + "\n--------------------------------------"
-                + "\n|  The Tavern owner looks at you with a smug face  |"
-                + "\n|  hoping to make a deal?                          |"
+                + "\n|  So it will be a HP Potion eh?     |"
+                + "\n|  We will see if I like ya enough   |"
                 + "\n--------------------------------------"
                 + "\nB - [B]uy Lvl 1-10 HP Potion"
                 + "\n"

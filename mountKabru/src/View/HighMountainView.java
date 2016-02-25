@@ -24,7 +24,7 @@ public class HighMountainView {
                 + "\n|  your face                          |"
                 + "\n|                                     |"
                 + "\n---------------------------------------"
-                + "\nM - search for a [M]onster"
+                + "\nS - [S]earch for a monster"
                 + "\nP - use a [P]otion"
                 + "\nI - check your [I]nventory"
                 + "\nQ - [Q]uit back to town"
@@ -76,7 +76,7 @@ public class HighMountainView {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "M": // go kill stuff in the High Mountains
+            case "S": // go kill stuff in the High Mountains
                 this.searchForMonster();
                 break;
             case "P": // use a potion

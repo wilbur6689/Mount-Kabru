@@ -24,7 +24,7 @@ public class JungleView {
                 + "\n|  you grip your weapon preparing to be slaughtered at any given moment. |"
                 + "\n-------------------------------------------------------------------------|"
                 + "\n"
-                + "\nM - Search for a [M]onster"
+                + "\nS - [S]earch for a monster"
                 + "\nP - Use [P]otion"
                 + "\nI - Check [I]nventory"
                 + "\nQ - [Q]uit back to town"
@@ -76,7 +76,7 @@ public class JungleView {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "M": // go kill stuff in the Jungle
+            case "S": // go kill stuff in the Jungle
                 this.searchForMonster();
                 break;
             case "P": // use a potion

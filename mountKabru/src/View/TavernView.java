@@ -106,17 +106,21 @@ public class TavernView {
     
     
     private void tavernOwner() {
-
         
-        int levelOfHero = Hero.getLevelOfHero();
+         int levelOfHero = 0;
+         
+         Scanner keyboard = new Scanner(System.in);
+         System.out.println("What level are you, hero?");
+         levelOfHero = keyboard.nextInt();
+         
+         String result = TavernControl.ownerResponse(levelOfHero);
+          System.out.println("\n*** You walk over to the Tavern Owner ***"
+                           + "\n*** and ask him for advise:           ***"
+                           + "\n "
+                           + "\n " + result);
 
-        String result = TavernControl.ownerResponse(levelOfHero);
-        System.out.println("\n*** You walk over to the Tavern Owner ***"
-                         + "\n*** and ask him for advice:           ***"
-                         + "\n "
-                         + "\n " + result);
     }
-
+          
     private void sleep() {
         System.out.println("\n*** you sleep well and feel refreshed ***");
     }

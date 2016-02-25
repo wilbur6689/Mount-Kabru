@@ -23,7 +23,7 @@ import java.util.Scanner;
                     + "\n|  You straggle into the blacksmith  |"
                     + "\n|  hoping to make a deal...          |"
                     + "\n--------------------------------------"
-                    + "\nB - [B]uy Mp Potion""
+                    + "\nB - [B]uy Mp Potion"
                     + "\n"
                     + "\nQ - Return to Tavern"
                     + "\n--------------------------------------";

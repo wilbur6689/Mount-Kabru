@@ -16,7 +16,7 @@ import model.Hero;
 public class NewCharView {
     
     private String promptMessage;
-    private String addStats =  "\n"
+    private String addStats1 =  "\n"
                 + "\n--------------------------------------"
                 + "\n|      Create a New Character        |"
                 + "\n--------------------------------------"
@@ -27,6 +27,27 @@ public class NewCharView {
                 + "\nQ - Quit"
                 + "\n--------------------------------------";
     
+    private String addStats2 =  "\n"
+                + "\n--------------------------------------"
+                + "\n|      Create a New Character        |"
+                + "\n--------------------------------------"
+                + "\n2nd question:                         " 
+                + "\n    [ M ] push with all your might?"
+                + "\n    [ W ] user your will to think it away?"
+                + "\n"
+                + "\nQ - Quit"
+                + "\n--------------------------------------";
+    
+    private String addStats3 =  "\n"
+                + "\n--------------------------------------"
+                + "\n|      Create a New Character        |"
+                + "\n--------------------------------------"
+                + "\n3rd question                           " 
+                + "\n    [ M ] push with all your might?"
+                + "\n    [ W ] user your will to think it away?"
+                + "\n"
+                + "\nQ - Quit"
+                + "\n--------------------------------------";
     
     public NewCharView() {
     this.promptMessage = "what is your name, hero?"; 
@@ -37,12 +58,12 @@ public class NewCharView {
        boolean done = false; //set flag to done
        do {
           //prompt for and get the players name
-          String menuOption = this.getUserInput();
-          if (menuOption.toUpperCase().equals("Q"))  //Player wants to quit
+          String heroNameChoice = this.getUserInput();
+          if (heroNameChoice.toUpperCase().equals("Q"))  //Player wants to quit
             return; //exit game 
           
           //do the requested action and display the next view
-          done = this.doAction(menuOption);
+          done = this.doAction(heroNameChoice);
           
        } while (!done);
     }
@@ -78,13 +99,13 @@ public class NewCharView {
         Hero hero = new Hero(heroName, "Warrior", 1, 100, 5, 5);
         
         // ask questions
-        this.promptMessage = this.addStats;
-        String answer = this.getUserInput().toUpperCase();
+        this.promptMessage = this.addStats1;
+        String answer1 = this.getUserInput().toUpperCase();
         
-        if (answer.equals("M")) {
+        if (answer1.equals("M")) {
             hero.setStrength(10);
         }
-        else if (answer.equals("W")) {
+        else if (answer1.equals("W")) {
             hero.setMana(10);
         }
         else {
@@ -92,6 +113,34 @@ public class NewCharView {
             return false;
         }
          
+        this.promptMessage = this.addStats2;
+        String answer2 = this.getUserInput().toUpperCase();
+        
+        if (answer2.equals("M")) {
+            hero.setStrength(20);
+        }
+        else if (answer2.equals("W")) {
+            hero.setMana(20);
+        }
+        else {
+            System.out.println("You entered an invalid responce, please try again");
+            return false;
+        }
+        
+        this.promptMessage = this.addStats3;
+        String answer3 = this.getUserInput().toUpperCase();
+        
+        if (answer3.equals("M")) {
+            hero.setStrength(30);
+        }
+        else if (answer3.equals("W")) {
+            hero.setMana(30);
+        }
+        else {
+            System.out.println("You entered an invalid response, please try again");
+            return false;
+        }
+        
         
         GameControl.createNewGame(hero);
         

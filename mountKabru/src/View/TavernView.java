@@ -5,6 +5,7 @@
  */
 package View;
 
+import model.Hero;
 import Control.TavernControl;
 import java.util.Scanner;
 
@@ -105,9 +106,8 @@ public class TavernView {
     
     private void tavernOwner() {
         
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("What level are you, hero?");
-        int levelOfHero = keyboard.nextInt();
+        
+        int levelOfHero = hero.getLevelOfHero();
 
         String result = TavernControl.ownerResponse(levelOfHero);
         System.out.println("\n*** You walk over to the Tavern Owner ***"

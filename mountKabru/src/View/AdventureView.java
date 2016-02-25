@@ -13,61 +13,61 @@ import java.util.Scanner;
  */
 public class AdventureView {
     
-
     
-
         private String plainsMenu = "\n"
-                    + "\n--------------------------------------"
-                    + "\n|  You wander out of town and try to |"
-                    + "\n|  decide where to fight next...     |"
-                    + "\n--------------------------------------"
-                    + "\nP - Fight in the [P]lains"
-                    + "\n???"
-                    + "\n???"
-                    + "\n???"
-                    + "\nQ - [Q]uit"
-                    + "\n--------------------------------------";
+                + "\n--------------------------------------"
+                + "\n|  You wander out of town and try to |"
+                + "\n|  decide where to fight next...     |"
+                + "\n--------------------------------------"
+                + "\n(1) - Fight in the Plains"
+                + "\n???"
+                + "\n???"
+                + "\n???"
+                + "\n(0) - Quit"
+                + "\n--------------------------------------";
+        
         private String jungleMenu = "\n"
                 + "\n--------------------------------------"
                 + "\n|  You wander out of town and try to |"
                 + "\n|  decide where to fight next...     |"
                 + "\n--------------------------------------"
-                + "\nP - Fight in the [P]lains"
-                + "\nJ - Fight in the [J]ungle"
+                + "\n(1) - Fight in the Plains"
+                + "\n(2) - Fight in the Jungle"
                 + "\n???"
                 + "\n???"
-                + "\nQ - [Q]uit"
+                + "\n(0) - Quit"
                 + "\n--------------------------------------";
+        
         private String darkForestMenu = "\n"
                 + "\n--------------------------------------"
                 + "\n|  You wander out of town and try to |"
                 + "\n|  decide where to fight next...     |"
                 + "\n--------------------------------------"
-                + "\nP - Fight in the [P]lains"
-                + "\nJ - Fight in the [J]ungle"
-                + "\nF - Fight in the dark [F]orest"
+                + "\n(1) - Fight in the Plains"
+                + "\n(2) - Fight in the Jungle"
+                + "\n(3) - Fight in the dark Forest"
                 + "\n???"
-                + "\nQ - [Q]uit"
+                + "\n(0) - [Q]uit"
                 + "\n--------------------------------------";
         private String highMountainMenu = "\n"
                 + "\n--------------------------------------"
                 + "\n|  You wander out of town and try to |"
                 + "\n|  decide where to fight next...     |"
                 + "\n--------------------------------------"
-                + "\nP - Fight in the [P]lains"
-                + "\nJ - Fight in the [J]ungle"
-                + "\nF - Fight in the dark [F]orest"
-                + "\nM - Fight in the high [M]ountains"
-                + "\nQ - [Q]uit"
+                + "\n(1) - Fight in the Plains"
+                + "\n(2) - Fight in the Jungle"
+                + "\n(3) - Fight in the dark Forest"
+                + "\n(4) - Fight in the high Mountains"
+                + "\n(0) - [Q]uit"
                 + "\n--------------------------------------";
 
         void displayAdventureView() {
 
            boolean done = false; //set flag to done
            do {
-              //prompt for and get the players name
+              //prompt for and get the players input
               int userResponse = this.getUserInput();
-              if (userResponse.toUpperCase().equals("Q"))  //Player wants to quit
+              if (userResponse == 0)  //Player wants to quit
                 return; //exit game
 
               //do the requested action and display the next view
@@ -76,12 +76,15 @@ public class AdventureView {
            } while (!done);
         }
 
+
         private String promptMessage;
 
         public AdventureView() {
             this.promptMessage = "Hero what the heck is your level";
         }
-            private int getUserInput() {
+            
+        
+        private int getUserInput() {
 
 
             Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
@@ -100,23 +103,22 @@ public class AdventureView {
 
                 }
           return value;
-            }
+        }
 
 
-        private boolean doAction(int choice) {
+        private boolean doAction(int userResponse) {
 
 
-            int answer = this.getUserInput();
-            if (answer <=10){
+            if (userResponse <=10){
                 this.promptMessage = plainsMenu;
             }
-            else if (answer <= 20 ) {
+            else if (userResponse <= 20 ) {
                this.promptMessage = jungleMenu;
             }
-            else if (answer <= 30) {
+            else if (userResponse <= 30) {
                 this.promptMessage = darkForestMenu;
             }
-            else if (answer <= 50) {
+            else if (userResponse <= 50) {
                 this.promptMessage = highMountainMenu;
             }
             else {
@@ -124,29 +126,20 @@ public class AdventureView {
             }
 
 
-            System.out.println();
+            
+            int menuChoice = this.getUserInput();
 
-            String menuOption = this.getUserInput()
-
-
-
-
-
-
-
-
-
-            switch (choice) {
-                case "P": // go kill stuff in the plains
+            switch (menuChoice) {
+                case 1: // go kill stuff in the plains
                     this.plainsAdventure();
                     break;
-                case "J": // go kill stuff in the jungle
+                case 2: // go kill stuff in the jungle
                     this.jungleAdventure();
                     break;
-                case "F": // go kill stuff in the forest
+                case 3: // go kill stuff in the forest
                     this.forestAdventure();
                     break;
-                case "M": // go kill stuff in the mountains
+                case 4: // go kill stuff in the mountains
                     this.mountainAdventure();
                     break;
 
@@ -190,5 +183,5 @@ public class AdventureView {
             highMountainView.displayMountainView();
         }
 
-        private
+      
 }

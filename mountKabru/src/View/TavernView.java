@@ -107,7 +107,7 @@ public class TavernView {
     
     private void tavernOwner() {
         
-         int levelOfHero = 0;
+         int levelOfHero;
          
          Scanner keyboard = new Scanner(System.in);
          System.out.println("What level are you, hero?");

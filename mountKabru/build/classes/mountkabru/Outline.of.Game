@@ -501,6 +501,61 @@ The player would then input their command into the keyboard.
 
 
 
+*****************************************************************************************************************************
+
+
+
+Presentation:
+1.	We learned about Java and made a simple program
+    a.	When each different types of Java selection statements is to be used and how explain how the 
+        selection statements work. 
+
+        1.	If, if-else, if-else-if ladder, switch
+        2.	https://content.byui.edu/file/012fc4e7-2014-4f9d-8fd5-a60f1421c096/1/Developing%20the%20View%20Layer.pdf 
+    b.	CODE WE WILL USE:
+        1.	Orson:  AdventureView
+        2.	Phillip: NewCharView
+
+2.	We learned about and created UML Class Diagrams for the model layer
+
+3.	We developed the model layer
+
+    a.	Classes made:
+    b.	concepts of the scope and lifespan of variables
+    c.	CODE TO USE: StartProgramView.java
+
+4.	We Designed and made a UML class diagram for the Control Layer
+    a.	Use an example of code to explain the following: (TavernControl)
+    b.	7 steps of the functional development process used to design and develop the function.
+        1.	Define - clearly define the problem that you are solving
+        2.	Text Matrix – 
+        3.	Outline the solution - 
+        4.	Test the Algorithm – 
+        5.	Translate the algorithm in to code
+        6.	Run the test cases to verify that the code is working as specified 
+        7.	Deployment – Deploy the changes to the repository.
+
+
+5.	We developed the Control layer 
+
+    a.	Classes made:
+    b.	Example of code:
+    c.	Code of the Unit Test:
+        1.	Orson: walk through the meleeDamage test
+        2.	Phillip: walk through the spellDamage test. (refer to complexManaEquation.docx)
+
+6.	We designed and Developed the View Layer
+
+    a.	Classes made:
+    b.	Example of code: We have to create an example of code to show the following:
+    c.	how arguments are passed by value and passed by reference.
+         1.	By reference – use an alias of the object. Any changes made will effect the original object.
+         2.	By value – makes a copy of the original object and the original object cannot be changed. 
+
+
+
+
+
 
 
 

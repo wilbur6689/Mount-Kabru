@@ -5,7 +5,7 @@
  */
 package mountkabru;
 
-import View.StartProgramView;
+import view.StartProgramView;
 import model.*;
 
 /**

@@ -524,7 +524,7 @@ Presentation:
     b.	concepts of the scope and lifespan of variables
     c.	CODE TO USE: StartProgramView.java
 
-4.	We Designed and made a UML class diagram for the Control Layer
+4.	We Designed and made a UML class diagram for the control Layer
     a.	Use an example of code to explain the following: (TavernControl)
     b.	7 steps of the functional development process used to design and develop the function.
         1.	Define - clearly define the problem that you are solving
@@ -536,7 +536,7 @@ Presentation:
         7.	Deployment – Deploy the changes to the repository.
 
 
-5.	We developed the Control layer 
+5.	We developed the control layer
 
     a.	Classes made:
     b.	Example of code:
@@ -544,7 +544,7 @@ Presentation:
         1.	Orson: walk through the meleeDamage test
         2.	Phillip: walk through the spellDamage test. (refer to complexManaEquation.docx)
 
-6.	We designed and Developed the View Layer
+6.	We designed and Developed the view Layer
 
     a.	Classes made:
     b.	Example of code: We have to create an example of code to show the following:

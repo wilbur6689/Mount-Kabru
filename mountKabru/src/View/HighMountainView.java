@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package view;
 
 import java.util.Scanner;
 
@@ -96,9 +96,9 @@ public class HighMountainView {
 
     private void searchForMonster() {
         
-        //create the Attack Monster View object
+        //create the Attack Monster view object
         AttackMonsView attackMonsView = new AttackMonsView();
-        //display the Attack Monster View
+        //display the Attack Monster view
         attackMonsView.displayAttackMonsView();
     }
 
@@ -109,9 +109,9 @@ public class HighMountainView {
 
     private void viewInventory() {
         
-        //create the Attack Monster View object
+        //create the Attack Monster view object
         InventoryView inventoryView = new InventoryView();
-        //display the Attack Monster View
+        //display the Attack Monster view
         inventoryView.displayInventoryView();
     }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package view;
 
 import java.util.Scanner;
 
@@ -95,10 +95,10 @@ public class GameMenuView {
     }
 
     private void goAdventure() {
-         // create adventure View object
+         // create adventure view object
         AdventureView adventureView = new AdventureView();
         
-        //display the adventure View
+        //display the adventure view
         adventureView.displayAdventureView();
     }
 

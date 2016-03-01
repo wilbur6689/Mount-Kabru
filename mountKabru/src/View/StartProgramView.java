@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package view;
 
-import Control.GameControl;
+import control.GameControl;
 import java.util.Scanner;
 import model.Player;
 

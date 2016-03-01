@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package view;
 
 import java.util.Scanner;
 
@@ -152,7 +152,7 @@ public class AdventureView {
         }
 
         private void plainsAdventure() {
-            //Create plains View object
+            //Create plains view object
             PlainsView plainsView = new PlainsView();
 
             //Display the plains view
@@ -160,7 +160,7 @@ public class AdventureView {
         }
 
         private void jungleAdventure() {
-            //Create plains View object
+            //Create plains view object
             JungleView jungleView = new JungleView();
 
             //Display the plains view
@@ -168,7 +168,7 @@ public class AdventureView {
         }
 
         private void forestAdventure() {
-            //Create plains View object
+            //Create plains view object
             DarkForestView darkForestView = new DarkForestView();
 
             //Display the plains view
@@ -176,7 +176,7 @@ public class AdventureView {
         }
 
         private void mountainAdventure() {
-            //Create plains View object
+            //Create plains view object
             HighMountainView highMountainView = new HighMountainView();
 
             //Display the plains view

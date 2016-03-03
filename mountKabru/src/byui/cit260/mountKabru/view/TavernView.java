@@ -23,7 +23,7 @@ public class TavernView extends View{
                 + "\n|  as tough as you can.               |"  
                 + "\n--------------------------------------"
                 + "\nT - talk to the [T]avern owner"
-                + "\nS - get a room and [S]leep is off"
+                + "\nS - get a room and [S]leep it off"
                 + "\nH - buy a [H]ealth potion"
                 + "\nM - buy a [M]ana potion"
                 + "\nQ - return to town"
@@ -91,13 +91,13 @@ public class TavernView extends View{
     private void buyHealthPotion() {
         BuyHPotionView buypotion = new BuyHPotionView(); //CREATES A NEW HP POTION VIEW
 
-        buypotion.displayBuyHPotionView();
+        buypotion.display();
     }
 
     private void buyManaPotion() {
        BuyMPotionView mPotion = new BuyMPotionView(); // CREATES A NEW MP POTION VIEW
 
-        mPotion.displayBuyMPotionView();
+        mPotion.display();
 
     }
 }

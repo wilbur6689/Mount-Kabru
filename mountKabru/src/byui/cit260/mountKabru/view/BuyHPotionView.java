@@ -11,12 +11,11 @@ import java.util.Scanner;
  *
  * @author Orson C Badger
  */
-public class BuyHPotionView {
+public class BuyHPotionView extends View {
 
-    private final String buyHPotionMenu;
 
     public BuyHPotionView() {
-        this.buyHPotionMenu = "\n"
+        super( "\n"
                 + "\n--------------------------------------"
                 + "\n|  So it will be a HP Potion eh?     |"
                 + "\n|  We will see if I like ya enough   |"
@@ -24,50 +23,14 @@ public class BuyHPotionView {
                 + "\nB - [B]uy Lvl 1-10 HP Potion"
                 + "\n"
                 + "\nQ - [Q]uit"
-                + "\n--------------------------------------";
+                + "\n--------------------------------------");
     }
 
-    void displayBuyHPotionView() {
+    
 
-        boolean done = false; //set flag to done
-        do {
-            //prompt for and get the players name
-            String menuOption = this.getBuyHPotionOption();
-            if (menuOption.toUpperCase().equals("Q"))  //Player wants to quit
-                return; //exit game
-
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String promptMessage;
-
-    private String getBuyHPotionOption() {
-
-
-        Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
-        String value = ""; // Value to be Returned
-        boolean valid = false; // Initialize to not valid
-
-        while (!valid) { // Loop while an invalid value is enter
-            System.out.println ("\n" + this.buyHPotionMenu);
-
-            value = keyboard.nextLine(); //Get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-
-            if (value.length() < 1){ //value is blank
-                System.out.println("\n Invalid value: Value can not be blank");
-                continue;
-            }
-            break; // end the loop
-
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+   
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 

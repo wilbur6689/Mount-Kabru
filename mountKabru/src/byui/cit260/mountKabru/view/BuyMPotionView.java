@@ -5,20 +5,16 @@
  */
 package byui.cit260.mountKabru.view;
 
-import java.util.Scanner;
-
-
-
     /**
      *
      * @author Orson C Badger
      */
-    public class BuyMPotionView {
+    public class BuyMPotionView extends View{
 
-        private final String buyMPotionMenu;
+    
 
         public BuyMPotionView() {
-            this.buyMPotionMenu = "\n"
+           super( "\n"
                     + "\n--------------------------------------"
                     + "\n|  You straggle into the blacksmith  |"
                     + "\n|  hoping to make a deal...          |"
@@ -26,51 +22,13 @@ import java.util.Scanner;
                     + "\nB - [B]uy Mp Potion"
                     + "\n"
                     + "\nQ - Return to Tavern"
-                    + "\n--------------------------------------";
-        }
+                    + "\n--------------------------------------");}
 
-        void displayBuyMPotionView() {
+        
 
-            boolean done = false; //set flag to done
-
-            do {
-                //prompt for and get the players name
-                String menuOption = this.getBuyMPotionOption();
-                if (menuOption.toUpperCase().equals("Q"))  //Player wants to quit
-                    return; //exit game
-
-                //do the requested action and display the next view
-                done = this.doAction(menuOption);
-
-            } while (!done);
-        }
-
-        private String promptMessage;
-
-        private String getBuyMPotionOption() {
-
-
-            Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
-            String value = ""; // Value to be Returned
-            boolean valid = false; // Initialize to not valid
-
-            while (!valid) { // Loop while an invalid value is enter
-                System.out.println ("\n" + this.buyMPotionMenu);
-
-                value = keyboard.nextLine(); //Get next line typed on keyboard
-                value = value.trim(); // trim off leading and trailing blanks
-
-                if (value.length() < 1){ //value is blank
-                    System.out.println("\n Invalid value: Value can not be blank");
-                    continue;
-                }
-                break; // end the loop
-
-            }
-            return value;
-        }
-
-        private boolean doAction(String choice) {
+        
+        @Override
+        public boolean doAction(String choice) {
 
             choice = choice.toUpperCase(); //convert choice to upper case
 

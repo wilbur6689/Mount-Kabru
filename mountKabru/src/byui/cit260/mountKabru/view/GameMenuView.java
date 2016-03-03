@@ -86,6 +86,6 @@ public class GameMenuView extends View {
         HelpMenuView helpMenuView = new HelpMenuView();
         
         //display the help menu view
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
     }
 }

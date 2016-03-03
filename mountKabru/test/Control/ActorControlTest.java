@@ -5,6 +5,7 @@
  */
 package control;
 
+import byui.cit260.mountKabru.control.ActorControl;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

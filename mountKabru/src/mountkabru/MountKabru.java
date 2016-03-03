@@ -5,8 +5,10 @@
  */
 package mountkabru;
 
-import view.StartProgramView;
-import model.*;
+import byui.cit260.mountKabru.model.Game;
+import byui.cit260.mountKabru.model.Hero;
+import byui.cit260.mountKabru.model.Player;
+import byui.cit260.mountKabru.view.StartProgramView;
 
 /**
  *

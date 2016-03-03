@@ -5,6 +5,7 @@
  */
 package control;
 
+import byui.cit260.mountKabru.control.TavernControl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

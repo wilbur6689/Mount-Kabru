@@ -27,8 +27,7 @@ import java.util.Scanner;
 		}
 
 		@Override
-
-		public String getInput();
+		public String getInput() {
 			boolean valid = false;
 			String selection = null;
 

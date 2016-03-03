@@ -73,7 +73,7 @@ public class MainMenuView extends View {
             NewCharView newCharView = new NewCharView();
 
             //Display the newCharView
-            newCharView.displayNewCharView();
+            newCharView.display();
         }
 
         private void loadGame() {

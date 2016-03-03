@@ -6,16 +6,19 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
-import java.util.Scanner;
 import byui.cit260.mountKabru.model.Hero;
 
 /**
  *
  * @author Phill
  */
-public class NewCharView {
+public class NewCharView extends View {
     
-    private String promptMessage;
+   
+    public NewCharView() {
+    super("what is your name, hero?"); 
+    }
+    
     private String addStats1 =  "\n"
                 + "\n--------------------------------------"
                 + "\n|      Create a New Character        |"
@@ -49,58 +52,20 @@ public class NewCharView {
                 + "\nQ - Quit"
                 + "\n--------------------------------------";
     
-    public NewCharView() {
-    this.promptMessage = "what is your name, hero?"; 
-    }
     
-    void displayNewCharView() {
-          
-       boolean done = false; //set flag to done
-       do {
-          //prompt for and get the players name
-          String heroNameChoice = this.getUserInput();
-          if (heroNameChoice.toUpperCase().equals("Q"))  //Player wants to quit
-            return; //exit game 
-          
-          //do the requested action and display the next view
-          done = this.doAction(heroNameChoice);
-          
-       } while (!done);
-    }
     
-
-    private String getUserInput() {
-        
     
-        Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
-        String value = ""; // Value to be Returned
-        boolean valid = false; // Initialize to not valid
-
-        while (!valid) { // Loop while an invalid value is enter
-          System.out.println (this.promptMessage);
-
-          value = keyboard.nextLine(); //Get next line typed on keyboard
-          value = value.trim(); // trim off leading and trailing blanks
-
-          if (value.length() < 1){ //value is blank
-            System.out.println("\n Invalid value: Value can not be blank");
-            continue;
-          }
-          break; // end the loop
-
-        }
-      return value;
-    }
-
-    private boolean doAction(String heroName) {
+    
+    @Override
+    public boolean doAction(String value) {
         
         // create Hero
         
-        Hero hero = new Hero(heroName, "Warrior", 1, 100, 5, 5);
+        Hero hero = new Hero(value, "Warrior", 1, 100, 5, 5);
         
         // ask questions
-        this.promptMessage = this.addStats1;
-        String answer1 = this.getUserInput().toUpperCase();
+        this.displayMessage = this.addStats1;
+        String answer1 = this.getInput().toUpperCase();
         
         if (answer1.equals("M")) {
             hero.setStrength(10);
@@ -113,8 +78,8 @@ public class NewCharView {
             return false;
         }
          
-        this.promptMessage = this.addStats2;
-        String answer2 = this.getUserInput().toUpperCase();
+        this.displayMessage = this.addStats2;
+        String answer2 = this.getInput().toUpperCase();
         
         if (answer2.equals("M")) {
             hero.setStrength(20);
@@ -127,8 +92,8 @@ public class NewCharView {
             return false;
         }
         
-        this.promptMessage = this.addStats3;
-        String answer3 = this.getUserInput().toUpperCase();
+        this.displayMessage = this.addStats3;
+        String answer3 = this.getInput().toUpperCase();
         
         if (answer3.equals("M")) {
             hero.setStrength(30);
@@ -149,7 +114,7 @@ public class NewCharView {
         GameMenuView gameMenuView = new GameMenuView();
         
         //display the game Menu view
-        gameMenuView.GameMenuView();
+        gameMenuView.display();
 
        
         return false;

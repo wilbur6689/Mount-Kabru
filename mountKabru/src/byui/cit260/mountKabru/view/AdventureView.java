@@ -11,8 +11,10 @@ import java.util.Scanner;
  *
  * @author Phill
  */
-public class AdventureView {
-    
+public class AdventureView extends View {
+    public AdventureView() {
+            super( "Hero what the heck is your level");
+        }
     
         private String plainsMenu = "\n"
                 + "\n--------------------------------------"
@@ -61,76 +63,40 @@ public class AdventureView {
                 + "\n(0) - [Q]uit"
                 + "\n--------------------------------------";
 
-        void displayAdventureView() {
-
-           boolean done = false; //set flag to done
-           do {
-              //prompt for and get the players input
-              int userResponse = this.getUserInput();
-              if (userResponse == 0)  //Player wants to quit
-                return; //exit game
-
-              //do the requested action and display the next view
-              done = this.doAction(userResponse);
-
-           } while (!done);
-        }
+       
 
 
-        private String promptMessage;
-
-        public AdventureView() {
-            this.promptMessage = "Hero what the heck is your level";
-        }
+        
             
         
-        private int getUserInput() {
+       
 
-
-            Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
-            int value = 0; // Value to be Returned
-            boolean valid = false; // Initialize to not valid
-
-                while (!valid) { // Loop while an invalid value is enter
-                  System.out.println ("\n" + this.promptMessage);
-
-                  value = keyboard.nextInt(); //Get next line typed on keyboard
-
-
-
-
-                  break; // end the loop
-
-                }
-          return value;
-        }
-
-
-        private boolean doAction(int userResponse) {
+        @Override
+        public boolean doAction(int userResponse) {
 
 
             if (userResponse <=10){
-                this.promptMessage = plainsMenu;
+                this.displayMessage = plainsMenu;
             }
             else if (userResponse <= 20 ) {
-               this.promptMessage = jungleMenu;
+               this.displayMessage = jungleMenu;
             }
             else if (userResponse <= 30) {
-                this.promptMessage = darkForestMenu;
+                this.displayMessage = darkForestMenu;
             }
             else if (userResponse <= 50) {
-                this.promptMessage = highMountainMenu;
+                this.displayMessage = highMountainMenu;
             }
             else {
                 System.out.println("That won't work try again");
             }
 
 
-            
-            int menuChoice = this.getUserInput();
+
+            int menuChoice = this.getInput();
 
             switch (menuChoice) {
-                case 1: // go kill stuff in the plains
+                case : // go kill stuff in the plains
                     this.plainsAdventure();
                     break;
                 case 2: // go kill stuff in the jungle
@@ -156,7 +122,7 @@ public class AdventureView {
             PlainsView plainsView = new PlainsView();
 
             //Display the plains view
-            plainsView.displayPlainsView();
+            plainsView.display();
         }
 
         private void jungleAdventure() {
@@ -164,7 +130,7 @@ public class AdventureView {
             JungleView jungleView = new JungleView();
 
             //Display the plains view
-            jungleView.displayJungleView();
+            jungleView.display();
         }
 
         private void forestAdventure() {
@@ -172,7 +138,7 @@ public class AdventureView {
             DarkForestView darkForestView = new DarkForestView();
 
             //Display the plains view
-            darkForestView.displayForestView();
+            darkForestView.display();
         }
 
         private void mountainAdventure() {
@@ -180,7 +146,7 @@ public class AdventureView {
             HighMountainView highMountainView = new HighMountainView();
 
             //Display the plains view
-            highMountainView.displayMountainView();
+            highMountainView.display();
         }
 
       

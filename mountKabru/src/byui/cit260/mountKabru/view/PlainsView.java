@@ -5,18 +5,16 @@
  */
 package byui.cit260.mountKabru.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Phill
  */
-public class PlainsView {
+public class PlainsView extends View {
     
-    private final String plainsMenu;
+
     
     public PlainsView() {
-    this.plainsMenu = "\n"
+    super( "\n"
                 + "\n---------------------------------------"
                 + "\n|  You jog outside of town a little   |"
                 + "\n|  ways and find the plains. You Put  |"
@@ -27,50 +25,13 @@ public class PlainsView {
                 + "\nP - use a [P]otion"
                 + "\nI - check your [I]nventory"
                 + "\nQ - [Q]uit back to town"
-                + "\n--------------------------------------";
+                + "\n--------------------------------------");
     }
     
-    void displayPlainsView() {
-          
-       boolean done = false; //set flag to done
-       do {
-          //prompt for and get the players name
-          String menuOption = this.getPlainsMenuOption();
-          if (menuOption.toUpperCase().equals("Q"))  //Player wants to quit
-            return; //exit game 
-          
-          //do the requested action and display the next view
-          done = this.doAction(menuOption);
-          
-       } while (!done);
-    }
+   
     
-    private String promptMessage;
-
-    private String getPlainsMenuOption() {
-        
-    
-        Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
-        String value = ""; // Value to be Returned
-        boolean valid = false; // Initialize to not valid
-
-        while (!valid) { // Loop while an invalid value is enter
-          System.out.println ("\n" + this.plainsMenu);
-
-          value = keyboard.nextLine(); //Get next line typed on keyboard
-          value = value.trim(); // trim off leading and trailing blanks
-
-          if (value.length() < 1){ //value is blank
-            System.out.println("\n Invalid value: Value can not be blank");
-            continue;
-          }
-          break; // end the loop
-
-        }
-      return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); //convert choice to upper case
         
@@ -98,7 +59,7 @@ public class PlainsView {
         //create the Attack Monster view object
         AttackMonsView attackMonsView = new AttackMonsView();
         //display the Attack Monster view
-        attackMonsView.displayAttackMonsView();
+        attackMonsView.display();
     }
 
     private void usePotion() {
@@ -111,6 +72,6 @@ public class PlainsView {
         //create the Attack Monster view object
         InventoryView inventoryView = new InventoryView();
         //display the Attack Monster view
-        inventoryView.displayInventoryView();
+        inventoryView.display();
     }
 }

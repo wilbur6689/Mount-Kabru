@@ -61,7 +61,7 @@ public class GameMenuView extends View {
         AdventureView adventureView = new AdventureView();
         
         //display the adventure view
-        adventureView.displayAdventureView();
+        adventureView.display();
     }
 
     private void goTavern() {

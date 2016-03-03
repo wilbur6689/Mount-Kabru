@@ -12,12 +12,12 @@ import java.util.Scanner;
  *
  * @author Phill
  */
-public class TavernView {
+public class TavernView extends View{
     
-    private final String tavernMenu;
+   
     
     public TavernView() {
-    this.tavernMenu = "\n"
+            super ("\n"
                 + "\n--------------------------------------"
                 + "\n|  You meander in the tavern looking |"
                 + "\n|  as tough as you can.               |"  
@@ -27,53 +27,18 @@ public class TavernView {
                 + "\nH - buy a [H]ealth potion"
                 + "\nM - buy a [M]ana potion"
                 + "\nQ - return to town"
-                + "\n--------------------------------------";
-    }
+                + "\n--------------------------------------");}
     
-    void displayTavernView() {
-          
-       boolean done = false; //set flag to done
-       do {
-          //prompt for and get the players name
-          String menuOption = this.getTavernMenuOption();
-          if (menuOption.toUpperCase().equals("Q"))  //Player wants to quit
-            return; //exit game 
-          
-          //do the requested action and display the next view
-          done = this.doAction(menuOption);
-          
-       } while (!done);
-    }
+    
     
     private String promptMessage;
 
-    private String getTavernMenuOption() {
+    @Override
+    private boolean doAction(String value) {
         
-        Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
-        String value = ""; // Value to be Returned
-        boolean valid = false; // Initialize to not valid
-
-        while (!valid) { // Loop while an invalid value is enter
-          System.out.println ("\n" + this.tavernMenu);
-
-          value = keyboard.nextLine(); //Get next line typed on keyboard
-          value = value.trim(); // trim off leading and trailing blanks
-
-          if (value.length() < 1){ //value is blank
-            System.out.println("\n Invalid value: Value can not be blank");
-            continue;
-          }
-          break; // end the loop
-
-        }
-      return value;
-    }
-
-    private boolean doAction(String choice) {
+        value = value.toUpperCase(); //convert choice to upper case
         
-        choice = choice.toUpperCase(); //convert choice to upper case
-        
-        switch (choice) {
+        switch (value) {
             case "T": // go talk to the tavern owner
                 this.tavernOwner();
                 break;

@@ -13,87 +13,85 @@ package view;
  */
 public class MainMenuView extends View {
     
-    private final String menu;
-    
-    public MainMenuView() {
-    super ("\n"
-                + "\n|----------------------------------------|"
-                + "\n|                                   ___  |"
-                + "\n|                _                 /   i |"
-                + "\n|             __|_|______         /     i|"
-                + "\n|   __       |      _ _  |    ___|       |"
-                + "\n|  /  `_     |  _  |_|_| |   |   |       |"
-                + "\n| |  _  |    | | | |_|_| |   |___|    _  |"
-                + "\n|_|_|_|_|____|_|_|_______|___|_|_|___|_|_|"
-                + "\n|                                        |"
-                + "\n|             ~~~Main Menu~~~            |"
-                + "\n|                                        |"
-                + "\n|----------------------------------------|"
-                + "\n   N - Start a new game"
-                + "\n   L - Load Game"
-                + "\n   S - Save Game"
-                + "\n   H - Get Help on how to play the game"
-                + "\n   Q - Quit"
-                + "\n------------------------------------------");
-    }
+       public MainMenuView() {
+                 super("\n"
+                    + "\n|----------------------------------------|"
+                    + "\n|                                   ___  |"
+                    + "\n|                _                 /   i |"
+                    + "\n|             __|_|______         /     i|"
+                    + "\n|   __       |      _ _  |    ___|       |"
+                    + "\n|  /  `_     |  _  |_|_| |   |   |       |"
+                    + "\n| |  _  |    | | | |_|_| |   |___|    _  |"
+                    + "\n|_|_|_|_|____|_|_|_______|___|_|_|___|_|_|"
+                    + "\n|                                        |"
+                    + "\n|             ~~~Main Menu~~~            |"
+                    + "\n|                                        |"
+                    + "\n|----------------------------------------|"
+                    + "\n   N - Start a new game"
+                    + "\n   L - Load Game"
+                    + "\n   S - Save Game"
+                    + "\n   H - Get Help on how to play the game"
+                    + "\n   Q - Quit"
+                    + "\n------------------------------------------");}
     
     
     
-    private String promptMessage;
+    
+        private String promptMessage;
 
-    
 
-    private boolean doAction(String choice) {
-        
-        choice = choice.toUpperCase(); //convert choice to upper case
-        
-        switch (choice) {
-            case "N": // create and start a new game
-                this.startNewGame();
-                break;
-            case "L": // load players game
-                this.loadGame();
-                break;
-            case "S": //save a players game
-                this.saveGame();
-                break;
-            case "H": //help menu
-                this.displayHelpMenu();
-                break;
-            default:
-                System.out.println("\n*** Invalid selection *** Try again");
-                
-                         
+        @Override
+        private boolean doAction(String value) {
+
+            value = value.toUpperCase(); //convert choice to upper case
+
+            switch (value) {
+                case "N": // create and start a new game
+                    this.startNewGame();
+                    break;
+                case "L": // load players game
+                    this.loadGame();
+                    break;
+                case "S": //save a players game
+                    this.saveGame();
+                    break;
+                case "H": //help menu
+                    this.displayHelpMenu();
+                    break;
+                default:
+                    System.out.println("\n*** Invalid selection *** Try again");
+
+
+            }
+            return false;
         }
-        return false;
-    }
 
-    private void startNewGame() {
-               
+        private void startNewGame() {
 
-        //Create newCharView object
-        NewCharView newCharView = new NewCharView();
-                
-        //Display the newCharView
-        newCharView.displayNewCharView();
-    }
 
-    private void loadGame() {
-        System.out.println("*** loadGame function called ***");
-    }
+            //Create newCharView object
+            NewCharView newCharView = new NewCharView();
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
+            //Display the newCharView
+            newCharView.displayNewCharView();
+        }
 
-    private void displayHelpMenu() {
-        
-        // create helpHelpMenuView object
-        HelpMenuView helpMenuView = new HelpMenuView();
-        
-        //display the help menu view
-        helpMenuView.displayHelpMenuView();
-    }
+        private void loadGame() {
+            System.out.println("*** loadGame function called ***");
+        }
+
+        private void saveGame() {
+            System.out.println("*** saveGame function called ***");
+        }
+
+        private void displayHelpMenu() {
+
+            // create helpHelpMenuView object
+            HelpMenuView helpMenuView = new HelpMenuView();
+
+            //display the help menu view
+            helpMenuView.displayHelpMenuView();
+        }
 
     
     

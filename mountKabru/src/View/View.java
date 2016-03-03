@@ -4,49 +4,54 @@ import java.util.Scanner;
 
 	public abstract class View implements ViewInterface {
 
-		Scanner keyboard = new Scanner(System.in);
 		protected String displayMessage;
+                
+                public View(String message) {
+                    this.displayMessage = message;
+                }
+                
+                @Override
+                public void display() {
+          
+                    boolean done = false; //set flag to done
+                    do {
+                       //prompt for and get the players name
+                       String value = this.getInput();
+                       if (value.toUpperCase().equals("Q"))  //Player wants to quit
+                         return; //exit game 
 
-		public View(String message) {
-			this.displayMessage = message;
-		}
+                       //do the requested action and display the next view
+                       done = this.doAction(value);
 
+                    } while (!done);
+                }
+                
+                @Override
+                public String getInput() {
+        
+    
+                    Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
+                    boolean valid = false; // Initialize to not valid
+                    String value = null; // Value to be Returned
+                    
 
-		@Override
-		public void display() {
-			String value = "";
-			boolean done =false;
+                    while (!valid) { // Loop while an invalid value is enter
+                      System.out.println ("\n" + this.displayMessage);
 
-			do {
-				System.out.println(this.displayMessage);
-				value = this.getInput();
-				done = this.doAction(value);
+                      value = keyboard.nextLine(); //Get next line typed on keyboard
+                      value = value.trim(); // trim off leading and trailing blanks
 
-			}
-			while (!done);
-		}
+                      if (value.length() < 1){ //value is blank
+                        System.out.println("\n Invalid value: Value can not be blank");
+                        continue;
+                      }
+                      break; // end the loop
 
-		@Override
-		public String getInput() {
-			boolean valid = false;
-			String selection = null;
-
-			while (!valid) {
-				//get the value entered from the keyboard
-				selection = keyboard.nextLine();
-				selection = selection.trim();
-
-				if (selection.length() < 1) {//blank value entered
-					System.out.println("You must enter a value");
-					continue;
-
-				}
-
-				break;
-			}
-
-			return selection; //return the name
-
-
+                    }
+                  return value;
+                }
+                
+                
+                
 	}
 

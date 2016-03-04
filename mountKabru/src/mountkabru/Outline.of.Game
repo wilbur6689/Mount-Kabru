@@ -1,0 +1,590 @@
+Phillip Willis
+Orson Badger
+
+Display a Welcome Screen (banner, introduction to the game, user name prompt)
+____________________________________
+***************************************************
+~~Welcome to the Mount Kabru Game!!!!!~~
+
+*********************************************************************
+
+The point of the game will be to protect the town of kabru from evil monsters in the surrounding lands. The end goal will be to find the mysterious master that created the monsters and destroy him.
+Enter your name: _______________
+ __________________________________
+**********************************************
+Welcome to Mount Kabru, *player name*!
+**********************************************
+
+Main Menu,
+[ N ] - New Game
+[ S ] - Save Game
+[ L ] - Load Game
+[ H ] - Help!
+[ E ] - Exit
+
+
+New game – starts a new adventure and asks the player to create a new character.
+Save Game - Gives the player the opportunity to save his progress in the game to be loaded at a future date
+Load game - this allows the player to pick up where they left off in the game.
+Help - This allows the player to open the help menu for a detailed list of commands.
+Exit - This will cause the program to quit.
+
+Help Menu
+There will be a help menu throughout the game in the various different menus. Each help menu will list the same options as
+ the menu where the help menu was accessed. After listing the options it will give a brief explanation of each choice.
+
+
+The Story -
+	Mount Kabru will be a Text-based RPG that will take players on an adventure through the lowest depths of the plains
+ to the highest peaks in the mountains. The story begins at the top of the mountain where the player will meet an old wise 
+ being called the “Mysterious Master”. The player is then asked several questions by the Mysterious Master. Depending on what 
+ the player chooses,the answers will assign the player a class: warrior, paladin, wizard.  This way a player may slightly 
+ customize their character.
+
+Create a new Character:
+	Three questions
+If a large tree fell on you and you were trapped, would you:
+[ M ] 	push with all your might?
+[ W ]	use your will to think it away?
+
+If you are hanging on the edge of a cliff, would you:
+[ M ] 	fall, knowing you're strong enough to not perish?
+[ W ] 	use your will to drift to the top?
+
+   3.	If you are being enticed by delicious pastries, would you:
+[ M ]  	Shove down as much as you can showing off your might?
+[ W ]	use your will to resist the temptation to indulge?
+
+ 4. 	The fourth question will be based on the assigned class:
+Warrior(all might): Warrior, what is the first rule of Fight club? player gives any answer. Response: hmmm… interesting.
+Paladin(half might, half will): Paladin, what color is the round side of a borgery? player gives answer. Response: Hmmm… I have never seen one of those before.
+
+Wizard(all will): Wizard, The famous wizard RathMar the Conqueror had a famous spell book, what did he call this book?
+Player gives any answer. Response: RathMar was a hamster, you idiot.
+
+The player is then thrown down off the mountain into a town called Wilbur. The people of Wilbur have suffered much due to 
+the wild lands surrounding the town. They know of an ancient folklore passed down through the generations that one individual 
+will rise up and defend the town from the evil monsters. The player will wake up in the tavern, not knowing how he got there, 
+and will talk to the barkeeper. The barkeeper will give the player some guidance and knowledge of how the game works. 
+The player will then continue on his adventure, fulfilling his destiny.
+
+As the player goes on adventures, killing monsters, and leveling up his character, he will one day return to the top 
+of the mountain to once again face the Mysterious Master. If the player is able to defeat the Mysterious Master, he will 
+become the new master. As the new master, the player will find a new hero to protect the town of wilbur.
+
+Game menu (town menu)
+ 	Welcome to the town of Kabru
+
+[ A ] - Adventure - for more information see the “Adventure” section.
+[ T ] - Tavern
+[ B ] - Blacksmith
+[ H ] - Help Menu
+[ Q ] - Quit
+
+The Tavern:
+The player can choose to accept or deny any quest. there may be anywhere from 2-4 quests available. Each quest will only be available for a certain level range, once the player advances past that level a new quest will replace it. (example: Quest #7 will only be available between character levels 6 and levels 9) Each quest will have a reward of shillings. The player may also go here and pay a small fee to sleep for the night. This will restore the health of the player to maximum. The player will also have the opportunity to buy Health and/or Mana potions that the player will be able to use out in the field of battle.
+
+[ T ] - Talk to Tavern owner
+[ S ] - Sleep
+[ H ] - Buy Health Potion
+[ M ] - Buy Mana Potion
+[ R ] - Return to Town
+
+
+Talk to Tavern Owner: This is used to gather information on where to go or listen to a bunch of mumbo jumbo as you level up.
+Sleep: This will allow the player to rest and fully recover. Costs 20 Shillings
+Buy Mana Potion: This will allow the player to gather a potion to restore mana that is lost.
+Available Quests:  Lists the 2 available quests per title.
+Return To Town: This allows the player to return to town.
+
+“Blacksmith”
+
+The blacksmith will allow the player to increase their armor and weapon bonus.
+The shilling price will start at 20 then doubling as Titles are increased.
+
+
+
+[ A ] -Armor Bonus
+[ W ] - Weapon Bonus
+[ R ] - Return to Town
+
+Armor Bonus: Pay shillings for Armor bonus.  +2 to defence
+Weapon Bonus:Pay shillings for Weapon bonus. +2 to attack
+Return To Town: This allows the player to return to town.
+
+“Adventure” - map of the mountain shaped like a triangle, see map section.
+(the underlined part of the description may change depending on the title of the character. the following text will be seen when the character is at the highest level)
+
+You begin to wonder outside of town looking for trouble. You come across a sign with 4 locations.  The first location says “The Plains - ½ mile”. The second location says “The Jungle - 12 Miles”. The third location says “The Dark Forest - 24 miles”. The last location says “The High Mountains - 43 miles”
+
+[ P ] - Plains (levels 1 - Level 30)
+[ J ] - Jungle (Level 11 - Level 40)
+[ F ] - Dark Forest (Level 21 - Level 40)
+[ M ] - High Mountains (Level 41 - Level 50)
+
+Plains -
+Monsters have a chance to attack with magical powers depending on level
+Monster types: Giant Ant, gnomes, gremlins, wolves, evil rabbits, Kabold, banshee, goblin
+
+Jungle -
+Monsters have a chance to attack with poison
+Monster types: Flies, frogs, giant spiders, curupira, snakes, Manticore, black panthers, gators.
+
+High Forest -
+Monsters have high defense and average damage.
+Monster types: Mountain Lion, Elves, Satyr, Centaurs, Dryad, leshy, Ent, werewolves,
+
+Mountain Peaks -
+Monsters are all around very strong and high melee damage.
+Monster types: Bear, Mountain Troll, Hydra, Griffin, Golem, Giant, Wraith, Demon, Master
+
+
+On Adventure
+You enter the * location name * and feel ready for battle.
+
+[ M ] - Search for Monster
+[ P ] - Use Potion
+[ I ] - Inventory
+[ R ] - Return to town
+
+Search for Monster: This option allows the player to look for a monster to kill. Killing monsters give 
+                    the player experience points
+Use Potion: The player may select a potion from their inventory
+Inventory: Inventory Lists all of the Available Items
+Return To Town: This allows the player to return to town.
+
+
+Monster Attacks -
+You have been attacked by a * monster name *. Prepare to attack or run away.
+[ A ] - Attack
+[ D ] - Defend
+[ C ] - Cast Spell
+[ R ] - Run away
+
+
+Attack: The player makes a melee attack. the damage amount will be based on strength and attack.
+Defend: The player defends against an upcoming attack. This will increase the player's dexterity for
+        this fight and will reset to the original when the fight is over.
+
+Cast Spell: The player makes a spell attack. the damage amount will be based on mana and attack.
+Run away: Player takes a chance to run away. 60% chance of success.
+
+3 complex equations
+
+chance to miss = dexterity / 100
+melee damage = (attack + strength - defence of opponent) + a random number between -2 and 2
+Spell damage = (attack + mana - defence of opponent) + a random number between -4 and 4
+Potion effects = current stat points + restored points
+
+
+Calculation of response from tavern owner will have 10 useful responses. once these responses have been displayed in order the tavern owner will have 10 silly responses that mean nothing.
+
+just a brief example of something
+if charLevel (less than or equal to <=) 10 {
+	response comes out of a loop and will cycle through the 10 responses
+else use this equation
+	there will be an array of the first 100 numbers of pie. the computer will pick a random number between 1 and 100, say 34 and assign a variable the value at the index 34. the computer will take that variable(1 thru 9) and match it to a prewritten response.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maps (Adventure map)					                             8
+								         88 8       888
+		 			       /-----------\	        888888 88 88888888
+A	8	        	Peak           |     X     |		  88888888888888
+      8 888			    /-------------------------------\
+B 	               High Forest  |    X     ||    X    ||    X    |
+                           /----------------------------------------------------\
+C	   	   Jungle |    X   ||    X     ||    X    ||    X    ||    X    |
+                 /--------------------------------------------------------------------------\
+D	 Plains	|    X   ||    X   ||    X     ||    X    ||    X    ||    X    ||    X     |
+	/-----------------------------------------------------------------------------------------\
+		     1         2          3          4          5          6           7        |
+
+The map represents the mountain the player will be exploring. The X marks represent places that are not accessible to the player. As the player increases in level, more locations will be available for him to explore. The player will begin at the bottom left of the mountain and continue upwards from left to right. The player will enter the unlocked coordinates via using ex. A 2 The player will then travel to that location. The rest of the map that is not a navigable place will return will an error message and another prompt to travel. When a place unlocks it will clear the X and make it a V.
+
+
+
+
+
+3 lists –
+            	Character stats list
+
+Character Name:	player chooses name
+Class:			Player chooses class
+Level:			player starts at level 1
+Experience: 		Player starts with 0 Experience
+Hitpoints: 		Player starts with 15 Hitpoints
+Player starts with 5 of the following:
+Attack
+Defence
+Strength
+Dexterity
+Mana
+
+
+		Enemy stats list
+Name:				This is the name of the enemy
+Level:				This is the Level of the Enemy
+HP:				This is how many Hitpoints the Enemy has.
+
+
+            	List of potions
+Here is listed all of the potions that will be available throughout the game.
+
+ Peasant Health Potion		Restore 5 HP
+ Novice Health Potion			Restore 20 HP
+ Adventurer Health Potion		Restore  40 HP
+ Advanced Health Potion		Restore 60 HP
+ Master Health Potion				Restore 140 HP
+
+
+List of monsters killed
+
+This list will show all of the enemies that you have slayed and sent to the underworld. This will be listed in alphabetical order in the respected location
+
+Plains:
+Giant Ant
+Gnomes
+Gremlins
+Wolves
+Evil Rabbits
+Kabold
+Banshee
+Goblin
+
+Jungle:
+Flies
+Frogs
+Giant Spiders
+Curupira
+Snakes
+Manticore
+Black Panthers
+Gators
+
+
+High Forest:
+Mountain Lion
+Elves
+Satyr
+Centaurs
+Dryad
+Leshy
+Ent
+Werewolves
+
+Mountain Peak:
+Dragon
+Mountain Troll
+Hydra
+Griffin
+Golem
+Giant
+Wraith
+Demon
+Master
+
+
+
+
+
+Save, Load game:
+
+
+            Save Game: This will allow the player to save their current game to a file.
+
+Load Game: This will allow the player return to their previous stage of their amazing adventure.
+
+
+Error message:
+
+Throughout the game the player will be asked for certain inputs from the keyboard. If they enter something incorrect it will display the message.
+
+“YOU FOOL DO YOU WISH TO BRING THE WRATH RothMar the Conqueror!? Please enter a valid response from the choices above!”
+
+ The player will then be shown the previous menu to choose a correct response.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************************************************************************
+Example of the game running:
+************************************************************************************************************************
+
+The game starts up and then asks for the person that is playing to enter their User Name
+
+If they do not have a User Name, they will be asked to create one. These are the 2 Possibilities
+----------------------------------------------------------------------
+Enter Desired User Name:
+----------------------------------------------------------------------
+OR
+======================================================================
+Enter your User Name:
+======================================================================
+
+
+The Player would then input their new name or current name.
+
+
+After the player has entered their User Name, they would have a menu that would then display to them this menu
+
+
+        **********************************************
+        Welcome to Mount Kabru, *player name*!
+        **********************************************
+
+        Main Menu,
+        [ N ] - New Game
+        [ S ] - Save Game
+        [ L ] - Load Game
+        [ H ] - Help!
+        [ E ] - Exit
+
+
+*The Game would then search for an old saved game or create a new saved game.
+    **The reason for this is because at the begging of the experience you are not going to be saving.
+        Therefore a possible Function would be
+
+                   menuInputError();
+                        This would display the text here
+
+                        **"How do you think that you can possibly save nothing? That is just not possible."**
+
+//The Saved game would then be output into a file that could be loaded upon return to game
+
+       Possible functions for this are:
+
+            loadSave();
+                This function is meant to locate the file to continue playing their adeventure.
+
+            createNewGame();
+                This Function would be used to create a new game.
+                        ** A New game is one that starts the player with nothing except the bare essentials.**
+
+            obtainHelp();
+                This Functions purpose is to display the full Help Menu
+
+            saveCurrent();
+                This Functions purpose is to override the createdNewGame();
+
+                    **Basically this rewrites over the Users game file to always be the most up to date play through their is.**
+
+
+After the player loads or creates a game they would have two possible outcomes to display
+
+[Option 1]
+
+    if (createNewGame(); == true then display Create New Game menu.)
+
+        Create New Game menu then would display and give the User these options
+
+        ********************************
+        Please Create a New Hero:
+        ********************************
+
+                createNewHero();
+                    This Functions purpose is to allow the player to create a new Hero to play as.
+                        they have the possibilty to be of a few classes. Warrior, Wizard and Paladin.
+
+    The PLayer would create a name for their hero
+
+
+    The Player would then have to Answer these questions.
+
+        There are Three possible outcomes for the player
+
+            If they choose all the questions here about regarding strength they would the be assigned the class of [Warrior]
+
+                Warrior is a Attribute of the class createNewHero();   Or is it? I will have to talk to Phillip about this.
+                    The purpose of this function is to create a new Hero with the player Class of Warrior
+
+                        The Warrior has More Strength
+                        Still it needs its own functions to set the attributes of a Warrior
+
+    The Way that a Paladin is created is if their are two answers for either Strength or Will.
+            Paladin is an Attribute of the createNewHero(); function
+                They have Mana and Strength
+
+                    Still it needs its own functions to set the attributes of a
+
+    Now the last possibility for these Question answer is that of WIll
+
+    If a PLayer answers all the Questions with will as an answer they will be assigned the class of Wizard
+        Wizard is an attribute of createNewHero();
+
+               Still it needs its own functions to set the attributes of a Wizard.
+
+
+
+
+        	3 questions
+
+
+        If a large tree fell on you and you were trapped, would you:
+        [ M ] 	push with all your might?         [Will]
+        [ W ]	use your will to think it away?   [Strength]
+
+        If you are hanging on the edge of a cliff, would you:
+        [ M ] 	fall, knowing you're strong enough to not perish? [Strength]
+        [ W ] 	use your will to drift to the top?                [Will]
+
+           3.	If you are being enticed by delicious pastries, would you:
+        [ M ]  	Shove down as much as you can showing off your might? [Strength]
+        [ W ]	use your will to resist the temptation to indulge?    [Will]
+
+
+
+
+         4. 	The fourth question will be based on the assigned class:
+
+
+        Warrior(all might): Warrior, what is the first rule of Fight club? player gives any answer. Response: hmmm… interesting.
+
+
+        Paladin(half might, half will): Paladin, what color is the round side of a burglar? player gives answer. Response: Hmmm… I have never seen one of those before.
+
+        Wizard(all will): Wizard, The famous wizard RathMar the Conqueror had a famous spell book, what did he call this book?
+
+            Player gives any answer. Response: RathMar was a hamster, you idiot.
+
+This will use a function to determine the questions asked after number 3. Number 4 will be affected by what class of hero is created.
+
+
+
+[Option 2]
+
+If the player did not need to create a new character then they would be taken Directly to the Main menu of the town.
+
+
+Game menu (Town menu)
+ 	Welcome to the town of Kabru
+
+[ A ] - Adventure - for more information see the “Adventure” section.
+[ T ] - Tavern
+[ B ] - Blacksmith
+[ H ] - Help Menu
+[ Q ] - Quit
+
+
+// Maybe their needs to be more for the player to do because right now this is a very limited menu and it seems kind of boring\\
+
+
+The player would then input their command into the keyboard.
+
+
+
+
+
+
+*****************************************************************************************************************************
+
+
+
+Presentation:
+1.	We learned about Java and made a simple program
+    a.	When each different types of Java selection statements is to be used and how explain how the 
+        selection statements work. 
+
+        1.	If, if-else, if-else-if ladder, switch
+        2.	https://content.byui.edu/file/012fc4e7-2014-4f9d-8fd5-a60f1421c096/1/Developing%20the%20View%20Layer.pdf 
+    b.	CODE WE WILL USE:
+        1.	Orson:  AdventureView
+        2.	Phillip: NewCharView
+
+2.	We learned about and created UML Class Diagrams for the model layer
+
+3.	We developed the model layer
+
+    a.	Classes made:
+    b.	concepts of the scope and lifespan of variables
+    c.	CODE TO USE: StartProgramView.java
+
+4.	We Designed and made a UML class diagram for the control Layer
+    a.	Use an example of code to explain the following: (TavernControl)
+    b.	7 steps of the functional development process used to design and develop the function.
+        1.	Define - clearly define the problem that you are solving
+        2.	Text Matrix – 
+        3.	Outline the solution - 
+        4.	Test the Algorithm – 
+        5.	Translate the algorithm in to code
+        6.	Run the test cases to verify that the code is working as specified 
+        7.	Deployment – Deploy the changes to the repository.
+
+
+5.	We developed the control layer
+
+    a.	Classes made:
+    b.	Example of code:
+    c.	Code of the Unit Test:
+        1.	Orson: walk through the meleeDamage test
+        2.	Phillip: walk through the spellDamage test. (refer to complexManaEquation.docx)
+
+6.	We designed and Developed the view Layer
+
+    a.	Classes made:
+    b.	Example of code: We have to create an example of code to show the following:
+    c.	how arguments are passed by value and passed by reference.
+         1.	By reference – use an alias of the object. Any changes made will effect the original object.
+         2.	By value – makes a copy of the original object and the original object cannot be changed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

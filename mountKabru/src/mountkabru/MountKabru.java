@@ -28,7 +28,7 @@ public class MountKabru {
         // TODO code application logic here
         
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        startProgramView.display();
             
           
         

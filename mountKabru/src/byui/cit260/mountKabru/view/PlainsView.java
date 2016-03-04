@@ -27,9 +27,9 @@ public class PlainsView extends View {
                 + "\nQ - [Q]uit back to town"
                 + "\n--------------------------------------");
     }
-    
-   
-    
+
+
+
     @Override
     public boolean doAction(String choice) {
         

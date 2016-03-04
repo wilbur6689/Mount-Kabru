@@ -5,117 +5,54 @@
  */
 package byui.cit260.mountKabru.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Phill
  */
 public class AdventureView extends View {
     public AdventureView() {
-            super( "Hero what the heck is your level");
+        super("\n"
+                + "\n--------------------------------------"
+                + "\n|  You wander out of town and try to |"
+                + "\n|  decide where to fight next...     |"
+                + "\n--------------------------------------"
+                + "\n(P) - Fight in the Plains"
+                + "\n(J) - Fight in the Jungle"
+                + "\n(F) - Fight in the dark Forest"
+                + "\n(M) - Fight in the high Mountains"
+                + "\n(Q) - [Q]uit"
+                + "\n--------------------------------------");
+    }
+
+
+
+    @Override
+    public boolean doAction(String choice) {
+
+        choice = choice.toUpperCase(); //convert choice to upper case
+
+        switch (choice) {
+            case "P": // go kill stuff in the Jungle
+                this.plainsAdventure();
+                break;
+            case "J": // use a potion
+                this.jungleAdventure();
+                break;
+            case "F": // view your inventory
+                this.forestAdventure();
+                break;
+            case "M": // view your inventory
+                this.mountainAdventure();
+                break;
+
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+
+
         }
-    
-        private String plainsMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(1) - Fight in the Plains"
-                + "\n???"
-                + "\n???"
-                + "\n???"
-                + "\n(0) - Quit"
-                + "\n--------------------------------------";
-        
-        private String jungleMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(1) - Fight in the Plains"
-                + "\n(2) - Fight in the Jungle"
-                + "\n???"
-                + "\n???"
-                + "\n(0) - Quit"
-                + "\n--------------------------------------";
-        
-        private String darkForestMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(1) - Fight in the Plains"
-                + "\n(2) - Fight in the Jungle"
-                + "\n(3) - Fight in the dark Forest"
-                + "\n???"
-                + "\n(0) - [Q]uit"
-                + "\n--------------------------------------";
-        private String highMountainMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(1) - Fight in the Plains"
-                + "\n(2) - Fight in the Jungle"
-                + "\n(3) - Fight in the dark Forest"
-                + "\n(4) - Fight in the high Mountains"
-                + "\n(0) - [Q]uit"
-                + "\n--------------------------------------";
+        return false;
+    }
 
-       
-
-
-        
-            
-        
-       
-
-        @Override
-        public boolean doAction(int userResponse) {
-
-
-            if (userResponse <=10){
-                this.displayMessage = plainsMenu;
-            }
-            else if (userResponse <= 20 ) {
-               this.displayMessage = jungleMenu;
-            }
-            else if (userResponse <= 30) {
-                this.displayMessage = darkForestMenu;
-            }
-            else if (userResponse <= 50) {
-                this.displayMessage = highMountainMenu;
-            }
-            else {
-                System.out.println("That won't work try again");
-            }
-
-
-
-            int menuChoice = this.getInput();
-
-            switch (menuChoice) {
-                case : // go kill stuff in the plains
-                    this.plainsAdventure();
-                    break;
-                case 2: // go kill stuff in the jungle
-                    this.jungleAdventure();
-                    break;
-                case 3: // go kill stuff in the forest
-                    this.forestAdventure();
-                    break;
-                case 4: // go kill stuff in the mountains
-                    this.mountainAdventure();
-                    break;
-
-                default:
-                    System.out.println("\n*** Invalid selection *** Try again");
-
-
-            }
-            return false;
-        }
 
         private void plainsAdventure() {
             //Create plains view object
@@ -149,5 +86,44 @@ public class AdventureView extends View {
             highMountainView.display();
         }
 
-      
-}
+    }
+
+
+
+/*private String plainsMenu = "\n"
+                + "\n--------------------------------------"
+                + "\n|  You wander out of town and try to |"
+                + "\n|  decide where to fight next...     |"
+                + "\n--------------------------------------"
+                + "\n(P) - Fight in the Plains"
+                + "\n???"
+                + "\n???"
+                + "\n???"
+                + "\n(Q) - Quit"
+                + "\n--------------------------------------";
+        
+        private String jungleMenu = "\n"
+                + "\n--------------------------------------"
+                + "\n|  You wander out of town and try to |"
+                + "\n|  decide where to fight next...     |"
+                + "\n--------------------------------------"
+                + "\n(P) - Fight in the Plains"
+                + "\n(J) - Fight in the Jungle"
+                + "\n???"
+                + "\n???"
+                + "\n(Q) - Quit"
+                + "\n--------------------------------------";
+        
+        private String darkForestMenu = "\n"
+                + "\n--------------------------------------"
+                + "\n|  You wander out of town and try to |"
+                + "\n|  decide where to fight next...     |"
+                + "\n--------------------------------------"
+                + "\n(P) - Fight in the Plains"
+                + "\n(J) - Fight in the Jungle"
+                + "\n(F) - Fight in the Dark Forest"
+                + "\n???"
+                + "\n(Q) - [Q]uit"
+                + "\n--------------------------------------";*/
+
+

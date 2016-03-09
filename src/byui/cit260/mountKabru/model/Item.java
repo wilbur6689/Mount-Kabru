@@ -7,22 +7,23 @@ import java.io.Serializable;
  */
 public enum Item implements Serializable{
 
-    stick("A scary looking Stick"),
-    kukri("This is a short stubby looking sword, to be used for removeing your head"),
-    battleAxe("This thing is sharp enough to kill you just looking at it"),
-    scythe("I dont think this was used to harvest grain... just sayin"),
-    leatherArmor("light weight, sturdy, and smells good, what more could you want?"),
-    scaleMail("A little more protection for not a bad price"),
-    carbonFiber("strong and light weight, also makes you look like batman"),
-    dragonBoneArmor("By far the best armor on the market, just dont let smog see you wearing it"),
-    healthPotion10("Heals you for 10 hitpoints"),
-    healthPotion20("Heals you for 20 hitpoints"),
-    healthPotion30("Heals you for 30 hitpoints"),
-    healthPotion40("Heals you for 40 hitpoints"),
-    manaPotion10("Restores 10 Mana Points"),
-    manaPotion20("Restores 20 Mana Points"),
-    manaPotion30("Restores 30 Mana Points"),
-    manaPotion40("Restores 40 Mana Points");
+    stick("A scary looking Stick",10,0,300,200,0,0),
+    kukri("This is a short stubby looking sword, to be used for removeing your head",20,0,1000,800,0,0),
+    battleAxe("This thing is sharp enough to kill you just looking at it", 30,0,3000,2500,0,0),
+    scythe("I dont think this was used to harvest grain... just sayin",40,0,7000,5500,0,0),
+    leatherArmor("light weight, sturdy, and smells good, what more could you want?",0,10,300,200,0,0),
+    scaleMail("A little more protection for not a bad price",0,20,1000,800,0,0),
+    carbonFiber("strong and light weight, also makes you look like batman",0,30,3000,2500,0,0),
+    dragonBoneArmor("By far the best armor on the market, just dont let smog see you wearing it",0,40,7000,5500,0,0),
+    manaPotion10("Restores 10 Mana Points",0,0,60,0,10,0),
+    manaPotion20("Restores 20 Mana Points",0,0,110,0,20,0),
+    manaPotion30("Restores 40 Mana Points",0,0,200,0,30,0),
+    manaPotion40("Restores 80 Mana Points",0,0,380,0,40,0),
+    healthPotion10("Heals you for 10 hitpoints",0,0,60,0,0,10),
+    healthPotion20("Heals you for 20 hitpoints",0,0,110,0,0,20),
+    healthPotion30("Heals you for 40 hitpoints",0,0,200,0,0,30),
+    healthPotion40("Heals you for 80 hitpoints",0,0,380,0,0,40);
+    
     
     private final String description;
     private final int attackValue;
@@ -32,18 +33,16 @@ public enum Item implements Serializable{
     private final int manaValue;
     private final int healthValue;
 
-
-
-
-    Item(String description) {
+    private Item(String description, int attackValue, int defenceValue, int costValue, int sellValue, int manaValue, int healthValue) {
         this.description = description;
-        attackValue = 1;
-        defenceValue = 1;
-        costValue = 10;
-        sellValue = 5;
-        manaValue = 1;
-        healthValue = 1;
+        this.attackValue = attackValue;
+        this.defenceValue = defenceValue;
+        this.costValue = costValue;
+        this.sellValue = sellValue;
+        this.manaValue = manaValue;
+        this.healthValue = healthValue;
     }
+
 
 
     public int getAttackValue() {

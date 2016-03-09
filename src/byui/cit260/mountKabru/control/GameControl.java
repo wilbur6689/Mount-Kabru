@@ -6,6 +6,7 @@
 package byui.cit260.mountKabru.control;
 
 import byui.cit260.mountKabru.model.Actor;
+import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Player;
 import mountkabru.MountKabru;
@@ -33,7 +34,7 @@ public class GameControl {
         return player;
     }
     
-    public static Hero createHero(String name, int attack) {
+    public static Hero createHero(String name, int attack, int mana) {
         
         
         if (name == null) {
@@ -41,18 +42,37 @@ public class GameControl {
         }
         
         Hero hero = new Hero();
-        hero.setName(name);
-       
         
-        MountKabru.setHero(hero); //save the hero
+        hero.setHeroName(name);
+        hero.setLevelOfHero(1);
+        hero.setExperience(1);
+        hero.setAttack(attack);
+        hero.setMana(mana);
         
+        if (attack == 30) {
+            hero.setHeroClassType("Warrior");
+        } 
+        else if (mana == 30) {
+            hero.setHeroClassType("Wizard");
+        }
+        else {
+            hero.setHeroClassType("Paladin");
+        }
+        
+        
+     
+        MountKabru.getCurrentGame().setHero(hero);
         
         return hero;
     }
 
-    public static void createNewGame(Actor actor) {
-        System.out.println("\n*** createNewGame function Called   ****");
+    public static void createNewGame() {
+        
+        Game game = new Game();
+        MountKabru.setCurrentGame(game);
     }
+    
+    
     
     
     

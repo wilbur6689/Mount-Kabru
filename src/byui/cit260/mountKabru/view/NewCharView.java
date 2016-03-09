@@ -60,18 +60,19 @@ public class NewCharView extends View {
     public boolean doAction(String value) {
         
         // create Hero
-        
-        Hero hero = new Hero(value, "Warrior", 1, 100, 5, 5);
+        String heroName = value;
+        int attack = 0;
+        int mana = 0;
         
         // ask questions
         this.displayMessage = this.addStats1;
         String answer1 = this.getInput().toUpperCase();
         
         if (answer1.equals("M")) {
-            hero.setStrength(10);
+            attack += 10;
         }
         else if (answer1.equals("W")) {
-            hero.setMana(10);
+            mana += 10;
         }
         else {
             System.out.println("You entered an invalid responce, please try again");
@@ -82,10 +83,10 @@ public class NewCharView extends View {
         String answer2 = this.getInput().toUpperCase();
         
         if (answer2.equals("M")) {
-            hero.setStrength(20);
+            attack += 10;
         }
         else if (answer2.equals("W")) {
-            hero.setMana(20);
+            mana += 10;
         }
         else {
             System.out.println("You entered an invalid responce, please try again");
@@ -96,10 +97,10 @@ public class NewCharView extends View {
         String answer3 = this.getInput().toUpperCase();
         
         if (answer3.equals("M")) {
-            hero.setStrength(30);
+            attack += 10;
         }
         else if (answer3.equals("W")) {
-            hero.setMana(30);
+            mana += 10;
         }
         else {
             System.out.println("You entered an invalid response, please try again");
@@ -107,7 +108,7 @@ public class NewCharView extends View {
         }
         
         
-        GameControl.createNewGame(hero);
+        GameControl.createHero(heroName, attack, mana);
         
         // create and display game menu view
         // create gameMenuView object

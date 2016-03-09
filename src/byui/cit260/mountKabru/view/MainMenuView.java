@@ -5,6 +5,9 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.GameControl;
+import mountkabru.MountKabru;
+
 
 
 /**
@@ -67,12 +70,11 @@ public class MainMenuView extends View {
         }
 
         private void startNewGame() {
-
-
-            //Create newCharView object
+            //Create a new game
+            GameControl.createNewGame();
+            
+            // display next view
             NewCharView newCharView = new NewCharView();
-
-            //Display the newCharView
             newCharView.display();
         }
 

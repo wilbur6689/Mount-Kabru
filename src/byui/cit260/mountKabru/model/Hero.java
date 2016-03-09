@@ -16,28 +16,28 @@ public class Hero extends Actor implements  Serializable  {
     private int levelOfHero;
     private int experience;
     private int mana;
-    private int strength;
+    private int attack;
 
 
     public Hero() {
 
     }
 
+    public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int attack) {
+        this.heroName = heroName;
+        this.heroClassType = heroClassType;
+        this.levelOfHero = levelOfHero;
+        this.experience = experience;
+        this.mana = mana;
+        this.attack = attack;
+    }
+    
     public String getHeroName() {
         return heroName;
     }
     
     public void setHeroName(String heroName) {
         this.heroName = heroName;
-    }
-
-    public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
-        this.heroName = heroName;
-        this.heroClassType = heroClassType;
-        this.levelOfHero = levelOfHero;
-        this.experience = experience;
-        this.mana = mana;
-        this.strength = strength;
     }
     
     public String getHeroClassType() {
@@ -72,12 +72,12 @@ public class Hero extends Actor implements  Serializable  {
         this.mana = mana;
     }
 
-    public int getStrength() {
-        return strength;
+    public int getAttack() {
+        return attack;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
+    public void setAttack(int attack) {
+        this.attack = attack;
     }
 
     @Override
@@ -87,7 +87,7 @@ public class Hero extends Actor implements  Serializable  {
         hash = 29 * hash + this.levelOfHero;
         hash = 29 * hash + this.experience;
         hash = 29 * hash + this.mana;
-        hash = 29 * hash + this.strength;
+        hash = 29 * hash + this.attack;
         return hash;
     }
 
@@ -112,7 +112,7 @@ public class Hero extends Actor implements  Serializable  {
         if (this.mana != other.mana) {
             return false;
         }
-        if (this.strength != other.strength) {
+        if (this.attack != other.attack) {
             return false;
         }
         if (!Objects.equals(this.heroClassType, other.heroClassType)) {
@@ -123,7 +123,7 @@ public class Hero extends Actor implements  Serializable  {
 
     @Override
     public String toString() {
-        return "Hero{" + "heroClassType=" + heroClassType + ", levelOfHero=" + levelOfHero + ", experience=" + experience + ", mana=" + mana + ", strength=" + strength + '}';
+        return "Hero{" + "heroClassType=" + heroClassType + ", levelOfHero=" + levelOfHero + ", experience=" + experience + ", mana=" + mana + ", attack=" + attack + '}';
     }
     
     

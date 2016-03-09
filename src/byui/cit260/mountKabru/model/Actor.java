@@ -15,6 +15,7 @@ import java.util.Objects;
 public class Actor implements Serializable{
     
     
+    
     //class instance variables
     private String name;
     private int hitPoints;

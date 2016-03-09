@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.mountKabru.view;
 
 /**
  *
- * @author wibur
+ * @author Phill
  */
-public interface ViewInterface {
-    
-     void display();
-     String getInput();
-     boolean doAction(String value);
-    
+public class MountKabru {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
     
 }

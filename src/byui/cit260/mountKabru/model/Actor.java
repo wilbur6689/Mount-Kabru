@@ -22,6 +22,8 @@ public class Actor implements Serializable{
     private int attack;
     private int chanceToHit;
     private int gold;
+    
+    private Game game;
 
     public Actor() {
     }

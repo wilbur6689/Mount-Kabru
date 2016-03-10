@@ -9,14 +9,31 @@ public class Player implements Serializable{
 
     private String name;
     
-    
+    private Hero hero;
+    private Game game;
 
 
     public Player(){
 
     }
 
+    public Hero getHero() {
+        return hero;
+    }
 
+    public void setHero(Hero hero) {
+        this.hero = hero;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    
     public String getName() {
         return name;
     }

@@ -16,6 +16,7 @@ public class Inventory implements Serializable {
     public Inventory(){
     }
 
+    
     public String getWeaponSlot() {
         return weaponSlot;
     }

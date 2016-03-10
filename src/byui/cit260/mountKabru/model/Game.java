@@ -18,11 +18,11 @@ public class Game implements Serializable{
     
     private String main;
     private Player player;
-    private Hero hero;
     private World world;
     
     private Item[] item;
     private Actor[] actor;
+    private Hero[] hero;
   
     
 
@@ -61,13 +61,14 @@ public class Game implements Serializable{
         this.item = item;
     }
 
-    public Hero getHero() {
+    public Hero[] getHero() {
         return hero;
     }
 
-    public void setHero(Hero hero) {
+    public void setHero(Hero[] hero) {
         this.hero = hero;
     }
+
     
     public Actor[] getActor() {
         return actor;

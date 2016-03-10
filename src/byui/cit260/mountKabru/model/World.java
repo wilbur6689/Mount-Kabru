@@ -16,9 +16,22 @@ public class World implements Serializable {
     
     private char rowCount;
     private int columnCount;
+    
+    private Game game;
+    
+    
 
     public World() {
     }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
 
     public char getRowCount() {
         return rowCount;

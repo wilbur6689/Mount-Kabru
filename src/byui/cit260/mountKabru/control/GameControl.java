@@ -8,7 +8,9 @@ package byui.cit260.mountKabru.control;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
+import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Player;
+import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
 
 /**
@@ -70,6 +72,13 @@ public class GameControl {
         
         Game game = new Game();
         MountKabru.setCurrentGame(game);
+        
+        game.setPlayer(player);
+        
+        World world = WorldControl.createWorld();
+        game.setWorld(world);
+        
+        WorldControl.moveActorToStartingLocation(world);
     }
     
     

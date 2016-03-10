@@ -24,10 +24,29 @@ public class Actor implements Serializable{
     private int chanceToHit;
     private int gold;
     
-    private Game game;
+    private RandomEvent[] randomEvent;
+    private Game[] game;
 
     public Actor() {
     }
+
+    public RandomEvent[] getRandomEvent() {
+        return randomEvent;
+    }
+
+    public void setRandomEvent(RandomEvent[] randomEvent) {
+        this.randomEvent = randomEvent;
+    }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+
+    
 
     public String getName() {
         return name;

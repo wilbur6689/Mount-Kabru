@@ -18,6 +18,7 @@ public class Hero extends Actor implements  Serializable  {
     private int mana;
     private int attack;
 
+     
 
     public Hero() {
 

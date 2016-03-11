@@ -13,7 +13,7 @@ public class WorldControl {
         World world = new World(20,20);
         
         //create a list of the different random Events in the game
-        RandomEvent[] randomEvent = createRandomEvent[];
+        RandomEvent[] randomEvent = WorldControl.createRandomEvents();
         
         //assign the different scences to locations in the map
         assignRandomEventToLocations(map, randomEvent);
@@ -24,6 +24,10 @@ public class WorldControl {
     static void moveActorToStartingLocation(World world) {
         System.out.println("*** Move Actor Function Called. ***");
         
+    }
+
+    private static RandomEvent[] createRandomEvents() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
    

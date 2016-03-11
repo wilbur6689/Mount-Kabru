@@ -37,22 +37,60 @@ public class GameControl {
         return player;
     }
     
-    public static Hero createHero(String name, int attack, int mana) {
+    public static Hero createHero(String name, String answer1, String answer2, String answer3) {
         
+         if (name == null) {
+            return null;
+        }
+         
+        int strength = 0;
+        int mana = 0;
         
-        if (name == null) {
+        //calculate Answer1
+         
+        if (answer1.equals("M")) {
+            strength += 10;
+        }
+        else if (answer1.equals("W")) {
+            mana += 10;
+        }
+        else {
             return null;
         }
         
+        //Caclulate Answer2
+        
+        if (answer2.equals("M")) {
+            strength += 10;
+        }
+        else if (answer2.equals("W")) {
+            mana += 10;
+        }
+        else {
+           return null;
+        }
+
+        //Caclulate Answer3
+        
+        if (answer3.equals("M")) {
+            strength += 10;
+        }
+        else if (answer3.equals("W")) {
+            mana += 10;
+        }
+        else {
+           return null;
+        }
+
         Hero hero = new Hero();
         
         hero.setHeroName(name);
         hero.setLevelOfHero(1);
         hero.setExperience(1);
-        hero.setAttack(attack);
+        hero.setStrength(strength);
         hero.setMana(mana);
         
-        if (attack == 30) {
+        if (strength == 30) {
             hero.setHeroClassType("Warrior");
         } 
         else if (mana == 30) {
@@ -68,6 +106,7 @@ public class GameControl {
         
         return hero;
     }
+    
 
     public static void createNewGame(Player player) {
         
@@ -76,8 +115,11 @@ public class GameControl {
         
         game.setPlayer(player);
         
-        Item[] inventoryList = GameControl.createInventoryList();
-        game.setItem(inventoryList);
+        //create a list of monsters
+        Actor[] actors = GameControl.createActors();
+        game.setActors(actors);
+        
+        //Create reandomEvents for the game
         
         World world = WorldControl.createWorld();
         game.setWorld(world);
@@ -85,19 +127,22 @@ public class GameControl {
         WorldControl.moveActorToStartingLocation(world);
     }
 
-    private static Item[] createInventoryList() {
+    private static Actor[] createActors() {
         
-        Item[] inventory = new Item[4];
+        //Create the list of Actors
         
-        inventory[0] = Item.stick;
-        inventory[1] = Item.clothes;
-        inventory[2] = Item.healthPotion10;
-        inventory[3] = Item.manaPotion10;
+        Actor[] actors = new Actor[13];
+        
+        Actor gnome = new Actor("Gnome", 8,4,3,2,7);
+        actors[0] = gnome;
         
         
         
-        return inventory;
+        return actors;
+        
     }
+
+    
     
     
     

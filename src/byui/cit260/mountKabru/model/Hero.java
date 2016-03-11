@@ -1,6 +1,7 @@
 package byui.cit260.mountKabru.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,10 +17,11 @@ public class Hero extends Actor implements  Serializable  {
     private int levelOfHero;
     private int experience;
     private int mana;
-    private int attack;
+    private int strength;
+ 
 
     private Player player;
-    private Inventory inventory;
+    private ArrayList<Item> inventory = new ArrayList<>();
     private Game game;
     
      
@@ -36,13 +38,15 @@ public class Hero extends Actor implements  Serializable  {
         this.player = player;
     }
 
-    public Inventory getInventory() {
+    public ArrayList<Item> getInventory() {
         return inventory;
     }
 
-    public void setInventory(Inventory inventory) {
+    public void setInventory(ArrayList<Item> inventory) {
         this.inventory = inventory;
     }
+
+
 
     public Game getGame() {
         return game;
@@ -54,13 +58,13 @@ public class Hero extends Actor implements  Serializable  {
     
     
 
-    public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int attack) {
+    public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
         this.heroName = heroName;
         this.heroClassType = heroClassType;
         this.levelOfHero = levelOfHero;
         this.experience = experience;
         this.mana = mana;
-        this.attack = attack;
+        this.strength = strength;
     }
     
     public String getHeroName() {
@@ -102,13 +106,13 @@ public class Hero extends Actor implements  Serializable  {
     public void setMana(int mana) {
         this.mana = mana;
     }
-
-    public int getAttack() {
-        return attack;
+    
+     public int getStrength() {
+        return strength;
     }
 
-    public void setAttack(int attack) {
-        this.attack = attack;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
 
     @Override
@@ -118,7 +122,7 @@ public class Hero extends Actor implements  Serializable  {
         hash = 29 * hash + this.levelOfHero;
         hash = 29 * hash + this.experience;
         hash = 29 * hash + this.mana;
-        hash = 29 * hash + this.attack;
+        hash = 29 * hash + this.strength;
         return hash;
     }
 
@@ -143,7 +147,7 @@ public class Hero extends Actor implements  Serializable  {
         if (this.mana != other.mana) {
             return false;
         }
-        if (this.attack != other.attack) {
+        if (this.strength != other.strength) {
             return false;
         }
         if (!Objects.equals(this.heroClassType, other.heroClassType)) {
@@ -154,7 +158,7 @@ public class Hero extends Actor implements  Serializable  {
 
     @Override
     public String toString() {
-        return "Hero{" + "heroClassType=" + heroClassType + ", levelOfHero=" + levelOfHero + ", experience=" + experience + ", mana=" + mana + ", attack=" + attack + '}';
+        return "Hero{" + "heroClassType =" + heroClassType + ", levelOfHero =" + levelOfHero + ", experience =" + experience + ", mana =" + mana + ", strength =" + strength + '}';
     }
     
     

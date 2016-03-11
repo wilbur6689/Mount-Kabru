@@ -61,54 +61,26 @@ public class NewCharView extends View {
         
         // create Hero
         String heroName = value;
-        int attack = 0;
-        int mana = 0;
+        
         
         // ask questions
         this.displayMessage = this.addStats1;
         String answer1 = this.getInput().toUpperCase();
         
-        if (answer1.equals("M")) {
-            attack += 10;
-        }
-        else if (answer1.equals("W")) {
-            mana += 10;
-        }
-        else {
-            System.out.println("You entered an invalid responce, please try again");
-            return false;
-        }
+        
          
         this.displayMessage = this.addStats2;
         String answer2 = this.getInput().toUpperCase();
         
-        if (answer2.equals("M")) {
-            attack += 10;
-        }
-        else if (answer2.equals("W")) {
-            mana += 10;
-        }
-        else {
-            System.out.println("You entered an invalid responce, please try again");
-            return false;
-        }
+        
         
         this.displayMessage = this.addStats3;
         String answer3 = this.getInput().toUpperCase();
         
-        if (answer3.equals("M")) {
-            attack += 10;
-        }
-        else if (answer3.equals("W")) {
-            mana += 10;
-        }
-        else {
-            System.out.println("You entered an invalid response, please try again");
-            return false;
-        }
+       
         
-        
-        GameControl.createHero(heroName, attack, mana);
+        //Need to set Hero Name, strength, Mana
+        GameControl.createHero(heroName, answer1, answer2, answer3);
         
         // create and display game menu view
         // create gameMenuView object

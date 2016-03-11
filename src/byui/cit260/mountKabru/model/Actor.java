@@ -28,8 +28,20 @@ public class Actor implements Serializable{
     private Game game;
 
     public Actor() {
+        
     }
 
+    public Actor(String name, int hitPoints, int defence, int attack, int chanceToHit, int gold) {
+        this.name = name;
+        this.hitPoints = hitPoints;
+        this.defence = defence;
+        this.attack = attack;
+        this.chanceToHit = chanceToHit;
+        this.gold = gold;
+    }
+
+    
+    
     public RandomEvent[] getRandomEvent() {
         return randomEvent;
     }

@@ -17,6 +17,9 @@ public class Location implements Serializable {
     private char row;
     private int column;
     private String areaExplored;
+    
+    private World world;
+    private RandomEvent[] randomEvent;
 
     public Location() {
     }
@@ -44,6 +47,24 @@ public class Location implements Serializable {
     public void setAreaExplored(String areaExplored) {
         this.areaExplored = areaExplored;
     }
+
+    public World getWorld() {
+        return world;
+    }
+
+    public void setWorld(World world) {
+        this.world = world;
+    }
+
+    public RandomEvent[] getRandomEvent() {
+        return randomEvent;
+    }
+
+    public void setRandomEvent(RandomEvent[] randomEvent) {
+        this.randomEvent = randomEvent;
+    }
+    
+    
 
     @Override
     public int hashCode() {

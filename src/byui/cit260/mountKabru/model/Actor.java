@@ -25,7 +25,7 @@ public class Actor implements Serializable{
     private int gold;
     
     private RandomEvent[] randomEvent;
-    private Game[] game;
+    private Game game;
 
     public Actor() {
     }
@@ -38,11 +38,11 @@ public class Actor implements Serializable{
         this.randomEvent = randomEvent;
     }
 
-    public Game[] getGame() {
+    public Game getGame() {
         return game;
     }
 
-    public void setGame(Game[] game) {
+    public void setGame(Game game) {
         this.game = game;
     }
 

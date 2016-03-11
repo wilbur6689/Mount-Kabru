@@ -32,6 +32,8 @@ public enum Item implements Serializable{
     private final int sellValue;
     private final int manaValue;
     private final int healthValue;
+    
+    private Game game;
 
     private Item(String description, int attackValue, int defenceValue, int costValue, int sellValue, int manaValue, int healthValue) {
         this.description = description;

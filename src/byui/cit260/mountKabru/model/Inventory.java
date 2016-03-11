@@ -12,6 +12,8 @@ public class Inventory implements Serializable {
     private String armorSlot;
     private int healthPotionSlot;
     private int manaPotionSlot;
+    
+    private Hero hero;
 
     public Inventory(){
     }
@@ -49,6 +51,14 @@ public class Inventory implements Serializable {
         this.manaPotionSlot = manaPotionSlot;
     }
 
+    public Hero getHero() {
+        return hero;
+    }
+
+    public void setHero(Hero hero) {
+        this.hero = hero;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 3;

@@ -18,6 +18,7 @@ public class World implements Serializable {
     private int columnCount;
     
     private Game game;
+    private Location[] location;
     
     
 
@@ -31,6 +32,15 @@ public class World implements Serializable {
     public void setGame(Game game) {
         this.game = game;
     }
+
+    public Location[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[] location) {
+        this.location = location;
+    }
+    
     
 
     public char getRowCount() {

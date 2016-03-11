@@ -7,10 +7,13 @@ import java.io.Serializable;
  */
 public enum Item implements Serializable{
 
+    
+    bareHands("Easy, Cheap, and always avaliable", 5,0,0,0,0,0),
     stick("A scary looking Stick",10,0,300,200,0,0),
     kukri("This is a short stubby looking sword, to be used for removeing your head",20,0,1000,800,0,0),
     battleAxe("This thing is sharp enough to kill you just looking at it", 30,0,3000,2500,0,0),
     scythe("I dont think this was used to harvest grain... just sayin",40,0,7000,5500,0,0),
+    clothes("Plain, simple, and comfortable clothes", 0,5,0,0,0,0),
     leatherArmor("light weight, sturdy, and smells good, what more could you want?",0,10,300,200,0,0),
     scaleMail("A little more protection for not a bad price",0,20,1000,800,0,0),
     carbonFiber("strong and light weight, also makes you look like batman",0,30,3000,2500,0,0),

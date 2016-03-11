@@ -9,6 +9,7 @@ import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Inventory;
+import byui.cit260.mountKabru.model.Item;
 import byui.cit260.mountKabru.model.Player;
 import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
@@ -68,17 +69,32 @@ public class GameControl {
         return hero;
     }
 
-    public static void createNewGame() {
+    public static void createNewGame(Player player) {
         
         Game game = new Game();
         MountKabru.setCurrentGame(game);
         
         game.setPlayer(player);
         
+        Item[] inventoryList = GameControl.createInventoryList();
+        game.setItem(inventoryList);
+        
         World world = WorldControl.createWorld();
         game.setWorld(world);
         
         WorldControl.moveActorToStartingLocation(world);
+    }
+
+    private static Item[] createInventoryList() {
+        
+        Item[] inventory = new Item[4];
+        
+        Item weapon = new Item();
+        weapon.
+        
+        
+        
+        return inventory;
     }
     
     

@@ -1,5 +1,6 @@
 package byui.cit260.mountKabru.control;
 
+import byui.cit260.mountKabru.model.RandomEvent;
 import byui.cit260.mountKabru.model.World;
 
 /**
@@ -7,12 +8,22 @@ import byui.cit260.mountKabru.model.World;
  */
 public class WorldControl {
 
-    static World createWorld() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static World createWorld() {
+        
+        World world = new World(20,20);
+        
+        //create a list of the different random Events in the game
+        RandomEvent[] randomEvent = createRandomEvent[];
+        
+        //assign the different scences to locations in the map
+        assignRandomEventToLocations(map, randomEvent);
+                
+        return world;
     }
 
     static void moveActorToStartingLocation(World world) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** Move Actor Function Called. ***");
+        
     }
     
    

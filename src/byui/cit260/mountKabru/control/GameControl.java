@@ -89,8 +89,10 @@ public class GameControl {
         
         Item[] inventory = new Item[4];
         
-        Item weapon = new Item();
-        weapon.
+        inventory[0] = Item.stick;
+        inventory[1] = Item.clothes;
+        inventory[2] = Item.healthPotion10;
+        inventory[3] = Item.manaPotion10;
         
         
         

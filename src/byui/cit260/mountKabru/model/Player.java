@@ -9,7 +9,7 @@ public class Player implements Serializable{
 
     private String name;
     
-    private Hero hero;
+    private Hero[] hero;
     private Game game;
 
 
@@ -17,11 +17,11 @@ public class Player implements Serializable{
 
     }
 
-    public Hero getHero() {
+    public Hero[] getHero() {
         return hero;
     }
 
-    public void setHero(Hero hero) {
+    public void setHero(Hero[] hero) {
         this.hero = hero;
     }
 

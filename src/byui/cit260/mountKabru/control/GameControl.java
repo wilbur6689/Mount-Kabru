@@ -132,10 +132,45 @@ public class GameControl {
         //Create the list of Actors
         
         Actor[] actors = new Actor[13];
-        
+        /* Actor
+        private String name;
+        private int hitPoints;
+        private int defence;
+        private int attack;
+        private int chanceToHit;
+        private int gold;
+        */
+        //plains MOnsters
         Actor gnome = new Actor("Gnome", 8,4,3,2,7);
         actors[0] = gnome;
-        
+        Actor banshee = new Actor("banshee", 12,5,5,2,12 );
+        actors[1] = banshee;
+        Actor evilRabbits = new Actor("evilRabbits", 15,3,16,4,30);
+        actors[2] = evilRabbits;
+        //Jungle Monsters
+        Actor frogs = new Actor("frogs", 20,5,15,3,45);
+        actors[3] = frogs;
+        Actor manticore = new Actor("manticore", 25,7,17,3,100);
+        actors[4] = manticore;
+        Actor gators = new Actor("gators", 30,8,18,3,37);
+        actors[5] = gators;
+        //DarkForest Monsters
+        Actor werewolves = new Actor("werewolves", 35,15,45,4,125);
+        actors[6] = werewolves;
+        Actor dryad = new Actor("dryad", 40,25,55,5,250);
+        actors[7] = dryad;
+        Actor theUndead = new Actor("theUndead", 50,34,67,7,650);
+        actors[8] = theUndead;
+        //HighMountain
+        Actor dragon = new Actor("dragon", 60,45,55,34,250);
+        actors[9] = dragon;
+        Actor hydra = new Actor("hydra", 70,67,100,34,9000);
+        actors[10] = hydra;
+        Actor giant = new Actor("giant", 150,75,46,34,40000);
+        actors[11] = giant;
+        Actor master = new Actor("master", 1,1,1,0,9999999);
+        actors[12] = master;
+
         
         
         return actors;

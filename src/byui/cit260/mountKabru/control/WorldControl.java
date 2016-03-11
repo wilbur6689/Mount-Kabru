@@ -16,7 +16,7 @@ public class WorldControl {
         RandomEvent[] randomEvent = WorldControl.createRandomEvents();
         
         //assign the different scences to locations in the map
-        assignRandomEventToLocations(map, randomEvent);
+        assignRandomEventToLocations(world, randomEvent);
                 
         return world;
     }
@@ -27,6 +27,20 @@ public class WorldControl {
     }
 
     private static RandomEvent[] createRandomEvents() {
+        RandomEvent[] randomEvents = new RandomEvent[20];
+        
+        RandomEvent goldEvent = new RandomEvent();
+        randomEvents[0] = goldEvent;
+        
+        
+        
+        
+        
+        return randomEvent;
+    
+    }
+
+    private static void assignRandomEventToLocations(World world, RandomEvent[] randomEvent) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

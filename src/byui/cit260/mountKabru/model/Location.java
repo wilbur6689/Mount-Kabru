@@ -14,93 +14,39 @@ import java.util.Objects;
  */
 public class Location implements Serializable {
     
-    private char row;
-    private int column;
-    private String areaExplored;
-    
-    
-    private RandomEvent[] event;
+    private String name;
+    private Event[] events;
+    private boolean discovered;
 
-    public Location() {
+    public Location(String name, Event[] events, boolean discovered) {
+        this.name = name;
+        this.events = events;
+        this.discovered = discovered;
     }
 
-    public char getRow() {
-        return row;
+    public String getName() {
+        return name;
     }
 
-    public void setRow(char row) {
-        this.row = row;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getColumn() {
-        return column;
+    public Event[] getEvents() {
+        return events;
     }
 
-    public void setColumn(int column) {
-        this.column = column;
+    public void setEvents(Event[] events) {
+        this.events = events;
     }
 
-    public String getAreaExplored() {
-        return areaExplored;
+    public boolean isDiscovered() {
+        return discovered;
     }
 
-    public void setAreaExplored(String areaExplored) {
-        this.areaExplored = areaExplored;
+    public void setDiscovered(boolean discovered) {
+        this.discovered = discovered;
     }
-
-    public World getWorld() {
-        return world;
-    }
-
-    public void setWorld(World world) {
-        this.world = world;
-    }
-
-    public RandomEvent[] getRandomEvent() {
-        return randomEvent;
-    }
-
-    public void setRandomEvent(RandomEvent[] randomEvent) {
-        this.randomEvent = randomEvent;
-    }
-    
-    
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 29 * hash + this.row;
-        hash = 29 * hash + this.column;
-        hash = 29 * hash + Objects.hashCode(this.areaExplored);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (this.row != other.row) {
-            return false;
-        }
-        if (this.column != other.column) {
-            return false;
-        }
-        return Objects.equals(this.areaExplored, other.areaExplored);
-    }
-
-    @Override
-    public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", areaExplored=" + areaExplored + '}';
-    }
-
     
     
     

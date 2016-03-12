@@ -29,8 +29,7 @@ public class World implements Serializable {
         
         
         this.rowCount = rowCount;
-        this.columnCount = columnCount;
-        
+        this.columnCount = columnCount;   
         location = new Location[rowCount][columnCount];
     }
     

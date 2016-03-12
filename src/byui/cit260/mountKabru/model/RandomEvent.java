@@ -14,31 +14,49 @@ import java.util.Objects;
  */
 public class RandomEvent implements Serializable{
     
-    //class instance variables
-    private String monsterEvent;
-    private String weirdEvent;
-    private int goldEvent;
-    
-    
-    private Actor actor;
-    private Location location;
+    String eventType;
+    String Name;
+    String description;
+    //Actor[] actors;
 
-    public RandomEvent() {
+    public RandomEvent(String eventType, String Name, String description) {
+        this.eventType = eventType;
+        this.Name = Name;
+        this.description = description;
     }
 
+    public String getEventType() {
+        return eventType;
+    }
+
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
+    
+    
    
     
     
 
     
-    
-    
- 
-
-    @Override
-    public String toString() {
-        return "RandomEvent{" + "monsterEvent=" + monsterEvent + ", weirdEvent=" + weirdEvent + ", goldEvent=" + goldEvent + ", barKeeperEvent=" + barKeeperEvent + ", bossEvent=" + bossEvent + '}';
-    }
+  
 
     
 

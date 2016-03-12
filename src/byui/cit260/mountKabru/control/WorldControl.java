@@ -8,16 +8,14 @@ import byui.cit260.mountKabru.model.World;
  */
 public class WorldControl {
 
-    public static World createWorld() {
+    public World createWorld() {
         
         World world = new World(20,20);
         
         //create a list of the different random Events in the game
         RandomEvent[] randomEvent = WorldControl.createRandomEvents();
         
-        //assign the different scences to locations in the map
-        GameControl.assignRandomEventToLocations(world, randomEvent);
-        //this is something that is crazy and WAY TOOOOOO COMPLEX FOR MY MEAGER BRAIN!!!!!!!!!!!!!!!!!!!!
+        setWorldLocations();
                 
         return world;
     }
@@ -37,8 +35,25 @@ public class WorldControl {
     
     }
 
-    private static void assignRandomEventToLocations(World world, RandomEvent[] randomEvent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void setWorldLocations() {
+      
+        Location[][] locations = world.getLocations();
+        
+        for(int i = 0;i<locations.length;i++) {
+            for(int x=0;x<locations[i].length;x++) {
+                
+                //Location newLocation = new Location(String name, Event[] events, boolean discovered)
+                
+                event[] events = new Event[2];
+                events[0] = new Event("Gold", "Get Rich", "you found the motherload");
+                events[1] = new Event("Monster", "You are going to die", "Boogeyman gotcha");
+                Location newLocation = new Location("location Name", events, false);
+                
+                locations[i][x] = newLocation;
+            }
+        }
+        
+        world.setLocations(locations);
     }
     
    

@@ -14,16 +14,27 @@ import java.util.Objects;
  */
 public class World implements Serializable {
     
-    private char rowCount;
+    private int rowCount;
     private int columnCount;
     
-    private Game game;
-    private Location[] location;
+   
+    private Location[][] location;
     
     
 
     public World() {
     }
+
+    public World(int rowCount, int columnCount) {
+        
+        
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+        
+        location = new Location[rowCount][columnCount];
+    }
+    
+    
 
     public Game getGame() {
         return game;
@@ -37,7 +48,7 @@ public class World implements Serializable {
         return location;
     }
 
-    public void setLocation(Location[] location) {
+    public void setLocation(int x, int y, Location newLocation) {
         this.location = location;
     }
     

@@ -18,8 +18,8 @@ public class Location implements Serializable {
     private int column;
     private String areaExplored;
     
-    private World world;
-    private RandomEvent[] randomEvent;
+    
+    private RandomEvent[] event;
 
     public Location() {
     }

@@ -16,16 +16,13 @@ public class WorldControl {
         RandomEvent[] randomEvent = WorldControl.createRandomEvents();
         
         //assign the different scences to locations in the map
-        assignRandomEventToLocations(world, randomEvent);
+        GameControl.assignRandomEventToLocations(world, randomEvent);
+        //this is something that is crazy and WAY TOOOOOO COMPLEX FOR MY MEAGER BRAIN!!!!!!!!!!!!!!!!!!!!
                 
         return world;
     }
 
-    static void moveActorToStartingLocation(World world) {
-        System.out.println("*** Move Actor Function Called. ***");
-        
-    }
-
+  
     private static RandomEvent[] createRandomEvents() {
         RandomEvent[] randomEvents = new RandomEvent[20];
         

@@ -11,7 +11,7 @@ import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Item;
 import byui.cit260.mountKabru.model.Player;
-import byui.cit260.mountKabru.model.RandomEvent;
+import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
 
@@ -120,17 +120,16 @@ public class GameControl {
         Actor[] actors = GameControl.createActors();
         game.setActors(actors);
         
-        //Create reandomEvents for the game
+        //Create Events for the game
         
+        Event[] events = EventControl.createEvent();
+       
         
-        
-        
-        
-        
+
         World world = WorldControl.createWorld();
         game.setWorld(world);
         
-        WorldControl.moveActorToStartingLocation(world);
+        WorldControl.setWorldLocations();
     }
 
     private static Actor[] createActors() {
@@ -183,7 +182,7 @@ public class GameControl {
         
     }
 
-    static void assignRandomEventToLocations(World world, RandomEvent[] randomEvent) {
+    static void assignRandomEventToLocations(World world, Event[] randomEvent) {
         System.out.println("*** Move Actor Function Called. ***");
     }
 

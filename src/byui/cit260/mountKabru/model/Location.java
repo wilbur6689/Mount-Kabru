@@ -14,22 +14,28 @@ import java.util.Objects;
  */
 public class Location implements Serializable {
     
-    private String name;
+    private String locationName;
     private Event[] events;
     private boolean discovered;
-
+    private int row;
+    private int column;
+    
+    public Location() {
+        
+    }
+    
     public Location(String name, Event[] events, boolean discovered) {
-        this.name = name;
+        this.locationName = name;
         this.events = events;
         this.discovered = discovered;
     }
 
-    public String getName() {
-        return name;
+    public String getLocationName() {
+        return locationName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
     }
 
     public Event[] getEvents() {
@@ -47,6 +53,24 @@ public class Location implements Serializable {
     public void setDiscovered(boolean discovered) {
         this.discovered = discovered;
     }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+    
+    
     
     
     

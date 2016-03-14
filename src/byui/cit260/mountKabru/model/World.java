@@ -18,7 +18,7 @@ public class World implements Serializable {
     private int columnCount;
     
    
-    private Location[][] location;
+    private Location[][] locations;
     
     
 
@@ -27,39 +27,49 @@ public class World implements Serializable {
 
     public World(int rowCount, int columnCount) {
         
+        if (rowCount < 1 || columnCount < 1) {
+            System.out.println("The numbe of rows and columns must be > Zero");
+            return;
+        }
         
         this.rowCount = rowCount;
         this.columnCount = columnCount;   
-        location = new Location[rowCount][columnCount];
+        this.locations = new Location[rowCount][columnCount];
+        
+        for (int row = 0; row < rowCount; row++) {
+            for (int column = 0; column < columnCount; column++) {
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setDiscovered(false);
+                
+                //assign the Location object to the current position in the array
+                locations[row][column] = location;
+            }
+        }
+        
+
+        
     }
     
-    
 
-    public Game getGame() {
-        return game;
+
+    public Location[][] getLocations() {
+        return locations;
     }
 
-    public void setGame(Game game) {
-        this.game = game;
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
 
-    public Location[] getLocation() {
-        return location;
-    }
-
-    public void setLocation(int x, int y, Location newLocation) {
-        this.location = location;
-    }
-    
-    
-
-    public char getRowCount() {
+    public int getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(char rowCount) {
+    public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
+
 
     public int getColumnCount() {
         return columnCount;

@@ -12,14 +12,14 @@ import java.util.Objects;
  *
  * @author wibur
  */
-public class RandomEvent implements Serializable{
+public class Event implements Serializable{
     
     String eventType;
     String Name;
     String description;
     //Actor[] actors;
 
-    public RandomEvent(String eventType, String Name, String description) {
+    public Event(String eventType, String Name, String description) {
         this.eventType = eventType;
         this.Name = Name;
         this.description = description;

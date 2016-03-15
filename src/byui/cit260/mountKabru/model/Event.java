@@ -16,15 +16,15 @@ public class Event implements Serializable{
     
     String eventType;
     String locationType;
-    String Name;
-    String description;
+    String eventName;
+    String eventDescription;
     //Actor[] actors;
 
     public Event(String eventType, String locationType, String Name, String description) {
         this.eventType = eventType;
         this.locationType = locationType;
-        this.Name = Name;
-        this.description = description;
+        this.eventName = Name;
+        this.eventDescription = description;
     }
 
     public String getEventType() {
@@ -35,12 +35,12 @@ public class Event implements Serializable{
         this.eventType = eventType;
     }
 
-    public String getName() {
-        return Name;
+    public String getEventName() {
+        return eventName;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
     public String getLocationType() {
@@ -52,12 +52,12 @@ public class Event implements Serializable{
     }
 
     
-    public String getDescription() {
-        return description;
+    public String getEventDescription() {
+        return eventDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEventDescription(String eventDescription) {
+        this.eventDescription = eventDescription;
     }
     
     

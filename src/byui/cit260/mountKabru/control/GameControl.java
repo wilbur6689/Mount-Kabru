@@ -123,8 +123,7 @@ public class GameControl {
 
         World world = WorldControl.createWorld();
         game.setWorld(world);
-        
-        WorldControl.setWorldLocations();
+       
     }
 
     private static Actor[] createActors() {

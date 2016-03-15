@@ -5,6 +5,8 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.model.Game;
+
 
 /**
  *
@@ -56,9 +58,14 @@ public class GameMenuView extends View {
         return false;
     }
 
-    private void goAdventure() {
+    public void goAdventure() {
          
         //Show the player the map
+         
+         World world = Game.getWorld();
+         
+         
+         
          
          
          
@@ -66,7 +73,7 @@ public class GameMenuView extends View {
         //adventureView.display();
     }
 
-    private void goTavern() {
+    public void goTavern() {
         
         //create the tavern view object
         TavernView tavernView = new TavernView();
@@ -74,7 +81,7 @@ public class GameMenuView extends View {
         tavernView.display();
     }
 
-    private void goBlacksmith() {
+    public void goBlacksmith() {
         
         //create the tavern view object
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -82,7 +89,7 @@ public class GameMenuView extends View {
         blacksmithView.display();
     }
 
-    private void displayHelpMenu() {
+    public void displayHelpMenu() {
         
          // create helpHelpMenuView object
         HelpMenuView helpMenuView = new HelpMenuView();

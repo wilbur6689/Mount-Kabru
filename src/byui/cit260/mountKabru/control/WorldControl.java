@@ -11,10 +11,13 @@ public class WorldControl {
 
     public World createWorld() {
         
-        World world = new World(5,5);
+        World world = new World(4,8);
         
-        createEvents();
-        setEventsToLocations();
+        //Create all the events for the game
+        Event[] events = createEvents();
+        
+        //set all the events to each location in the world
+        setEventsToLocations(world, events);
                 
         return world;
     }
@@ -25,15 +28,22 @@ public class WorldControl {
         
         Location[][] locations = world.getLocations();
         
+          for (int row = 0; row < rowCount; row++) {
+            for (int column = 0; column < columnCount; column++) {
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setDiscovered(false);
+        
         
         //Start Point
-        locations[0][0].setEvents(events[events.town]);
-        locations[0][1].setEvents(events[events.town]);
-        locations[0][2].setEvents(events[events.town]);
-        locations[0][3].setEvents(events[events.town]);
-        locations[0][4].setEvents(events[events.town]);
-        locations[0][5].setEvents(events[events.town]);        
-        locations[0][6].setEvents(events[events.town]);
+        locations[0][0].setEvents(events);
+        locations[0][1].setEvents(events);
+        locations[0][2].setEvents(events);
+        locations[0][3].setEvents(events);
+        locations[0][4].setEvents(events);
+        locations[0][5].setEvents(events);        
+        locations[0][6].setEvents(events);
         locations[0][7].setEvents(events[events.town]);
         locations[0][8].setEvents(events[events.town]);
         locations[0][9].setEvents(events[events.town]);
@@ -65,31 +75,31 @@ public class WorldControl {
     private static Event[] createEvents() {
         Event[] events = new Event[9];
         
-        Event townEvent = new Event("Town", "You return to Town!", "you look around for a place to shop");
+        Event townEvent = new Event("Town", "Town", "You return to Town!", "you look around for a place to shop");
         events[0] = townEvent;
         
-        Event plainsGoldEvent = new Event("Gold", "You Found Gold!", "you found the motherload");
+        Event plainsGoldEvent = new Event("Gold", "plains", "You Found Gold!", "you found the motherload");
         events[1] = plainsGoldEvent;
         
-        Event plainsMonsterEvent = new Event("Monster", "You Found a Monster!", "Prepare for Battle weakling");
+        Event plainsMonsterEvent = new Event("Monster", "plains", "You Found a Monster!", "Prepare for Battle weakling");
         events[2] = plainsMonsterEvent;
         
-        Event jungleGoldEvent = new Event("Gold", "You Found Gold!", "you found the motherload");
+        Event jungleGoldEvent = new Event("Gold", "Jungle", "You Found Gold!", "you found the motherload");
         events[3] = jungleGoldEvent;
         
-        Event jungleMonsterEvent = new Event("Monster", "You Found a Monster!", "Prepare for Battle weakling");
+        Event jungleMonsterEvent = new Event("Monster", "Jungle", "You Found a Monster!", "Prepare for Battle weakling");
         events[4] = jungleMonsterEvent;
         
-        Event forestGoldEvent = new Event("Gold", "You Found Gold!", "you found the motherload");
+        Event forestGoldEvent = new Event("Gold", "Forest", "You Found Gold!", "you found the motherload");
         events[5] = forestGoldEvent;
         
-        Event forestMonsterEvent = new Event("Monster", "You Found a Monster!", "Prepare for Battle weakling");
+        Event forestMonsterEvent = new Event("Monster", "Forest", "You Found a Monster!", "Prepare for Battle weakling");
         events[6] = forestMonsterEvent;
         
-        Event mountainGoldEvent = new Event("Gold", "You Found Gold!", "you found the motherload");
+        Event mountainGoldEvent = new Event("Gold", "Mountain", "You Found Gold!", "you found the motherload");
         events[7] = mountainGoldEvent;
         
-        Event mountainMonsterEvent = new Event("Monster", "You Found a Monster!", "Prepare for Battle weakling");
+        Event mountainMonsterEvent = new Event("Monster", "Mountain", "You Found a Monster!", "Prepare for Battle weakling");
         events[8] = mountainMonsterEvent;
         
         

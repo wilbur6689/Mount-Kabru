@@ -120,11 +120,6 @@ public class GameControl {
         Actor[] actors = GameControl.createActors();
         game.setActors(actors);
         
-        //Create Events for the game
-        
-        Event[] events = EventControl.createEvent();
-       
-        
 
         World world = WorldControl.createWorld();
         game.setWorld(world);

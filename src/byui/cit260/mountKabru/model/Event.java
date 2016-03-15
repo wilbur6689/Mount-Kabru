@@ -10,17 +10,19 @@ import java.util.Objects;
 
 /**
  *
- * @author wibur
+ * @author wilbur
  */
 public class Event implements Serializable{
     
     String eventType;
+    String locationType;
     String Name;
     String description;
     //Actor[] actors;
 
-    public Event(String eventType, String Name, String description) {
+    public Event(String eventType, String locationType, String Name, String description) {
         this.eventType = eventType;
+        this.locationType = locationType;
         this.Name = Name;
         this.description = description;
     }
@@ -41,6 +43,15 @@ public class Event implements Serializable{
         this.Name = Name;
     }
 
+    public String getLocationType() {
+        return locationType;
+    }
+
+    public void setLocationType(String locationType) {
+        this.locationType = locationType;
+    }
+
+    
     public String getDescription() {
         return description;
     }

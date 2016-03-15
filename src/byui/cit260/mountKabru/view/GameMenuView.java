@@ -57,11 +57,13 @@ public class GameMenuView extends View {
     }
 
     private void goAdventure() {
-         // create adventure view object
-        
          
-        AdventureView adventureView = new AdventureView();
-        adventureView.display();
+        //Show the player the map
+         
+         
+         
+       // AdventureView adventureView = new AdventureView();
+        //adventureView.display();
     }
 
     private void goTavern() {

@@ -23,7 +23,7 @@ public class WorldControl {
     }
 
 
-    private static void setEventsToLocations(World world, Event[] events) {
+    private static void setEventsToLocations(World world, Event[] event) {
       
         
         Location[][] locations = world.getLocations();

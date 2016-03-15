@@ -11,16 +11,16 @@ public class WorldControl {
 
     public World createWorld() {
         
-        World world = new World(20,20);
+        World world = new World(5,5);
         
         createEvents();
-        setWorldLocations();
+        setEventsToLocations();
                 
         return world;
     }
 
 
-    private static void setWorldLocations(World world) {
+    private static void setEventsToLocations(World world, Event[] event) {
       
         
         Location[][] locations = world.getLocations();
@@ -32,11 +32,38 @@ public class WorldControl {
         locations[0][2].setLocations
         locations[0][3].setLocations
         locations[0][4].setLocations
-        locations[0][5].setLocations        
-        locations[0][6].setLocations
-        locations[0][7].setLocations
-        locations[0][8].setLocations
-        locations[0][9].setLocations
+        locations[0][5].setLocations
+        locations[1][0].setLocations(locations[LocationType]);
+        locations[1][1].setLocations
+        locations[1][2].setLocations
+        locations[1][3].setLocations
+        locations[1][4].setLocations
+        locations[1][5].setLocations
+        locations[2][0].setLocations(locations[LocationType]);
+        locations[2][1].setLocations
+        locations[2][2].setLocations
+        locations[2][3].setLocations
+        locations[2][4].setLocations
+        locations[2][5].setLocations        
+        locations[3][0].setLocations(locations[LocationType]);
+        locations[3][1].setLocations
+        locations[3][2].setLocations
+        locations[3][3].setLocations
+        locations[3][4].setLocations
+        locations[3][5].setLocations        
+        locations[4][0].setLocations(locations[LocationType]);
+        locations[4][1].setLocations
+        locations[4][2].setLocations
+        locations[4][3].setLocations
+        locations[4][4].setLocations
+        locations[4][5].setLocations                
+        locations[5][0].setLocations(locations[LocationType]);
+        locations[5][1].setLocations
+        locations[5][2].setLocations
+        locations[5][3].setLocations
+        locations[5][4].setLocations
+        locations[5][5].setLocations                
+        
         
         
         

@@ -8,10 +8,7 @@ package byui.cit260.mountKabru.control;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
-import byui.cit260.mountKabru.model.Inventory;
-import byui.cit260.mountKabru.model.Item;
 import byui.cit260.mountKabru.model.Player;
-import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
 
@@ -51,11 +48,9 @@ public class GameControl {
          
         if (answer1.equals("M")) {
             strength += 10;
-        }
-        else if (answer1.equals("W")) {
+        }else if (answer1.equals("W")) {
             mana += 10;
-        }
-        else {
+        }else {
             return null;
         }
         
@@ -63,11 +58,9 @@ public class GameControl {
         
         if (answer2.equals("M")) {
             strength += 10;
-        }
-        else if (answer2.equals("W")) {
+        }else if (answer2.equals("W")) {
             mana += 10;
-        }
-        else {
+        }else {
            return null;
         }
 
@@ -75,11 +68,9 @@ public class GameControl {
         
         if (answer3.equals("M")) {
             strength += 10;
-        }
-        else if (answer3.equals("W")) {
+        }else if (answer3.equals("W")) {
             mana += 10;
-        }
-        else {
+        }else {
            return null;
         }
 
@@ -93,16 +84,12 @@ public class GameControl {
         
         if (strength == 30) {
             hero.setHeroClassType("Warrior");
-        } 
-        else if (mana == 30) {
+        }else if (mana == 30) {
             hero.setHeroClassType("Wizard");
-        }
-        else {
+        }else {
             hero.setHeroClassType("Paladin");
         }
-        
-        
-     
+
         MountKabru.getCurrentGame().setHero(hero);
         
         return hero;
@@ -126,7 +113,7 @@ public class GameControl {
        
     }
 
-    private static Actor[] createActors() {
+    public static Actor[] createActors() {
         
         //Create the list of Actors
         
@@ -176,19 +163,30 @@ public class GameControl {
         
     }
 
-    public static int totalMons() {
+    public static int avgMonsterHP(Actor[] actors) {
         
-        
-        
-        Actor[] actors = MountKabru.getCurrentGame().getActors();
-        
-        int totalMons = 0;
-        
-        for (int i = 0;i<actors.length;i++) {
-            totalMons+=1;
-        }
+        //needs to find the average of the player hitpoints.
+       
 
-        return totalMons;
+        if (actors == null){
+            return -1;
+        }
+        
+        int averageHP = 0;
+        int totalHP = 0;
+
+        for (Actor actor : actors) {
+            int hitPoints = actor.getHitPoints();
+            if (hitPoints < 1 || hitPoints > 150) {
+                return -2;
+            }
+            
+            totalHP += hitPoints; 
+        }
+        
+        averageHP = totalHP / actors.length;
+        
+        return averageHP;
     }
 
     

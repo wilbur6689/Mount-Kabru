@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package control;
+package byui.cit260.mountKabru.control;
 
-import byui.cit260.mountKabru.control.TavernControl;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -16,6 +17,14 @@ import static org.junit.Assert.*;
 public class TavernControlTest {
     
     public TavernControlTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
     }
 
     /**
@@ -48,8 +57,6 @@ public class TavernControlTest {
         else {
             fail ("you have failed");
         }
-        
-   
         
     }
     

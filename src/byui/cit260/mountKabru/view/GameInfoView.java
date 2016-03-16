@@ -6,6 +6,8 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
+import byui.cit260.mountKabru.model.Actor;
+import mountkabru.MountKabru;
 
 /**
  *
@@ -22,7 +24,7 @@ public class GameInfoView extends View {
                 + "\n|  tell you something very useful...'    |"
                 + "\n------------------------------------------"
                 + "\n"
-                + "\nT - [T]otal number of monsters in the game"
+                + "\nA - [A]verage number of Hit Points for the monsters in the game"
                 + "\nL - [L]ist of monsters from weakest to strongest "
                 + "\nS - [S]ee your Stats "
                 + "\nQ - [Q]uit"
@@ -37,8 +39,8 @@ public class GameInfoView extends View {
         value = value.toUpperCase(); //convert choice to upper case
 
         switch (value) {
-            case "T": // Buy weapons and armor from the blacksmith
-                this.totalMonsters();
+            case "A": // Buy weapons and armor from the blacksmith
+                this.avgMonsters();
                 break;
             case "L": // Sell your weapons or armor to the blacksmith
                 this.listMonsters();
@@ -53,10 +55,12 @@ public class GameInfoView extends View {
         return false;
     }
 
-    private void totalMonsters() {
+    private void avgMonsters() {
 
-        int totalMons = GameControl.totalMons();
-        System.out.println("\nLast time I checked there were " + totalMons + " Different Types of monsters in this world.");
+        Actor[] actors = MountKabru.getCurrentGame().getActors();
+        
+        int avgMonsterHP = GameControl.avgMonsterHP(actors);
+        System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
 
     }
 

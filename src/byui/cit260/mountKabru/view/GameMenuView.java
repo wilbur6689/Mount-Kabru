@@ -56,6 +56,9 @@ public class GameMenuView extends View {
             case "H": //help menu
                 this.displayHelpMenu();
                 break;
+            case "Q": //help menu
+                this.quitGame();
+                break;
             
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -132,6 +135,10 @@ public class GameMenuView extends View {
         
         //display the help menu view
         helpMenuView.display();
+    }
+
+    private void quitGame() {
+        System.exit(0);
     }
 
     

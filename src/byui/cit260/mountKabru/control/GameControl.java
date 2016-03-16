@@ -176,8 +176,19 @@ public class GameControl {
         
     }
 
-    static void assignRandomEventToLocations(World world, Event[] randomEvent) {
-        System.out.println("*** Move Actor Function Called. ***");
+    public static int totalMons() {
+        
+        
+        
+        Actor[] actors = MountKabru.getCurrentGame().getActors();
+        
+        int totalMons = 0;
+        
+        for (int i = 0;i<actors.length;i++) {
+            totalMons+=1;
+        }
+
+        return totalMons;
     }
 
     

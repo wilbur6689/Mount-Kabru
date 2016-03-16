@@ -25,6 +25,7 @@ public class GameMenuView extends View {
                 + "\nA - go on an [A]dventure"
                 + "\nT - visit the [T]avern"
                 + "\nB - visit the [B]lacksmith"
+                + "\nG - [G]et Information from the Old Man"
                 + "\nH - please [H]elp!"
                 + "\nQ - [Q]uit"
                 + "\n--------------------------------------");
@@ -48,6 +49,9 @@ public class GameMenuView extends View {
                 break;
             case "B": // visit the blacksmith in town
                 this.goBlacksmith();
+                break;
+            case "G": // Get Information about the game
+                this.goGameInfo();
                 break;
             case "H": //help menu
                 this.displayHelpMenu();
@@ -94,8 +98,8 @@ public class GameMenuView extends View {
                 
        System.out.println("   |   1    |   2    |   3    |   4    |   5    |   6    |   7    |   8    |"); 
          
-       // AdventureView adventureView = new AdventureView();
-        //adventureView.display();
+       AdventureView adventureView = new AdventureView();
+       adventureView.display();
     }
 
     public void goTavern() {
@@ -113,7 +117,14 @@ public class GameMenuView extends View {
         //display the tavern view
         blacksmithView.display();
     }
-
+    
+    private void goGameInfo() {
+        GameInfoView gameInfoView = new GameInfoView();
+        
+        gameInfoView.display();
+        
+    }
+    
     public void displayHelpMenu() {
         
          // create helpHelpMenuView object
@@ -122,4 +133,6 @@ public class GameMenuView extends View {
         //display the help menu view
         helpMenuView.display();
     }
+
+    
 }

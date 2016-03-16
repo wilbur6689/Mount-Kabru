@@ -80,10 +80,11 @@ public class GameMenuView extends View {
                 Location location = locations[row][column];
                 boolean discovered = location.isDiscovered(); 
                 if (discovered == true) {
-                 System.out.print("o");
+                 System.out.print("---");
+                 System.out.print("/\\");
                 }
                 else {
-                System.out.print("---");   
+                 System.out.print("---");   
                  System.out.print("??");
                 }
                 System.out.print("---");

@@ -17,9 +17,19 @@ public class GameMenuView extends View {
     
     public GameMenuView() {
            super( "\n"
-                + "\n--------------------------------------"
-                + "\n|  This here be the Town of Kabru    |"
-                + "\n--------------------------------------"
+               + "\n|----------------------------------------|"
+               + "\n|                                   ___  |"
+               + "\n|                _                 /   \\ |"
+               + "\n|             __|_|______         /     \\|"
+               + "\n|   __       |      _ _  |    ___|       |"
+               + "\n|  /  `_     |  _  |_|_| |   |   |       |"
+               + "\n| |  _  |    | | | |_|_| |   |___|    _  |"
+               + "\n|_|_|_|_|____|_|_|_______|___|_|_|___|_|_|"
+               + "\n|                                        |"
+               + "\n|    This here be the Town of Kabru      |"
+               + "\n|                                        |"
+               + "\n|----------------------------------------|"
+
                 + "\nA - go on an [A]dventure"
                 + "\nT - visit the [T]avern"
                 + "\nB - visit the [B]lacksmith"

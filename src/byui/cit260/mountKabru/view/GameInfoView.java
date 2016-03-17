@@ -25,7 +25,7 @@ public class GameInfoView extends View {
                 + "\n------------------------------------------"
                 + "\n"
                 + "\nA - [A]verage number of Hit Points for the monsters in the game"
-                + "\nL - [L]ist of monsters from weakest to strongest "
+                + "\nL - [L]ist of Monsters Alphabetically "
                 + "\nS - [S]ee your Stats "
                 + "\nQ - [Q]uit"
                 + "\n--------------------------------------");
@@ -65,13 +65,15 @@ public class GameInfoView extends View {
     }
 
     private void listMonsters() {
-        
-        System.out.println("\nI dont know that, ask me something else");
+        Actor[] actors = MountKabru.getCurrentGame().getActors();
+        String listOMonsters = GameControl.listOMonsters(actors);
+        System.out.println("\nHere you go! This is all of the monsterData that I have discovered. \n"
+            + listOMonsters);
     }
 
     private void heroStats() {
         
-        System.out.println("\nI dont know that, ask me something else");
+        System.out.println("\nI don't know that, ask me something else");
     }
     
 }

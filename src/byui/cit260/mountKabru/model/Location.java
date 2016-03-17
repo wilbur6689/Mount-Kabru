@@ -23,12 +23,16 @@ public class Location implements Serializable {
     public Location() {
         
     }
-    
-    public Location(String name, Event[] events, boolean discovered) {
-        this.locationName = name;
+
+    public Location(String locationName, Event[] events, boolean discovered, int row, int column) {
+        this.locationName = locationName;
         this.events = events;
         this.discovered = discovered;
+        this.row = row;
+        this.column = column;
     }
+    
+    
 
     public String getLocationName() {
         return locationName;

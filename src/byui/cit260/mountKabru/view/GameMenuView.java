@@ -5,9 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
-import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Location;
-import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
 
 

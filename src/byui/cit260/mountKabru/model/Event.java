@@ -18,7 +18,7 @@ public class Event implements Serializable{
     String locationType;
     String eventName;
     String eventDescription;
-    //Actor[] actors;
+  
 
     public Event(String eventType, String locationType, String Name, String description) {
         this.eventType = eventType;

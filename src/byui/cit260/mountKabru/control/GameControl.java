@@ -13,7 +13,7 @@ import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
 
 import java.util.Arrays;
-import java.util.Collections;
+
 
 /**
  *
@@ -194,18 +194,23 @@ public class GameControl {
 
 
     public static String listOMonsters(Actor[] actors) {
+        // Here I am creating a new array that I will sort the names into to arrange them.
+
         String[] newNames = new String[actors.length];
+        //This for statement is here to count the names from the array above into a list
         for (int i = 0; i < newNames.length;i++) {
+            //newNames is the name of the array, Here I am telling the array to find the index of the name using the ge
+            //getName function. After it is called it puts the name into the empty location in the newNames array.
             newNames[i] = actors[i].getName();
         }
 
         String names = "\n";
-
+        // Here I am sorting the array of newNames alphabetically
         Arrays.sort(newNames);
-
+        // This is where I am assigning the names a variable of "name" from the newNames array data-types
         for (String name : newNames)
             names += name + "\n";
-
+        //I return the new names in the sorted order.
         return names;
 
     }

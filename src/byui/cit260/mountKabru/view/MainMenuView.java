@@ -17,20 +17,7 @@ import mountkabru.MountKabru;
 public class MainMenuView extends View {
     
        public MainMenuView() {
-                 super("\n"
-                    + "\n|----------------------------------------|"
-                    + "\n|                                   ___  |"
-                    + "\n|                _                 /   i |"
-                    + "\n|             __|_|______         /     i|"
-                    + "\n|   __       |      _ _  |    ___|       |"
-                    + "\n|  /  `_     |  _  |_|_| |   |   |       |"
-                    + "\n| |  _  |    | | | |_|_| |   |___|    _  |"
-                    + "\n|_|_|_|_|____|_|_|_______|___|_|_|___|_|_|"
-                    + "\n|                                        |"
-                    + "\n|             ~~~Main Menu~~~            |"
-                    + "\n|                                        |"
-                    + "\n|----------------------------------------|"
-                    + "\n   N - Start a new game"
+                 super("\n   N - Start a new game"
                     + "\n   L - Load Game"
                     + "\n   S - Save Game"
                     + "\n   H - Get Help on how to play the game"

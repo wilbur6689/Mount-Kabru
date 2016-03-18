@@ -66,7 +66,10 @@ public class GameInfoView extends View {
 
     private void listMonsters() {
         
-        System.out.println("\nI dont know that, ask me something else");
+        Actor[] actors = MountKabru.getCurrentGame().getActors();
+        
+        String names = GameControl.listOMonsters(actors);
+        System.out.println("\n here is a list of all the monsters: " + names);
     }
 
     private void heroStats() {

@@ -10,6 +10,7 @@ import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Player;
 import byui.cit260.mountKabru.model.World;
+import java.util.Arrays;
 import mountkabru.MountKabru;
 
 /**
@@ -119,7 +120,7 @@ public class GameControl {
         
         Actor[] actors = new Actor[13];
         /* Actor
-        private String name;
+        private String names;
         private int hitPoints;
         private int defence;
         private int attack;
@@ -127,7 +128,7 @@ public class GameControl {
         private int gold;
         */
         //plains MOnsters
-        Actor gnome = new Actor("Gnome", 8,4,3,2,7);
+        Actor gnome = new Actor("gnome", 8,4,3,2,7);
         actors[0] = gnome;
         Actor banshee = new Actor("banshee", 12,5,5,2,12 );
         actors[1] = banshee;
@@ -188,6 +189,13 @@ public class GameControl {
         
         return averageHP;
     }
+    
+    public static String listOMonsters(Actor[] actors) {
+        
+    
+                
+    }
+
 
     
     

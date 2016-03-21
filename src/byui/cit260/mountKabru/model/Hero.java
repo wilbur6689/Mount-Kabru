@@ -46,8 +46,6 @@ public class Hero extends Actor implements  Serializable  {
         this.inventory = inventory;
     }
 
-
-
     public Game getGame() {
         return game;
     }
@@ -55,7 +53,6 @@ public class Hero extends Actor implements  Serializable  {
     public void setGame(Game game) {
         this.game = game;
     }
-    
     
 
     public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
@@ -158,7 +155,7 @@ public class Hero extends Actor implements  Serializable  {
 
     @Override
     public String toString() {
-        return "Hero{" + "heroClassType =" + heroClassType + ", levelOfHero =" + levelOfHero + ", experience =" + experience + ", mana =" + mana + ", strength =" + strength + '}';
+        return "Here is your Hero:{" + "\n Hero Class Type = " + heroClassType + "\n Level of Your Hero = " + levelOfHero + "\n Experience = " + experience + "\n Mana = " + mana + "\n Strength = " + strength + '}';
     }
     
     

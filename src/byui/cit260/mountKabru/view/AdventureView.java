@@ -32,16 +32,16 @@ public class AdventureView extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "P": // go kill stuff in the Jungle
+            case "P": // go kill stuff in the plains
                 this.plainsAdventure();
                 break;
-            case "J": // use a potion
+            case "J": // go kill stuff in the jungle
                 this.jungleAdventure();
                 break;
-            case "F": // view your inventory
+            case "F": // go kill stuff in the forest
                 this.forestAdventure();
                 break;
-            case "M": // view your inventory
+            case "M": // go kill stuff in the Mountains
                 this.mountainAdventure();
                 break;
 

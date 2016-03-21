@@ -6,10 +6,6 @@
 package byui.cit260.mountKabru.control;
 
 import byui.cit260.mountKabru.model.Actor;
-import byui.cit260.mountKabru.model.Hero;
-import byui.cit260.mountKabru.model.Player;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -98,15 +94,15 @@ public class GameControlTest {
         
     }
     
-//    @Test
-//    public void testAvgMonsterHP3() {
-//        System.out.println("avgMonsterHP fail 2");
-//        int expResult = -2;
-//        Actor[] actors = GameControl.createActors();
-//        int result = GameControl.avgMonsterHP(actors);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        
-//    }
+    @Test
+    public void testAvgMonsterHP3() {
+        System.out.println("avgMonsterHP fail 2");
+        int expResult = -2;
+        Actor[] actors = GameControl.createActors();
+        int result = GameControl.avgMonsterHP(actors);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
     
 }

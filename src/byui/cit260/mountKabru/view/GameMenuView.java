@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Location;
 import mountkabru.MountKabru;
 
@@ -29,16 +30,17 @@ public class GameMenuView extends View {
                + "\n|    This here be the Town of Kabru      |"
                + "\n|                                        |"
                + "\n|----------------------------------------|"
-
-                + "\nA - go on an [A]dventure"
-                + "\nT - visit the [T]avern"
-                + "\nB - visit the [B]lacksmith"
-                + "\nG - [G]et Information from the Old Man"
-                + "\nH - please [H]elp!"
-                + "\nQ - [Q]uit"
-                + "\n--------------------------------------");
+               + "\n"
+               + "\n" + MountKabru.getCurrentGame().getHero().toString() 
+               + "\n"
+               + "\n  A - go on an [A]dventure"
+               + "\n  T - visit the [T]avern"
+               + "\n  B - visit the [B]lacksmith"
+               + "\n  G - [G]et Information from the Old Man"
+               + "\n  H - please [H]elp!"
+               + "\n  Q - [Q]uit"
+               + "\n--------------------------------------");
     }
-    
     
     
     private String promptMessage;

@@ -19,7 +19,7 @@ public class GameInfoView extends View {
         super("\n"
                 + "\n------------------------------------------"
                 + "\n|  You find an old beggar behind the     |"
-                + "\n|  tavern. He streches his hand out      |"
+                + "\n|  tavern. He stretches his hand out      |"
                 + "\n|  and says 'Give me a coin and I will   |"
                 + "\n|  tell you something very useful...'    |"
                 + "\n------------------------------------------"

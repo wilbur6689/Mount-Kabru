@@ -6,6 +6,8 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
+import byui.cit260.mountKabru.exceptions.ActorControlException;
+import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Hero;
 
 /**
@@ -77,11 +79,14 @@ public class NewCharView extends View {
         this.displayMessage = this.addStats3;
         String answer3 = this.getInput().toUpperCase();
         
-       
-        
         //Need to set Hero Name, strength, Mana
-        GameControl.createHero(heroName, answer1, answer2, answer3);
-        
+        try { 
+        GameControl.createHero(heroName, answer1, answer2, answer3); 
+        } 
+        catch (GameControlException me) {
+            System.out.println(me.getMessage());
+            
+        }
         // create and display game menu view
         // create gameMenuView object
         GameMenuView gameMenuView = new GameMenuView();

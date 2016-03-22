@@ -22,12 +22,12 @@ public class Hero extends Actor implements  Serializable  {
 
     private Player player;
     private Inventory inventory;
-    private Game game;
+
     
      
 
     public Hero() {
-
+        
     }
 
     public Player getPlayer() {
@@ -46,15 +46,22 @@ public class Hero extends Actor implements  Serializable  {
         this.inventory = inventory;
     }
 
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
     
 
+    public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength, Player player, Inventory inventory, String name, int hitPoints, int defence, int attack, int chanceToHit, int gold) {
+        super(name, hitPoints, defence, attack, chanceToHit, gold);
+        this.heroName = heroName;
+        this.heroClassType = heroClassType;
+        this.levelOfHero = levelOfHero;
+        this.experience = experience;
+        this.mana = mana;
+        this.strength = strength;
+        this.player = player;
+        this.inventory = inventory;
+    }
+    
+    
+    
     public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
         this.heroName = heroName;
         this.heroClassType = heroClassType;

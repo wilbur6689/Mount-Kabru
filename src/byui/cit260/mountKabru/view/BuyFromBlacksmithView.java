@@ -17,14 +17,22 @@ public class BuyFromBlacksmithView extends View {
     
     public BuyFromBlacksmithView() {
            super( "\n"
-                + "\n--------------------------------------"
-                + "\n|  What would you like to buy?        |"
-                + "\n|                                     |"
-                + "\n--------------------------------------"
-                + "\nS - [S]word"
-                + "\nA - [A]rmor"
+                + "\n----------------------------------------------------------------"
+                + "\n|                                                              |"
+                + "\n|    / \\                   __ ________ __                      |"
+                + "\n|    | |    Weapons:      /  /        \\  \\      Armor:         |"
+                + "\n|    | |  1. Stick        |  |   __   |  |    5. Leather       |"
+                + "\n|    | |  2. Kukri        |__|  |  |  |__|    6. Scale Mail    |"
+                + "\n|    | |  3. Battle Axe      |  |__|  |       7. Carbon Fiber  |"
+                + "\n|    |_|  4. Scythe           \\      /        8. Dragon Bone   |"
+                + "\n|   < _ >                    | \\    / |                        |"
+                + "\n|    {_}                     |  \\__/  |                        |"
+                + "\n|                            |  |  |  |                        |"
+                + "\n---------------------------------------------------------------"
+                + "\n Please Enter the Number of the item you wish to purchase"
+                + "\n Your Gold = " + MountKabru.getCurrentGame().getHero().getGold()
                 + "\nQ - [Q]uit"
-                + "\n--------------------------------------");
+                + "\n---------------------------------------------------------------");
     }
     
     @Override
@@ -33,11 +41,29 @@ public class BuyFromBlacksmithView extends View {
         value = value.toUpperCase(); //convert choice to upper case
         
         switch (value) {
-            case "S": // Buy weapons and armor from the blacksmith
-                this.buyWeapon();
+            case "1": // Buy weapons and armor from the blacksmith
+                this.buyStick();
                 break;
-            case "A": // Sell your weapons or armor to the blacksmith
-                this.buyArmor();
+            case "2": // Sell your weapons or armor to the blacksmith
+                this.buyKukri();
+                break;
+            case "3": // Buy weapons and armor from the blacksmith
+                this.buyAxe();
+                break;
+            case "4": // Sell your weapons or armor to the blacksmith
+                this.buyScythe();
+                break;
+            case "5": // Buy weapons and armor from the blacksmith
+                this.buyLeather();
+                break;
+            case "6": // Sell your weapons or armor to the blacksmith
+                this.buyScaleMail();
+                break;
+            case "7": // Buy weapons and armor from the blacksmith
+                this.buyFiber();
+                break;
+            case "8": // Sell your weapons or armor to the blacksmith
+                this.buyBone();
                 break;
                         
             default:
@@ -48,20 +74,141 @@ public class BuyFromBlacksmithView extends View {
         return false;
     }
 
-    private void buyWeapon() {
+
+    private void buyStick() {
+        int cost = 300;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.kukri);
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
         
+        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.stick);
         System.out.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
-             
-             
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display();        
+        
     }
 
-    private void buyArmor() {
-         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.scaleMail);
-         
-         System.out.println("Its been a pleasure to serve you"
+    private void buyKukri() {
+        int cost = 1000;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.kukri);
+        System.out.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
+    }
+
+    private void buyAxe() {
+        int cost = 3000;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.battleAxe);
+        System.out.println("Its been a pleasure to serve you"
+                        + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
+    }
+
+    private void buyScythe() {
+        int cost = 7000;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.scythe);
+        System.out.println("Its been a pleasure to serve you"
+                        + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
+    }
+
+    private void buyLeather() {
+        int cost = 300;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.leatherArmor);
+        System.out.println("Its been a pleasure to serve you"
+                        + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
+    }
+
+    private void buyScaleMail() {
+        int cost = 1000;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.scaleMail);
+        System.out.println("Its been a pleasure to serve you"
+                        + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
+    }
+
+    private void buyFiber() {
+        int cost = 3000;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.carbonFiber);
+        System.out.println("Its been a pleasure to serve you"
+                        + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
+    }
+
+    private void buyBone() {
+        int cost = 7000;
+        int gold = MountKabru.getCurrentGame().getHero().getGold();
+        
+        if (gold > cost) {
+            gold -= cost;
+            MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else { System.out.println("Sorry, you dont have enough gold.");}
+        
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.dragonBoneArmor);
+        System.out.println("Its been a pleasure to serve you"
+                        + "\nThank you for your Business ");
+        
+        BlacksmithView blacksmithView = new BlacksmithView();
+        blacksmithView.display(); 
     }
 }

@@ -162,8 +162,9 @@ public class Hero extends Actor implements  Serializable  {
 
     @Override
     public String toString() {
-        return "Here is your Hero:{" + "\n Hero Class Type = " + heroClassType + "\n Level of Your Hero = " + levelOfHero + "\n Experience = " + experience + "\n Mana = " + mana + "\n Strength = " + strength + '}';
+        return "Here is your Hero:{" + "\n Hero Name = " + heroName + "\n Hero Class Type = " + heroClassType + "\n Level of Your Hero = " + levelOfHero + "\n Experience = " + experience + "\n Mana = " + mana + "\n Strength = " + strength + '}';
     }
+    
     
     
 }

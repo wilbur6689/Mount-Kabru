@@ -80,6 +80,13 @@ public class GameControl {
            return null;
         }
 
+        //(String heroName, String heroClassType, 
+        //int levelOfHero, int experience, int mana, 
+        //int strength, Player player, Inventory inventory, 
+        //String name, int hitPoints, int defence, int attack, 
+        //int chanceToHit, int gold) {
+        
+        
         Hero hero = new Hero();
         
         hero.setHeroName(name);
@@ -87,6 +94,8 @@ public class GameControl {
         hero.setExperience(1);
         hero.setStrength(strength);
         hero.setMana(mana);
+        hero.setHitPoints(20);
+        hero.setGold(10000);
         
         if (strength == 30) {
             hero.setHeroClassType("Warrior");

@@ -24,11 +24,11 @@ import java.util.Arrays;
  */
 public class GameControl {
 
-    public static Player createPlayer(String name) {
+    public static Player createPlayer(String name) throws GameControlException {
         
         
         if (name == null) {
-            return null;
+            throw new GameControlException("The name variable was null.");
         }
         
         Player player = new Player();

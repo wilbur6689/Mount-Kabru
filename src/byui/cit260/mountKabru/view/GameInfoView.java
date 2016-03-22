@@ -57,7 +57,7 @@ public class GameInfoView extends View {
     }
 
     private void avgMonsters() {
-
+        try {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
 
         int avgMonsterHP = 0;
@@ -67,10 +67,15 @@ public class GameInfoView extends View {
             e.printStackTrace();
         }
         System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
-
+        } 
+        catch (GameControlException me) {
+            System.out.println(me.getMessage());
+            
+        }
     }
 
     private void listMonsters() {
+        try {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
         String listOMonsters = null;
         try {
@@ -80,6 +85,11 @@ public class GameInfoView extends View {
         }
         System.out.println("\nHere you go! This is all of the monsterData that I have discovered. \n"
             + listOMonsters);
+        }
+        catch (GameControlException me) {
+            System.out.println(me.getMessage());
+            
+        }
     }
 
     private void heroStats() {

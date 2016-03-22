@@ -60,11 +60,12 @@ public class MainMenuView extends View {
         private void startNewGame() {
             //Create a new game
             try {
-                GameControl.createNewGame(MountKabru.getPlayer());
-            } catch (GameControlException e) {
-                e.printStackTrace();
+            GameControl.createNewGame(MountKabru.getPlayer());
             }
-
+            catch (GameControlException me) {
+            System.out.println(me.getMessage());
+            
+        }
             // display next view
             NewCharView newCharView = new NewCharView();
             newCharView.display();

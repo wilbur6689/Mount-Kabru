@@ -31,7 +31,7 @@ public class WorldControl {
         
           for (int row = 0; row < rowCount; row++) {
             for (int column = 0; column < columnCount; column++) {
-               locations[row][column].setEvents(events);
+               locations[row][column].setEvents(events[EventType.townEvent.ordinal()]);
         
             }
             
@@ -77,6 +77,18 @@ public class WorldControl {
     
     }
     
+    public enum EventType {
+        townEvent,
+        plainsGoldEvent,
+        plainsMonsterEvent,
+        jungleGoldEvent,
+        jungleMonsterEvent,
+        forestGoldEvent,
+        forestMonsterEvent,
+        mountainGoldEvent,
+        mountainMonsterEvent,
+        
+    }
     
    
 }

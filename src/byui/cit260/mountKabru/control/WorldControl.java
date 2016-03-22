@@ -25,28 +25,54 @@ public class WorldControl {
 
     private static void setEventsToLocations(World world, Event[] events) {
       
-        int rowCount = world.getRowCount();
-        int columnCount = world.getColumnCount(); 
-        Location[][] locations = world.getLocations();
+       Location[][] locations = world.getLocations();
+       
+       //start point
+        locations[0][0].createEvents(events[EventType.townEvent.ordinal()]);
+        locations[0][1].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][2].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][3].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][4].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][5].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][6].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+
+        locations[1][0].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][1].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][2].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][3].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][4].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][5].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][6].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+
+        locations[2][0].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][1].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][2].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][3].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][4].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][5].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][6].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
         
-          for (int row = 0; row < rowCount; row++) {
-            for (int column = 0; column < columnCount; column++) {
-               locations[row][column].setEvents(events[EventType.townEvent.ordinal()]);
-        
-            }
-            
-          }
+        locations[3][0].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][1].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][2].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][3].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][4].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][5].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][6].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+
+
+
 
     }
     
   
     
     private static Event[] createEvents() {
-        Event[] events = new Event[9];
+        Event[] events = new Event[EventType.values().length];
         
         Event townEvent = new Event("Town", "Town", "You return to Town!", "you look around for a place to shop");
         events[0] = townEvent;
-        
+
         Event plainsGoldEvent = new Event("Gold", "plains", "You Found Gold!", "you found the motherload");
         events[1] = plainsGoldEvent;
         

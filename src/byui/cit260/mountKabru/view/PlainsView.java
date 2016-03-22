@@ -5,6 +5,11 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.InventoryControl;
+import byui.cit260.mountKabru.model.Inventory;
+import byui.cit260.mountKabru.model.Item;
+import mountkabru.MountKabru;
+
 /**
  *
  * @author Phill
@@ -43,7 +48,7 @@ public class PlainsView extends View {
                 this.usePotion();
                 break;
             case "I": // view your inventory
-                this.viewInventory();
+                InventoryControl.viewInventory();
                 break;
             
             default:
@@ -67,11 +72,4 @@ public class PlainsView extends View {
                          + "\n*** remember you dont have any potions   ***");
     }
 
-    private void viewInventory() {
-        
-        //create the Attack Monster view object
-        InventoryView inventoryView = new InventoryView();
-        //display the Attack Monster view
-        inventoryView.display();
-    }
 }

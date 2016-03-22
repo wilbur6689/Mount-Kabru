@@ -8,48 +8,55 @@ import java.util.Objects;
  */
 public class Inventory implements Serializable {
 
-    private String weaponSlot;
-    private String armorSlot;
-    private int healthPotionSlot;
-    private int manaPotionSlot;
+    private Item weaponSlot;
+    private Item armorSlot;
+    private Item healthPotionSlot;
+    private Item manaPotionSlot;
     
     private Hero hero;
 
     public Inventory(){
     }
 
-    
-    public String getWeaponSlot() {
+    public Inventory(Item weaponSlot, Item armorSlot, Item healthPotionSlot, Item manaPotionSlot) {
+        this.weaponSlot = weaponSlot;
+        this.armorSlot = armorSlot;
+        this.healthPotionSlot = healthPotionSlot;
+        this.manaPotionSlot = manaPotionSlot;
+    }
+
+    public Item getWeaponSlot() {
         return weaponSlot;
     }
 
-    public void setWeaponSlot(String weaponSlot) {
+    public void setWeaponSlot(Item weaponSlot) {
         this.weaponSlot = weaponSlot;
     }
 
-    public String getArmorSlot() {
+    public Item getArmorSlot() {
         return armorSlot;
     }
 
-    public void setArmorSlot(String armorSlot) {
+    public void setArmorSlot(Item armorSlot) {
         this.armorSlot = armorSlot;
     }
 
-    public int getHealthPotionSlot() {
+    public Item getHealthPotionSlot() {
         return healthPotionSlot;
     }
 
-    public void setHealthPotionSlot(int healthPotionSlot) {
+    public void setHealthPotionSlot(Item healthPotionSlot) {
         this.healthPotionSlot = healthPotionSlot;
     }
 
-    public int getManaPotionSlot() {
+    public Item getManaPotionSlot() {
         return manaPotionSlot;
     }
 
-    public void setManaPotionSlot(int manaPotionSlot) {
+    public void setManaPotionSlot(Item manaPotionSlot) {
         this.manaPotionSlot = manaPotionSlot;
     }
+    
 
     public Hero getHero() {
         return hero;
@@ -58,14 +65,14 @@ public class Inventory implements Serializable {
     public void setHero(Hero hero) {
         this.hero = hero;
     }
-    
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.weaponSlot);
-        hash = 67 * hash + Objects.hashCode(this.armorSlot);
-        hash = 67 * hash + this.healthPotionSlot;
-        hash = 67 * hash + this.manaPotionSlot;
+        int hash = 7;
+        hash = 37 * hash + Objects.hashCode(this.weaponSlot);
+        hash = 37 * hash + Objects.hashCode(this.armorSlot);
+        hash = 37 * hash + Objects.hashCode(this.healthPotionSlot);
+        hash = 37 * hash + Objects.hashCode(this.manaPotionSlot);
         return hash;
     }
 
@@ -81,20 +88,22 @@ public class Inventory implements Serializable {
             return false;
         }
         final Inventory other = (Inventory) obj;
+        if (this.weaponSlot != other.weaponSlot) {
+            return false;
+        }
+        if (this.armorSlot != other.armorSlot) {
+            return false;
+        }
         if (this.healthPotionSlot != other.healthPotionSlot) {
             return false;
         }
         if (this.manaPotionSlot != other.manaPotionSlot) {
             return false;
         }
-        if (!Objects.equals(this.weaponSlot, other.weaponSlot)) {
-            return false;
-        }
-        if (!Objects.equals(this.armorSlot, other.armorSlot)) {
-            return false;
-        }
         return true;
     }
+    
+    
 
     @Override
     public String toString() {

@@ -29,8 +29,13 @@ public class MountKabru {
         
         StartProgramView startProgramView = new StartProgramView();
         
+        try {
         startProgramView.display();
-            
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }    
           
         
     }    

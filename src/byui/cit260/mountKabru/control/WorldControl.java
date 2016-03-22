@@ -28,37 +28,37 @@ public class WorldControl {
        Location[][] locations = world.getLocations();
        
        //start point
-        locations[0][0].createEvents(events[EventType.townEvent.ordinal()]);
-        locations[0][1].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
-        locations[0][2].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
-        locations[0][3].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
-        locations[0][4].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
-        locations[0][5].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
-        locations[0][6].createEvents(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][0].setEvent(events[EventType.townEvent.ordinal()]);
+        locations[0][1].setEvent(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][2].setEvent(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][3].setEvent(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][4].setEvent(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][5].setEvent(events[EventType.plainsMonsterEvent.ordinal()]);
+        locations[0][6].setEvent(events[EventType.plainsMonsterEvent.ordinal()]);
 
-        locations[1][0].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
-        locations[1][1].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
-        locations[1][2].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
-        locations[1][3].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
-        locations[1][4].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
-        locations[1][5].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
-        locations[1][6].createEvents(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][0].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][1].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][2].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][3].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][4].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][5].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
+        locations[1][6].setEvent(events[EventType.jungleMonsterEvent.ordinal()]);
 
-        locations[2][0].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
-        locations[2][1].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
-        locations[2][2].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
-        locations[2][3].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
-        locations[2][4].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
-        locations[2][5].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
-        locations[2][6].createEvents(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][0].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][1].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][2].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][3].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][4].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][5].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
+        locations[2][6].setEvent(events[EventType.forestMonsterEvent.ordinal()]);
         
-        locations[3][0].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
-        locations[3][1].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
-        locations[3][2].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
-        locations[3][3].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
-        locations[3][4].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
-        locations[3][5].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
-        locations[3][6].createEvents(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][0].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][1].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][2].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][3].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][4].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][5].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
+        locations[3][6].setEvent(events[EventType.mountainMonsterEvent.ordinal()]);
 
 
 

@@ -17,7 +17,7 @@ import java.util.Objects;
 public class Location implements Serializable {
 
     private String locationName;
-    private Event[] events;
+    private Event event;
     private boolean discovered;
     private int row;
     private int column;
@@ -26,9 +26,8 @@ public class Location implements Serializable {
 
     }
 
-    public Location(String locationName, Event[] events, boolean discovered, int row, int column) {
+    public Location(String locationName, boolean discovered, int row, int column) {
         this.locationName = locationName;
-        this.events = events;
         this.discovered = discovered;
         this.row = row;
         this.column = column;
@@ -43,12 +42,12 @@ public class Location implements Serializable {
         this.locationName = locationName;
     }
 
-    public Event[] getEvents() {
-        return events;
+    public Event getEvent() {
+        return event;
     }
 
-    public void setEvents(Event[] events) {
-        this.events = events;
+    public void setEvent(Event event) {
+        this.event = event;
     }
 
     public boolean isDiscovered() {
@@ -76,36 +75,5 @@ public class Location implements Serializable {
     }
 
 
-    public void createEvents(Event x) {
-        {
-            Event[] event = new Event[WorldControl.EventType.values().length];
-
-            Event townEvent = new Event("Town", "Town", "You return to Town!", "you look around for a place to shop");
-            event[0] = townEvent;
-
-            Event plainsGoldEvent = new Event("Gold", "plains", "You Found Gold!", "you found the motherload");
-            event[1] = plainsGoldEvent;
-
-            Event plainsMonsterEvent = new Event("Monster", "plains", "You Found a Monster!", "Prepare for Battle weakling");
-            event[2] = plainsMonsterEvent;
-
-            Event jungleGoldEvent = new Event("Gold", "Jungle", "You Found Gold!", "you found the motherload");
-            event[3] = jungleGoldEvent;
-
-            Event jungleMonsterEvent = new Event("Monster", "Jungle", "You Found a Monster!", "Prepare for Battle weakling");
-            event[4] = jungleMonsterEvent;
-
-            Event forestGoldEvent = new Event("Gold", "Forest", "You Found Gold!", "you found the motherload");
-            event[5] = forestGoldEvent;
-
-            Event forestMonsterEvent = new Event("Monster", "Forest", "You Found a Monster!", "Prepare for Battle weakling");
-            event[6] = forestMonsterEvent;
-
-            Event mountainGoldEvent = new Event("Gold", "Mountain", "You Found Gold!", "you found the motherload");
-            event[7] = mountainGoldEvent;
-
-            Event mountainMonsterEvent = new Event("Monster", "Mountain", "You Found a Monster!", "Prepare for Battle weakling");
-            event[8] = mountainMonsterEvent;
-        }
-    }
+    
 }

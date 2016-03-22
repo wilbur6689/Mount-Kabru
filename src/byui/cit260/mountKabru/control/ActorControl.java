@@ -19,7 +19,7 @@ public class ActorControl {
 
         if (attack < 5 || attack > 100) {
             if (attack > 100) {
-                return -4;
+                throw new ActorControlException("The attack was to large of a number.");
             }
             throw new ActorControlException("The attack was a negitive number.");
         }

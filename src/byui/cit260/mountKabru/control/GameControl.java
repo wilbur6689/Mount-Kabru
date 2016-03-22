@@ -6,13 +6,13 @@
 package byui.cit260.mountKabru.control;
 
 import static byui.cit260.mountKabru.control.InventoryControl.createInventory;
+import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Player;
 import byui.cit260.mountKabru.model.World;
-import java.util.Arrays;
 import mountkabru.MountKabru;
 
 import java.util.Arrays;
@@ -33,18 +33,24 @@ public class GameControl {
         
         Player player = new Player();
         player.setName(name);
-       
-        
-        MountKabru.setPlayer(player); //save the player
-        
-        
+        MountKabru.setPlayer(player); //save the player  
         return player;
     }
     
-    public static Hero createHero(String name, String answer1, String answer2, String answer3) {
+    public static Hero createHero(String name, String answer1, String answer2, String answer3) throws GameControlException {
         
-         if (name == null) {
-            return null;
+         if (name == null){
+            throw new GameControlException("The name variable was null.");
+        }
+         
+         if (answer1 == null){
+            throw new GameControlException("The first Answer was null.");
+        }
+         if (answer2 == null){
+            throw new GameControlException("The second Answer was null.");
+        }
+         if (answer3 == null){
+            throw new GameControlException("The third Answer was null.");
         }
          
         int strength = 0;
@@ -116,7 +122,11 @@ public class GameControl {
     }
     
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws GameControlException{
+        
+        if (player == null){
+            throw new GameControlException("The player variable was null.");
+        }
         
         Game game = new Game();
         MountKabru.setCurrentGame(game);
@@ -134,6 +144,8 @@ public class GameControl {
     }
 
     public static Actor[] createActors() {
+        
+        
         
         //Create the list of Actors
         
@@ -183,13 +195,13 @@ public class GameControl {
         
     }
 
-    public static int avgMonsterHP(Actor[] actors) {
+    public static int avgMonsterHP(Actor[] actors) throws GameControlException {
         
         //needs to find the average of the player hitpoints.
        
 
         if (actors == null){
-            return -1;
+            throw new GameControlException("The actors variable was null.");
         }
         
         int averageHP = 0;
@@ -198,7 +210,7 @@ public class GameControl {
         for (Actor actor : actors) {
             int hitPoints = actor.getHitPoints();
             if (hitPoints < 1 || hitPoints > 150) {
-                return -2;
+                throw new GameControlException("The hitPoints was too large or too small of a number.");
             }
             
             totalHP += hitPoints; 
@@ -209,7 +221,11 @@ public class GameControl {
         return averageHP;
     }
 
-    public static String listOMonsters(Actor[] actors) {
+    public static String listOMonsters(Actor[] actors) throws GameControlException {
+        
+        if (actors == null){
+            throw new GameControlException("The actors variable was null.");
+        }
         
         // Here I am creating a new array that I will sort the names into to arrange them.
         String[] newNames = new String[actors.length];

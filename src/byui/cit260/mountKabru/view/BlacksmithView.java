@@ -52,9 +52,11 @@ public class BlacksmithView extends View {
     }
 
     private void buyFromBlacksmith() {
-        System.out.println("\n***   Sorry, I am just now stocking my shelves    ***"
-                         + "\n***   with all the best weapons and armor I can   ***"
-                         + "\n***   find. please come back later.               ***");
+        BuyFromBlacksmithView buyFromBlacksmithView = new BuyFromBlacksmithView();
+        
+        buyFromBlacksmithView.display();
+        
+        
     }
 
     private void sellToBlacksmith() {

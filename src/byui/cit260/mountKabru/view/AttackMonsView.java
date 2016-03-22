@@ -6,6 +6,7 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.ActorControl;
+import byui.cit260.mountKabru.exceptions.ActorControlException;
 
 import java.util.Scanner;
 
@@ -58,13 +59,18 @@ public class AttackMonsView extends View{
     }
 
     private void attackMonster() {
-        int attack = 35;
+        int attack = -5;
         int strength = 23;
-        int opponentDefense = 17;
+        int opponentDefense = 17; 
+        try { 
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         System.out.println("\n*** You walk over to the monster      ***"
                          + "\n*** and punch him in the gut          ***"
                          + "\n*** You do " + result + " Damage    ***");
+        
+        } catch (ActorControlException me) {
+            System.out.println(me.getMessage());
+        }
     }
 
     private void defendYourself() {
@@ -72,13 +78,18 @@ public class AttackMonsView extends View{
     }
 
     private void castSpell() {
-        int attack = 50;
+        int attack = 550;
         int mana = 30;
         int opponentDefense = 10;
+        try {
         int result = ActorControl.spellDamage(attack, mana, opponentDefense);
         System.out.println("\n*** You walk over to the monster      ***"
                          + "\n*** and cast fireball                 ***"
                          + "\n*** You do " + result + " Damage    ***");
+        
+        } catch (ActorControlException me) {
+            System.out.println(me.getMessage());
+         }
     }
 
 }

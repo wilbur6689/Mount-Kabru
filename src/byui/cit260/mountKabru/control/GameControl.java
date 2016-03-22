@@ -5,9 +5,11 @@
  */
 package byui.cit260.mountKabru.control;
 
+import static byui.cit260.mountKabru.control.InventoryControl.createInventory;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Hero;
+import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Player;
 import byui.cit260.mountKabru.model.World;
 import java.util.Arrays;
@@ -93,8 +95,13 @@ public class GameControl {
         }else {
             hero.setHeroClassType("Paladin");
         }
-
+        
+        
+        
         MountKabru.getCurrentGame().setHero(hero);
+        
+        Inventory inventory = createInventory();
+        MountKabru.getCurrentGame().getHero().setInventory(inventory);
         
         return hero;
     }

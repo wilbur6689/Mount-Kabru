@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.InventoryControl;
 import java.util.Scanner;
 
 /**
@@ -44,7 +45,7 @@ public class DarkForestView extends View {
                 this.usePotion();
                 break;
             case "I": // view your inventory
-                this.viewInventory();
+                InventoryControl.viewInventory();
                 break;
             
             default:

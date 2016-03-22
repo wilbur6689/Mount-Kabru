@@ -9,24 +9,24 @@ package byui.cit260.mountKabru.exceptions;
  *
  * @author wibur
  */
-public class WorldControlException extends Exception {
+public class ActorControlException extends Exception {
 
-    public WorldControlException() {
+    public ActorControlException() {
     }
 
-    public WorldControlException(String string) {
+    public ActorControlException(String string) {
         super(string);
     }
 
-    public WorldControlException(String string, Throwable thrwbl) {
+    public ActorControlException(String string, Throwable thrwbl) {
         super(string, thrwbl);
     }
 
-    public WorldControlException(Throwable thrwbl) {
+    public ActorControlException(Throwable thrwbl) {
         super(thrwbl);
     }
 
-    public WorldControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
+    public ActorControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
     

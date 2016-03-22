@@ -21,7 +21,7 @@ public class Hero extends Actor implements  Serializable  {
  
 
     private Player player;
-    private ArrayList<Item> inventory = new ArrayList<>();
+    private Inventory inventory;
     private Game game;
     
      
@@ -38,11 +38,11 @@ public class Hero extends Actor implements  Serializable  {
         this.player = player;
     }
 
-    public ArrayList<Item> getInventory() {
+    public Inventory getInventory() {
         return inventory;
     }
 
-    public void setInventory(ArrayList<Item> inventory) {
+    public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
 

@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.InventoryControl;
 import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Location;
 import mountkabru.MountKabru;
@@ -36,6 +37,7 @@ public class GameMenuView extends View {
                + "\n  A - go on an [A]dventure"
                + "\n  T - visit the [T]avern"
                + "\n  B - visit the [B]lacksmith"
+               + "\n  I - [I]nventory"
                + "\n  G - [G]et Information from the Old Man"
                + "\n  H - please [H]elp!"
                + "\n  Q - [Q]uit"
@@ -59,6 +61,9 @@ public class GameMenuView extends View {
                 break;
             case "B": // visit the blacksmith in town
                 this.goBlacksmith();
+                break;
+            case "I": // visit the blacksmith in town
+                InventoryControl.viewInventory();
                 break;
             case "G": // Get Information about the game
                 this.goGameInfo();

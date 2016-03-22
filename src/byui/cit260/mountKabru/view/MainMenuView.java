@@ -6,6 +6,7 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
+import byui.cit260.mountKabru.exceptions.GameControlException;
 import mountkabru.MountKabru;
 
 
@@ -58,8 +59,13 @@ public class MainMenuView extends View {
 
         private void startNewGame() {
             //Create a new game
+            try {
             GameControl.createNewGame(MountKabru.getPlayer());
+            }
+            catch (GameControlException me) {
+            System.out.println(me.getMessage());
             
+        }
             // display next view
             NewCharView newCharView = new NewCharView();
             newCharView.display();

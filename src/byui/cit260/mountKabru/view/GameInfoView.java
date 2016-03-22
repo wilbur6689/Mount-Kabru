@@ -6,6 +6,7 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
+import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Actor;
 import mountkabru.MountKabru;
 
@@ -56,19 +57,29 @@ public class GameInfoView extends View {
     }
 
     private void avgMonsters() {
-
+        try {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
         
         int avgMonsterHP = GameControl.avgMonsterHP(actors);
         System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
-
+        } 
+        catch (GameControlException me) {
+            System.out.println(me.getMessage());
+            
+        }
     }
 
     private void listMonsters() {
+        try {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
         String listOMonsters = GameControl.listOMonsters(actors);
         System.out.println("\nHere you go! This is all of the monsterData that I have discovered. \n"
             + listOMonsters);
+        }
+        catch (GameControlException me) {
+            System.out.println(me.getMessage());
+            
+        }
     }
 
     private void heroStats() {

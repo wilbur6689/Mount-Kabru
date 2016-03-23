@@ -7,8 +7,9 @@ package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
 import byui.cit260.mountKabru.exceptions.GameControlException;
-import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Player;
+
+import static java.lang.Integer.parseInt;
 
 
 /**
@@ -40,7 +41,15 @@ public class StartProgramView extends View {
                 + "\n"
                 + "\n"
                 + "\n Please enter your name: ");}
-   
+
+    private String age =  "\n"
+
+            + "\n"
+            + "\n"
+            + "\nPlease enter your Age"
+            + "\n--------------------------------------";
+
+
     @Override
     public boolean doAction(String playersName) {
         
@@ -50,7 +59,25 @@ public class StartProgramView extends View {
             return false;
         
         }
+
+        // ask questions
+        this.displayMessage = this.age;
+        String playerAge = this.getInput().toUpperCase();
+        int playerAge1 = 0;
+
+        try{
+            playerAge1 = parseInt(playerAge);
+        } catch (NumberFormatException nf){
+            System.out.println("You entered a wrong number");
+        }
+
+    System.out.println("this is your age " +playerAge1);
+
         Player player = null;
+
+
+
+
         try {
             // Call createPlayer() control function
             player = GameControl.createPlayer(playersName);

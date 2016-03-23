@@ -18,14 +18,19 @@ public class Event implements Serializable{
     String locationType;
     String eventName;
     String eventDescription;
-  
+    Actor[] actors;
+    Item[] items;
 
-    public Event(String eventType, String locationType, String Name, String description) {
+    public Event(String eventType, String locationType, String eventName, String eventDescription, Actor[] actors, Item[] items) {
         this.eventType = eventType;
         this.locationType = locationType;
-        this.eventName = Name;
-        this.eventDescription = description;
+        this.eventName = eventName;
+        this.eventDescription = eventDescription;
+        this.actors = actors;
+        this.items = items;
     }
+
+    
 
     public String getEventType() {
         return eventType;

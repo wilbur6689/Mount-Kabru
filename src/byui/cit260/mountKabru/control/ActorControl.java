@@ -23,10 +23,10 @@ public class ActorControl {
         
         //Create the list of Actors
         
-        Actor[] actors = new Actor[4];
+        Actor[][] actors = new Actor[4][1];
        
             //plains MOnsters
-            Actor[] plainsActors = new Actor[3];
+            Actor[] plainsActors = new Actor[4];
             Actor gnome = new Actor("gnome", 8,4,3,2,7);
             plainsActors[0] = gnome;
             Actor banshee = new Actor("Banshee", 12,5,5,2,12 );
@@ -36,7 +36,7 @@ public class ActorControl {
         actors[0] = plainsActors;
 
             //Jungle Monsters
-            Actor[] jungleActors = new Actor[3];
+            Actor[] jungleActors = new Actor[4];
             Actor frogs = new Actor("Frogs", 20,5,15,3,45);
             jungleActors[0] = frogs;
             Actor manticore = new Actor("Manticore", 25,7,17,3,100);
@@ -46,7 +46,7 @@ public class ActorControl {
         actors[1] = jungleActors;
 
             //DarkForest Monsters
-            Actor[] forestActors = new Actor[3];
+            Actor[] forestActors = new Actor[4];
             Actor werewolves = new Actor("Werewolves", 35,15,45,4,125);
             forestActors[6] = werewolves;
             Actor dryad = new Actor("Dryad", 40,25,55,5,250);

@@ -7,6 +7,7 @@ package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Item;
+import static java.lang.Integer.parseInt;
 import mountkabru.MountKabru;
 
 /**
@@ -37,32 +38,37 @@ public class BuyFromBlacksmithView extends View {
     
     @Override
     public boolean doAction(String value) {
+        int realNumber = 0; 
         
-        value = value.toUpperCase(); //convert choice to upper case
+        try {
+        realNumber = parseInt(value);
+        } catch(NumberFormatException nf) {
+            System.out.println("\n You must enter a value number");
+        }
         
-        switch (value) {
-            case "1": // Buy weapons and armor from the blacksmith
+        switch (realNumber) {
+            case 1: // Buy weapons and armor from the blacksmith
                 this.buyStick();
                 break;
-            case "2": // Sell your weapons or armor to the blacksmith
+            case 2: // Sell your weapons or armor to the blacksmith
                 this.buyKukri();
                 break;
-            case "3": // Buy weapons and armor from the blacksmith
+            case 3: // Buy weapons and armor from the blacksmith
                 this.buyAxe();
                 break;
-            case "4": // Sell your weapons or armor to the blacksmith
+            case 4: // Sell your weapons or armor to the blacksmith
                 this.buyScythe();
                 break;
-            case "5": // Buy weapons and armor from the blacksmith
+            case 5: // Buy weapons and armor from the blacksmith
                 this.buyLeather();
                 break;
-            case "6": // Sell your weapons or armor to the blacksmith
+            case 6: // Sell your weapons or armor to the blacksmith
                 this.buyScaleMail();
                 break;
-            case "7": // Buy weapons and armor from the blacksmith
+            case 7: // Buy weapons and armor from the blacksmith
                 this.buyFiber();
                 break;
-            case "8": // Sell your weapons or armor to the blacksmith
+            case 8: // Sell your weapons or armor to the blacksmith
                 this.buyBone();
                 break;
                         

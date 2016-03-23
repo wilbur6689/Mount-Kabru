@@ -54,7 +54,8 @@ public class NewCharView extends View {
                 + "\nQ - Quit"
                 + "\n--------------------------------------";
     
-    
+    private String getStartingGold = "\n"
+                + "\n How much gold would you like to start out with?";
     
     
     
@@ -79,9 +80,12 @@ public class NewCharView extends View {
         this.displayMessage = this.addStats3;
         String answer3 = this.getInput().toUpperCase();
         
+        this.displayMessage = this.getStartingGold;
+        String startingGold = this.getInput().toUpperCase();
+        
         //Need to set Hero Name, strength, Mana
         try { 
-        GameControl.createHero(heroName, answer1, answer2, answer3); 
+        GameControl.createHero(heroName, answer1, answer2, answer3, startingGold); 
         } 
         catch (GameControlException me) {
             System.out.println(me.getMessage());

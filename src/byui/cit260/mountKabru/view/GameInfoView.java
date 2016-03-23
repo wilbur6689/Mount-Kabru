@@ -5,8 +5,9 @@
  */
 package byui.cit260.mountKabru.view;
 
-import byui.cit260.mountKabru.control.GameControl;
-import byui.cit260.mountKabru.exceptions.GameControlException;
+import byui.cit260.mountKabru.control.ActorControl;
+import byui.cit260.mountKabru.exceptions.ActorControlException;
+import byui.cit260.mountKabru.exceptions.ActorControlException;
 import byui.cit260.mountKabru.model.Actor;
 import mountkabru.MountKabru;
 
@@ -43,14 +44,14 @@ public class GameInfoView extends View {
             case "A": // Buy weapons and armor from the blacksmith
                 try {
                     this.avgMonsters();
-                } catch (GameControlException e) {
+                } catch (ActorControlException e) {
                     e.printStackTrace();
                 }
                 break;
             case "L": // Sell your weapons or armor to the blacksmith
                 try {
                     this.listMonsters();
-                } catch (GameControlException e) {
+                } catch (ActorControlException e) {
                     e.printStackTrace();
                 }
                 break;
@@ -64,24 +65,24 @@ public class GameInfoView extends View {
         return false;
     }
 
-    private void avgMonsters() throws GameControlException {
+    private void avgMonsters() throws ActorControlException {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
 
         int avgMonsterHP = 0;
         try {
-            avgMonsterHP = GameControl.avgMonsterHP(actors);
-        } catch (GameControlException e) {
+            avgMonsterHP = ActorControl.avgMonsterHP(actors);
+        } catch (ActorControlException e) {
             e.printStackTrace();
         }
         System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
     }
 
-    private void listMonsters() throws GameControlException {
+    private void listMonsters() throws ActorControlException {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
         String listOMonsters = null;
         try {
-            listOMonsters = GameControl.listOMonsters(actors);
-        } catch (GameControlException e) {
+            listOMonsters = ActorControl.listOMonsters(actors);
+        } catch (ActorControlException e) {
             e.printStackTrace();
         }
         System.out.println("\nHere you go! This is all of the monsterData that I have discovered. \n"

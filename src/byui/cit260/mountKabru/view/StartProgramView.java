@@ -6,6 +6,8 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
+import byui.cit260.mountKabru.exceptions.GameControlException;
+import byui.cit260.mountKabru.model.Game;
 import byui.cit260.mountKabru.model.Player;
 
 
@@ -48,20 +50,27 @@ public class StartProgramView extends View {
             return false;
         
         }
-    
-        // Call createPlayer() control function
-        Player player = GameControl.createPlayer(playersName);
-        
-        if (player == null) { //if unsuccessful
-            System. out.println("\nError creating the player.");
-            return false;
-        }
-        
+        Player player = null;
+        try {
+            // Call createPlayer() control function
+            player = GameControl.createPlayer(playersName);
+            }
+            catch (GameControlException me){
+                System.out.println(me.getMessage());
+            }
+            if (player == null) { //if unsuccessful
+                System.out.println("\nError creating the player.");
+                return false;
+            }
 
-        this.displayNextView(player);
-        
-        return true;
-    }
+
+            this.displayNextView(player);
+
+            return true;
+
+        }
+
+
        
     private void displayNextView(Player player) {
         System.out.println("\n ====================================="

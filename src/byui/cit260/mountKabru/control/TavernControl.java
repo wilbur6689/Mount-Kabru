@@ -1,6 +1,7 @@
 package byui.cit260.mountKabru.control;
 
 
+import byui.cit260.mountKabru.exceptions.TavernControlException;
 
 /**
  * Created by badgerwaves on 2/10/16.
@@ -9,7 +10,7 @@ public class TavernControl {
 
   
 
-public static String ownerResponse(int levelOfHero) {
+public static String ownerResponse(int levelOfHero) throws Exception{
     
     int respType = 0;
     int index;
@@ -35,17 +36,17 @@ public static String ownerResponse(int levelOfHero) {
         , "I am an old timer. But not as stupid as you!"
         , "CheeseCake is good do you want some? TOO BAD! You cannot have any! IT'S all mine! HAHAHAHAHAHHAHAHAHAHAHAHAH"}; 
      
-    
+
      
     if (levelOfHero < 1) {
-       return "-1";
+        throw new TavernControlException("The level of the hero was too low.");
     } 
 
     if (levelOfHero > 50) {
-        return "-2";    
+        throw new TavernControlException("THe level of the hero was too high.");
     }
     
-    //Finds out if the response will be usefull
+    //Finds out if the response will be useful
     if (levelOfHero > 0 && levelOfHero < 10) {
         respType = 0;
     }

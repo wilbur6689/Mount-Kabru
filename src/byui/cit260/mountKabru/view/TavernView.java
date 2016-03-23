@@ -6,6 +6,9 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.TavernControl;
+import byui.cit260.mountKabru.exceptions.GameControlException;
+import byui.cit260.mountKabru.exceptions.TavernControlException;
+
 import java.util.Scanner;
 
 /**
@@ -71,16 +74,19 @@ public class TavernView extends View{
     private void tavernOwner() {
         
          int levelOfHero;
-         
+         try{
          Scanner keyboard = new Scanner(System.in);
          System.out.println("What level are you, hero?");
          levelOfHero = keyboard.nextInt();
-         
-         String result = TavernControl.ownerResponse(levelOfHero);
-          System.out.println("\n*** You walk over to the Tavern Owner ***"
-                           + "\n*** and ask him for advise:           ***"
-                           + "\n "
-                           + "\n " + result);
+
+             String result = TavernControl.ownerResponse(levelOfHero);
+             System.out.println("\n*** You walk over to the Tavern Owner ***"
+                     + "\n*** and ask him for advise:           ***"
+                     + "\n "
+                     + "\n " + result);
+         } catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
 
     }
           

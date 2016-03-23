@@ -41,10 +41,18 @@ public class GameInfoView extends View {
 
         switch (value) {
             case "A": // Buy weapons and armor from the blacksmith
-                this.avgMonsters();
+                try {
+                    this.avgMonsters();
+                } catch (GameControlException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "L": // Sell your weapons or armor to the blacksmith
-                this.listMonsters();
+                try {
+                    this.listMonsters();
+                } catch (GameControlException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "S": // Sell your weapons or armor to the blacksmith
                 this.heroStats();
@@ -56,30 +64,28 @@ public class GameInfoView extends View {
         return false;
     }
 
-    private void avgMonsters() {
-        try {
+    private void avgMonsters() throws GameControlException {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
-        
-        int avgMonsterHP = GameControl.avgMonsterHP(actors);
-        System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
-        } 
-        catch (GameControlException me) {
-            System.out.println(me.getMessage());
-            
+
+        int avgMonsterHP = 0;
+        try {
+            avgMonsterHP = GameControl.avgMonsterHP(actors);
+        } catch (GameControlException e) {
+            e.printStackTrace();
         }
+        System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
     }
 
-    private void listMonsters() {
-        try {
+    private void listMonsters() throws GameControlException {
         Actor[] actors = MountKabru.getCurrentGame().getActors();
-        String listOMonsters = GameControl.listOMonsters(actors);
+        String listOMonsters = null;
+        try {
+            listOMonsters = GameControl.listOMonsters(actors);
+        } catch (GameControlException e) {
+            e.printStackTrace();
+        }
         System.out.println("\nHere you go! This is all of the monsterData that I have discovered. \n"
-            + listOMonsters);
-        }
-        catch (GameControlException me) {
-            System.out.println(me.getMessage());
-            
-        }
+                + listOMonsters);
     }
 
     private void heroStats() {

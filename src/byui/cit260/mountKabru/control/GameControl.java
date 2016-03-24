@@ -140,9 +140,9 @@ public class GameControl {
         }
         
         Game game = new Game();
-       
+        MountKabru.setCurrentGame(game);
         
-        //game.setPlayer(player);
+        game.setPlayer(player);
         
         //create a list of monsters
         Actor[][] actors = ActorControl.createActors();
@@ -152,7 +152,7 @@ public class GameControl {
         World world = WorldControl.createWorld();
         game.setWorld(world);
         
-         MountKabru.setCurrentGame(game);
+         
        
     }
 

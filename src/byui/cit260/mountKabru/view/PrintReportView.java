@@ -37,13 +37,10 @@ public class PrintReportView extends View {
                 this.monsterReport();
                 break;
             case "H": // go kill stuff in the jungle
-                this.jungleAdventure();
+                this.heroReport();
                 break;
             case "F": // go kill stuff in the forest
-                this.forestAdventure();
-                break;
-            case "M": // go kill stuff in the Mountains
-                this.mountainAdventure();
+                this.lickIt();
                 break;
 
             default:
@@ -52,6 +49,18 @@ public class PrintReportView extends View {
 
         }
         return false;
+    }
+
+    private void monsterReport() {
+        System.out.println("*** You Called the monster report function ***");
+    }
+
+    private void heroReport() {
+       System.out.println("*** You Called the hero report function ***");
+    }
+
+    private void lickIt() {
+       System.out.println("*** You started licking only to find out it was a sticky envelope ***");
     }
     
 }

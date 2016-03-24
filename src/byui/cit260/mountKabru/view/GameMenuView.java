@@ -37,6 +37,7 @@ public class GameMenuView extends View {
                + "\n  A - go on an [A]dventure"
                + "\n  T - visit the [T]avern"
                + "\n  B - visit the [B]lacksmith"
+               + "\n  P - Visit the [P]rint Shop"
                + "\n  S - [S]tats"
                + "\n  I - [I]nventory"
                + "\n  G - [G]et Information from the Old Man"
@@ -62,6 +63,9 @@ public class GameMenuView extends View {
                 break;
             case "B": // visit the blacksmith in town
                 this.goBlacksmith();
+                break;
+            case "P": // visit the blacksmith in town
+                this.goPrintShop();
                 break;
             case "S": // visit the blacksmith in town
                 this.goStats();
@@ -140,6 +144,12 @@ public class GameMenuView extends View {
         blacksmithView.display();
     }
     
+    private void goPrintShop() {
+        
+        PrintReportView printShop = new PrintReportView();
+        printShop.display();
+    }
+    
     private void goStats() {
         Hero hero = MountKabru.getCurrentGame().getHero();
         System.out.println(hero);
@@ -164,6 +174,8 @@ public class GameMenuView extends View {
     private void quitGame() {
         System.exit(0);
     }
+
+    
 
     
 

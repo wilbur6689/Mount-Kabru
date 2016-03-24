@@ -21,25 +21,25 @@ public class EventControl {
     
        
             Event[] plainsEvent = new Event[2];
-            plainsEvent[1] = new Event("Gold", "plains", "You Found Gold!", "you found the motherload", null, goldEvents[goldEventType.plainsGoldEvent.ordinal()]);
-            plainsEvent[2] = new Event("Monster", "plains", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.plainsActors.ordinal()], null);
+            plainsEvent[0] = new Event("Gold", "plains", "You Found Gold!", "you found the motherload", null, goldEvents[goldEventType.plainsGoldEvent.ordinal()]);
+            plainsEvent[1] = new Event("Monster", "plains", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.plainsActors.ordinal()], null);
         events[0] = plainsEvent;
       
             Event[] jungleEvent = new Event[2];
-            jungleEvent[1] = new Event("Gold", "Jungle", "You Found Gold!", "you found the motherload",null, goldEvents[goldEventType.jungleGoldEvent.ordinal()]);
-            jungleEvent[2] = new Event("Monster", "Jungle", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.jungleActors.ordinal()], null);
+            jungleEvent[0] = new Event("Gold", "Jungle", "You Found Gold!", "you found the motherload",null, goldEvents[goldEventType.jungleGoldEvent.ordinal()]);
+            jungleEvent[1] = new Event("Monster", "Jungle", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.jungleActors.ordinal()], null);
         events[1] = jungleEvent;
 
             Event[] darkForestEvent = new Event[2];
-            darkForestEvent[1] = new Event("Gold", "Forest", "You Found Gold!", "you found the motherload", null, goldEvents[goldEventType.forestGoldEvent.ordinal()]);
-            darkForestEvent[2] = new Event("Monster", "Forest", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.forestActors.ordinal()], null);
+            darkForestEvent[0] = new Event("Gold", "Forest", "You Found Gold!", "you found the motherload", null, goldEvents[goldEventType.forestGoldEvent.ordinal()]);
+            darkForestEvent[1] = new Event("Monster", "Forest", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.forestActors.ordinal()], null);
         events[2] = darkForestEvent;
         
         
         
             Event[] mountainEvent = new Event[2];
-            mountainEvent[1] = new Event("Gold", "Mountain", "You Found Gold!", "you found the motherload", null, goldEvents[goldEventType.mountainGoldEvent.ordinal()]);
-            mountainEvent[2] = new Event("Monster", "Mountain", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.mountainActors.ordinal()], null);
+            mountainEvent[0] = new Event("Gold", "Mountain", "You Found Gold!", "you found the motherload", null, goldEvents[goldEventType.mountainGoldEvent.ordinal()]);
+            mountainEvent[1] = new Event("Monster", "Mountain", "You Found a Monster!", "Prepare for Battle weakling", actors[ActorControl.ActorGroup.mountainActors.ordinal()], null);
         events[3] = mountainEvent;
         
         return events;
@@ -124,9 +124,9 @@ public class EventControl {
         int randomNumber = (int) (Math.random() * 10);
         
         if (randomNumber < 4) {
-            numberReturn = 1;
+            numberReturn = 0;
         } else {
-            numberReturn = 2;
+            numberReturn = 1;
         }
         
         return numberReturn;

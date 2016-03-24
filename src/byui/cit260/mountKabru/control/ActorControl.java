@@ -58,25 +58,25 @@ public class ActorControl {
             //DarkForest Monsters
             Actor[] forestActors = new Actor[4];
             Actor werewolves = new Actor("Werewolves", 35,15,45,4,125);
-            forestActors[6] = werewolves;
+            forestActors[0] = werewolves;
             Actor dryad = new Actor("Dryad", 40,25,55,5,250);
-            forestActors[7] = dryad;
+            forestActors[1] = dryad;
             Actor theUndead = new Actor("TheUndead", 50,34,67,7,650);
-            forestActors[8] = theUndead;
+            forestActors[2] = theUndead;
             Actor centaurs = new Actor("Centaurs", 45,28,48,6,450);
-            forestActors[8] = centaurs;
+            forestActors[3] = centaurs;
         actors[2] = forestActors;
 
             //HighMountain
             Actor[] mountainActors = new Actor[4];
             Actor dragon = new Actor("Dragon", 60,45,55,34,250);
-            mountainActors[9] = dragon;
+            mountainActors[0] = dragon;
             Actor hydra = new Actor("Hydra", 70,67,100,34,9000);
-            mountainActors[10] = hydra;
+            mountainActors[1] = hydra;
             Actor giant = new Actor("Giant", 150,75,46,34,40000);
-            mountainActors[11] = giant;
+            mountainActors[2] = giant;
             Actor master = new Actor("Master", 1,1,1,0,9999999);
-            mountainActors[12] = master;
+            mountainActors[3] = master;
         actors[3] = mountainActors;
         
         

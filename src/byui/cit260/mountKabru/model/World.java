@@ -31,8 +31,8 @@ public class World implements Serializable {
         this.rowCount = rowCount;
         this.columnCount = columnCount;   
         this.locations = new Location[rowCount][columnCount];
-        
-        for (int row = 0; row < rowCount; row++) {
+       
+            for (int row = 0; row < rowCount; row++) {
             for (int column = 0; column < columnCount; column++) {
                 Location location = new Location();
                 location.setColumn(column);

@@ -19,18 +19,19 @@ public class Event implements Serializable{
     String eventName;
     String eventDescription;
     Actor[] actors;
-    Item[] items;
+    int[] goldValue;
 
-    public Event(String eventType, String locationType, String eventName, String eventDescription, Actor[] actors, Item[] items) {
+    public Event(String eventType, String locationType, String eventName, String eventDescription, Actor[] actors, int[] goldValue) {
         this.eventType = eventType;
         this.locationType = locationType;
         this.eventName = eventName;
         this.eventDescription = eventDescription;
         this.actors = actors;
-        this.items = items;
+        this.goldValue = goldValue;
     }
 
     
+
 
     public String getEventType() {
         return eventType;
@@ -55,7 +56,6 @@ public class Event implements Serializable{
     public void setLocationType(String locationType) {
         this.locationType = locationType;
     }
-
     
     public String getEventDescription() {
         return eventDescription;
@@ -64,18 +64,18 @@ public class Event implements Serializable{
     public void setEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
     }
-    
-    
-    
-   
-    
-    
 
-    
-  
+    public Actor[] getActors() {
+        return actors;
+    }
 
-    
+    public int[] getGoldValue() {
+        return goldValue;
+    }
 
-    
+    public void setGoldValue(int[] goldValue) {
+        this.goldValue = goldValue;
+    }
+
     
     }

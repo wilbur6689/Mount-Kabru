@@ -17,9 +17,14 @@ public class ActorControl {
         return hero;
     }
 
-    public static Actor[] createActors() {
+    public static Actor[][] createActors() {
         
-        
+//        private String name;
+//    private int hitPoints;
+//    private int defence;
+//    private int attack;
+//    private int chanceToHit;
+//    private int gold;
         
         //Create the list of Actors
         
@@ -33,6 +38,8 @@ public class ActorControl {
             plainsActors[1] = banshee;
             Actor evilRabbits = new Actor("EvilRabbits", 15,3,16,4,30);
             plainsActors[2] = evilRabbits;
+            Actor wolves = new Actor("wolves", 9,3,6,6,15);
+            plainsActors[3] = wolves;
         actors[0] = plainsActors;
 
             //Jungle Monsters
@@ -43,6 +50,8 @@ public class ActorControl {
             jungleActors[1] = manticore;
             Actor gators = new Actor("Gators", 30,8,18,3,37);
             jungleActors[2] = gators;
+            Actor largeSpider = new Actor("Large Spider", 24,6,14,6,60);
+            jungleActors[3] = largeSpider;
         actors[1] = jungleActors;
 
             //DarkForest Monsters
@@ -53,6 +62,8 @@ public class ActorControl {
             forestActors[7] = dryad;
             Actor theUndead = new Actor("TheUndead", 50,34,67,7,650);
             forestActors[8] = theUndead;
+            Actor centaurs = new Actor("Centaurs", 45,28,48,6,450);
+            forestActors[8] = centaurs;
         actors[2] = forestActors;
 
             //HighMountain
@@ -71,8 +82,11 @@ public class ActorControl {
         return actors;
         
     }
+    
+    
+    
 
-    public static int avgMonsterHP(Actor[] actors) throws ActorControlException {
+    public static int avgMonsterHP(Actor[][] actors) throws ActorControlException {
         
         //needs to find the average of the player hitpoints.
        
@@ -84,7 +98,7 @@ public class ActorControl {
         int averageHP = 0;
         int totalHP = 0;
 
-        for (Actor actor : actors) {
+        for (Actor[][] actor : actors) {
             int hitPoints = actor.getHitPoints();
             if (hitPoints < 1 || hitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
@@ -98,7 +112,7 @@ public class ActorControl {
         return averageHP;
     }
 
-    public static String listOMonsters(Actor[] actors) throws ActorControlException {
+    public static String listOMonsters(Actor[][] actors) throws ActorControlException {
         
         if (actors == null){
             throw new ActorControlException("The actors variable was null.");
@@ -128,13 +142,7 @@ public class ActorControl {
         return names;
 
     }
-    
-   
-    
-    
-    
-    
-    
+     
     
     public static int meleeDamage(int attack, int strength, int opponentDefense) throws ActorControlException {
 
@@ -194,5 +202,12 @@ public class ActorControl {
 
         return manaDamage;
 
+    }
+    
+    public enum ActorGroup {
+        plainsActors,
+        jungleActors,
+        forestActors,
+        mountainActors,
     }
 }

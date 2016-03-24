@@ -17,6 +17,8 @@ import static java.lang.Integer.parseInt;
 import mountkabru.MountKabru;
 
 import java.util.Arrays;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 
 /**
@@ -138,17 +140,19 @@ public class GameControl {
         }
         
         Game game = new Game();
-        MountKabru.setCurrentGame(game);
+       
         
-        game.setPlayer(player);
+        //game.setPlayer(player);
         
         //create a list of monsters
-        Actor[] actors = ActorControl.createActors();
+        Actor[][] actors = ActorControl.createActors();
         game.setActors(actors);
         
 
         World world = WorldControl.createWorld();
         game.setWorld(world);
+        
+         MountKabru.setCurrentGame(game);
        
     }
 

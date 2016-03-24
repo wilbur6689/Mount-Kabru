@@ -66,7 +66,7 @@ public class GameInfoView extends View {
     }
 
     private void avgMonsters() throws ActorControlException {
-        Actor[] actors = MountKabru.getCurrentGame().getActors();
+        Actor[][] actors = MountKabru.getCurrentGame().getActors();
 
         int avgMonsterHP = 0;
         try {
@@ -78,7 +78,7 @@ public class GameInfoView extends View {
     }
 
     private void listMonsters() throws ActorControlException {
-        Actor[] actors = MountKabru.getCurrentGame().getActors();
+        Actor[][] actors = MountKabru.getCurrentGame().getActors();
         String listOMonsters = null;
         try {
             listOMonsters = ActorControl.listOMonsters(actors);

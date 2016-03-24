@@ -13,7 +13,7 @@ public class InventoryControl {
     public static Inventory createInventory() {
         
         
-        Inventory inventory = new Inventory(Item.battleAxe, Item.carbonFiber, Item.healthPotion10, Item.manaPotion10);
+        Inventory inventory = new Inventory(Item.bareHands, Item.clothes, null, null);
         
         
          MountKabru.getCurrentGame().getHero().setInventory(inventory);

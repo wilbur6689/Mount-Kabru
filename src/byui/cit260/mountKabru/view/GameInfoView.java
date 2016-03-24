@@ -66,11 +66,11 @@ public class GameInfoView extends View {
     }
 
     private void avgMonsters() throws ActorControlException {
-        Actor[][] actors = MountKabru.getCurrentGame().getActors();
+        
 
         int avgMonsterHP = 0;
         try {
-            avgMonsterHP = ActorControl.avgMonsterHP(actors);
+            avgMonsterHP = ActorControl.avgMonsterHP();
         } catch (ActorControlException e) {
             e.printStackTrace();
         }

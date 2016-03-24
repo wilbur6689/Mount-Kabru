@@ -4,6 +4,7 @@ import byui.cit260.mountKabru.exceptions.ActorControlException;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Hero;
 import java.util.Arrays;
+import mountkabru.MountKabru;
 
 /**
  * Created by badgerwaves on 2/10/16.
@@ -86,28 +87,63 @@ public class ActorControl {
     
     
 
-    public static int avgMonsterHP(Actor[][] actors) throws ActorControlException {
+    public static int avgMonsterHP() throws ActorControlException {
         
         //needs to find the average of the player hitpoints.
-       
+       Actor[][] actors1 = MountKabru.getCurrentGame().getActors();
 
-        if (actors == null){
+        if (actors1 == null){
             throw new ActorControlException("The actors variable was null.");
         }
         
         int averageHP = 0;
         int totalHP = 0;
-
-        for (Actor[][] actor : actors) {
-            int hitPoints = actor.getHitPoints();
-            if (hitPoints < 1 || hitPoints > 150) {
+         
+        Actor[] plainsActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
+        
+        for (Actor actors : plainsActors) {
+            int plainsHitPoints = actors.getHitPoints();
+            if (plainsHitPoints < 1 || plainsHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }
             
-            totalHP += hitPoints; 
+            totalHP += plainsHitPoints; 
         }
         
-        averageHP = totalHP / actors.length;
+        Actor[] jungleActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
+        
+        for (Actor actors : jungleActors) {
+            int jungleHitPoints = actors.getHitPoints();
+            if (jungleHitPoints < 1 || jungleHitPoints > 150) {
+                throw new ActorControlException("The hitPoints was too large or too small of a number.");
+            }
+            
+            totalHP += jungleHitPoints; 
+        }
+        
+        Actor[] forestActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
+        
+        for (Actor actors : forestActors) {
+            int forestHitPoints = actors.getHitPoints();
+            if (plainsHitPoints < 1 || plainsHitPoints > 150) {
+                throw new ActorControlException("The hitPoints was too large or too small of a number.");
+            }
+            
+            totalHP += plainsHitPoints; 
+        }
+        
+        Actor[] jungleActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
+        
+        for (Actor actors : jungleActors) {
+            int jungleHitPoints = actors.getHitPoints();
+            if (jungleHitPoints < 1 || jungleHitPoints > 150) {
+                throw new ActorControlException("The hitPoints was too large or too small of a number.");
+            }
+            
+            totalHP += jungleHitPoints; 
+        }
+        
+        averageHP = totalHP / plainsActors.length;
         
         return averageHP;
     }
@@ -117,6 +153,8 @@ public class ActorControl {
         if (actors == null){
             throw new ActorControlException("The actors variable was null.");
         }
+        
+        
         
         // Here I am creating a new array that I will sort the names into to arrange them.
         String[] newNames = new String[actors.length];

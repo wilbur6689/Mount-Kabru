@@ -158,25 +158,54 @@ public class ActorControl {
         
         
         // Here I am creating a new array that I will sort the names into to arrange them.
-        Actor[] newNames =  actors[ActorGroup.plainsActors.ordinal()];
-
-        Actor plainsActors = new Actor();
-
-        //This for statement is here to count the names from the array above into a list
-        for (int i = 0; i < newNames.length;i++) {
-
-            //newNames is the name of the array, Here I am telling the array to find the index of the name using the ge
-            //getName function. After it is called it puts the name into the empty location in the newNames array.
-            newNames[i] = actors[i].getName();
+        Actor[] plainsActors =  actors[ActorGroup.plainsActors.ordinal()];
+        Actor[] jungleActors =  actors[ActorGroup.jungleActors.ordinal()];
+        Actor[] forestActors =  actors[ActorGroup.forestActors.ordinal()];
+        Actor[] mountainActors =  actors[ActorGroup.mountainActors.ordinal()];
+        
+        String[] arrayOfNames = new String[16];
+        
+        for (Actor actorNames : plainsActors) {
+            int i = 0;
+            String singleActorName = actorNames.getName();
+            
+            arrayOfNames[i]= singleActorName;
+            i++;
         }
+        
+        for (Actor actorNames : jungleActors) {
+            int i = 4;
+            String singleActorName = actorNames.getName();
+            
+            arrayOfNames[i]= singleActorName;
+            i++;
+        }
+        
+        for (Actor actorNames : forestActors) {
+            int i = 9;
+            String singleActorName = actorNames.getName();
+            
+            arrayOfNames[i]= singleActorName;
+            i++;
+        }
+        
+        for (Actor actorNames : mountainActors) {
+            int i = 13;
+            String singleActorName = actorNames.getName();
+            
+            arrayOfNames[i]= singleActorName;
+            i++;
+        }
+        
+
 
 
         String names = "\n";
         // Here I am sorting the array of newNames alphabetically
-        Arrays.sort(newNames);
+        Arrays.sort(arrayOfNames);
 
         // This is where I am assigning the names a variable of "name" from the newNames array data-types
-        for (String name : newNames)
+        for (String name : arrayOfNames)
             names += name + "\n";
         
         //I return the new names in the sorted order.

@@ -125,22 +125,22 @@ public class ActorControl {
         
         for (Actor actors : forestActors) {
             int forestHitPoints = actors.getHitPoints();
-            if (plainsHitPoints < 1 || plainsHitPoints > 150) {
+            if (forestHitPoints < 1 || forestHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }
             
-            totalHP += plainsHitPoints; 
+            totalHP += forestHitPoints; 
         }
         
-        Actor[] jungleActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
+        Actor[] mountainActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
         
-        for (Actor actors : jungleActors) {
-            int jungleHitPoints = actors.getHitPoints();
-            if (jungleHitPoints < 1 || jungleHitPoints > 150) {
+        for (Actor actors : mountainActors) {
+            int mountainHitPoints = actors.getHitPoints();
+            if (mountainHitPoints < 1 || mountainHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }
             
-            totalHP += jungleHitPoints; 
+            totalHP += mountainHitPoints; 
         }
         
         averageHP = totalHP / plainsActors.length;

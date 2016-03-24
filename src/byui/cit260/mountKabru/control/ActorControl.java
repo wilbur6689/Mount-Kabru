@@ -149,7 +149,8 @@ public class ActorControl {
     }
 
     public static String listOMonsters(Actor[][] actors) throws ActorControlException {
-        
+
+
         if (actors == null){
             throw new ActorControlException("The actors variable was null.");
         }
@@ -157,7 +158,9 @@ public class ActorControl {
         
         
         // Here I am creating a new array that I will sort the names into to arrange them.
-        String[] newNames = new String[actors.length];
+        Actor[] newNames =  actors[ActorGroup.plainsActors.ordinal()];
+
+        Actor plainsActors = new Actor();
 
         //This for statement is here to count the names from the array above into a list
         for (int i = 0; i < newNames.length;i++) {

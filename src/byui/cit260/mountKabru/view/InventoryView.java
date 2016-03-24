@@ -5,22 +5,26 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.InventoryControl;
+
 /**
  *
  * @author Phill
  */
 public class InventoryView extends View {
     
-
+    String inventory[] = InventoryControl.viewInventory();
+   
+    
     
     public InventoryView() {
     super( "\n"
                 + "\n---------------------------------------"
-                + "\n|  You look around for your backpack  |"
-                + "\n|  and remember you forgot it back    |"
-                + "\n|  in town.                           |"
+                + "\n|  You look around at what you have   |"
+                + "\n|  on hand...                         |"
+                + "\n|                                     |"
                 + "\n---------------------------------------"
-                + "\nS - [S]mile at yourself"
+                + "\nC - [C]heck Inventory"
                 + "\nQ - [Q]uit back to serching"
                 + "\n--------------------------------------");
     }
@@ -33,22 +37,28 @@ public class InventoryView extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "S": // go kill stuff in the High Mountains
-                this.smileAtYourself();
+            case "C": // go kill stuff in the High Mountains
+                this.checkInv();
                 break;
            
             
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
         return false;
     }
 
-    private void smileAtYourself() {
-        System.out.println("\n*** you stare down at a pool of water and begin smiling  ***"
-                         + "\n*** Boy, dont you look hansom!!                          ***");
+    private void checkInv() {
+        
+        String inventoryList = " ";
+        for (int i=0; i<inventory.length;i++) {
+            
+        inventoryList += inventory[i];
+        }
+        
+             this.console.println(inventoryList);
     }
    
 }

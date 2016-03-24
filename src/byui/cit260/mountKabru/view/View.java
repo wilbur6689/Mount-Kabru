@@ -1,10 +1,16 @@
 package byui.cit260.mountKabru.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import mountkabru.MountKabru;
 
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
+    
+    protected final BufferedReader keyboard = MountKabru.getInFile();
+    protected final PrintWriter console = MountKabru.getOutFile();
 
     public View(String message) {
         this.displayMessage = message;
@@ -31,18 +37,21 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
 
-        Scanner keyboard = new Scanner(System.in); // get the infile for keyboard
+        
         boolean valid = false; // Initialize to not valid
         String value = null; // Value to be Returned
 
         while (!valid) { // Loop while an invalid value is enter
-            System.out.println("\n" + this.displayMessage);
-
-            value = keyboard.nextLine(); //Get next line typed on keyboard
+            this.console.println("\n" + this.displayMessage);
+            try {
+            value = this.keyboard.readLine(); //Get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
-
+            } catch (Exception e) {
+             this.console.println(e.getMessage());
+         }
+            
             if (value.length() < 1) { //value is blank
-                System.out.println("\n Invalid value: Value can not be blank");
+                this.console.println("\n Invalid value: Value can not be blank");
                 continue;
             }
             break; // end the loop

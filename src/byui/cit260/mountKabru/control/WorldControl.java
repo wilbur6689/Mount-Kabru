@@ -1,5 +1,6 @@
 package byui.cit260.mountKabru.control;
 
+import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.Location;
@@ -11,7 +12,7 @@ import mountkabru.MountKabru;
  */
    public class WorldControl {
 
-    public static World createWorld() {
+    public static World createWorld() throws GameControlException {
         
         World world = new World(4,8);
         

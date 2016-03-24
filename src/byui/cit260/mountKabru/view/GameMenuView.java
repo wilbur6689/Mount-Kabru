@@ -84,7 +84,7 @@ public class GameMenuView extends View {
                 break;
             
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
@@ -99,30 +99,30 @@ public class GameMenuView extends View {
          int columnCount = MountKabru.getCurrentGame().getWorld().getColumnCount();
          
          
-         System.out.println("This is the map of the world");
+         this.console.println("This is the map of the world");
          
          
         for (int row = rowCount-1; row >= 0; row--) {
             
-            System.out.print(" " + (row+1) + " ");
+            this.console.print(" " + (row+1) + " ");
             for (int column = 0; column < columnCount; column++) {
-                System.out.print("|");
+                this.console.print("|");
                 Location location = locations[row][column];
                 boolean discovered = location.isDiscovered(); 
                 if (discovered == true) {
-                 System.out.print("---");
-                 System.out.print("/\\");
+                 this.console.print("---");
+                 this.console.print("/\\");
                 }
                 else {
-                 System.out.print("---");   
-                 System.out.print("??");
+                 this.console.print("---");   
+                 this.console.print("??");
                 }
-                System.out.print("---");
+                this.console.print("---");
             }
-        System.out.print("| \n");
+        this.console.print("| \n");
         }
                 
-       System.out.println("   |   1    |   2    |   3    |   4    |   5    |   6    |   7    |   8    |"); 
+       this.console.println("   |   1    |   2    |   3    |   4    |   5    |   6    |   7    |   8    |"); 
          
        AdventureView adventureView = new AdventureView();
        adventureView.display();
@@ -152,7 +152,7 @@ public class GameMenuView extends View {
     
     private void goStats() {
         Hero hero = MountKabru.getCurrentGame().getHero();
-        System.out.println(hero);
+        this.console.println(hero);
     }
     
     private void goGameInfo() {

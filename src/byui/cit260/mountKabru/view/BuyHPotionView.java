@@ -41,7 +41,7 @@ public class BuyHPotionView extends View {
 
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
 
 
         }
@@ -49,7 +49,7 @@ public class BuyHPotionView extends View {
     }
 
     private void buyFromTavernOwner() {
-        System.out.println("\n***   NOPE    ***"
+        this.console.println("\n***   NOPE    ***"
                 +          "\n***   NOPE   ***"
                 +          "\n***   Please come back later.               ***");
     }

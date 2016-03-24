@@ -45,7 +45,7 @@ public class BuyFromBlacksmithView extends View {
         try {
         realNumber = parseInt(value);
         } catch(NumberFormatException nf) {
-            System.out.println("\n You must enter a value number");
+            this.console.println("\n You must enter a value number");
         }
         
         switch (realNumber) {
@@ -75,7 +75,7 @@ public class BuyFromBlacksmithView extends View {
                 break;
                         
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
@@ -90,10 +90,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.stick);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -108,10 +108,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.kukri);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -125,10 +125,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.battleAxe);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -142,10 +142,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.scythe);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -159,10 +159,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.leatherArmor);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -176,10 +176,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.scaleMail);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -193,10 +193,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.carbonFiber);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();
@@ -210,10 +210,10 @@ public class BuyFromBlacksmithView extends View {
         if (gold > cost) {
             gold -= cost;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else { System.out.println("Sorry, you dont have enough gold.");}
+        } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.dragonBoneArmor);
-        System.out.println("Its been a pleasure to serve you"
+        this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
         BlacksmithView blacksmithView = new BlacksmithView();

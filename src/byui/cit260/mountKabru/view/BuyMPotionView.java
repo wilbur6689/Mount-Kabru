@@ -39,7 +39,7 @@ package byui.cit260.mountKabru.view;
 
 
                 default:
-                    System.out.println("\n*** HEY DINGBAT THAT WON'T WORK!");
+                    this.console.println("\n*** HEY DINGBAT THAT WON'T WORK!");
 
 
             }
@@ -47,7 +47,7 @@ package byui.cit260.mountKabru.view;
         }
 
         private void buyFromTavernOwner() {
-            System.out.println("\n***   SO you want a freaking potion for mana?    ***"
+            this.console.println("\n***   SO you want a freaking potion for mana?    ***"
                     +          "\n***   You can't have one cause I dont like ya!   ***"
                     +          "\n***   Maybe when I have some I will like you!    ***");
         }

@@ -13,6 +13,7 @@ import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Player;
 import byui.cit260.mountKabru.model.World;
+import byui.cit260.mountKabru.view.ErrorView;
 import static java.lang.Integer.parseInt;
 import mountkabru.MountKabru;
 
@@ -65,7 +66,7 @@ public class GameControl {
         try {
         startGold = parseInt(startingGold);
         } catch(NumberFormatException nf) {
-            System.out.println("\n You must enter a value number");
+            ErrorView.display("GameControl", "Error is in startingGold. You must enter a value number");
         }
         //calculate Answer1
          

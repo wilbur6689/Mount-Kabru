@@ -88,7 +88,7 @@ public class NewCharView extends View {
         GameControl.createHero(heroName, answer1, answer2, answer3, startingGold); 
         } 
         catch (GameControlException me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
             
         }
         // create and display game menu view

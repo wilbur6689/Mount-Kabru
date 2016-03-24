@@ -44,7 +44,7 @@ public class PrintReportView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
 
 
         }
@@ -52,15 +52,15 @@ public class PrintReportView extends View {
     }
 
     private void monsterReport() {
-        System.out.println("*** You Called the monster report function ***");
+        this.console.println("*** You Called the monster report function ***");
     }
 
     private void heroReport() {
-       System.out.println("*** You Called the hero report function ***");
+       this.console.println("*** You Called the hero report function ***");
     }
 
     private void lickIt() {
-       System.out.println("*** You started licking only to find out it was a sticky envelope ***");
+       this.console.println("*** You started licking only to find out it was a sticky envelope ***");
     }
     
 }

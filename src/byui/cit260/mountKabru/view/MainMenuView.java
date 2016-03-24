@@ -51,7 +51,7 @@ public class MainMenuView extends View {
                     this.displayHelpMenu();
                     break;
                 default:
-                    System.out.println("\n*** Invalid selection *** Try again");
+                    this.console.println("\n*** Invalid selection *** Try again");
 
 
             }
@@ -65,7 +65,7 @@ public class MainMenuView extends View {
             GameControl.createNewGame(player);
             }
             catch (GameControlException me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
             
         }
             // display next view
@@ -74,11 +74,11 @@ public class MainMenuView extends View {
         }
 
         private void loadGame() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
         }
 
         private void saveGame() {
-            System.out.println("*** saveGame function called ***");
+            this.console.println("*** saveGame function called ***");
         }
 
         private void displayHelpMenu() {

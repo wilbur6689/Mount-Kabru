@@ -50,7 +50,7 @@ public class JungleView extends View{
                 break;
             
             default:
-                System.out.println("\n*** What ever you were trying to do failed epically! *** Try again");
+                this.console.println("\n*** What ever you were trying to do failed epically! *** Try again");
                 
            
         }
@@ -66,7 +66,7 @@ public class JungleView extends View{
     }
 
     private void usePotion() {
-        System.out.println("\n*** you look into your potion pouch and    ***"
+        this.console.println("\n*** you look into your potion pouch and    ***"
                          + "\n*** remember you don't have any potions.   ***");
     }
 

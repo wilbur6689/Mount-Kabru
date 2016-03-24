@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.model;
 
+import byui.cit260.mountKabru.exceptions.GameControlException;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -21,11 +22,11 @@ public class World implements Serializable {
     public World() {
     }
 
-    public World(int rowCount, int columnCount) {
+    public World(int rowCount, int columnCount) throws GameControlException {
         
         if (rowCount < 1 || columnCount < 1) {
-            System.out.println("The numbe of rows and columns must be > Zero");
-            return;
+            throw new GameControlException("The numbe of rows and columns must be > Zero");
+
         }
         
         this.rowCount = rowCount;

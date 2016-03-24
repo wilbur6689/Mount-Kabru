@@ -44,7 +44,7 @@ public class BlacksmithView extends View {
                 break;
                         
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
@@ -60,7 +60,7 @@ public class BlacksmithView extends View {
     }
 
     private void sellToBlacksmith() {
-        System.out.println("\n***   Sorry, I would love to look at what you     ***"
+        this.console.println("\n***   Sorry, I would love to look at what you     ***"
                          + "\n***   you got but I am too busy stocking my       ***"
                          + "\n***   shelves, please come back later.            ***");
     }

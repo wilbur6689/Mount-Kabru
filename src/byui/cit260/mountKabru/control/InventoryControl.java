@@ -21,19 +21,16 @@ public class InventoryControl {
         return inventory;
     }
     
-    public static void viewInventory() {
+    public static String[] viewInventory() {
         
-        String weapon = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
-        String armor = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName();
-        String health = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
-        String mana = MountKabru.getCurrentGame().getHero().getInventory().getManaPotionSlot().getName();
+        String[] inventory = new String[4];
         
-        System.out.println("Here is your Inventory "
-                        + "\n Weapon        = " + weapon
-                        + "\n Armor         = " + armor
-                        + "\n Health Potion = " + health
-                        + "\n Mana Potion   = " + mana
-                        + "\n");
+        inventory[0] = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
+        inventory[1] = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName();
+        inventory[2] = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
+        inventory[3] = MountKabru.getCurrentGame().getHero().getInventory().getManaPotionSlot().getName();
+        
+        return inventory;
     }
     
 }

@@ -54,7 +54,7 @@ public class StartProgramView extends View {
     public boolean doAction(String playersName) {
         
         if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: " 
+            this.console.println("\nInvalid players name: " 
                     + "The name must be greater than one character in length");
             return false;
         
@@ -68,10 +68,10 @@ public class StartProgramView extends View {
         try{
             playerAge1 = parseInt(playerAge);
         } catch (NumberFormatException nf){
-            System.out.println("You entered a wrong number");
+            this.console.println("You entered a wrong number");
         }
 
-    System.out.println("this is your age " +playerAge1);
+    this.console.println("this is your age " +playerAge1);
 
         Player player = null;
 
@@ -83,10 +83,10 @@ public class StartProgramView extends View {
             player = GameControl.createPlayer(playersName);
             }
             catch (GameControlException me){
-                System.out.println(me.getMessage());
+                this.console.println(me.getMessage());
             }
             if (player == null) { //if unsuccessful
-                System.out.println("\nError creating the player.");
+                this.console.println("\nError creating the player.");
                 return false;
             }
 
@@ -100,7 +100,7 @@ public class StartProgramView extends View {
 
        
     private void displayNextView(Player player) {
-        System.out.println("\n ====================================="
+        this.console.println("\n ====================================="
                          + "\n Welcome to the game " + player.getName()
                          + "\n We hope you have a lot of fun!"
                          + "\n ====================================="
@@ -122,7 +122,7 @@ public class StartProgramView extends View {
     public final void displayBanner() {
          
          
-        System.out.println(
+        this.console.println(
           "\n______________________________________________________"
         + "\n|****************************************************|"
         + "\n|    88     888                __                    |"

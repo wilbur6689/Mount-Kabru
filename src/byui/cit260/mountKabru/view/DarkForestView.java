@@ -49,7 +49,7 @@ public class DarkForestView extends View {
                 break;
             
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
@@ -65,7 +65,7 @@ public class DarkForestView extends View {
     }
 
     private void usePotion() {
-        System.out.println("\n*** you look into your potion pouch and  ***"
+        this.console.println("\n*** you look into your potion pouch and  ***"
                          + "\n*** remember you dont have any potions   ***");
     }
 

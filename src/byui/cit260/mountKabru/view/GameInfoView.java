@@ -60,7 +60,7 @@ public class GameInfoView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
         }
         return false;
     }
@@ -74,7 +74,7 @@ public class GameInfoView extends View {
         } catch (ActorControlException e) {
             e.printStackTrace();
         }
-        System.out.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
+        this.console.println("\nLast time I checked there is an average of " + avgMonsterHP + " Hit Points of all the monsters in the game");
     }
 
     private void listMonsters() throws ActorControlException {
@@ -85,13 +85,13 @@ public class GameInfoView extends View {
         } catch (ActorControlException e) {
             e.printStackTrace();
         }
-        System.out.println("\nHere you go! This is all of the monsterData that I have discovered. \n"
+        this.console.println("\nHere you go! This is all of the monsterData that I have discovered. \n"
                 + listOMonsters);
     }
 
     private void heroStats() {
         
-        System.out.println("\nI don't know that, ask me something else");
+        this.console.println("\nI don't know that, ask me something else");
     }
     
 }

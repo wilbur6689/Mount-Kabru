@@ -56,7 +56,7 @@ public class TavernView extends View{
                 break;
                 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
@@ -75,23 +75,23 @@ public class TavernView extends View{
         
          int levelOfHero;
          try{
-         Scanner keyboard = new Scanner(System.in);
-         System.out.println("What level are you, hero?");
-         levelOfHero = keyboard.nextInt();
+         
+         this.console.println("What level are you, hero?");
+         levelOfHero = this.keyboard.read();
 
              String result = TavernControl.ownerResponse(levelOfHero);
-             System.out.println("\n*** You walk over to the Tavern Owner ***"
+             this.console.println("\n*** You walk over to the Tavern Owner ***"
                      + "\n*** and ask him for advise:           ***"
                      + "\n "
                      + "\n " + result);
          } catch (Exception e) {
-             System.out.println(e.getMessage());
+             this.console.println(e.getMessage());
          }
 
     }
           
     private void sleep() {
-        System.out.println("\n*** you sleep well and feel refreshed ***");
+        this.console.println("\n*** you sleep well and feel refreshed ***");
     }
 
     private void buyHealthPotion() {

@@ -3,6 +3,7 @@ package byui.cit260.mountKabru.control;
 import byui.cit260.mountKabru.exceptions.ActorControlException;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Hero;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import mountkabru.MountKabru;
 
@@ -239,7 +240,7 @@ public class ActorControl {
         }
 
         int meleeDamage = attack + strength - opponentDefense;
-        System.out.println(meleeDamage);
+        
 
         return meleeDamage;
 

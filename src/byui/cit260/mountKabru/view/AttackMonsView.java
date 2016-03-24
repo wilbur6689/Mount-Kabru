@@ -51,7 +51,7 @@ public class AttackMonsView extends View{
                 break;
             
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 
                          
         }
@@ -64,17 +64,17 @@ public class AttackMonsView extends View{
         int opponentDefense = 17; 
         try { 
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
-        System.out.println("\n*** You walk over to the monster      ***"
+        this.console.println("\n*** You walk over to the monster      ***"
                          + "\n*** and punch him in the gut          ***"
                          + "\n*** You do " + result + " Damage    ***");
         
         } catch (ActorControlException me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
         }
     }
 
     private void defendYourself() {
-        System.out.println("\n*** You take a defensive stance, and gain nothing  ***");
+        this.console.println("\n*** You take a defensive stance, and gain nothing  ***");
     }
 
     private void castSpell() {
@@ -83,12 +83,12 @@ public class AttackMonsView extends View{
         int opponentDefense = 10;
         try {
         int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        System.out.println("\n*** You walk over to the monster      ***"
+        this.console.println("\n*** You walk over to the monster      ***"
                          + "\n*** and cast fireball                 ***"
                          + "\n*** You do " + result + " Damage    ***");
         
         } catch (ActorControlException me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
          }
     }
 

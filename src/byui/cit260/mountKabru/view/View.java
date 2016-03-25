@@ -9,11 +9,14 @@ public abstract class View implements ViewInterface {
 
     protected String displayMessage;
     
-    protected final BufferedReader keyboard = MountKabru.getInFile();
-    protected final PrintWriter console = MountKabru.getOutFile();
+    protected final BufferedReader keyboard;
+    protected final PrintWriter console;
 
     public View(String message) {
         this.displayMessage = message;
+        
+        keyboard = MountKabru.getInFile();
+        console = MountKabru.getOutFile();
     }
     
 

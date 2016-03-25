@@ -3,7 +3,6 @@ package byui.cit260.mountKabru.control;
 import byui.cit260.mountKabru.exceptions.ActorControlException;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Hero;
-import java.io.PrintWriter;
 import java.util.Arrays;
 import mountkabru.MountKabru;
 
@@ -34,13 +33,13 @@ public class ActorControl {
        
             //plains MOnsters
             Actor[] plainsActors = new Actor[4];
-            Actor gnome = new Actor("gnome", 8,4,3,2,7);
+            Actor gnome = new Actor("Gnome", 8,4,3,2,7);
             plainsActors[0] = gnome;
             Actor banshee = new Actor("Banshee", 12,5,5,2,12 );
             plainsActors[1] = banshee;
             Actor evilRabbits = new Actor("EvilRabbits", 15,3,16,4,30);
             plainsActors[2] = evilRabbits;
-            Actor wolves = new Actor("wolves", 9,3,6,6,15);
+            Actor wolves = new Actor("Wolves", 9,3,6,6,15);
             plainsActors[3] = wolves;
         actors[0] = plainsActors;
 
@@ -165,33 +164,36 @@ public class ActorControl {
         Actor[] mountainActors =  actors[ActorGroup.mountainActors.ordinal()];
         
         String[] arrayOfNames = new String[16];
-        
+        int i = 0;
         for (Actor actorNames : plainsActors) {
-            int i = 0;
+            
             String singleActorName = actorNames.getName();
             
             arrayOfNames[i]= singleActorName;
             i++;
         }
         
+        i = 4;
         for (Actor actorNames : jungleActors) {
-            int i = 4;
+            
             String singleActorName = actorNames.getName();
             
             arrayOfNames[i]= singleActorName;
             i++;
         }
         
+        i = 8;
         for (Actor actorNames : forestActors) {
-            int i = 9;
+            
             String singleActorName = actorNames.getName();
             
             arrayOfNames[i]= singleActorName;
             i++;
         }
         
+        i = 12;
         for (Actor actorNames : mountainActors) {
-            int i = 13;
+            
             String singleActorName = actorNames.getName();
             
             arrayOfNames[i]= singleActorName;

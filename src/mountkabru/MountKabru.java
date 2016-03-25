@@ -37,20 +37,20 @@ public class MountKabru {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        StartProgramView startProgramView = new StartProgramView();
+        StartProgramView startProgramView = null;
         
         try {
-            
+          
         MountKabru.inFile = new BufferedReader(new InputStreamReader(System.in));
         MountKabru.outFile = new PrintWriter(System.out, true);         
         String filePath = "log.txt";
         MountKabru.logFile = new PrintWriter(filePath);
-            
+        startProgramView = new StartProgramView();  
         startProgramView.display();
         } catch (Throwable te) {
             ErrorView.display("StartProgramView","Error reading the input: this is what it is: " + te.getMessage() );
             te.printStackTrace();
-            startProgramView.display();
+           
         }    
         finally {
             try {

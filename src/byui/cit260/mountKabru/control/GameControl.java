@@ -180,7 +180,7 @@ public class GameControl {
         try(FileInputStream fips = new FileInputStream(filePath)){
             ObjectInputStream input = new ObjectInputStream(fips);
 
-           game = (Game) input.readObject();
+           game = (Game) input.readObject(); //read the game object from file
         }
 
         catch(Exception e){

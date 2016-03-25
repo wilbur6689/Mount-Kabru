@@ -63,7 +63,7 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
-
+        new LoadGameView().display();
     }
 
     private void displayHelpMenu() {

@@ -6,8 +6,12 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.exceptions.GameControlException;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import mountkabru.MountKabru;
 
 /**
@@ -23,7 +27,7 @@ public class PrintReportView extends View {
                 + "\n|  decide what to do next...         |"
                 + "\n--------------------------------------"
                 + "\n(M) - Print [M]onster Report" 
-                + "\n(C) - Print [H]ero Report "
+                + "\n(H) - Print [H]ero Report "
                 + "\n(F) - Lick some envelopes "
                 + "\n "
                 + "\n(Q) - [Q]uit"
@@ -62,11 +66,11 @@ public class PrintReportView extends View {
        String monsterReport = "\n"
                + "\n|----------------------------------------|"
                + "\n|                                        |"
-               + "\n|          Hero stats Report             |"
+               + "\n|          Monster  Report               |"
                + "\n|                                        |"
                + "\n|----------------------------------------|"
-               + "\n The Stats                The Values"
-               + "\n-----------              ------------"  
+               + "\n The Monsters                The Values"
+               + "\n-----------                 ------------"  
                + "\n Name                    " + MountKabru.getCurrentGame().getHero().getHeroName()
                + "\n  "
                + "\n  "
@@ -108,8 +112,18 @@ public class PrintReportView extends View {
                + "\n--------------------------------------";
        
        
-       FileOutputStream fops = new FileOutputStream(filePath);
-                ObjectOutputStream output = new ObjectOutputStream(fops);
+                FileOutputStream fops;
+        try {
+            fops = new FileOutputStream(filePath);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(PrintReportView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                ObjectOutputStream output;
+        try {
+            output = new ObjectOutputStream(fops);
+        } catch (IOException ex) {
+            Logger.getLogger(PrintReportView.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
                 output.writeObject(heroReport); //write game to object File
             

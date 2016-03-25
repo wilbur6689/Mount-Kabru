@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.GameControl;
 import byui.cit260.mountKabru.control.InventoryControl;
 import byui.cit260.mountKabru.model.Hero;
 import byui.cit260.mountKabru.model.Location;
@@ -38,10 +39,11 @@ public class GameMenuView extends View {
                + "\n  T - visit the [T]avern"
                + "\n  B - visit the [B]lacksmith"
                + "\n  P - Visit the [P]rint Shop"
-               + "\n  S - [S]tats"
-               + "\n  I - [I]nventory"
+               + "\n  C - [C]haracter stats"
+               + "\n  I - [I]nventory "
                + "\n  G - [G]et Information from the Old Man"
                + "\n  H - please [H]elp!"
+               + "\n  S - [S]ave Game"
                + "\n  Q - [Q]uit"
                + "\n--------------------------------------");
     }
@@ -67,8 +69,8 @@ public class GameMenuView extends View {
             case "P": // visit the blacksmith in town
                 this.goPrintShop();
                 break;
-            case "S": // visit the blacksmith in town
-                this.goStats();
+            case "C": // visit the blacksmith in town
+                this.goCharStats();
                 break;
             case "I": // visit the blacksmith in town
                 InventoryControl.viewInventory();
@@ -78,6 +80,9 @@ public class GameMenuView extends View {
                 break;
             case "H": //help menu
                 this.displayHelpMenu();
+                break;
+            case "S": //help menu
+                this.saveGame();
                 break;
             case "Q": //help menu
                 this.quitGame();
@@ -150,7 +155,7 @@ public class GameMenuView extends View {
         printShop.display();
     }
     
-    private void goStats() {
+    private void goCharStats() {
         Hero hero = MountKabru.getCurrentGame().getHero();
         this.console.println(hero);
     }
@@ -171,9 +176,19 @@ public class GameMenuView extends View {
         helpMenuView.display();
     }
 
+    private void saveGame() {
+        
+       new SaveGameView().display();
+        
+    }
+    
     private void quitGame() {
         System.exit(0);
     }
+
+    
+
+    
 
     
 

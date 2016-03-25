@@ -48,7 +48,7 @@ public class MountKabru {
         startProgramView = new StartProgramView();  
         startProgramView.display();
         } catch (Throwable te) {
-            ErrorView.display("StartProgramView","Error reading the input: this is what it is: " + te.getMessage() );
+            ErrorView.display("StartProgramView","Error reading the input: " + te.getMessage() );
             te.printStackTrace();
            
         }    

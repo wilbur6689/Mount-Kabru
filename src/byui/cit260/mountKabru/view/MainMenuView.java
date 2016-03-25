@@ -10,101 +10,69 @@ import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Player;
 import mountkabru.MountKabru;
 
-
-
 /**
  *
  * @author Phill
  */
 public class MainMenuView extends View {
-    
-       public MainMenuView() {
-                 super("\n   N - Start a new game"
-                    + "\n   L - Load Game"
-                    + "\n   S - Save Game"
-                    + "\n   H - Get Help on how to play the game"
-                    + "\n   Q - Quit"
-                    + "\n------------------------------------------");}
-    
-    
-    
-    
-        private String promptMessage;
 
+    public MainMenuView() {
+        super("\n   N - Start a new game"
+            + "\n   L - Load Game"
+            + "\n   H - Get Help on how to play the game"
+            + "\n   Q - Quit"
+            + "\n------------------------------------------");
+    }
 
-        @Override
-        public boolean doAction(String value) {
+    private String promptMessage;
 
-            value = value.toUpperCase(); //convert choice to upper case
+    @Override
+    public boolean doAction(String value) {
 
-            switch (value) {
-                case "N": // create and start a new game
-                    this.startNewGame();
-                    break;
-                case "L": // load players game
-                    this.loadGame();
-                    break;
-                case "S": //save a players game
-                    this.saveGame();
-                    break;
-                case "H": //help menu
-                    this.displayHelpMenu();
-                    break;
-                default:
-                    this.console.println("\n*** Invalid selection *** Try again");
+        value = value.toUpperCase(); //convert choice to upper case
 
+        switch (value) {
+            case "N": // create and start a new game
+                this.startNewGame();
+                break;
+            case "L": // load players game
+                this.loadGame();
+                break;
+            case "H": //help menu
+                this.displayHelpMenu();
+                break;
+            default:
+                this.console.println("\n*** Invalid selection *** Try again");
 
-            }
-            return false;
         }
+        return false;
+    }
 
-        private void startNewGame() {
-            //Create a new game
-            try {   
-            Player player = MountKabru.getPlayer();    
+    private void startNewGame() {
+        //Create a new game
+        try {
+            Player player = MountKabru.getPlayer();
             GameControl.createNewGame(player);
-            }
-            catch (GameControlException me) {
+        } catch (GameControlException me) {
             this.console.println(me.getMessage());
-            
+
         }
-            // display next view
-            NewCharView newCharView = new NewCharView();
-            newCharView.display();
-        }
+        // display next view
+        NewCharView newCharView = new NewCharView();
+        newCharView.display();
+    }
 
-        private void loadGame() {
+    private void loadGame() {
 
+    }
 
-                this.console.println("\n\nEnter the location where you want a new game");
+    private void displayHelpMenu() {
 
-            String filePath = this.getInput();
+        // create helpHelpMenuView object
+        HelpMenuView helpMenuView = new HelpMenuView();
 
-            try{
-                GameControl.getSavedGame(filePath);
+        //display the help menu view
+        helpMenuView.display();
+    }
 
-
-            } catch (Exception e ){
-                ErrorView.display("MainMenuView", e.getMessage());
-            }
-
-            GameMenuView gameMenu = new GameMenuView();
-            gameMenu.display();
-        }
-
-        private void saveGame() {
-            this.console.println("*** saveGame function called ***");
-        }
-
-        private void displayHelpMenu() {
-
-            // create helpHelpMenuView object
-            HelpMenuView helpMenuView = new HelpMenuView();
-
-            //display the help menu view
-            helpMenuView.display();
-        }
-
-    
-    
 }

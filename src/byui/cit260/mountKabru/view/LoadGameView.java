@@ -44,7 +44,7 @@ public class LoadGameView extends View {
             return false;
         }
         
-        this.console.println("You have successfuly loaded your game called: " + filePath);
+        this.console.println("You have successfully loaded your game called: " + filePath);
         
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();

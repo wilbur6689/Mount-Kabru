@@ -6,7 +6,10 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.exceptions.GameControlException;
+
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
 import mountkabru.MountKabru;
 
@@ -106,13 +109,27 @@ public class PrintReportView extends View {
                + "\n  "
                + "\n  "
                + "\n--------------------------------------";
-       
-       
-       FileOutputStream fops = new FileOutputStream(filePath);
-                ObjectOutputStream output = new ObjectOutputStream(fops);
 
-                output.writeObject(heroReport); //write game to object File
-            
+
+        FileOutputStream fops = null;
+        try {
+            fops = new FileOutputStream(filePath);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        ObjectOutputStream output = null;
+        try {
+            output = new ObjectOutputStream(fops);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            output.writeObject(heroReport); //write game to object File
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void lickIt() {

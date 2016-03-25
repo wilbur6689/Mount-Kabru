@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b44a2586-d6ec-4506-950a-da4e32275091" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/ActorControl.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/ActorControl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/TavernControl.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/TavernControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/MainMenuView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/MainMenuView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/View.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/byui/cit260/mountKabru/control/ActorControlTest.java" afterPath="$PROJECT_DIR$/test/byui/cit260/mountKabru/control/ActorControlTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/byui/cit260/mountKabru/control/TavernControlTest.java" afterPath="$PROJECT_DIR$/test/byui/cit260/mountKabru/control/TavernControlTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.iml" afterPath="$PROJECT_DIR$/test/test.iml" />
     </list>
     <ignored path="Mount-Kabru.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +37,8 @@
       <file leaf-file-name="GameControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.10144927">
-              <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.79710144">
+              <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1030,7 +1023,7 @@
       <workItem from="1458787540608" duration="106000" />
       <workItem from="1458829569477" duration="10082000" />
       <workItem from="1458880894478" duration="188000" />
-      <workItem from="1458913719098" duration="4178000" />
+      <workItem from="1458913719098" duration="4233000" />
     </task>
     <task id="LOCAL-00001" summary="Created Monster List: Orson C Badger">
       <created>1458255575891</created>
@@ -1098,11 +1091,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458832725294</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Save Gme and Load Game&#10;3-25-16">
+      <created>1458922416333</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1458922416333</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45411000" />
+    <option name="totallyTimeSpent" value="45466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="746" extended-state="0" />
@@ -1154,7 +1153,8 @@
     <MESSAGE value="Coded the idea of Event Control&#10;&#10;Orson C Badger&#10;&#10;3-22-16" />
     <MESSAGE value="Coded the ParseInt for the Beginning of the game where it now asks for the age of the player.&#10;&#10;Orson C Badger&#10;&#10;3-22-16" />
     <MESSAGE value="Working on the actor list&#10;Orson C Badger&#10;&#10;3-22-16" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on the actor list&#10;Orson C Badger&#10;&#10;3-22-16" />
+    <MESSAGE value="Save Gme and Load Game&#10;3-25-16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save Gme and Load Game&#10;3-25-16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1601,8 +1601,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.10144927">
-          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.79710144">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
           <folding />
         </state>
       </provider>

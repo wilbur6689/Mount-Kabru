@@ -62,26 +62,7 @@ public class PrintReportView extends View {
     private void monsterReport() {
         
         
-       String monsterReport = "\n"
-               + "\n|----------------------------------------|"
-               + "\n|                                        |"
-               + "\n|          Hero stats Report             |"
-               + "\n|                                        |"
-               + "\n|----------------------------------------|"
-               + "\n The Stats                The Values"
-               + "\n-----------              ------------"  
-               + "\n Name                    " + MountKabru.getCurrentGame().getHero().getHeroName()
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n--------------------------------------";
+       //String monsterReport =
     }
 
     private void heroReport() {
@@ -90,26 +71,25 @@ public class PrintReportView extends View {
        String filePath = getInput();
         
         String heroReport = "\n"
-               + "\n|----------------------------------------|"
-               + "\n|                                        |"
-               + "\n|          Hero stats Report             |"
-               + "\n|                                        |"
-               + "\n|----------------------------------------|"
-               + "\n The Stats                The Values"
-               + "\n-----------              ------------"  
-               + "\n Name                    " + MountKabru.getCurrentGame().getHero().getHeroName()
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n  "
-               + "\n--------------------------------------";
-
+                + "\n|-------------------------------------------------------|"
+                + "\n|                                                       |"
+                + "\n|                   Hero Stats Report                   |"
+                + "\n|                                                       |"
+                + "\n|-------------------------------------------------------|"
+                + "\n The Stats        Starting Values          Current Values"
+                + "\n-----------    -------------------         --------------"
+                + "\n Name                  NULL                " + MountKabru.getCurrentGame().getHero().getHeroName()
+                + "\n HitPoints             NULL                " + MountKabru.getCurrentGame().getHero().getHitPoints()
+                + "\n Defense               NULL                " + MountKabru.getCurrentGame().getHero().getDefence()
+                + "\n Attack                NULL                " + MountKabru.getCurrentGame().getHero().getAttack()
+                + "\n Gold                  NULL                " + MountKabru.getCurrentGame().getHero().getGold()
+                + "\n  "
+                + "\n  "
+                + "\n  "
+                + "\n  "
+                + "\n  "
+                + "\n  "
+                + "\n--------------------------------------";
 
         FileOutputStream fops = null;
         try {
@@ -129,6 +109,8 @@ public class PrintReportView extends View {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+       this.console.println(" This is the message you get when it works YAY!");
 
     }
 

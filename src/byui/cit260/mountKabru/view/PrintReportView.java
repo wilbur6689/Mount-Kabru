@@ -5,6 +5,11 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.exceptions.GameControlException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import mountkabru.MountKabru;
+
 /**
  *
  * @author wibur
@@ -17,7 +22,7 @@ public class PrintReportView extends View {
                 + "\n|  You head into the printShop and   |"
                 + "\n|  decide what to do next...         |"
                 + "\n--------------------------------------"
-                + "\n(M) - Print [M]onster Report"
+                + "\n(M) - Print [M]onster Report" 
                 + "\n(C) - Print [H]ero Report "
                 + "\n(F) - Lick some envelopes "
                 + "\n "
@@ -52,11 +57,62 @@ public class PrintReportView extends View {
     }
 
     private void monsterReport() {
-        this.console.println("*** You Called the monster report function ***");
+        
+        
+       String monsterReport = "\n"
+               + "\n|----------------------------------------|"
+               + "\n|                                        |"
+               + "\n|          Hero stats Report             |"
+               + "\n|                                        |"
+               + "\n|----------------------------------------|"
+               + "\n The Stats                The Values"
+               + "\n-----------              ------------"  
+               + "\n Name                    " + MountKabru.getCurrentGame().getHero().getHeroName()
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n--------------------------------------";
     }
 
     private void heroReport() {
-       this.console.println("*** You Called the hero report function ***");
+       this.console.println("Where would you like to save the report?");
+       
+       String filePath = getInput();
+        
+        String heroReport = "\n"
+               + "\n|----------------------------------------|"
+               + "\n|                                        |"
+               + "\n|          Hero stats Report             |"
+               + "\n|                                        |"
+               + "\n|----------------------------------------|"
+               + "\n The Stats                The Values"
+               + "\n-----------              ------------"  
+               + "\n Name                    " + MountKabru.getCurrentGame().getHero().getHeroName()
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n  "
+               + "\n--------------------------------------";
+       
+       
+       FileOutputStream fops = new FileOutputStream(filePath);
+                ObjectOutputStream output = new ObjectOutputStream(fops);
+
+                output.writeObject(heroReport); //write game to object File
+            
     }
 
     private void lickIt() {

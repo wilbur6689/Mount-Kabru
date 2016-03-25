@@ -13,7 +13,7 @@ import byui.cit260.mountKabru.control.InventoryControl;
  */
 public class InventoryView extends View {
     
-    String inventory[] = InventoryControl.viewInventory();
+    
    
     
     
@@ -52,6 +52,7 @@ public class InventoryView extends View {
 
     private void checkInv() {
         
+        String inventory[] = InventoryControl.viewInventory();
         String inventoryList = " ";
         for (int i=0; i<inventory.length;i++) {
             

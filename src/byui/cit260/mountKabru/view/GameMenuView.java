@@ -33,7 +33,7 @@ public class GameMenuView extends View {
                + "\n|                                        |"
                + "\n|----------------------------------------|"
                + "\n"
-               + "\n"  
+               + "\n"  + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName()
                + "\n"
                + "\n  A - go on an [A]dventure"
                + "\n  T - visit the [T]avern"

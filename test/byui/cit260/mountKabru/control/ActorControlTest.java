@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.control;
 
+import byui.cit260.mountKabru.exceptions.ActorControlException;
 import byui.cit260.mountKabru.model.Hero;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -38,7 +39,12 @@ public class ActorControlTest {
         int strength = 23;
         int opponentDefense = 17;
         int expResult = 41;
-        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+        int result = 0;
+        try {
+            result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+        } catch (ActorControlException e) {
+            e.printStackTrace();
+        }
         assertEquals(expResult, result);
         System.out.println(result);
     }
@@ -50,8 +56,13 @@ public class ActorControlTest {
         int strength = 23;
         int opponentDefense = 90;
         int expResult = -1;
-        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
-        assertEquals(expResult, result);
+           int result = 0;
+           try {
+               result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+           assertEquals(expResult, result);
            System.out.println(result);
     }
     
@@ -62,8 +73,13 @@ public class ActorControlTest {
         int strength = -1;
         int opponentDefense = 34;
         int expResult = -2;
-        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
-        assertEquals(expResult, result);
+           int result = 0;
+           try {
+               result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+           assertEquals(expResult, result);
            System.out.println(result);
     }
     
@@ -74,8 +90,13 @@ public class ActorControlTest {
         int strength = 4;
         int opponentDefense = 1-5;
         int expResult = -3;
-        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
-        assertEquals(expResult, result);
+           int result = 0;
+           try {
+               result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+           assertEquals(expResult, result);
            System.out.println(result);
     }
        @Test
@@ -85,8 +106,13 @@ public class ActorControlTest {
         int strength = 666;
         int opponentDefense = 233;
         int expResult = -4;
-        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
-        assertEquals(expResult, result);
+           int result = 0;
+           try {
+               result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+           assertEquals(expResult, result);
            System.out.println(result);
         
     }
@@ -97,9 +123,14 @@ public class ActorControlTest {
         int mana = 20;
         int opponentDefense = 15;
         String expResult = "31-40";
-        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        
-        System.out.println(result);
+           int result = 0;
+           try {
+               result = ActorControl.spellDamage(attack, mana, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+
+           System.out.println(result);
         if (result > 2 && result < 100) {
             if (result >= -4 && result < 0) {
                 assertTrue(true);
@@ -120,9 +151,14 @@ public class ActorControlTest {
         int mana = 30;
         int opponentDefense = 10;
         String expResult = "-4";
-        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        
-        System.out.println(result);
+           int result = 0;
+           try {
+               result = ActorControl.spellDamage(attack, mana, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+
+           System.out.println(result);
         if (result > 2 && result < 100) {
             if (result >= -4 && result < 0) {
                 assertTrue(true);
@@ -144,9 +180,14 @@ public class ActorControlTest {
         int mana = 351;
         int opponentDefense = 15;
         String expResult = "-4";
-        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        
-        System.out.println(result);
+           int result = 0;
+           try {
+               result = ActorControl.spellDamage(attack, mana, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+
+           System.out.println(result);
         if (result > 2 && result < 100) {
             if (result >= -4 && result < 0) {
                 assertTrue(true);
@@ -168,9 +209,14 @@ public class ActorControlTest {
         int mana = 25;
         int opponentDefense = 150;
         String expResult = "-4";
-        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        
-        System.out.println(result);
+           int result = 0;
+           try {
+               result = ActorControl.spellDamage(attack, mana, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+
+           System.out.println(result);
         if (result > 2 && result < 100) {
             if (result >= -4 && result < 0) {
                 assertTrue(true);
@@ -192,9 +238,14 @@ public class ActorControlTest {
         int mana = 5;
         int opponentDefense = 5;
         String expResult = "6-15";
-        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        
-        System.out.println(result);
+           int result = 0;
+           try {
+               result = ActorControl.spellDamage(attack, mana, opponentDefense);
+           } catch (ActorControlException e) {
+               e.printStackTrace();
+           }
+
+           System.out.println(result);
         if (result > 2 && result < 100) {
             if (result >= -4 && result < 0) {
                 assertTrue(true);

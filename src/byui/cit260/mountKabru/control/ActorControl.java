@@ -223,14 +223,14 @@ public class ActorControl {
             if (attack > 100) {
                 throw new ActorControlException("The attack was to large of a number.");
             }
-            throw new ActorControlException("The attack was a negitive number.");
+            throw new ActorControlException("The attack was a negative number.");
         }
 
         if (strength < 2 || strength > 100) {
             if (strength > 100) {
                 throw new ActorControlException("The strength was to large of a number.");
             }
-            throw new ActorControlException("The strength was a negitive number.");
+            throw new ActorControlException("The strength was a negative number.");
 
         }
 
@@ -238,7 +238,7 @@ public class ActorControl {
             if (opponentDefense > 100) {
                 throw new ActorControlException("The opponentDefense was to large of a number.");
             }
-            throw new ActorControlException("The opponentDefense was a negitive number.");
+            throw new ActorControlException("The opponentDefense was a negative number.");
         }
 
         int meleeDamage = attack + strength - opponentDefense;

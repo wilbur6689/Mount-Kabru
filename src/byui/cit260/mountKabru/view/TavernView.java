@@ -8,6 +8,7 @@ package byui.cit260.mountKabru.view;
 import byui.cit260.mountKabru.control.TavernControl;
 import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.exceptions.TavernControlException;
+import static java.lang.Integer.parseInt;
 
 import java.util.Scanner;
 
@@ -72,12 +73,13 @@ public class TavernView extends View{
     
     
     private void tavernOwner() {
-        
+         String levelOfHeroString;
          int levelOfHero;
          try{
          
          this.console.println("What level are you, hero?");
-         levelOfHero = this.keyboard.read();
+         levelOfHeroString = this.keyboard.readLine();
+         levelOfHero = parseInt(levelOfHeroString);
 
              String result = TavernControl.ownerResponse(levelOfHero);
              this.console.println("\n*** You walk over to the Tavern Owner ***"

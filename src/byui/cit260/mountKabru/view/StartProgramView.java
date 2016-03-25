@@ -10,6 +10,7 @@ import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Player;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 
 /**

@@ -38,7 +38,7 @@ public class LoadGameView extends View {
         
         try {
             //load a save game
-            GameControl.getSavedGame(filePath);
+            GameControl.loadGame(filePath);
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
             return false;

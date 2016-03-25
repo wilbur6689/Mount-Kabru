@@ -21,6 +21,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 
 /**
@@ -174,7 +175,7 @@ public class GameControl {
         }
 
 
-    public static void getSavedGame(String filePath)
+    public static void loadGame(String filePath)
         throws GameControlException {
          Game game = null;
         try(FileInputStream fips = new FileInputStream(filePath)){

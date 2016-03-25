@@ -14,42 +14,38 @@ import java.util.Objects;
  * @author wibur
  */
 public class World implements Serializable {
-    
+
     private int rowCount;
     private int columnCount;
     private Location[][] locations;
-    
+
     public World() {
     }
 
     public World(int rowCount, int columnCount) throws GameControlException {
-        
+
         if (rowCount < 1 || columnCount < 1) {
             throw new GameControlException("The numbe of rows and columns must be > Zero");
 
         }
-        
+
         this.rowCount = rowCount;
-        this.columnCount = columnCount;   
+        this.columnCount = columnCount;
         this.locations = new Location[rowCount][columnCount];
-       
-            for (int row = 0; row < rowCount; row++) {
+
+        for (int row = 0; row < rowCount; row++) {
             for (int column = 0; column < columnCount; column++) {
                 Location location = new Location();
                 location.setColumn(column);
                 location.setRow(row);
                 location.setDiscovered(false);
-                
+
                 //assign the Location object to the current position in the array
                 locations[row][column] = location;
             }
         }
-        
 
-        
     }
-    
-
 
     public Location[][] getLocations() {
         return locations;
@@ -66,7 +62,6 @@ public class World implements Serializable {
     public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
-
 
     public int getColumnCount() {
         return columnCount;
@@ -109,14 +104,5 @@ public class World implements Serializable {
     public String toString() {
         return "World{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-    
-    
 
-    
-    
-    
-    
 }
-
-    
-    

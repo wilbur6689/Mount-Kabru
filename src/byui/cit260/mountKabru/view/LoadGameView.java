@@ -6,8 +6,7 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.GameControl;
-import java.io.File;
-import java.util.ArrayList;
+
 
 /**
  *
@@ -20,7 +19,7 @@ public class LoadGameView extends View {
     }
 
     @Override
-    public boolean doAction(String value) {
+    public boolean doAction(String filePath) {
 
         //get list of names of all the files in a folder
         
@@ -35,7 +34,7 @@ public class LoadGameView extends View {
 //            }
 //        }
 
-        String filePath = this.getInput();
+       
         
         try {
             //load a save game

@@ -58,10 +58,8 @@ public static String ownerResponse(int levelOfHero) throws Exception{
     
     
     index = (int) (Math.random() * 10 + respType);
-    
-    String ownerResponse = ownerSaying[index];
- 
-    return ownerResponse;
+
+    return ownerSaying[index];
     
     
 

@@ -17,6 +17,10 @@ import byui.cit260.mountKabru.view.ErrorView;
 import static java.lang.Integer.parseInt;
 import mountkabru.MountKabru;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import static java.lang.Integer.parseInt;
 import static java.lang.Integer.parseInt;
@@ -157,6 +161,41 @@ public class GameControl {
        
     }
 
+    public static void saveGame(Game game, String filePath)
+
+        throws GameControlException {
+
+            try(FileOutputStream fops = new FileOutputStream(filePath)){
+                ObjectOutputStream output = new ObjectOutputStream(fops);
+
+                output.writeObject(game); //write game to object File
+            }
+
+            catch(Exception e){
+                throw new GameControlException(e.getMessage());
+            }
+        }
+
+
+    public static void getSavedGame(String filePath)
+        throws GameControlException {
+         Game game = null;
+        try(FileInputStream fips = new FileInputStream(filePath)){
+            ObjectInputStream input = new ObjectInputStream(fips);
+
+           game = (Game) input.readObject();
+        }
+
+        catch(Exception e){
+            throw new GameControlException(e.getMessage());
+        }
+
+        MountKabru.setCurrentGame(game);
+    }
+
+    }
+    }
+
     
 
-}
+

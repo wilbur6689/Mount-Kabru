@@ -35,8 +35,13 @@ public class TavernControlTest {
         System.out.println("ownerResponse");
         int levelOfHero = 4;
         String expResult = "";
-        String result = TavernControl.ownerResponse(levelOfHero);
-       
+        String result = null;
+        try {
+            result = TavernControl.ownerResponse(levelOfHero);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         boolean found = false;
         String[] testSaying = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", 
             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"};

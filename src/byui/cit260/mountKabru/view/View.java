@@ -52,7 +52,7 @@ public abstract class View implements ViewInterface {
             } catch (Exception e) {
              this.console.println(e.getMessage());
          }
-            
+
             if (value.length() < 1) { //value is blank
                 this.console.println("\n Invalid value: Value can not be blank");
                 continue;

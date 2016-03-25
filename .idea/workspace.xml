@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b44a2586-d6ec-4506-950a-da4e32275091" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/LoadGameView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/LoadGameView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/PrintReportView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/PrintReportView.java" />
     </list>
     <ignored path="Mount-Kabru.iws" />
@@ -35,35 +34,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TavernControl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/TavernControl.java">
+      <file leaf-file-name="Hero.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Hero.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoadGameView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/LoadGameView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding>
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -71,8 +47,8 @@
       <file leaf-file-name="PrintReportView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/PrintReportView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71014494">
-              <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.9130435">
+              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -947,7 +923,7 @@
       <workItem from="1458787540608" duration="106000" />
       <workItem from="1458829569477" duration="10082000" />
       <workItem from="1458880894478" duration="188000" />
-      <workItem from="1458913719098" duration="10575000" />
+      <workItem from="1458913719098" duration="13132000" />
     </task>
     <task id="LOCAL-00001" summary="Created Monster List: Orson C Badger">
       <created>1458255575891</created>
@@ -1033,11 +1009,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458939261897</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="&#10;3-25-16">
+      <created>1458943531231</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1458943531231</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51808000" />
+    <option name="totallyTimeSpent" value="54365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1368" height="746" extended-state="6" />
@@ -1145,10 +1127,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/PrintReportView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71014494">
-          <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.9130435">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

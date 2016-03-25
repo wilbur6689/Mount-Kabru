@@ -61,6 +61,7 @@ public class PrintReportView extends View {
     }
 
     private void monsterReport() {
+        
 
         this.console.println("Where would you like to save your file?");
         String filePath = getInput();
@@ -70,11 +71,10 @@ public class PrintReportView extends View {
 
         for (int i = 0; i < actors.length; i++) {
             for (int r = 0; r < actors[i].length; r++) {
-                monsterStats += actors[i][r].getName() 
-                + "               " 
-                + actors[i][r].getHitPoints()
-                + "               "
-                + actors[i][r].getGold()
+                monsterStats += 
+                padString(actors[i][r].getName())
+                + padString(Integer.toString(actors[i][r].getHitPoints()))
+                + padString(Integer.toString(actors[i][r].getGold()))
                 + "\n";
 
             }
@@ -87,7 +87,7 @@ public class PrintReportView extends View {
                 + "\n|                                                  |"
                 + "\n|--------------------------------------------------|"
                 + "\n The Monsters       Hit Points          Gold "
-                + "\n-----------         ------------       ------------"
+                + "\n-----------         ------------       -------------"
                 + "\n" + monsterStats
      
                 + "\n--------------------------------------";
@@ -110,26 +110,30 @@ public class PrintReportView extends View {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+        
+        this.console.println(monsterReport);
+        
     }
 
     private void heroReport() {
-        this.console.println("Where would you like to save the report?");
-
-        String filePath = getInput();
-
+       this.console.println("Where would you like to save the report?");
+       
+       String filePath = getInput();
+        
         String heroReport = "\n"
-                + "\n|----------------------------------------|"
-                + "\n|                                        |"
-                + "\n|          Hero stats Report             |"
-                + "\n|                                        |"
-                + "\n|----------------------------------------|"
-                + "\n The Stats      Starting Values          Current Values"
-                + "\n-----------     ---------------         --------------------"
-                + "\n Name              null                    " + MountKabru.getCurrentGame().getHero().getHeroName()
-                + "\n HitPoints          20"
-                + "\n  "
-                + "\n  "
-                + "\n  "
+                + "\n|-------------------------------------------------------|"
+                + "\n|                                                       |"
+                + "\n|                   Hero Stats Report                   |"
+                + "\n|                                                       |"
+                + "\n|-------------------------------------------------------|"
+                + "\n The Stats        Starting Values          Current Values"
+                + "\n-----------    -------------------         --------------"
+                + "\n Name                  NULL                " + MountKabru.getCurrentGame().getHero().getHeroName()
+                + "\n HitPoints             NULL                " + MountKabru.getCurrentGame().getHero().getHitPoints()
+                + "\n Defense               NULL                " + MountKabru.getCurrentGame().getHero().getDefence()
+                + "\n Attack                NULL                " + MountKabru.getCurrentGame().getHero().getAttack()
+                + "\n Gold                  NULL                " + MountKabru.getCurrentGame().getHero().getGold()
                 + "\n  "
                 + "\n  "
                 + "\n  "
@@ -156,11 +160,25 @@ public class PrintReportView extends View {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+       this.console.println(" This is the message you get when it works YAY!");
 
     }
 
     private void lickIt() {
         this.console.println("*** You started licking only to find out it was a sticky envelope ***");
+    }
+
+    
+    public String padString(String string) {
+        
+        while (string.length() < 20) {
+            
+            string = string + " ";
+        }
+        
+        
+        return string;
     }
 
 }

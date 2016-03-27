@@ -98,39 +98,32 @@ public class GameMenuView extends View {
 
     public void goAdventure() {
          
-        //Show the player the map
-         Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
-         int rowCount = MountKabru.getCurrentGame().getWorld().getRowCount();
-         int columnCount = MountKabru.getCurrentGame().getWorld().getColumnCount();
-         
-         
-         this.console.println("This is the map of the world");
-         
-         
-        for (int row = rowCount-1; row >= 0; row--) {
-            
-            this.console.print(" " + (row+1) + " ");
+       Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
+        int rowCount = MountKabru.getCurrentGame().getWorld().getRowCount();
+        int columnCount = MountKabru.getCurrentGame().getWorld().getColumnCount();
+        
+        for (int row = rowCount - 1; row >= 0; row--) {
+            this.console.print(" " + (row + 1) + " ");
             for (int column = 0; column < columnCount; column++) {
                 this.console.print("|");
                 Location location = locations[row][column];
-                boolean discovered = location.isDiscovered(); 
+                boolean discovered = location.isDiscovered();
                 if (discovered == true) {
-                 this.console.print("---");
-                 this.console.print("/\\");
-                }
-                else {
-                 this.console.print("---");   
-                 this.console.print("??");
+                    this.console.print("---");
+                    this.console.print("/\\");
+                } else {
+                    this.console.print("---");
+                    this.console.print("??");
                 }
                 this.console.print("---");
             }
-        this.console.print("| \n");
+            this.console.print("| \n");
         }
-                
-       this.console.println("   |   1    |   2    |   3    |   4    |   5    |   6    |   7    |   8    |"); 
-         
-       AdventureView adventureView = new AdventureView();
-       adventureView.display();
+
+        this.console.println("   |   1    |   2    |   3    |   4    |   5    |   6    |   7    |   8    |"); 
+        
+       WorldMapView worldMap = new WorldMapView();
+       worldMap.display();
     }
 
     public void goTavern() {

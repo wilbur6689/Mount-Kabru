@@ -5,6 +5,8 @@
  */
 package byui.cit260.mountKabru.view;
 
+import static java.lang.Integer.parseInt;
+
 
 /**
  *
@@ -14,16 +16,16 @@ public class WorldMapView extends View {
 
     public WorldMapView() {
         super("\n"
-            + "\n------------------------------------------------"
-            + "\n   Which Location would you like to visit?      "
-            + "\n   Please enter the two numbers together"
-            + "\n                                                "
-            + "\n                                                "
+            + "\n--------------------------------------------------------"
+            + "\n   Which Location would you like to visit?         "
+            + "\n   "
+            + "\n   Choose your number from the ranges below"
+            + "\n   "
             + "\n         (11) - Return to town "
             + "\n  (12) - (18) - Plains "
-            + "\n  (20) - (28) - Jungle"
-            + "\n  (30) - (38) - Dark Forest"
-            + "\n  (40) - (48) - High Mountain"
+            + "\n  (21) - (28) - Jungle"
+            + "\n  (31) - (38) - Dark Forest"
+            + "\n  (41) - (48) - High Mountain"
             + "\n"
             + "\n  (Q) - quit");
     }
@@ -35,42 +37,43 @@ public class WorldMapView extends View {
         
 
         choice = choice.toUpperCase(); //convert choice to upper case
-
-        switch (choice) {
-            case "P": // go kill stuff in the plains
-                this.plainsAdventure();
-                break;
-            case "J": // go kill stuff in the jungle
-                this.jungleAdventure();
-                break;
-            case "F": // go kill stuff in the forest
-                this.forestAdventure();
-                break;
-            case "M": // go kill stuff in the Mountains
-                this.mountainAdventure();
-                break;
-
-            default:
-                this.console.println("\n*** Invalid selection *** Try again");
-
+        
+        int location = parseInt(choice);
+        
+        if (location < 12) {
+            this.returnToTown(location);
+        } else if (location < 19) {
+            this.plainsAdventure(location);
+        } else if (location < 29) {
+            this.jungleAdventure(location);
+        } else if (location < 39) {
+            this.forestAdventure(location);
+        } else {
+            this.mountainAdventure(location);
         }
+        
+        
         return false;
     }
 
-    private void plainsAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void returnToTown(int location){
+        this.console.println("you called the town function");
+    }
+    
+    private void plainsAdventure(int location) {
+        this.console.println("you called the plains function");
     }
 
-    private void jungleAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void jungleAdventure(int location) {
+        this.console.println("you called the jungle function");
     }
 
-    private void forestAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void forestAdventure(int location) {
+        this.console.println("you called the forest function");
     }
 
-    private void mountainAdventure() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void mountainAdventure(int location) {
+        this.console.println("you called the mountain function");
     }
 
 }

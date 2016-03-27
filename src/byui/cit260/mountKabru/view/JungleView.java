@@ -46,7 +46,7 @@ public class JungleView extends View{
                 this.usePotion();
                 break;
             case "I": // view your inventory
-                InventoryControl.viewInventory();
+                this.viewInventory();
                 break;
             
             default:

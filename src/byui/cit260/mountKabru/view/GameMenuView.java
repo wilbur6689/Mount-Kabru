@@ -73,7 +73,7 @@ public class GameMenuView extends View {
                 this.goCharStats();
                 break;
             case "I": // visit the blacksmith in town
-                InventoryControl.viewInventory();
+                this.viewInventory();
                 break;
             case "G": // Get Information about the game
                 this.goGameInfo();
@@ -160,6 +160,11 @@ public class GameMenuView extends View {
         this.console.println(hero);
     }
     
+    private void viewInventory() {
+       InventoryView inventory = new InventoryView();
+       inventory.display();
+    }
+    
     private void goGameInfo() {
         GameInfoView gameInfoView = new GameInfoView();
         
@@ -185,6 +190,8 @@ public class GameMenuView extends View {
     private void quitGame() {
         System.exit(0);
     }
+
+    
 
     
 

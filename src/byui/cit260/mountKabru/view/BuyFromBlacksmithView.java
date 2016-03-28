@@ -76,7 +76,7 @@ public class BuyFromBlacksmithView extends View {
                 
                          
         }
-        return true;
+        return false;
     }
 
 

@@ -23,7 +23,7 @@ public class SellToBlacksmithView extends View {
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
-                + "\n|              Your Current Armor to sell:                     |"
+                + "\n|              Your Current Armor to sell:                                            |"
                 + "\n|" + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() + "|"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
@@ -53,15 +53,12 @@ public class SellToBlacksmithView extends View {
                 this.sellArmor();
                 break;
 
-
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
-
 
         }
         return false;
     }
-
 
     private void sellWeapon() {
         int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue();
@@ -78,30 +75,20 @@ public class SellToBlacksmithView extends View {
 
     }
 
-
     private void sellArmor() {
         int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue();
         int gold = MountKabru.getCurrentGame().getHero().getGold();
+        Item playerArmor = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot();
+        Item clothes = Item.clothes;
 
-        if (gold > sellValue) {
+        if (playerArmor != clothes) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.clothes);
-        } else
-          {
-           this.console.println("Sorry You cannot sell me something you don't have");
-          }
-
-        this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
+            this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
+        } else {
+            this.console.println("You dont have anything I want, go away.");
+        }
     }
 
 }
-
-
-    
-    
-    
-    
-    
-    
-

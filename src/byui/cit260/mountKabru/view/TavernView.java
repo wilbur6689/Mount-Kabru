@@ -98,7 +98,7 @@ public class TavernView extends View{
         
         int maxHP = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
         int goldBefore = MountKabru.getCurrentGame().getHero().getGold();
-        Item[] items = MountKabru.getCurrentGame().getItems();
+        
         String response;
         
         
@@ -117,19 +117,31 @@ public class TavernView extends View{
     }
 
     private void buyHealthPotion() {
-        
+        int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
         int hPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getHealthValue();
         
         if (hPotion == 10) {
             this.console.println("Sorry, but you already have a potion.");
         } else {
+            int afterGold = beforeGold - 100;
+            MountKabru.getCurrentGame().getHero().setGold(afterGold);
             MountKabru.getCurrentGame().getHero().getInventory().setHealthPotionSlot(Item.healthPotion10);
             this.console.println("Thank you for buying a health Potion");
         }
     }
 
     private void buyManaPotion() {
-       
+       int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
+        int mPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getManaValue();
+        
+        if (mPotion == 10) {
+            this.console.println("Sorry, but you already have a potion.");
+        } else {
+            int afterGold = beforeGold - 100;
+            MountKabru.getCurrentGame().getHero().setGold(afterGold);
+            MountKabru.getCurrentGame().getHero().getInventory().setHealthPotionSlot(Item.manaPotion10);
+            this.console.println("Thank you for buying a Mana Potion");
+        }
 
     }
 }

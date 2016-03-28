@@ -63,16 +63,17 @@ public class SellToBlacksmithView extends View {
     private void sellWeapon() {
         int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue();
         int gold = MountKabru.getCurrentGame().getHero().getGold();
+        Item playerWeapon = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot();
+        Item bareHands = Item.bareHands;
 
-        if (gold > sellValue) {
+        if (playerWeapon != bareHands) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.bareHands);
+            this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
         } else {
-
+            this.console.println("You don't have anything I want, go away.");
         }
-        this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
-
     }
 
     private void sellArmor() {
@@ -87,7 +88,7 @@ public class SellToBlacksmithView extends View {
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.clothes);
             this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
         } else {
-            this.console.println("You dont have anything I want, go away.");
+            this.console.println("You don't have anything I want, go away.");
         }
     }
 

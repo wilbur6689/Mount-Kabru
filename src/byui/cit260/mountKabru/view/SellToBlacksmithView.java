@@ -15,6 +15,7 @@ import static java.lang.Integer.parseInt;
  */
 public class SellToBlacksmithView extends View {
 
+    
     public SellToBlacksmithView() {
         super("\n"
                 + "\n----------------------------------------------------------------"

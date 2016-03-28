@@ -16,10 +16,10 @@ public class AdventureView extends View {
                 + "\n|  You wander out of town and try to |"
                 + "\n|  decide where to fight next...     |"
                 + "\n--------------------------------------"
-                + "\n(P) - Fight in the Plains"
-                + "\n(J) - Fight in the Jungle"
-                + "\n(F) - Fight in the dark Forest"
-                + "\n(M) - Fight in the high Mountains"
+                + "\n(P) - Fight in the Plains: Recommended Level 1-10"
+                + "\n(J) - Fight in the Jungle: Recommended Level 20-30"
+                + "\n(F) - Fight in the dark Forest: Recommended Level 30-40"
+                + "\n(M) - Fight in the high Mountains: Recommended Level 40-50"
                 + "\n(Q) - [Q]uit"
                 + "\n--------------------------------------");
     }

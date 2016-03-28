@@ -53,7 +53,6 @@ public class BlacksmithView extends View {
 
     private void buyFromBlacksmith() {
         BuyFromBlacksmithView buyFromBlacksmithView = new BuyFromBlacksmithView();
-        
         buyFromBlacksmithView.display();
         
         

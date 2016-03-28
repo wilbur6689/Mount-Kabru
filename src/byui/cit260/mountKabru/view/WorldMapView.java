@@ -55,7 +55,7 @@ public class WorldMapView extends View {
         return false;
         }
 
-        
+        //We need to call the sgetLocations function in the worldControl
         
         
         

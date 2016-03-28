@@ -92,13 +92,11 @@ public class NewCharView extends View {
         }
         // create and display game menu view
         // create gameMenuView object
-        GameMenuView gameMenuView = new GameMenuView();
-        
+        GameMenuView gameMenuView = new GameMenuView();        
         //display the game Menu view
         gameMenuView.display();
 
-       
-        return false;
+        return true;
     }
 
     

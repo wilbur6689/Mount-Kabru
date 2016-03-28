@@ -66,7 +66,7 @@ public class GameMenuView extends View {
                 break;
             case "B": // visit the blacksmith in town
                 this.goBlacksmith();
-                break;
+                break;               
             case "P": // visit the blacksmith in town
                 this.goPrintShop();
                 break;
@@ -133,6 +133,7 @@ public class GameMenuView extends View {
         TavernView tavernView = new TavernView();
         //display the tavern view
         tavernView.display();
+ 
     }
 
     public void goBlacksmith() {
@@ -141,6 +142,8 @@ public class GameMenuView extends View {
         BlacksmithView blacksmithView = new BlacksmithView();
         //display the tavern view
         blacksmithView.display();
+        
+
     }
     
     private void goPrintShop() {

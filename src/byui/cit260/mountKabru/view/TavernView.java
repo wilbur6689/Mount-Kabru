@@ -57,6 +57,9 @@ public class TavernView extends View{
             case "M": // buy a mana potion
                 this.buyManaPotion();
                 break;
+            case "R": // buy a mana potion
+                this.buyReturn();
+                break;
                 
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
@@ -143,5 +146,10 @@ public class TavernView extends View{
             this.console.println("Thank you for buying a Mana Potion");
         }
 
+    }
+
+    private void buyReturn() {
+        GameMenuView menu = new GameMenuView();
+        menu.display();
     }
 }

@@ -23,7 +23,7 @@ public class SellToBlacksmithView extends View {
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
-                + "\n|              Your Current Armor to sell:                                            |"
+                + "\n|              Your Current Armor to sell:                     |"
                 + "\n|" + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() + "|"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
@@ -70,8 +70,9 @@ public class SellToBlacksmithView extends View {
         if (gold > sellValue) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else {
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.bareHands);
+        } else {
+
         }
         this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
 
@@ -85,9 +86,12 @@ public class SellToBlacksmithView extends View {
         if (gold > sellValue) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else {
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.clothes);
-        }
+        } else
+          {
+           this.console.println("Sorry You cannot sell me something you don't have");
+          }
+
         this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
     }
 

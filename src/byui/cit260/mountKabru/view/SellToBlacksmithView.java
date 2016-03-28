@@ -53,15 +53,12 @@ public class SellToBlacksmithView extends View {
                 this.sellArmor();
                 break;
 
-
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
-
 
         }
         return false;
     }
-
 
     private void sellWeapon() {
         int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue();
@@ -70,34 +67,28 @@ public class SellToBlacksmithView extends View {
         if (gold > sellValue) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else {
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.bareHands);
+        } else {
+
         }
         this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
 
     }
-
 
     private void sellArmor() {
         int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue();
         int gold = MountKabru.getCurrentGame().getHero().getGold();
+        Item playerArmor = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot();
+        Item clothes = Item.clothes;
 
-        if (gold > sellValue) {
+        if (playerArmor != clothes) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
-        } else {
             MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.clothes);
+            this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
+        } else {
+            this.console.println("You dont have anything I want, go away.");
         }
-        this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
     }
 
 }
-
-
-    
-    
-    
-    
-    
-    
-

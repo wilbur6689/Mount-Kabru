@@ -4,6 +4,7 @@ import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.Location;
 import byui.cit260.mountKabru.model.World;
+import mountkabru.MountKabru;
 
 /**
  * Created by badgerwaves on 2/10/16.
@@ -64,10 +65,15 @@ import byui.cit260.mountKabru.model.World;
         locations[3][4].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][5].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][6].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
-
-
+        
+        MountKabru.getCurrentGame().getWorld().setLocations(locations);
     }
 
+       public static Location getLocation(int row, int column){
+           Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
+           
+           return locations[row][column];
+       }
 
 }
 

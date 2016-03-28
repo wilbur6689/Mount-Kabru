@@ -55,8 +55,7 @@ public class WorldMapView extends View {
         return false;
         }
 
-        Location location = MountKabru.getCurrentGame().getHero().getCurrentLocation();
-        MountKabru.getCurrentGame().getHero().setCurrentLocation(location[row][column]);
+        
         
         
         

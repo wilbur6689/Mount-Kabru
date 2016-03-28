@@ -73,9 +73,6 @@ public class GameMenuView extends View {
             case "C": // visit the blacksmith in town
                 this.goCharStats();
                 break;
-            case "I": // visit the blacksmith in town
-                this.viewInventory();
-                break;
             case "G": // Get Information about the game
                 this.goGameInfo();
                 break;
@@ -189,11 +186,6 @@ public class GameMenuView extends View {
                 + "\n HP Potion:   " + healthPotion
                 + "\n Mana Potion: " + manaPotion
         );
-    }
-    
-    private void viewInventory() {
-       InventoryView inventory = new InventoryView();
-       inventory.display();
     }
     
     private void goGameInfo() {

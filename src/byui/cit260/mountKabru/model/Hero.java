@@ -60,9 +60,7 @@ public class Hero extends Actor implements  Serializable  {
         this.player = player;
         this.inventory = inventory;
     }
-    
-    
-    
+
     public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
         this.heroName = heroName;
         this.heroClassType = heroClassType;
@@ -71,6 +69,7 @@ public class Hero extends Actor implements  Serializable  {
         this.mana = mana;
         this.strength = strength;
     }
+
     
     public String getHeroName() {
         return heroName;

@@ -60,10 +60,9 @@ public class NewCharView extends View {
     
     
     @Override
-    public boolean doAction(String value) {
+    public boolean doAction(String heroName) {
         
-        // create Hero
-        String heroName = value;
+        
         
         
         // ask questions

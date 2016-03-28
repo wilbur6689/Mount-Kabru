@@ -8,9 +8,11 @@ package byui.cit260.mountKabru.view;
 import byui.cit260.mountKabru.control.TavernControl;
 import byui.cit260.mountKabru.exceptions.GameControlException;
 import byui.cit260.mountKabru.exceptions.TavernControlException;
+import byui.cit260.mountKabru.model.Item;
 import static java.lang.Integer.parseInt;
 
 import java.util.Scanner;
+import mountkabru.MountKabru;
 
 /**
  *
@@ -26,10 +28,10 @@ public class TavernView extends View{
                 + "\n|  You meander in the tavern looking |"
                 + "\n|  as tough as you can.               |"  
                 + "\n--------------------------------------"
-                + "\nT - talk to the [T]avern owner"
-                + "\nS - get a room and [S]leep it off"
-                + "\nH - buy a [H]ealth potion"
-                + "\nM - buy a [M]ana potion"
+                + "\nT - talk to the [T]avern owner    - Costs your dignity"
+                + "\nS - get a room and [S]leep it off - Costs 250 Gold"
+                + "\nH - buy a [H]ealth potion         - Costs 100 Gold"
+                + "\nM - buy a [M]ana potion           - Costs 100 Gold"
                 + "\nQ - return to town"
                 + "\n--------------------------------------");}
     
@@ -54,6 +56,9 @@ public class TavernView extends View{
                 break;
             case "M": // buy a mana potion
                 this.buyManaPotion();
+                break;
+            case "R": // buy a mana potion
+                this.buyReturn();
                 break;
                 
             default:
@@ -93,19 +98,58 @@ public class TavernView extends View{
     }
           
     private void sleep() {
-        this.console.println("\n*** you sleep well and feel refreshed ***");
+        
+        int maxHP = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
+        int goldBefore = MountKabru.getCurrentGame().getHero().getGold();
+        
+        String response;
+        
+        
+        
+        if (goldBefore < 250) {
+            response = "\n Sorry you do not have enough gold";
+            
+        } else {
+            int goldAfter = goldBefore - 250;
+            MountKabru.getCurrentGame().getHero().setGold(goldAfter);
+            response = "\n you sleep well and feel refreshed ";
+            MountKabru.getCurrentGame().getHero().setCurrentHitPoints(maxHP);
+        }
+        
+        this.console.println(response);
     }
 
     private void buyHealthPotion() {
-        BuyHPotionView buypotion = new BuyHPotionView(); //CREATES A NEW HP POTION VIEW
-
-        buypotion.display();
+        int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
+        int hPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getHealthValue();
+        
+        if (hPotion == 10) {
+            this.console.println("Sorry, but you already have a potion.");
+        } else {
+            int afterGold = beforeGold - 100;
+            MountKabru.getCurrentGame().getHero().setGold(afterGold);
+            MountKabru.getCurrentGame().getHero().getInventory().setHealthPotionSlot(Item.healthPotion10);
+            this.console.println("Thank you for buying a health Potion");
+        }
     }
 
     private void buyManaPotion() {
-       BuyMPotionView mPotion = new BuyMPotionView(); // CREATES A NEW MP POTION VIEW
+       int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
+        int mPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getManaValue();
+        
+        if (mPotion == 10) {
+            this.console.println("Sorry, but you already have a potion.");
+        } else {
+            int afterGold = beforeGold - 100;
+            MountKabru.getCurrentGame().getHero().setGold(afterGold);
+            MountKabru.getCurrentGame().getHero().getInventory().setHealthPotionSlot(Item.manaPotion10);
+            this.console.println("Thank you for buying a Mana Potion");
+        }
 
-        mPotion.display();
+    }
 
+    private void buyReturn() {
+        GameMenuView menu = new GameMenuView();
+        menu.display();
     }
 }

@@ -99,11 +99,7 @@ public class GameControl {
            return null;
         }
 
-        //(String heroName, String heroClassType, 
-        //int levelOfHero, int experience, int mana, 
-        //int strength, Player player, Inventory inventory, 
-        //String name, int hitPoints, int defence, int attack, 
-        //int chanceToHit, int gold) {
+        
         
         
         Hero hero = new Hero();
@@ -114,7 +110,7 @@ public class GameControl {
         hero.setStrength(strength);
         hero.setMana(mana);
         hero.setMaxHitPoints(20);
-        hero.setCurrentHitPoints(20);
+        hero.setCurrentHitPoints(10);
         hero.setGold(startGold);
         
         if (strength == 30) {

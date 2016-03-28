@@ -5,17 +5,8 @@
  */
 package byui.cit260.mountKabru.view;
 
-import byui.cit260.mountKabru.model.Inventory;
 import byui.cit260.mountKabru.model.Item;
-import static java.lang.Integer.parseInt;
 import mountkabru.MountKabru;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
 import static java.lang.Integer.parseInt;
 
 /**
@@ -85,7 +76,7 @@ public class BuyFromBlacksmithView extends View {
                 
                          
         }
-        return false;
+        return true;
     }
 
 
@@ -102,8 +93,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display();        
+           
         
     }
 
@@ -120,8 +110,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+        
     }
 
     private void buyAxe() {
@@ -137,8 +126,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+        
     }
 
     private void buyScythe() {
@@ -154,8 +142,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+        
     }
 
     private void buyLeather() {
@@ -171,8 +158,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+         
     }
 
     private void buyScaleMail() {
@@ -188,8 +174,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+        
     }
 
     private void buyFiber() {
@@ -205,8 +190,7 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+        
     }
 
     private void buyBone() {
@@ -222,7 +206,6 @@ public class BuyFromBlacksmithView extends View {
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         
-        BlacksmithView blacksmithView = new BlacksmithView();
-        blacksmithView.display(); 
+        
     }
 }

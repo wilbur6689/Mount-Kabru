@@ -56,7 +56,7 @@ public class InventoryView extends View {
         String inventoryList = " ";
         for (int i=0; i<inventory.length;i++) {
             
-        inventoryList += inventory[i];
+        inventoryList += inventory[i] + "\n";
         }
         
              this.console.println(inventoryList);

@@ -44,6 +44,7 @@ public class GameMenuView extends View {
                + "\n  G - [G]et Information from the Old Man"
                + "\n  H - please [H]elp!"
                + "\n  S - [S]ave Game"
+               + "\n  L - [L]oad Game"
                + "\n  Q - [Q]uit"
                + "\n--------------------------------------");
     }
@@ -84,7 +85,10 @@ public class GameMenuView extends View {
             case "S": //help menu
                 this.saveGame();
                 break;
-            case "Q": //help menu
+            case "L": //load game menu
+                this.loadGame();
+                break;
+            case "Q": //quit game
                 this.quitGame();
                 break;
             
@@ -149,8 +153,42 @@ public class GameMenuView extends View {
     }
     
     private void goCharStats() {
-        Hero hero = MountKabru.getCurrentGame().getHero();
-        this.console.println(hero);
+        
+        String heroName = MountKabru.getCurrentGame().getHero().getName();
+        String heroClass = MountKabru.getCurrentGame().getHero().getHeroClassType();
+        int heroLevel = MountKabru.getCurrentGame().getHero().getLevelOfHero();
+        int heroExperience = MountKabru.getCurrentGame().getHero().getExperience();
+        int heroStrength = MountKabru.getCurrentGame().getHero().getStrength();
+        int heroMana = MountKabru.getCurrentGame().getHero().getMana();
+        int heroCurrentHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
+        int heroDefence = MountKabru.getCurrentGame().getHero().getDefence();
+        int heroAttack = MountKabru.getCurrentGame().getHero().getAttack();
+        int heroChanceToHit = MountKabru.getCurrentGame().getHero().getChanceToHit();
+        int heroGold = MountKabru.getCurrentGame().getHero().getGold();
+        String weaponSlot = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
+        String armorSlot = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName();
+        String healthPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
+        String manaPotion = MountKabru.getCurrentGame().getHero().getInventory().getManaPotionSlot().getName();
+        
+        this.console.println(
+                          "\n"
+                + "\n Hero Name:   " + heroName 
+                + "\n Class:       " + heroClass
+                + "\n Level:       " + heroLevel
+                + "\n Experience:  " + heroExperience
+                + "\n Strength:    " + heroStrength
+                + "\n Mana:        " + heroMana
+                + "\n Hitpoints:   " + heroCurrentHP 
+                + "\n Defence:     " + heroDefence
+                + "\n Attack:      " + heroAttack
+                + "\n To Hit:      " + heroChanceToHit
+                + "\n Gold:        " + heroGold
+                + "\n"
+                + "\n Weapon:      " + weaponSlot
+                + "\n Armor:       " + armorSlot
+                + "\n HP Potion:   " + healthPotion
+                + "\n Mana Potion: " + manaPotion
+        );
     }
     
     private void viewInventory() {
@@ -180,9 +218,15 @@ public class GameMenuView extends View {
         
     }
     
+    private void loadGame() {
+        new LoadGameView().display();
+    }
+    
     private void quitGame() {
         System.exit(0);
     }
+
+    
 
     
 

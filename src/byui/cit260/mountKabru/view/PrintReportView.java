@@ -73,7 +73,7 @@ public class PrintReportView extends View {
             for (int r = 0; r < actors[i].length; r++) {
                 monsterStats += 
                 padString(actors[i][r].getName())
-                + padString(Integer.toString(actors[i][r].getHitPoints()))
+                + padString(Integer.toString(actors[i][r].getMaxHitPoints()))
                 + padString(Integer.toString(actors[i][r].getGold()))
                 + "\n";
 
@@ -130,7 +130,7 @@ public class PrintReportView extends View {
                 + "\n The Stats        Starting Values          Current Values"
                 + "\n-----------    -------------------         --------------"
                 + "\n Name                  NULL                " + MountKabru.getCurrentGame().getHero().getHeroName()
-                + "\n HitPoints             NULL                " + MountKabru.getCurrentGame().getHero().getHitPoints()
+                + "\n HitPoints             NULL                " + MountKabru.getCurrentGame().getHero().getMaxHitPoints()
                 + "\n Defense               NULL                " + MountKabru.getCurrentGame().getHero().getDefence()
                 + "\n Attack                NULL                " + MountKabru.getCurrentGame().getHero().getAttack()
                 + "\n Gold                  NULL                " + MountKabru.getCurrentGame().getHero().getGold()

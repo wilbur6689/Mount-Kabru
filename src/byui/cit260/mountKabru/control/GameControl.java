@@ -21,7 +21,6 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
 
 
 /**
@@ -114,7 +113,8 @@ public class GameControl {
         hero.setExperience(1);
         hero.setStrength(strength);
         hero.setMana(mana);
-        hero.setHitPoints(20);
+        hero.setMaxHitPoints(20);
+        hero.setCurrentHitPoints(20);
         hero.setGold(startGold);
         
         if (strength == 30) {
@@ -159,8 +159,9 @@ public class GameControl {
        
     }
 
-    public static void saveGame(Game game, String filePath) throws GameControlException {
+    public static void saveGame(Game game, String fileName) throws GameControlException {
 
+        String filePath = "saveGames\\" + fileName; 
             try(FileOutputStream fops = new FileOutputStream(filePath)){
                 ObjectOutputStream output = new ObjectOutputStream(fops);
 
@@ -173,8 +174,9 @@ public class GameControl {
         }
 
 
-    public static void loadGame(String filePath) throws GameControlException {
+    public static void loadGame(String fileName) throws GameControlException {
          
+        String filePath = "saveGames\\" + fileName;
         Game game = null;
         try(FileInputStream fips = new FileInputStream(filePath)){
             ObjectInputStream input = new ObjectInputStream(fips);

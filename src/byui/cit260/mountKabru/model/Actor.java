@@ -18,7 +18,8 @@ public class Actor implements Serializable{
     
     //class instance variables
     private String name;
-    private int hitPoints;
+    private int maxHitPoints;
+    private int currentHitPoints;
     private int defence;
     private int attack;
     private int chanceToHit;
@@ -31,9 +32,10 @@ public class Actor implements Serializable{
         
     }
 
-    public Actor(String name, int hitPoints, int defence, int attack, int chanceToHit, int gold) {
+    public Actor(String name, int maxHitPoints, int currentHitPoints, int defence, int attack, int chanceToHit, int gold) {
         this.name = name;
-        this.hitPoints = hitPoints;
+        this.maxHitPoints = maxHitPoints;
+        this.currentHitPoints = currentHitPoints;
         this.defence = defence;
         this.attack = attack;
         this.chanceToHit = chanceToHit;
@@ -68,12 +70,20 @@ public class Actor implements Serializable{
         this.name = name;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getMaxHitPoints() {
+        return maxHitPoints;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void setMaxHitPoints(int maxHitPoints) {
+        this.maxHitPoints = maxHitPoints;
+    }
+
+    public int getCurrentHitPoints() {
+        return currentHitPoints;
+    }
+
+    public void setCurrentHitPoints(int currentHitPoints) {
+        this.currentHitPoints = currentHitPoints;
     }
 
     public int getDefence() {
@@ -112,7 +122,7 @@ public class Actor implements Serializable{
     public int hashCode() {
         int hash = 5;
         hash = 37 * hash + Objects.hashCode(this.name);
-        hash = 37 * hash + this.hitPoints;
+        hash = 37 * hash + this.maxHitPoints;
         hash = 37 * hash + this.defence;
         hash = 37 * hash + this.attack;
         hash = 37 * hash + this.chanceToHit;
@@ -132,7 +142,7 @@ public class Actor implements Serializable{
             return false;
         }
         final Actor other = (Actor) obj;
-        if (this.hitPoints != other.hitPoints) {
+        if (this.maxHitPoints != other.maxHitPoints) {
             return false;
         }
         if (this.defence != other.defence) {
@@ -155,8 +165,10 @@ public class Actor implements Serializable{
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", hitPoints=" + hitPoints + ", defence=" + defence + ", attack=" + attack + ", chanceToHit=" + chanceToHit + ", gold=" + gold + '}';
+        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defence=" + defence + ", attack=" + attack + ", chanceToHit=" + chanceToHit + ", gold=" + gold + '}';
     }
+
+    
     
     
     

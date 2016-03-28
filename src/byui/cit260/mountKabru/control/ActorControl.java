@@ -33,49 +33,49 @@ public class ActorControl {
        
             //plains MOnsters
             Actor[] plainsActors = new Actor[4];
-            Actor gnome = new Actor("Gnome", 8,4,3,2,7);
+            Actor gnome = new Actor("Gnome",8,8,4,3,2,7);
             plainsActors[0] = gnome;
-            Actor banshee = new Actor("Banshee", 12,5,5,2,12 );
+            Actor banshee = new Actor("Banshee", 12,12,5,5,2,12 );
             plainsActors[1] = banshee;
-            Actor evilRabbits = new Actor("EvilRabbits", 15,3,16,4,30);
+            Actor evilRabbits = new Actor("EvilRabbits", 15,15,3,16,4,30);
             plainsActors[2] = evilRabbits;
-            Actor wolves = new Actor("Wolves", 9,3,6,6,15);
+            Actor wolves = new Actor("Wolves", 9,9,3,6,6,15);
             plainsActors[3] = wolves;
         actors[0] = plainsActors;
 
             //Jungle Monsters
             Actor[] jungleActors = new Actor[4];
-            Actor frogs = new Actor("Frogs", 20,5,15,3,45);
+            Actor frogs = new Actor("Frogs", 20,20,5,15,3,45);
             jungleActors[0] = frogs;
-            Actor manticore = new Actor("Manticore", 25,7,17,3,100);
+            Actor manticore = new Actor("Manticore", 25,25,7,17,3,100);
             jungleActors[1] = manticore;
-            Actor gators = new Actor("Gators", 30,8,18,3,37);
+            Actor gators = new Actor("Gators", 30,30,8,18,3,37);
             jungleActors[2] = gators;
-            Actor largeSpider = new Actor("Large Spider", 24,6,14,6,60);
+            Actor largeSpider = new Actor("Large Spider", 24,24,6,14,6,60);
             jungleActors[3] = largeSpider;
         actors[1] = jungleActors;
 
             //DarkForest Monsters
             Actor[] forestActors = new Actor[4];
-            Actor werewolves = new Actor("Werewolves", 35,15,45,4,125);
+            Actor werewolves = new Actor("Werewolves", 35,35,15,45,4,125);
             forestActors[0] = werewolves;
-            Actor dryad = new Actor("Dryad", 40,25,55,5,250);
+            Actor dryad = new Actor("Dryad", 40,40,25,55,5,250);
             forestActors[1] = dryad;
-            Actor theUndead = new Actor("TheUndead", 50,34,67,7,650);
+            Actor theUndead = new Actor("TheUndead", 50,50,34,67,7,650);
             forestActors[2] = theUndead;
-            Actor centaurs = new Actor("Centaurs", 45,28,48,6,450);
+            Actor centaurs = new Actor("Centaurs", 45,45,28,48,6,450);
             forestActors[3] = centaurs;
         actors[2] = forestActors;
 
             //HighMountain
             Actor[] mountainActors = new Actor[4];
-            Actor dragon = new Actor("Dragon", 60,45,55,34,250);
+            Actor dragon = new Actor("Dragon", 60,60,45,55,34,250);
             mountainActors[0] = dragon;
-            Actor hydra = new Actor("Hydra", 70,67,100,34,9000);
+            Actor hydra = new Actor("Hydra", 70,70,67,100,34,9000);
             mountainActors[1] = hydra;
-            Actor giant = new Actor("Giant", 150,75,46,34,40000);
+            Actor giant = new Actor("Giant", 150,150,75,46,34,40000);
             mountainActors[2] = giant;
-            Actor master = new Actor("Master", 1,1,1,0,9999999);
+            Actor master = new Actor("Master", 1,1,1,1,0,9999999);
             mountainActors[3] = master;
         actors[3] = mountainActors;
         
@@ -102,7 +102,7 @@ public class ActorControl {
         Actor[] plainsActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
         
         for (Actor actors : plainsActors) {
-            int plainsHitPoints = actors.getHitPoints();
+            int plainsHitPoints = actors.getMaxHitPoints();
             if (plainsHitPoints < 1 || plainsHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }
@@ -113,7 +113,7 @@ public class ActorControl {
         Actor[] jungleActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
         
         for (Actor actors : jungleActors) {
-            int jungleHitPoints = actors.getHitPoints();
+            int jungleHitPoints = actors.getMaxHitPoints();
             if (jungleHitPoints < 1 || jungleHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }
@@ -124,7 +124,7 @@ public class ActorControl {
         Actor[] forestActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
         
         for (Actor actors : forestActors) {
-            int forestHitPoints = actors.getHitPoints();
+            int forestHitPoints = actors.getMaxHitPoints();
             if (forestHitPoints < 1 || forestHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }
@@ -135,7 +135,7 @@ public class ActorControl {
         Actor[] mountainActors = actors1[ActorControl.ActorGroup.plainsActors.ordinal()];
         
         for (Actor actors : mountainActors) {
-            int mountainHitPoints = actors.getHitPoints();
+            int mountainHitPoints = actors.getMaxHitPoints();
             if (mountainHitPoints < 1 || mountainHitPoints > 150) {
                 throw new ActorControlException("The hitPoints was too large or too small of a number.");
             }

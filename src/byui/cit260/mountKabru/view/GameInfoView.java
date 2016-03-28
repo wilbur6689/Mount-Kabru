@@ -28,7 +28,6 @@ public class GameInfoView extends View {
                 + "\n"
                 + "\nA - [A]verage number of Hit Points for the monsters in the game"
                 + "\nL - [L]ist of Monsters Alphabetically "
-                + "\nS - [S]ee your Stats "
                 + "\nQ - [Q]uit"
                 + "\n--------------------------------------");
     }
@@ -55,9 +54,7 @@ public class GameInfoView extends View {
                     e.printStackTrace();
                 }
                 break;
-            case "S": // Sell your weapons or armor to the blacksmith
-                this.heroStats();
-                break;
+           
 
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
@@ -89,9 +86,6 @@ public class GameInfoView extends View {
                 + listOMonsters);
     }
 
-    private void heroStats() {
-        
-        this.console.println("\nI don't know that, ask me something else");
-    }
+    
     
 }

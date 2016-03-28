@@ -59,8 +59,8 @@ public class BlacksmithView extends View {
     }
 
     private void sellToBlacksmith() {
-        this.console.println("\n***   Sorry, I would love to look at what you     ***"
-                         + "\n***   you got but I am too busy stocking my       ***"
-                         + "\n***   shelves, please come back later.            ***");
+        SellToBlacksmithView sellToBlacksmith = new SellToBlacksmithView();
+        
+        sellToBlacksmith.display();
     }
 }

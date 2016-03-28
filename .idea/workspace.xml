@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b44a2586-d6ec-4506-950a-da4e32275091" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/AdventureView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/AdventureView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BlacksmithView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BlacksmithView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/GameInfoView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/GameInfoView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/HelpMenuView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/HelpMenuView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/SellToBlacksmithView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/SellToBlacksmithView.java" />
     </list>
     <ignored path="Mount-Kabru.iws" />
@@ -42,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Hero.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,8 +97,8 @@
       <file leaf-file-name="SellToBlacksmithView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/SellToBlacksmithView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66511625">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.80465114">
+              <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromBlacksmithView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -414,17 +410,14 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/control/ActorControl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/saveGames/test</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Actor.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Hero.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/model/World.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BlacksmithView.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromBlacksmithView.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/GameMenuView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/InventoryView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/JungleView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/PlainsView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/PrintReportView.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/NewCharView.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/TavernView.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -432,9 +425,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/saveGames/freddyTest</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/saveGames/test</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/WorldMapView.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/h</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -442,9 +433,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/fred500</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/saveGames/testFile</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test37</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyHPotionView.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyMPotionView.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -1026,7 +1016,7 @@
       <workItem from="1458880894478" duration="188000" />
       <workItem from="1458913719098" duration="13454000" />
       <workItem from="1458970213882" duration="4000" />
-      <workItem from="1459177647648" duration="5124000" />
+      <workItem from="1459177647648" duration="5379000" />
     </task>
     <task id="LOCAL-00001" summary="Created Monster List: Orson C Badger">
       <created>1458255575891</created>
@@ -1124,11 +1114,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458946135981</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Worked on sell to blacksmith view to simplify it.&#10;&#10;&#10;3-25-16">
+      <created>1459199943897</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1459199943897</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59815000" />
+    <option name="totallyTimeSpent" value="60070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="770" extended-state="6" />
@@ -1140,7 +1136,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30709878" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3065476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8005952" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1182,7 +1178,8 @@
     <MESSAGE value="Working on the actor list&#10;Orson C Badger&#10;&#10;3-22-16" />
     <MESSAGE value="Save Gme and Load Game&#10;3-25-16" />
     <MESSAGE value="&#10;3-25-16" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;3-25-16" />
+    <MESSAGE value="Worked on sell to blacksmith view to simplify it.&#10;&#10;&#10;3-25-16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on sell to blacksmith view to simplify it.&#10;&#10;&#10;3-25-16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1309,7 +1306,7 @@
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Hero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1333,7 +1330,7 @@
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromBlacksmithView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1358,8 +1355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/SellToBlacksmithView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66511625">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.80465114">
+          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

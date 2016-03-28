@@ -13,18 +13,18 @@ import static java.lang.Integer.parseInt;
  *
  * @author Phill
  */
-public class SellToBlacksmithView extends View{
-    
-     public SellToBlacksmithView() {
-           super( "\n"
+public class SellToBlacksmithView extends View {
+
+    public SellToBlacksmithView() {
+        super("\n"
                 + "\n----------------------------------------------------------------"
                 + "\n|        You Current Weapon to sell:                           |"
-                + "\n|"    +    MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName()   + "       " +MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue() +"|"
+                + "\n|" + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue() + "|"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|              Your Current Armor to sell:                                            |"
-                + "\n|"        +MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName()  +"       " +MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() +  "|"
+                + "\n|" + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() + "|"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
@@ -34,17 +34,17 @@ public class SellToBlacksmithView extends View{
                 + "\nQ - [Q]uit"
                 + "\n---------------------------------------------------------------");
     }
-    
+
     @Override
     public boolean doAction(String value) {
-        int realNumber = 0; 
-        
+        int realNumber = 0;
+
         try {
-        realNumber = parseInt(value);
-        } catch(NumberFormatException nf) {
+            realNumber = parseInt(value);
+        } catch (NumberFormatException nf) {
             this.console.println("\n You must enter a value number");
         }
-        
+
         switch (realNumber) {
             case 1: // sell weapons and armor from the blacksmith
                 this.sellWeapon();
@@ -53,55 +53,45 @@ public class SellToBlacksmithView extends View{
                 this.sellArmor();
                 break;
 
-                        
+
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
-                
-                         
+
+
         }
         return false;
     }
 
 
-    
-
     private void sellWeapon() {
         int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue();
         int gold = MountKabru.getCurrentGame().getHero().getGold();
-        
-        if (gold > sellValue){
+
+        if (gold > sellValue) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else {
+            MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.bareHands);
         }
-        
-         else { MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.bareHands);}
-            this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
-        
-        SellToBlacksmithView sellToBlackSmithView = new SellToBlacksmithView();
-        SellToBlacksmithView.display();
-   }
+        this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
 
-
-
-
-
+    }
 
 
     private void sellArmor() {
-        int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() ;
+        int sellValue = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue();
         int gold = MountKabru.getCurrentGame().getHero().getGold();
-        
-        if (gold > sellValue){
+
+        if (gold > sellValue) {
             gold += sellValue;
             MountKabru.getCurrentGame().getHero().setGold(gold);
+        } else {
+            MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.clothes);
         }
-        
-        else {MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.clothes);}
-            this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
-        
-        SellToBlacksmithView sellToBlackSmithView = new SellToBlacksmithView();
-        SellToBlacksmithView.display();
-   }
+        this.console.println("It has been a pleasure doing business with you, bring me more items you don't want.");
+    }
+
+}
 
 
     

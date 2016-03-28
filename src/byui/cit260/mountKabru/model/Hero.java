@@ -18,7 +18,7 @@ public class Hero extends Actor implements  Serializable  {
     private int mana;
     private int strength;
  
-
+    private Location currentLocation;
     private Player player;
     private Inventory inventory;
 
@@ -119,6 +119,15 @@ public class Hero extends Actor implements  Serializable  {
         this.strength = strength;
     }
 
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+    
+    
     @Override
     public int hashCode() {
         int hash = 5;

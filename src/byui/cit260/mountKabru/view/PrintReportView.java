@@ -62,9 +62,16 @@ public class PrintReportView extends View {
 
     private void monsterReport() {
         
-
+        String value = "";
         this.console.println("Where would you like to save your file?");
-        String filePath = getInput();
+        try {
+            value = this.keyboard.readLine(); //Get next line typed on keyboard
+            value = value.trim(); // trim off leading and trailing blanks
+            } catch (Exception e) {
+             this.console.println(e.getMessage());
+         }
+        
+        String filePath = value;
 
         Actor[][] actors = MountKabru.getCurrentGame().getActors();
         String monsterStats = null;
@@ -117,9 +124,16 @@ public class PrintReportView extends View {
     }
 
     private void heroReport() {
-       this.console.println("Where would you like to save the report?");
-       
-       String filePath = getInput();
+       String value = "";
+        this.console.println("Where would you like to save your file?");
+        try {
+            value = this.keyboard.readLine(); //Get next line typed on keyboard
+            value = value.trim(); // trim off leading and trailing blanks
+            } catch (Exception e) {
+             this.console.println(e.getMessage());
+         }
+        
+        String filePath = value;
         
         String heroReport = "\n"
                 + "\n|-------------------------------------------------------|"

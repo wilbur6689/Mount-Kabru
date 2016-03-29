@@ -72,6 +72,8 @@ public class AdventureView extends View {
         AttackMonsView attackMonsView = new AttackMonsView();
         //display the Attack Monster view
         attackMonsView.display();
+        
+        
     }
 
     private void usePotion() {
@@ -84,26 +86,32 @@ public class AdventureView extends View {
     }
 
     private void curLocation() {
-        String currentLocation = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getEventType();
-        String eventType = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getLocationType();
+        String eventType = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getEventType();
+        String locationType = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getLocationType();
+        String eventName = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getEventName();
         
-        this.console.println("This is your current location: " + currentLocation
-                        + "\n This is your event type: " + eventType);
+        this.console.println("This is your event type: " + eventType
+                        + "\n This is your location type: " + locationType
+                        + "\n this is the event name: " + eventName);
                 
     }
 
     private void changeLocation() {
         World world = MountKabru.getCurrentGame().getWorld();
         Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
-        Event[][] events = new Event[locations.length][locations[0].length];
+        Event[][] events = new Event[locations.length][locations[0].length -1];
         
         for (int i=0;i<locations.length;i++) {
-            for (int j=0;j<locations[i].length;j++) {
+            for (int j=0;j<locations[i].length-1;j++) {
                 events[i][j] = locations[i][j].getEvent();
+                System.out.println(events[i][j].getEventType());
             }
         }
         
+        
         WorldControl.setEventsToLocations(world, events);
+        
+        
     }
 
     }

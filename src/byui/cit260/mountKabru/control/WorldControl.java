@@ -41,7 +41,8 @@ import mountkabru.MountKabru;
         locations[0][4].setEvent(events[EventControl.EventType.plainsEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[0][5].setEvent(events[EventControl.EventType.plainsEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[0][6].setEvent(events[EventControl.EventType.plainsEvent.ordinal()][EventControl.pickRandomNumber()]);
-
+        locations[0][7].setEvent(events[EventControl.EventType.plainsEvent.ordinal()][EventControl.pickRandomNumber()]);
+        
         locations[1][0].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[1][1].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[1][2].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
@@ -49,6 +50,7 @@ import mountkabru.MountKabru;
         locations[1][4].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[1][5].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[1][6].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
+        locations[1][7].setEvent(events[EventControl.EventType.jungleEvent.ordinal()][EventControl.pickRandomNumber()]);
 
         locations[2][0].setEvent(events[EventControl.EventType.forestEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[2][1].setEvent(events[EventControl.EventType.forestEvent.ordinal()][EventControl.pickRandomNumber()]);
@@ -57,6 +59,7 @@ import mountkabru.MountKabru;
         locations[2][4].setEvent(events[EventControl.EventType.forestEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[2][5].setEvent(events[EventControl.EventType.forestEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[2][6].setEvent(events[EventControl.EventType.forestEvent.ordinal()][EventControl.pickRandomNumber()]);
+        locations[2][7].setEvent(events[EventControl.EventType.forestEvent.ordinal()][EventControl.pickRandomNumber()]);
         
         locations[3][0].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][1].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
@@ -65,6 +68,7 @@ import mountkabru.MountKabru;
         locations[3][4].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][5].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][6].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
+        locations[3][7].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         
         //MountKabru.getCurrentGame().getWorld().setLocations(locations);
     }

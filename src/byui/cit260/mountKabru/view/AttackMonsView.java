@@ -7,6 +7,7 @@ package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.ActorControl;
 import byui.cit260.mountKabru.exceptions.ActorControlException;
+import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Location;
 
 import java.util.Scanner;
@@ -41,9 +42,11 @@ public class AttackMonsView extends View{
         
         choice = choice.toUpperCase(); //convert choice to upper case
         
+        
+        
         switch (choice) {
             case "A": // attack the monster before he kills you
-                this.attackMonster();
+                this.attackMonster(monster);
                 break;
             case "D": // defend youself 
                 this.defendYourself();
@@ -60,10 +63,10 @@ public class AttackMonsView extends View{
         return false;
     }
 
-    private void attackMonster() {
-        int attack = -5;
-        int strength = 23;
-        int opponentDefense = 17; 
+    private void attackMonster(Actor monster) {
+        int attack = MountKabru.getCurrentGame().getHero().getAttack();
+        int strength = MountKabru.getCurrentGame().getHero().getStrength();
+        int opponentDefense = ; 
         try { 
         int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
         this.console.println("\n*** You walk over to the monster      ***"

@@ -24,9 +24,13 @@ public class AttackMonsView extends View{
     public AttackMonsView() {
     super( "\n"
                 + "\n---------------------------------------"
-                + "\n|  You found a Monster!!!             |"
-                + "\n|                                     |"
-                + "\n|  Prepare to fight                   |"
+                + "\n|  You found a " + MountKabru.getCurrentGame().getHero().getFoundMonster().getName() + "    "
+                + "\n|  "
+                + "\n|  Health: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getCurrentHitPoints()  
+                + "\n|  "
+                + ""
+                + "                                   "
+                + "\n|  Prepare to fight                   "
                 + "\n---------------------------------------"
                 + "\nA - [A]ttack"
                 + "\nD - [D]efend"
@@ -46,7 +50,7 @@ public class AttackMonsView extends View{
         
         switch (choice) {
             case "A": // attack the monster before he kills you
-                this.attackMonster(monster);
+                this.attackMonster();
                 break;
             case "D": // defend youself 
                 this.defendYourself();
@@ -63,24 +67,27 @@ public class AttackMonsView extends View{
         return false;
     }
 
-    private void attackMonster(Actor monster) {
-        Actor[] monsters = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getActors();
-        
+    private void attackMonster() {
         
         
         int attack = MountKabru.getCurrentGame().getHero().getAttack();
         int strength = MountKabru.getCurrentGame().getHero().getStrength();
-        int opponentDefense = ; 
+        int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefence();
+        int damageDoneToMonster = 0;
+        
         try { 
-        int result = ActorControl.meleeDamage(attack, strength, opponentDefense);
+         damageDoneToMonster = ActorControl.meleeDamage(attack, strength, opponentDefense);
         this.console.println("\n*** You walk over to the monster      ***"
                          + "\n*** and punch him in the gut          ***"
-                         + "\n*** You do " + result + " Damage    ***");
+                         + "\n*** You do " + damageDoneToMonster + " Damage    ***");
         
         } catch (ActorControlException me) {
             this.console.println(me.getMessage());
         }
         
+        int currentHP = MountKabru.getCurrentGame().getHero().getFoundMonster().getCurrentHitPoints();
+        currentHP -= damageDoneToMonster;
+        MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(currentHP);
         //reset the event for the currect location
         Location location = MountKabru.getCurrentGame().getHero().getCurrentLocation();
         

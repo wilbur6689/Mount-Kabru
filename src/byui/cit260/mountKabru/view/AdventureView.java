@@ -5,7 +5,10 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.ActorControl;
+import byui.cit260.mountKabru.control.EventControl;
 import byui.cit260.mountKabru.control.WorldControl;
+import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.Location;
 import byui.cit260.mountKabru.model.World;
@@ -68,6 +71,10 @@ public class AdventureView extends View {
 
     private void searchForMonster() {
         
+        Actor[] monsters = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getActors();
+        Actor monsterYouFight = monsters[ActorControl.pickRandomMonster()];
+        MountKabru.getCurrentGame().getHero().setFoundMonster(monsterYouFight);
+        
         //create the Attack Monster view object
         AttackMonsView attackMonsView = new AttackMonsView();
         //display the Attack Monster view
@@ -99,7 +106,7 @@ public class AdventureView extends View {
     private void changeLocation() {
         World world = MountKabru.getCurrentGame().getWorld();
         Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
-        Event[][] events = new Event[locations.length][locations[0].length -1];
+        Event[][] events = EventControl.createEvents();
         
         for (int i=0;i<locations.length;i++) {
             for (int j=0;j<locations[i].length-1;j++) {

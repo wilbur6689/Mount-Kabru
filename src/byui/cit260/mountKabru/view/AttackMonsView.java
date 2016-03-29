@@ -64,6 +64,10 @@ public class AttackMonsView extends View{
     }
 
     private void attackMonster(Actor monster) {
+        Actor[] monsters = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getActors();
+        
+        
+        
         int attack = MountKabru.getCurrentGame().getHero().getAttack();
         int strength = MountKabru.getCurrentGame().getHero().getStrength();
         int opponentDefense = ; 

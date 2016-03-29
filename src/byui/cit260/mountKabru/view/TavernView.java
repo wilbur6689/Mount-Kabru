@@ -71,12 +71,6 @@ public class TavernView extends View{
 
     
     
-    
-    
-    
-    
-    
-    
     private void tavernOwner() {
          String levelOfHeroString;
          int levelOfHero;

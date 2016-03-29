@@ -5,7 +5,9 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.model.Location;
 import static java.lang.Integer.parseInt;
+import mountkabru.MountKabru;
 
 
 /**
@@ -33,35 +35,41 @@ public class WorldMapView extends View {
     
 
     @Override
-    public boolean doAction(String choice) {
+    public boolean doAction(String value) {
         
-
-        choice = choice.toUpperCase(); //convert choice to upper case
+        String choice = value.toUpperCase(); //convert choice to upper case
+        String[] valueArray = choice.split(" ");
+        int row;
+        int column;
         
-        int location = parseInt(choice);
-        
-        if (location < 12) {
-            this.returnToTown(location);
-        } else if (location < 19) {
-            this.plainsAdventure(location);
-        } else if (location < 29) {
-            this.jungleAdventure(location);
-        } else if (location < 39) {
-            this.forestAdventure(location);
-        } else {
-            this.mountainAdventure(location);
+        try {
+            row = Integer.parseInt(valueArray[0]);
+            column = Integer.parseInt(valueArray[1]);
+        } catch (NumberFormatException nfe) {
+            ErrorView.display("World Map View", "You entered the wrong number");
+            return false;
         }
+        
+        if ((row < 1 || row > 4) || (column < 1 || column > 8)) {
+        ErrorView.display("World Map View", "You have entered in the wrong number please try again.");
+        return false;
+        }
+
+        //We need to call the sgetLocations function in the worldControl
+        
+        
         
         
         return false;
     }
 
-    private void returnToTown(int location){
+    private void returnToTown(){
         this.console.println("you called the town function");
     }
     
-    private void plainsAdventure(int location) {
-        this.console.println("you called the plains function");
+    private void Adventure(int location) {
+        AdventureView adventureView = new AdventureView();
+        adventureView.display();
     }
 
     private void jungleAdventure(int location) {

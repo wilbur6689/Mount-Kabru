@@ -12,15 +12,14 @@ package byui.cit260.mountKabru.view;
 public class AdventureView extends View {
     public AdventureView() {
         super("\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(P) - Fight in the Plains: Recommended Level 1-10"
-                + "\n(J) - Fight in the Jungle: Recommended Level 20-30"
-                + "\n(F) - Fight in the dark Forest: Recommended Level 30-40"
-                + "\n(M) - Fight in the high Mountains: Recommended Level 40-50"
-                + "\n(Q) - [Q]uit"
+                + "\n----------------------------------------"
+                + "\n|  You wander out of town and try to   |"
+                + "\n|  decide what to fight next...        |"
+                + "\n----------------------------------------"
+                + "\nS - [S]earch for a monster"
+                + "\nP - use a [P]otion"
+                + "\nC - [C]heck your stats"
+                + "\nQ - [Q]uit back to town"
                 + "\n--------------------------------------");
     }
 
@@ -28,102 +27,43 @@ public class AdventureView extends View {
 
     @Override
     public boolean doAction(String choice) {
-
+        
         choice = choice.toUpperCase(); //convert choice to upper case
-
+        
         switch (choice) {
-            case "P": // go kill stuff in the plains
-                this.plainsAdventure();
+            case "S": // go kill stuff in the Jungle
+                this.searchForMonster();
                 break;
-            case "J": // go kill stuff in the jungle
-                this.jungleAdventure();
+            case "P": // use a potion
+                this.usePotion();
                 break;
-            case "F": // go kill stuff in the forest
-                this.forestAdventure();
+            case "C": // view your inventory
+                this.checkStats();
                 break;
-            case "M": // go kill stuff in the Mountains
-                this.mountainAdventure();
-                break;
-
+            
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
-
-
+                
+                         
         }
         return false;
     }
 
-
-        private void plainsAdventure() {
-            //Create plains view object
-            PlainsView plainsView = new PlainsView();
-
-            //Display the plains view
-            plainsView.display();
-        }
-
-        private void jungleAdventure() {
-            //Create plains view object
-            JungleView jungleView = new JungleView();
-
-            //Display the plains view
-            jungleView.display();
-        }
-
-        private void forestAdventure() {
-            //Create plains view object
-            DarkForestView darkForestView = new DarkForestView();
-
-            //Display the plains view
-            darkForestView.display();
-        }
-
-        private void mountainAdventure() {
-            //Create plains view object
-            HighMountainView highMountainView = new HighMountainView();
-
-            //Display the plains view
-            highMountainView.display();
-        }
-
+    private void searchForMonster() {
+        
+        //create the Attack Monster view object
+        AttackMonsView attackMonsView = new AttackMonsView();
+        //display the Attack Monster view
+        attackMonsView.display();
     }
 
+    private void usePotion() {
+        this.console.println("\n*** you look into your potion pouch and  ***"
+                         + "\n*** remember you dont have any potions   ***");
+    }
 
+    private void checkStats() {
+        this.console.println("You ran the Check stats function");
+    }
 
-/*private String plainsMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(P) - Fight in the Plains"
-                + "\n???"
-                + "\n???"
-                + "\n???"
-                + "\n(Q) - Quit"
-                + "\n--------------------------------------";
-        
-        private String jungleMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(P) - Fight in the Plains"
-                + "\n(J) - Fight in the Jungle"
-                + "\n???"
-                + "\n???"
-                + "\n(Q) - Quit"
-                + "\n--------------------------------------";
-        
-        private String darkForestMenu = "\n"
-                + "\n--------------------------------------"
-                + "\n|  You wander out of town and try to |"
-                + "\n|  decide where to fight next...     |"
-                + "\n--------------------------------------"
-                + "\n(P) - Fight in the Plains"
-                + "\n(J) - Fight in the Jungle"
-                + "\n(F) - Fight in the Dark Forest"
-                + "\n???"
-                + "\n(Q) - [Q]uit"
-                + "\n--------------------------------------";*/
-
-
+    }

@@ -1,7 +1,6 @@
 package byui.cit260.mountKabru.control;
 
 import byui.cit260.mountKabru.exceptions.GameControlException;
-import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.Location;
 import byui.cit260.mountKabru.model.World;
@@ -15,8 +14,6 @@ import mountkabru.MountKabru;
     public static World createWorld() throws GameControlException {
         
         World world = new World(4,8);
-        
-        Location[][] locations;
         
         //Create all the events for the game
         Event[][] events = EventControl.createEvents();
@@ -68,12 +65,15 @@ import mountkabru.MountKabru;
         locations[3][4].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][5].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][6].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
-
-
-
-
+        
+        MountKabru.getCurrentGame().getWorld().setLocations(locations);
     }
 
+       public static Location getLocation(int row, int column){
+           Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
+           
+           return locations[row][column];
+       }
 
 }
 

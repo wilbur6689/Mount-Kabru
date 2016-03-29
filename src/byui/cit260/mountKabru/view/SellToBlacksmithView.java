@@ -15,16 +15,17 @@ import static java.lang.Integer.parseInt;
  */
 public class SellToBlacksmithView extends View {
 
+    
     public SellToBlacksmithView() {
         super("\n"
                 + "\n----------------------------------------------------------------"
                 + "\n|        You Current Weapon to sell:                           |"
-                + "\n|" + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue() + "|"
+                + "\n| 1.  " + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getSellValue() + "                          |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|              Your Current Armor to sell:                                            |"
-                + "\n|" + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() + "|"
+                + "\n| 2.  " + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName() + "       " + MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getSellValue() + "                            |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"
                 + "\n|                                                              |"

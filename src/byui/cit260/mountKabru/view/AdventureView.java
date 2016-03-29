@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.WorldControl;
 import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.Location;
 import byui.cit260.mountKabru.model.World;
@@ -102,7 +103,7 @@ public class AdventureView extends View {
             }
         }
         
-        
+        WorldControl.setEventsToLocations(world, events);
     }
 
     }

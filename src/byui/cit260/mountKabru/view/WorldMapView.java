@@ -65,7 +65,6 @@ public class WorldMapView extends View {
         
         //We need to call the setLocations function in the worldControl
         Location location = WorldControl.getLocation(row, column);
-        location.setEvent(event);
         MountKabru.getCurrentGame().getHero().setCurrentLocation(location);
         this.Adventure();
         

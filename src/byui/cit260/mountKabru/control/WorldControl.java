@@ -28,7 +28,7 @@ import mountkabru.MountKabru;
         
 
 
-       private static void setEventsToLocations(World world, Event[][] events) {
+       public static void setEventsToLocations(World world, Event[][] events) {
       
        Location[][] locations = world.getLocations();
       

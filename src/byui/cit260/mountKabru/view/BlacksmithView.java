@@ -21,7 +21,7 @@ public class BlacksmithView extends View {
                 + "\n|  hoping to make a deal...          |"
                 + "\n--------------------------------------"
                 + "\nB - [B]uy weapons and Armor"
-                + "\nS - [S]ell weapongs and armor"
+                + "\nS - [S]ell weapons and armor"
                 + "\nQ - [Q]uit"
                 + "\n--------------------------------------");
     }

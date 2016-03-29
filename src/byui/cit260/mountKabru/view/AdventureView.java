@@ -103,8 +103,8 @@ public class AdventureView extends View {
         
         for (int i=0;i<locations.length;i++) {
             for (int j=0;j<locations[i].length-1;j++) {
-                events[i][j] = locations[i][j].getEvent();
-                System.out.println(events[i][j].getEventType());
+//                events[i][j] = locations[i][j].getEvent();
+                System.out.println(locations[i][j].getEvent().getEventType());
             }
         }
         

@@ -5,6 +5,7 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.control.WorldControl;
 import byui.cit260.mountKabru.model.Location;
 import static java.lang.Integer.parseInt;
 import mountkabru.MountKabru;
@@ -22,12 +23,15 @@ public class WorldMapView extends View {
             + "\n   Which Location would you like to visit?         "
             + "\n   "
             + "\n   Choose your number from the ranges below"
+            + "\n   This first number is the row and the second"
+            + "\n   number is the column. You must have a ',' "
+            + "\n   between the numbers. example= 3,7 "
             + "\n   "
-            + "\n         (11) - Return to town "
-            + "\n  (12) - (18) - Plains "
-            + "\n  (21) - (28) - Jungle"
-            + "\n  (31) - (38) - Dark Forest"
-            + "\n  (41) - (48) - High Mountain"
+            + "\n         (1,1) - Return to town "
+            + "\n  (1,2) - (1,7) - Plains         Hero Level: 1-10"
+            + "\n  (2,1) - (2,7) - Jungle         Hero Level: 10-25"
+            + "\n  (3,1) - (3,7) - Dark Forest    Hero Level: 25-40"
+            + "\n  (4,1) - (4,7) - High Mountain  Hero Level: 40-50"
             + "\n"
             + "\n  (Q) - quit");
     }
@@ -38,7 +42,7 @@ public class WorldMapView extends View {
     public boolean doAction(String value) {
         
         String choice = value.toUpperCase(); //convert choice to upper case
-        String[] valueArray = choice.split(" ");
+        String[] valueArray = choice.split(",");
         int row;
         int column;
         
@@ -54,34 +58,25 @@ public class WorldMapView extends View {
         ErrorView.display("World Map View", "You have entered in the wrong number please try again.");
         return false;
         }
-
-        //We need to call the sgetLocations function in the worldControl
         
+        if (row == 1 && column == 1) {
+            return true;
+        }
         
-        
+        //We need to call the setLocations function in the worldControl
+        Location location = WorldControl.getLocation(row, column);
+        location.setEvent(event);
+        MountKabru.getCurrentGame().getHero().setCurrentLocation(location);
+        this.Adventure();
         
         return false;
     }
 
-    private void returnToTown(){
-        this.console.println("you called the town function");
-    }
     
-    private void Adventure(int location) {
+    
+    private void Adventure() {
         AdventureView adventureView = new AdventureView();
         adventureView.display();
-    }
-
-    private void jungleAdventure(int location) {
-        this.console.println("you called the jungle function");
-    }
-
-    private void forestAdventure(int location) {
-        this.console.println("you called the forest function");
-    }
-
-    private void mountainAdventure(int location) {
-        this.console.println("you called the mountain function");
     }
 
 }

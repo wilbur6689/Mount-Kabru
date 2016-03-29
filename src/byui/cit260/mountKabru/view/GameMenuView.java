@@ -44,7 +44,7 @@ public class GameMenuView extends View {
                + "\n  H - please [H]elp!"
                + "\n  S - [S]ave Game"
                + "\n  L - [L]oad Game"
-               + "\n  Q - [Q]uit"
+               + "\n  M - [M]ain Menu"
                + "\n--------------------------------------");
     }
     
@@ -84,9 +84,8 @@ public class GameMenuView extends View {
             case "L": //load game menu
                 this.loadGame();
                 break;
-            case "Q": //quit game
-                this.quitGame();
-                break;
+            case "M": //quit game
+                return true;
             
             default:
                 this.console.println("\n*** Invalid selection *** Try again");

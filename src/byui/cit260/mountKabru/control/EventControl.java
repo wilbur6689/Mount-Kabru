@@ -123,7 +123,9 @@ public class EventControl {
         int numberReturn;
         int randomNumber = (int) (Math.random() * 10);
         
-        if (randomNumber < 4) {
+        
+        
+        if (randomNumber < 3) {
             numberReturn = 0;
         } else {
             numberReturn = 1;

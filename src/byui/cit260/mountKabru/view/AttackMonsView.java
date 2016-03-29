@@ -7,8 +7,10 @@ package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.ActorControl;
 import byui.cit260.mountKabru.exceptions.ActorControlException;
+import byui.cit260.mountKabru.model.Location;
 
 import java.util.Scanner;
+import mountkabru.MountKabru;
 
 /**
  *
@@ -71,6 +73,12 @@ public class AttackMonsView extends View{
         } catch (ActorControlException me) {
             this.console.println(me.getMessage());
         }
+        
+        //reset the event for the currect location
+        Location location = MountKabru.getCurrentGame().getHero().getCurrentLocation();
+        
+        
+        
     }
 
     private void defendYourself() {

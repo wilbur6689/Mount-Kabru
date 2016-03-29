@@ -66,13 +66,14 @@ import mountkabru.MountKabru;
         locations[3][5].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         locations[3][6].setEvent(events[EventControl.EventType.mountainEvent.ordinal()][EventControl.pickRandomNumber()]);
         
-        MountKabru.getCurrentGame().getWorld().setLocations(locations);
+        //MountKabru.getCurrentGame().getWorld().setLocations(locations);
     }
 
        public static Location getLocation(int row, int column){
-           Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
-           
-           return locations[row][column];
+           Location[][] location = MountKabru.getCurrentGame().getWorld().getLocations();
+           row -= 1;
+           column -= 1;
+           return location[row][column];
        }
 
 }

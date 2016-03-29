@@ -18,6 +18,7 @@ public class World implements Serializable {
     private int rowCount;
     private int columnCount;
     private Location[][] locations;
+    private Event[][] events;
 
     public World() {
     }

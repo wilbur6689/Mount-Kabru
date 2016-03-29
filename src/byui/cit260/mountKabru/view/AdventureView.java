@@ -5,6 +5,11 @@
  */
 package byui.cit260.mountKabru.view;
 
+import byui.cit260.mountKabru.model.Event;
+import byui.cit260.mountKabru.model.Location;
+import byui.cit260.mountKabru.model.World;
+import mountkabru.MountKabru;
+
 /**
  *
  * @author Phill
@@ -19,7 +24,9 @@ public class AdventureView extends View {
                 + "\nS - [S]earch for a monster"
                 + "\nP - use a [P]otion"
                 + "\nC - [C]heck your stats"
-                + "\nQ - [Q]uit back to town"
+                + "\nL - What is my [L]ocation?"
+                + "\nX - Change location events...(FOR DEBUG ONLY)"
+                + "\nR - [R]eturn back to Map"
                 + "\n--------------------------------------");
     }
 
@@ -27,6 +34,7 @@ public class AdventureView extends View {
 
     @Override
     public boolean doAction(String choice) {
+        
         
         choice = choice.toUpperCase(); //convert choice to upper case
         
@@ -40,6 +48,14 @@ public class AdventureView extends View {
             case "C": // view your inventory
                 this.checkStats();
                 break;
+            case "L": // use a potion
+                this.curLocation();
+                break;
+            case "X": // use a potion
+                this.changeLocation();
+                break;
+            case "R": // use a potion
+                return true;
             
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
@@ -64,6 +80,29 @@ public class AdventureView extends View {
 
     private void checkStats() {
         this.console.println("You ran the Check stats function");
+    }
+
+    private void curLocation() {
+        String currentLocation = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getEventType();
+        String eventType = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getLocationType();
+        
+        this.console.println("This is your current location: " + currentLocation
+                        + "\n This is your event type: " + eventType);
+                
+    }
+
+    private void changeLocation() {
+        World world = MountKabru.getCurrentGame().getWorld();
+        Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
+        Event[][] events = new Event[locations.length][locations[0].length];
+        
+        for (int i=0;i<locations.length;i++) {
+            for (int j=0;j<locations[i].length;j++) {
+                events[i][j] = locations[i][j].getEvent();
+            }
+        }
+        
+        
     }
 
     }

@@ -108,6 +108,7 @@ public class GameControl {
         
         hero.setHeroName(name);
         hero.setLevelOfHero(1);
+        hero.setXpToNextLevel(30);
         hero.setExperience(1);
         hero.setStrength(strength);
         hero.setMana(mana);
@@ -193,9 +194,40 @@ public class GameControl {
 
 
 
-    public static void raiseTheLevelDamnIt(){
+    public static void raiseTheLevel(){
 
-
+        //get the class of the hero
+        String heroClass = MountKabru.getCurrentGame().getHero().getHeroClassType();
+        
+        if (heroClass.equals("Warrior")) {
+            
+            //do stuff for warrior
+            //get before stats (with getters) that you want to change(health, str)
+            //add stuff and set them to new variables
+            //set the new variables to the hero stats with a "setter"
+        }
+        
+        else if (heroClass.equals("Wizard")) {
+            //do stuff for Wizard
+            //get before stats (with getters) that you want to change(health, Mana)
+            //add stuff and set them to new variables
+            //set the new variables to the hero stats with a "setter"
+        }
+        
+        else {
+            //do stuff for the Paladin
+             //get before stats (with getters) that you want to change(health, Mana, and str)
+            //add stuff and set them to new variables
+            //set the new variables to the hero stats with a "setter"
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         // The point of this function is to raise the level of the hero
         // The first thing I need to do is find the current level
         //After I find to current level I need to know the experience

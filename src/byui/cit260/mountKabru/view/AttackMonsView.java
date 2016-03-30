@@ -111,8 +111,11 @@ public class AttackMonsView extends View{
            int xpGained = MountKabru.getCurrentGame().getHero().getFoundMonster().getXpGained();
            int afterXP = beforeXP + xpGained;
            MountKabru.getCurrentGame().getHero().setExperience(afterXP);
+           int xpToNextLevel = MountKabru.getCurrentGame().getHero().getXpToNextLevel();
            
-           if 
+           if (afterXP > xpToNextLevel) {
+               //level up the hero
+           }
            
            //set Gold
            int beforeGold = MountKabru.getCurrentGame().getHero().getGold();

@@ -226,18 +226,18 @@ public class GameControl {
             //get before stats (with getters) that you want to change(health, Mana,level)
 
             int beforeHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
-            int beforeStrength = MountKabru.getCurrentGame().getHero().getStrength();
+            int beforeMana = MountKabru.getCurrentGame().getHero().getMana();
             int beforeLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
             
             //add stuff and set them to new variables
             int afterHealth = beforeHealth + 50;
-            int afterStrength = beforeStrength + 2;
+            int afterMana = beforeMana + 2;
             int afterLvlUp = beforeLvlUp + 1;
 
             //set the new variables to the hero stats with a "setter"
 
             MountKabru.getCurrentGame().getHero().setMaxHitPoints(afterHealth);
-            MountKabru.getCurrentGame().getHero().setStrength(afterStrength);
+            MountKabru.getCurrentGame().getHero().setMana(afterMana);
             MountKabru.getCurrentGame().getHero().setLevelOfHero(afterLvlUp);
         }
         
@@ -251,10 +251,10 @@ public class GameControl {
             int beforeLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
             //add stuff and set them to new variables
             
-            int afterHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
-            int afterStrength = MountKabru.getCurrentGame().getHero().getStrength();
-            int afterMana = MountKabru.getCurrentGame().getHero().getMana();
-            int afterLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
+            int afterHealth = beforeHealth +50;
+            int afterStrength = beforeStrength + 1;
+            int afterMana = beforeMana +1;
+            int afterLvlUp = beforeLvlUp +1;
             
             
             //set the new variables to the hero stats with a "setter"

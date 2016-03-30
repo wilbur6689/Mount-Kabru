@@ -58,7 +58,7 @@ public class GameControl {
             throw new GameControlException("The third Answer was null.");
         }
 
-        int startGold = 0;
+        int startGold = 50;
         int strength = 0;
         int mana = 0;
 

@@ -193,7 +193,7 @@ public class GameControl {
 
 
 
-    public static void raisetheLevelDamnit(){
+    public static void raiseTheLevelDamnIt(){
 
 
         // The point of this function is to raise the level of the hero
@@ -210,7 +210,7 @@ public class GameControl {
             //Raise the level of the hero by one.
             currentLevel = +1;
 
-            MountKabru.getCurrentGame().getHero().setLevelOfHero();
+            MountKabru.getCurrentGame().getHero().setLevelOfHero(currentLevel);
         }
 
 

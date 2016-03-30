@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b44a2586-d6ec-4506-950a-da4e32275091" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.txt" afterPath="$PROJECT_DIR$/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/InventoryControl.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/InventoryControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Inventory.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Inventory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Item.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/AttackMonsView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/AttackMonsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromSpellCaster.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromSpellCaster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/GameMenuView.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/view/GameMenuView.java" />
     </list>
     <ignored path="Mount-Kabru.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,8 +111,8 @@
       <file leaf-file-name="InventoryControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/InventoryControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35603714">
-              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.43343654">
+              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -887,7 +880,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459315537860</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="I am trying to create the inventory on creation but I am not allowed to for some weird reason. I think it has something to do with the inventory control. But everything else I worked on from the new store to the new cast spell function works like a charm. Just not the Damn creation of an inventory.&#10;&#10;3-25-16">
+      <created>1459321471339</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1459321471339</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -948,7 +947,8 @@
     <MESSAGE value="Worked on sell to blacksmith view to simplify it.&#10;&#10;&#10;3-25-16" />
     <MESSAGE value="BEAUTIFIED BLACKSMITH&#10;&#10;3-25-16" />
     <MESSAGE value="Worked on the spells layer, can't figure out the enum rubbish&#10;&#10;3-25-16" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on the spells layer, can't figure out the enum rubbish&#10;&#10;3-25-16" />
+    <MESSAGE value="I am trying to create the inventory on creation but I am not allowed to for some weird reason. I think it has something to do with the inventory control. But everything else I worked on from the new store to the new cast spell function works like a charm. Just not the Damn creation of an inventory.&#10;&#10;3-25-16" />
+    <option name="LAST_COMMIT_MESSAGE" value="I am trying to create the inventory on creation but I am not allowed to for some weird reason. I think it has something to do with the inventory control. But everything else I worked on from the new store to the new cast spell function works like a charm. Just not the Damn creation of an inventory.&#10;&#10;3-25-16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1263,32 +1263,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromSpellCaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5315#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#1186#1187#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1347,10 +1326,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/view/BuyFromSpellCaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#5315#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/InventoryControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35603714">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.43343654">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
           <folding />
         </state>
       </provider>

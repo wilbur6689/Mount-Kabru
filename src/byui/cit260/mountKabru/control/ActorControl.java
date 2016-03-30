@@ -207,14 +207,14 @@ public class ActorControl {
 
     public static int meleeDamage(int attack, int strength, int opponentDefense) throws ActorControlException {
 
-        if (attack < 5 || attack > 100) {
+        if (attack < 0 || attack > 200) {
             if (attack > 100) {
                 throw new ActorControlException("The attack was to large of a number.");
             }
             throw new ActorControlException("The attack was a negative number.");
         }
 
-        if (strength < 2 || strength > 100) {
+        if (strength < 0 || strength > 100) {
             if (strength > 100) {
                 throw new ActorControlException("The strength was to large of a number.");
             }
@@ -222,14 +222,14 @@ public class ActorControl {
 
         }
 
-        if (opponentDefense < 5 || opponentDefense > 100) {
+        if (opponentDefense < 1 || opponentDefense > 100) {
             if (opponentDefense > 100) {
                 throw new ActorControlException("The opponentDefense was to large of a number.");
             }
             throw new ActorControlException("The opponentDefense was a negative number.");
         }
 
-        int meleeDamage = attack + strength - opponentDefense;
+        int meleeDamage = attack + strength - opponentDefense + (int) (Math.random() * 10);
 
         return meleeDamage;
 

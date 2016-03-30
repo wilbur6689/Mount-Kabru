@@ -161,7 +161,7 @@ public class GameMenuView extends View {
         int heroCurrentHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
         int heroDefence = MountKabru.getCurrentGame().getHero().getDefence();
         int heroAttack = MountKabru.getCurrentGame().getHero().getAttack();
-        int heroChanceToHit = MountKabru.getCurrentGame().getHero().getChanceToHit();
+        int heroChanceToHit = MountKabru.getCurrentGame().getHero().getXpGained();
         int heroGold = MountKabru.getCurrentGame().getHero().getGold();
         String weaponSlot = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
         String armorSlot = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName();

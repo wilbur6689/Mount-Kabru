@@ -17,6 +17,12 @@ public class InventoryControl {
         
         
          MountKabru.getCurrentGame().getHero().setInventory(inventory);
+         int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+         int defense = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getDefenceValue();
+         MountKabru.getCurrentGame().getHero().setAttack(attack);
+         MountKabru.getCurrentGame().getHero().setDefence(defense);
+         
+         
         
         return inventory;
     }

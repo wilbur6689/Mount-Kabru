@@ -52,9 +52,9 @@ public class EventControl {
             //creates a random number and adds it to the players gold
             
             int[] plainsGoldEvent = new int[4];
-            int goldAmountPlains1 = (int) (Math.random() * 10 + 50);
-            int goldAmountPlains2 = (int) (Math.random() * 10 + 50);      
-            int goldAmountPlains3 = (int) (Math.random() * 10 + 50);             
+            int goldAmountPlains1 = (int) (Math.random() * 10 + 5);
+            int goldAmountPlains2 = (int) (Math.random() * 10 + 15);      
+            int goldAmountPlains3 = (int) (Math.random() * 10 + 30);             
             int goldAmountPlains4 = (int) (Math.random() * 10 + 50);  
 
             plainsGoldEvent[0] = goldAmountPlains1;
@@ -64,9 +64,9 @@ public class EventControl {
         goldEvents[0] = plainsGoldEvent;
              
             int[] jungleGoldEvent = new int[4];
-            int goldAmountjungle1 = (int) (Math.random() * 10 + 50);
-            int goldAmountjungle2 = (int) (Math.random() * 10 + 50);      
-            int goldAmountjungle3 = (int) (Math.random() * 10 + 50);             
+            int goldAmountjungle1 = (int) (Math.random() * 10 + 5);
+            int goldAmountjungle2 = (int) (Math.random() * 10 + 15);      
+            int goldAmountjungle3 = (int) (Math.random() * 10 + 30);             
             int goldAmountjungle4 = (int) (Math.random() * 10 + 50);  
 
             jungleGoldEvent[0] = goldAmountjungle1;

@@ -19,7 +19,7 @@ public class BuyFromBlacksmithView extends View {
     
     public BuyFromBlacksmithView() {
            super( "\n"
-                + "\n----------------------------------------------------------------"
+                + "\n--------------------------------------------------------------------------------------------"
                 + "\n|                                                                           "
                 + "\n|    / \\                                __ ________ __                              "
                 + "\n|    | |    Weapons:                   /  /        \\  \\      Armor:                 "
@@ -30,7 +30,7 @@ public class BuyFromBlacksmithView extends View {
                 + "\n|   < _ >                                 | \\    / |                               "
                 + "\n|    {_}                                  |  \\__/  |                               "
                 + "\n|                                         |  |  |  |                                "
-                + "\n---------------------------------------------------------------"
+                + "\n--------------------------------------------------------------------------------------------"
                 + "\n Please Enter the Number of the item you wish to purchase"
                 + "\n Your Gold = " + MountKabru.getCurrentGame().getHero().getGold()
                 + "\nQ - [Q]uit"
@@ -40,7 +40,7 @@ public class BuyFromBlacksmithView extends View {
     @Override
     public boolean doAction(String value) {
         int realNumber = 0; 
-        
+
         try {
         realNumber = parseInt(value);
         } catch(NumberFormatException nf) {

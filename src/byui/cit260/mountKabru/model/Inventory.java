@@ -10,6 +10,7 @@ public class Inventory implements Serializable {
 
     private Item weaponSlot;
     private Item armorSlot;
+    private Item spellSlot;
     private Item healthPotionSlot;
     private Item manaPotionSlot;
     
@@ -23,6 +24,14 @@ public class Inventory implements Serializable {
         this.armorSlot = armorSlot;
         this.healthPotionSlot = healthPotionSlot;
         this.manaPotionSlot = manaPotionSlot;
+    }
+
+    public Item getSpellSlot() {
+        return spellSlot;
+    }
+
+    public void setSpellSlot(Item spellSlot) {
+        this.spellSlot = spellSlot;
     }
 
     public Item getWeaponSlot() {

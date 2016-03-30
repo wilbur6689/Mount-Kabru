@@ -26,7 +26,11 @@ public enum Item implements Serializable{
     healthPotion20("healthPotion20","Heals you for 20 hitpoints",0,0,110,0,0,20),
     healthPotion30("healthPotion30","Heals you for 40 hitpoints",0,0,200,0,0,30),
     healthPotion40("healthPotion40","Heals you for 80 hitpoints",0,0,380,0,0,40);
-    
+    roaringWinds("Roaring Winds","releases winds of fury", 10,0,200,100,0);
+    summonDemons("Summon Demons","you summoned the dead and now rule all, hah jk ", 40,0,1000,500,0);
+    roaringWaters("Roaring Waters","releases waters of fury", 80,0,3000,1500,0);
+    hellFire("Hell Fire","Ignites everything and kills it", 120,0,7000,3500,0);
+
     private final String name;
     private final String description;
     private final int attackValue;

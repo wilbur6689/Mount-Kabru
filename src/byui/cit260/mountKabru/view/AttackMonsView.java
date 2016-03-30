@@ -7,6 +7,7 @@ package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.ActorControl;
 import byui.cit260.mountKabru.control.EventControl;
+import byui.cit260.mountKabru.control.GameControl;
 import byui.cit260.mountKabru.control.WorldControl;
 import byui.cit260.mountKabru.exceptions.ActorControlException;
 import byui.cit260.mountKabru.model.Actor;
@@ -103,7 +104,9 @@ public class AttackMonsView extends View {
             int xpToNextLevel = MountKabru.getCurrentGame().getHero().getXpToNextLevel();
 
             if (afterXP > xpToNextLevel) {
-                //level up the hero
+                GameControl.raiseTheLevel();
+                this.console.println("\nYou have worked hard and Gained a Level!!!"
+                                   + "\n you are now level: " + MountKabru.getCurrentGame().getHero().getLevelOfHero());
             }
 
             //set Gold
@@ -129,8 +132,12 @@ public class AttackMonsView extends View {
 
         } else {
             MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(currentHP);
-
             this.console.println("The monster has this much life: " + currentHP);
+            
+            //Monster attacks you back
+            
+            
+            
         }
 
     }
@@ -168,7 +175,15 @@ public class AttackMonsView extends View {
             int beforeXP = MountKabru.getCurrentGame().getHero().getExperience();
             int xpGained = MountKabru.getCurrentGame().getHero().getFoundMonster().getXpGained();
             int afterXP = beforeXP + xpGained;
+
             MountKabru.getCurrentGame().getHero().setExperience(afterXP);
+            int xpToNextLevel = MountKabru.getCurrentGame().getHero().getXpToNextLevel();
+            if (afterXP > xpToNextLevel) {
+                GameControl.raiseTheLevel();
+                this.console.println("\nYou have worked hard and Gained a Level!!!"
+                                   + "\n you are now level: " + MountKabru.getCurrentGame().getHero().getLevelOfHero());
+                       
+            }
 
             //set Gold
             int beforeGold = MountKabru.getCurrentGame().getHero().getGold();

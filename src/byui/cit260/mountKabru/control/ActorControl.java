@@ -238,21 +238,21 @@ public class ActorControl {
 
     public static int spellDamage(int spellAttack, int mana, int opponentDefense) throws ActorControlException {
 
-        if (spellAttack < 5 || spellAttack > 100) {
+        if (spellAttack < 0 || spellAttack > 200) {
             if (spellAttack > 100) {
                 throw new ActorControlException("The attack was to large of a number.");
             }
             throw new ActorControlException("The attack was a negitive number.");
         }
 
-        if (mana < 2 || mana > 100) {
+        if (mana < 0 || mana > 200) {
             if (mana > 100) {
                 throw new ActorControlException("The mana was to large of a number.");
             }
             throw new ActorControlException("The mana was a negitive number.");
         }
 
-        if (opponentDefense < 5 || opponentDefense > 100) {
+        if (opponentDefense < 0 || opponentDefense > 200) {
             if (opponentDefense > 100) {
                 throw new ActorControlException("The opponentDefense was to large of a number.");
             }

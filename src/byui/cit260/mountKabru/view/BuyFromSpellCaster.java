@@ -15,19 +15,18 @@ import static java.lang.Integer.parseInt;
 import static java.lang.Integer.parseInt;
 import static java.lang.Integer.parseInt;
 
-
 public class BuyFromSpellCaster extends View {
 
     public BuyFromSpellCaster() {
         super("\n"
-                +"------------------------------------------------------------------"
-                +"\n       -Spells Available to Purchase-                             "
-                +"\n 1 - Roaring Winds    : 300g"
-                +"\n 2 - Summon Demons    :1000g"    
-                +"\n 3 - Roaring Waters   :3000g"    
-                +"\n 4 - Hell Fire        :7000g"    
-                +"\n"
-                +"\n----------------------------------------------------------------"
+                + "------------------------------------------------------------------"
+                + "\n       -Spells Available to Purchase-                             "
+                + "\n 1 - Roaring Winds    : 300g"
+                + "\n 2 - Summon Demons    :1000g"
+                + "\n 3 - Roaring Waters   :3000g"
+                + "\n 4 - Hell Fire        :7000g"
+                + "\n"
+                + "\n----------------------------------------------------------------"
                 + "\n Please Enter the Number of the item you wish to purchase"
                 + "\n Your Gold = " + MountKabru.getCurrentGame().getHero().getGold()
                 + "\nQ - [Q]uit"
@@ -58,15 +57,12 @@ public class BuyFromSpellCaster extends View {
                 this.buyHellFire();
                 break;
 
-
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
-
 
         }
         return false;
     }
-
 
     private void buyRoaringWinds() {
         int cost = 300;
@@ -82,11 +78,9 @@ public class BuyFromSpellCaster extends View {
         MountKabru.getCurrentGame().getHero().getInventory().setSpellSlot(Item.roaringWinds);
 
         int spellAttack = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
-
         MountKabru.getCurrentGame().getHero().setSpellAttack(spellAttack);
         this.console.println("Its been a pleasure to serve you"
                 + "\nThank you for your Business ");
-
 
     }
 
@@ -102,14 +96,11 @@ public class BuyFromSpellCaster extends View {
         }
 
         MountKabru.getCurrentGame().getHero().getInventory().setSpellSlot(Item.summonDemons);
-        int mana = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
-
-        MountKabru.getCurrentGame().getHero().setMana(mana);
-
+        int spellAttack = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
+        MountKabru.getCurrentGame().getHero().setSpellAttack(spellAttack);
         //this.console.println(MountKabru.getHero().getAttack());
         this.console.println("Its been a pleasure to serve you"
-                + "\nThank you for your Business " );
-
+                + "\nThank you for your Business ");
 
     }
 
@@ -125,12 +116,10 @@ public class BuyFromSpellCaster extends View {
         }
 
         MountKabru.getCurrentGame().getHero().getInventory().setSpellSlot(Item.roaringWaters);
-        int mana = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
-
-        MountKabru.getCurrentGame().getHero().setMana(mana);
+        int spellAttack = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
+        MountKabru.getCurrentGame().getHero().setSpellAttack(spellAttack);
         this.console.println("Its been a pleasure to serve you"
                 + "\nThank you for your Business ");
-
 
     }
 
@@ -145,14 +134,11 @@ public class BuyFromSpellCaster extends View {
             this.console.println("Sorry, you don't have enough gold.");
         }
         MountKabru.getCurrentGame().getHero().getInventory().setSpellSlot(Item.hellFire);
-        int mana = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
-
-        MountKabru.getCurrentGame().getHero().setMana(mana);
+        int spellAttack = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getManaValue();
+        MountKabru.getCurrentGame().getHero().setSpellAttack(spellAttack);
         this.console.println("Its been a pleasure to serve you"
                 + "\nThank you for your Business ");
 
-
     }
-
 
 }

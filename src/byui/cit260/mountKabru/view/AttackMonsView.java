@@ -141,13 +141,13 @@ public class AttackMonsView extends View {
 
     private void castSpell() {
 
-        int attack = MountKabru.getCurrentGame().getHero().getAttack();
+        int spellAttack = MountKabru.getCurrentGame().getHero().getSpellAttack();
         int mana = MountKabru.getCurrentGame().getHero().getMana();
         int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefence();
         int damageDoneToMonster = 0;
 
         try {
-            damageDoneToMonster = ActorControl.spellDamage(attack, mana, opponentDefense);
+            damageDoneToMonster = ActorControl.spellDamage(spellAttack, mana, opponentDefense);
             this.console.println("\n*** You Cast a spell at the       ***"
                     + "\n*** monster          ***"
                     + "\n*** You do " + damageDoneToMonster + " Damage    ***");

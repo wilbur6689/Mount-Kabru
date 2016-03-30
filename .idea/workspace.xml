@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b44a2586-d6ec-4506-950a-da4e32275091" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java" afterPath="$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java" />
     </list>
     <ignored path="Mount-Kabru.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +79,8 @@
       <file leaf-file-name="GameControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8604651">
-              <caret line="263" column="69" selection-start-line="263" selection-start-column="69" selection-end-line="263" selection-end-column="69" />
+            <state vertical-scroll-proportion="4.688372">
+              <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
               <folding>
                 <element signature="method#createHero#0;class#GameControl#0" expanded="false" />
               </folding>
@@ -1127,7 +1126,7 @@
       <workItem from="1458913719098" duration="13454000" />
       <workItem from="1458970213882" duration="4000" />
       <workItem from="1459177647648" duration="8474000" />
-      <workItem from="1459347616899" duration="4641000" />
+      <workItem from="1459347616899" duration="5292000" />
     </task>
     <task id="LOCAL-00001" summary="Created Monster List: Orson C Badger">
       <created>1458255575891</created>
@@ -1309,11 +1308,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459352140486</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Worked on the Level function and finished&#10;&#10;3-30-16">
+      <created>1459352680228</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1459352680228</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67806000" />
+    <option name="totallyTimeSpent" value="68457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="1" width="1368" height="768" extended-state="6" />
@@ -1372,7 +1377,8 @@
     <MESSAGE value="Worked on the spells layer, can't figure out the enum rubbish&#10;&#10;3-25-16" />
     <MESSAGE value="I am trying to create the inventory on creation but I am not allowed to for some weird reason. I think it has something to do with the inventory control. But everything else I worked on from the new store to the new cast spell function works like a charm. Just not the Damn creation of an inventory.&#10;&#10;3-25-16" />
     <MESSAGE value="Worked on the Level function&#10;&#10;3-30-16" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on the Level function&#10;&#10;3-30-16" />
+    <MESSAGE value="Worked on the Level function and finished&#10;&#10;3-30-16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on the Level function and finished&#10;&#10;3-30-16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1850,8 +1856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8604651">
-          <caret line="263" column="69" selection-start-line="263" selection-start-column="69" selection-end-line="263" selection-end-column="69" />
+        <state vertical-scroll-proportion="4.688372">
+          <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
           <folding>
             <element signature="method#createHero#0;class#GameControl#0" expanded="false" />
           </folding>

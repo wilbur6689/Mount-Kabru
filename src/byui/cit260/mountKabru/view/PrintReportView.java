@@ -173,9 +173,10 @@ public class PrintReportView extends View {
             output.writeObject(heroReport); //write game to object File
         } catch (IOException e) {
             e.printStackTrace();
+            
         }
         
-       this.console.println(" This is the message you get when it works YAY!");
+       this.console.println(heroReport +"\n This is the message you get when it works YAY!");
 
     }
 

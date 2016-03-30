@@ -12,7 +12,7 @@ package byui.cit260.mountKabru.view;
 public interface ViewInterface {
     
      void display();
-     String getInput();
+     
      boolean doAction(String value);
     
     

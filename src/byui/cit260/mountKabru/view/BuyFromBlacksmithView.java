@@ -8,6 +8,8 @@ package byui.cit260.mountKabru.view;
 import byui.cit260.mountKabru.model.Item;
 import mountkabru.MountKabru;
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 /**
  *
@@ -17,18 +19,18 @@ public class BuyFromBlacksmithView extends View {
     
     public BuyFromBlacksmithView() {
            super( "\n"
-                + "\n----------------------------------------------------------------"
-                + "\n|                                                                           |"
-                + "\n|    / \\                         __ ________ __                              |"
-                + "\n|    | |    Weapons:            /  /        \\  \\      Armor:                 |"
-                + "\n|    | |  1. Stick              |  |   __   |  |    5. Leather              |"
-                + "\n|    | |  2. Kukri              |__|  |  |  |__|    6. Scale Mail           |"
-                + "\n|    | |  3. Battle Axe              |  |__|  |       7. Carbon Fiber       |"
-                + "\n|    |_|  4. Scythe                \\      /        8. Dragon Bone         |"
-                + "\n|   < _ >                         | \\    / |                               |"
-                + "\n|    {_}                          |  \\__/  |                               |"
-                + "\n|                                 |  |  |  |                                |"
-                + "\n---------------------------------------------------------------"
+                + "\n--------------------------------------------------------------------------------------------"
+                + "\n|                                                                           "
+                + "\n|    / \\                                __ ________ __                              "
+                + "\n|    | |    Weapons:                   /  /        \\  \\      Armor:                 "
+                + "\n|    | |  1. Stick       300g         |  ||   __   ||  |     5. Leather       300g       "
+                + "\n|    | |  2. Kukri       1000g        |__||  |  |  ||__|     6. Scale Mail    1000g       "
+                + "\n|    | |  3. Battle Axe  3000g            |  |__|  |         7. Carbon Fiber  3000g     "
+                + "\n|    |_|  4. Scythe      7000g             \\      /          8. Dragon Bone   7000g"
+                + "\n|   < _ >                                 | \\    / |                               "
+                + "\n|    {_}                                  |  \\__/  |                               "
+                + "\n|                                         |  |  |  |                                "
+                + "\n--------------------------------------------------------------------------------------------"
                 + "\n Please Enter the Number of the item you wish to purchase"
                 + "\n Your Gold = " + MountKabru.getCurrentGame().getHero().getGold()
                 + "\nQ - [Q]uit"
@@ -38,7 +40,7 @@ public class BuyFromBlacksmithView extends View {
     @Override
     public boolean doAction(String value) {
         int realNumber = 0; 
-        
+
         try {
         realNumber = parseInt(value);
         } catch(NumberFormatException nf) {
@@ -113,8 +115,10 @@ public class BuyFromBlacksmithView extends View {
         int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
+        
+        //this.console.println(MountKabru.getHero().getAttack());
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business " + attack);
         
         
     }
@@ -167,7 +171,7 @@ public class BuyFromBlacksmithView extends View {
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.leatherArmor);
 
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
         this.console.println("Its been a pleasure to serve you"
@@ -186,7 +190,7 @@ public class BuyFromBlacksmithView extends View {
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.scaleMail);
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
 
@@ -208,7 +212,7 @@ public class BuyFromBlacksmithView extends View {
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.carbonFiber);
 
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
         this.console.println("Its been a pleasure to serve you"
@@ -228,7 +232,7 @@ public class BuyFromBlacksmithView extends View {
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.dragonBoneArmor);
 
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
         this.console.println("Its been a pleasure to serve you"

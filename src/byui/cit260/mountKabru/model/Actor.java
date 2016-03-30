@@ -22,7 +22,7 @@ public class Actor implements Serializable{
     private int currentHitPoints;
     private int defence;
     private int attack;
-    private int chanceToHit;
+    private int xpGained;
     private int gold;
     
     private Event[] randomEvent;
@@ -32,13 +32,13 @@ public class Actor implements Serializable{
         
     }
 
-    public Actor(String name, int maxHitPoints, int currentHitPoints, int defence, int attack, int chanceToHit, int gold) {
+    public Actor(String name, int maxHitPoints, int currentHitPoints, int defence, int attack, int xpGained, int gold) {
         this.name = name;
         this.maxHitPoints = maxHitPoints;
         this.currentHitPoints = currentHitPoints;
         this.defence = defence;
         this.attack = attack;
-        this.chanceToHit = chanceToHit;
+        this.xpGained = xpGained;
         this.gold = gold;
     }
 
@@ -102,12 +102,12 @@ public class Actor implements Serializable{
         this.attack = attack;
     }
 
-    public int getChanceToHit() {
-        return chanceToHit;
+    public int getXpGained() {
+        return xpGained;
     }
 
-    public void setChanceToHit(int chanceToHit) {
-        this.chanceToHit = chanceToHit;
+    public void setXpGained(int xpGained) {
+        this.xpGained = xpGained;
     }
 
     public int getGold() {
@@ -125,7 +125,7 @@ public class Actor implements Serializable{
         hash = 37 * hash + this.maxHitPoints;
         hash = 37 * hash + this.defence;
         hash = 37 * hash + this.attack;
-        hash = 37 * hash + this.chanceToHit;
+        hash = 37 * hash + this.xpGained;
         hash = 37 * hash + this.gold;
         return hash;
     }
@@ -151,7 +151,7 @@ public class Actor implements Serializable{
         if (this.attack != other.attack) {
             return false;
         }
-        if (this.chanceToHit != other.chanceToHit) {
+        if (this.xpGained != other.xpGained) {
             return false;
         }
         if (this.gold != other.gold) {
@@ -165,7 +165,7 @@ public class Actor implements Serializable{
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defence=" + defence + ", attack=" + attack + ", chanceToHit=" + chanceToHit + ", gold=" + gold + '}';
+        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defence=" + defence + ", attack=" + attack + ", chanceToHit=" + xpGained + ", gold=" + gold + '}';
     }
 
     

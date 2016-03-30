@@ -26,7 +26,7 @@ public class World implements Serializable {
     public World(int rowCount, int columnCount) throws GameControlException {
 
         if (rowCount < 1 || columnCount < 1) {
-            throw new GameControlException("The numbe of rows and columns must be > Zero");
+            throw new GameControlException("The number of rows and columns must be > Zero");
 
         }
 

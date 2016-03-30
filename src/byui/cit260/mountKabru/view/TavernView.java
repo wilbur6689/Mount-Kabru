@@ -13,6 +13,8 @@ import static java.lang.Integer.parseInt;
 
 import java.util.Scanner;
 import mountkabru.MountKabru;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 /**
  *

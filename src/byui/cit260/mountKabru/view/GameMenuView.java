@@ -38,6 +38,7 @@ public class GameMenuView extends View {
                + "\n  A - go on an [A]dventure"
                + "\n  T - visit the [T]avern"
                + "\n  B - visit the [B]lacksmith"
+               + "\n  SC- Visit the [S]pell[C]aster"
                + "\n  P - Visit the [P]rint Shop"
                + "\n  C - [C]haracter stats"
                + "\n  G - [G]et Information from the Old Man"
@@ -83,6 +84,9 @@ public class GameMenuView extends View {
                 break;
             case "L": //load game menu
                 this.loadGame();
+                break;
+            case "SC":
+                this.goSpellCaster();
                 break;
             case "M": //quit game
                 return true;
@@ -161,10 +165,11 @@ public class GameMenuView extends View {
         int heroCurrentHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
         int heroDefence = MountKabru.getCurrentGame().getHero().getDefence();
         int heroAttack = MountKabru.getCurrentGame().getHero().getAttack();
-        int heroChanceToHit = MountKabru.getCurrentGame().getHero().getChanceToHit();
+        int heroChanceToHit = MountKabru.getCurrentGame().getHero().getXpGained();
         int heroGold = MountKabru.getCurrentGame().getHero().getGold();
         String weaponSlot = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
         String armorSlot = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName();
+        String spellSlot = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getName();
         String healthPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
         String manaPotion = MountKabru.getCurrentGame().getHero().getInventory().getManaPotionSlot().getName();
         
@@ -184,6 +189,7 @@ public class GameMenuView extends View {
                 + "\n"
                 + "\n Weapon:      " + weaponSlot
                 + "\n Armor:       " + armorSlot
+                + "\n Spell:       " + spellSlot
                 + "\n HP Potion:   " + healthPotion
                 + "\n Mana Potion: " + manaPotion
         );
@@ -210,7 +216,11 @@ public class GameMenuView extends View {
        new SaveGameView().display();
         
     }
-    
+    private void goSpellCaster(){
+        BuyFromSpellCaster buyFromSpellCaster = new BuyFromSpellCaster();
+
+        buyFromSpellCaster.display();
+    }
     private void loadGame() {
         new LoadGameView().display();
     }

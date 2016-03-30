@@ -18,20 +18,13 @@ import mountkabru.MountKabru;
 public class WorldMapView extends View {
 
     public WorldMapView() {
-        super("\n"
-            + "\n--------------------------------------------------------"
-            + "\n   Which Location would you like to visit?         "
-            + "\n   "
-            + "\n   Choose your number from the ranges below"
-            + "\n   This first number is the row and the second"
-            + "\n   number is the column. You must have a ',' "
-            + "\n   between the numbers. example= 3,7 "
-            + "\n   "
-            + "\n         (1,1) - Return to town "
-            + "\n  (1,2) - (1,7) - Plains         Hero Level: 1-10"
-            + "\n  (2,1) - (2,7) - Jungle         Hero Level: 10-25"
-            + "\n  (3,1) - (3,7) - Dark Forest    Hero Level: 25-40"
-            + "\n  (4,1) - (4,7) - High Mountain  Hero Level: 40-50"
+        super("\n   must follow example= '3 7' "
+            + "\n "  
+            + "\n         (1 1) - Return to town "
+            + "\n  (1 2) - (1 7) - Plains         Hero Level: 1-10"
+            + "\n  (2 1) - (2 7) - Jungle         Hero Level: 10-25"
+            + "\n  (3 1) - (3 7) - Dark Forest    Hero Level: 25-40"
+            + "\n  (4 1) - (4 7) - High Mountain  Hero Level: 40-50"
             + "\n"
             + "\n  (Q) - quit");
     }
@@ -42,7 +35,7 @@ public class WorldMapView extends View {
     public boolean doAction(String value) {
         
         String choice = value.toUpperCase(); //convert choice to upper case
-        String[] valueArray = choice.split(",");
+        String[] valueArray = choice.split(" ");
         int row;
         int column;
         

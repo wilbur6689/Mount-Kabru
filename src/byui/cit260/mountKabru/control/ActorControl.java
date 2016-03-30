@@ -265,6 +265,12 @@ public class ActorControl {
 
     }
 
+    public static int monsterAttack(int attack, int opponentDefense) {
+        int monsterDamage = attack - opponentDefense + (int) (Math.random() * 10);
+        
+        return monsterDamage;
+    }
+    
     public static int pickRandomMonster() {
         
         int numberReturn;

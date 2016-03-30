@@ -19,6 +19,7 @@ public class Game implements Serializable{
     private String main;
     private Player player;
     private World world;
+    private boolean endOfGame = false;
     
     private Item[] items;
     private Actor[][] actors;
@@ -52,7 +53,16 @@ public class Game implements Serializable{
     public void setWorld(World world) {
         this.world = world;
     }
+
+    public boolean isEndOfGame() {
+        return endOfGame;
+    }
+
+    public void setEndOfGame(boolean endOfGame) {
+        this.endOfGame = endOfGame;
+    }
     
+        
     public Item[] getItems() {
         return items;
     }

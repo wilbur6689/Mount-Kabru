@@ -60,6 +60,9 @@ public class GameMenuView extends View {
         switch (value) {
             case "A": // go kill stuff on an adventure
                 this.goAdventure();
+                if (MountKabru.getCurrentGame().isEndOfGame()){
+                    return true;
+                }
                 break;
             case "T": // visit the tavern in town
                 this.goTavern();

@@ -41,6 +41,9 @@ public class AdventureView extends View {
         switch (choice) {
             case "S": // go kill stuff in the Jungle
                 this.searchForMonster();
+                if (MountKabru.getCurrentGame().isEndOfGame()){
+                    return true;
+                }
                 break;
             case "P": // use a potion
                 this.usePotion();
@@ -78,6 +81,7 @@ public class AdventureView extends View {
             AttackMonsView attackMonsView = new AttackMonsView();
             //display the Attack Monster view
             attackMonsView.display();
+            return;
         } else {
             int[] goldEvents = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getGoldEvent();
 

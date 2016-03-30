@@ -111,13 +111,17 @@ public class AttackMonsView extends View{
            int xpGained = MountKabru.getCurrentGame().getHero().getFoundMonster().getXpGained();
            int afterXP = beforeXP + xpGained;
            MountKabru.getCurrentGame().getHero().setExperience(afterXP);
-                   
+           
+           if 
+           
            //set Gold
            int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
            int goldGained = MountKabru.getCurrentGame().getHero().getFoundMonster().getGold();
            int afterGold = beforeGold + goldGained;
            MountKabru.getCurrentGame().getHero().setGold(afterGold);
-           MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(0);        
+           MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(0); 
+           
+           
            
            //return back to the adventure view
             World world = MountKabru.getCurrentGame().getWorld();

@@ -19,12 +19,16 @@ public class Inventory implements Serializable {
     public Inventory(){
     }
 
-    public Inventory(Item weaponSlot, Item armorSlot, Item healthPotionSlot, Item manaPotionSlot) {
+    public Inventory(Item weaponSlot, Item armorSlot, Item spellSlot, Item healthPotionSlot, Item manaPotionSlot, Hero hero) {
         this.weaponSlot = weaponSlot;
         this.armorSlot = armorSlot;
+        this.spellSlot = spellSlot;
         this.healthPotionSlot = healthPotionSlot;
         this.manaPotionSlot = manaPotionSlot;
+
     }
+
+
 
     public Item getSpellSlot() {
         return spellSlot;

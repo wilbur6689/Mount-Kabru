@@ -149,19 +149,73 @@ public class AttackMonsView extends View{
         this.console.println("\n*** You take a defensive stance, and gain nothing  ***");
     }
 
+
+
+
+
+
+
+
+
     private void castSpell() {
-        int attack = 550;
-        int mana = 30;
-        int opponentDefense = 10;
-        try {
-        int result = ActorControl.spellDamage(attack, mana, opponentDefense);
-        this.console.println("\n*** You walk over to the monster      ***"
-                         + "\n*** and cast fireball                 ***"
-                         + "\n*** You do " + result + " Damage    ***");
+        
+        int attack = MountKabru.getCurrentGame().getHero().getAttack();
+        int mana = MountKabru.getCurrentGame().getHero().getMana();
+        int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefence();
+        int damageDoneToMonster = 0;
+        
+        try { 
+         damageDoneToMonster = ActorControl.meleeDamage(attack, mana, opponentDefense);
+        this.console.println("\n*** You Cast a spell at the       ***"
+                         + "\n*** monster          ***"
+                         + "\n*** You do " + damageDoneToMonster + " Damage    ***");
         
         } catch (ActorControlException me) {
             this.console.println(me.getMessage());
-         }
+        }
+        
+        int currentHP = MountKabru.getCurrentGame().getHero().getFoundMonster().getCurrentHitPoints();
+        currentHP -= damageDoneToMonster;
+        
+        if (currentHP < 0){
+            
+           //say you killed the monster
+           this.console.println("You defied all logic and were able to slay the monster.");
+           
+           //set XP
+           int beforeXP = MountKabru.getCurrentGame().getHero().getExperience();
+           int xpGained = MountKabru.getCurrentGame().getHero().getFoundMonster().getXpGained();
+           int afterXP = beforeXP + xpGained;
+           MountKabru.getCurrentGame().getHero().setExperience(afterXP);
+                   
+           //set Gold
+           int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
+           int goldGained = MountKabru.getCurrentGame().getHero().getFoundMonster().getGold();
+           int afterGold = beforeGold + goldGained;
+           MountKabru.getCurrentGame().getHero().setGold(afterGold);
+           MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(0);        
+           
+           //return back to the adventure view
+            World world = MountKabru.getCurrentGame().getWorld();
+        Location[][] locations = MountKabru.getCurrentGame().getWorld().getLocations();
+        Event[][] events = EventControl.createEvents();
+        
+        for (int i=0;i<locations.length;i++) {
+            for (int j=0;j<locations[i].length-1;j++) {
+//                events[i][j] = locations[i][j].getEvent();
+                //System.out.println(locations[i][j].getEvent().getEventType());
+            }
+        }
+        
+        
+        WorldControl.setEventsToLocations(world, events);
+            
+        } else {
+        MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(currentHP);
+        
+        this.console.println("The monster has this much life: " + currentHP);
+        }
+        
     }
 
 }

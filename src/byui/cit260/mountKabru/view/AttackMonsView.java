@@ -262,6 +262,56 @@ public class AttackMonsView extends View {
             MountKabru.getCurrentGame().getHero().getFoundMonster().setCurrentHitPoints(currentHP);
 
             this.console.println("The monster has this much life: " + currentHP);
+            
+            //Monster attacks you back
+            
+            int monsAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getAttack();
+            int playerDef = MountKabru.getCurrentGame().getHero().getDefence();
+            int beforeHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
+            
+            int monsDamage = ActorControl.monsterAttack(monsAttack, playerDef);
+            int afterHP = beforeHP - monsDamage;
+            
+            this.console.println("\n--------------------------------------------------"
+                               + "\n               You were attacked!!!"
+                               + "\n--------------------------------------------------"
+                               + "\n"
+                               + "\n  the " + MountKabru.getCurrentGame().getHero().getFoundMonster().getName()
+                               + "\n  hit you for " + monsDamage + " Damage!"
+                               + "\n  "
+                               + "\n  You now have " + afterHP + " Hit Points");
+            
+            
+            if (afterHP <1) {
+                //hero dies and its GAME OVER
+                //load the Main Menu
+                MountKabru.getCurrentGame().setEndOfGame(true);
+                this.console.println("\n"
+                        + "\n ---------------------------------------------------------------------"
+                        + "\n"
+                        + "\n   You are fighting bravely but your weapon is getting heavy..."
+                        + "\n"
+                        + "\n   You try to catch your breath...      "
+                        + "\n   "
+                        + "\n   you slowly loose your sight and feel something bash you in the head..."
+                        + "\n"
+                        + "\n   Sorry, you died"
+                        + "\n                                    _"
+                        + "\n                                   { }" 
+                        + "\n                                   { }"
+                        + "\n                                 __{ }__"
+                        + "\n                                 \\_____/"
+                        + "\n         __                        | |   "
+                        + "\n        /  \\                       | | "
+                        + "\n       /    \\____ ________         | |         ______"
+                        + "\n   ___/__/\\     |    |____\\        | |        /   _0 \\ "
+                        + "\n  /_____/  \\____|_________/Mmn~    |_|    ~nmM\\____0_/"
+                        + "\n");
+                
+                return;
+            }
+            
+            MountKabru.getCurrentGame().getHero().setCurrentHitPoints(afterHP);
         }
 
     }

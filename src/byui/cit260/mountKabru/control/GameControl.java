@@ -202,23 +202,66 @@ public class GameControl {
         if (heroClass.equals("Warrior")) {
             
             //do stuff for warrior
-            //get before stats (with getters) that you want to change(health, str)
+            //get before stats (with getters) that you want to change(health, str,level)
+            int beforeHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
+            int beforeStrength = MountKabru.getCurrentGame().getHero().getStrength();
+            int beforeLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
+
+
+
             //add stuff and set them to new variables
+
+            int afterHealth = beforeHealth + 50;
+            int afterStrength = beforeStrength + 2;
+            int afterLvlUp = beforeLvlUp + 1;
             //set the new variables to the hero stats with a "setter"
+
+            MountKabru.getCurrentGame().getHero().setMaxHitPoints(afterHealth);
+            MountKabru.getCurrentGame().getHero().setStrength(afterStrength);
+            MountKabru.getCurrentGame().getHero().setLevelOfHero(afterLvlUp);
         }
         
         else if (heroClass.equals("Wizard")) {
             //do stuff for Wizard
-            //get before stats (with getters) that you want to change(health, Mana)
+            //get before stats (with getters) that you want to change(health, Mana,level)
+
+            int beforeHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
+            int beforeStrength = MountKabru.getCurrentGame().getHero().getStrength();
+            int beforeLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
+            
             //add stuff and set them to new variables
+            int afterHealth = beforeHealth + 50;
+            int afterStrength = beforeStrength + 2;
+            int afterLvlUp = beforeLvlUp + 1;
+
             //set the new variables to the hero stats with a "setter"
+
+            MountKabru.getCurrentGame().getHero().setMaxHitPoints(afterHealth);
+            MountKabru.getCurrentGame().getHero().setStrength(afterStrength);
+            MountKabru.getCurrentGame().getHero().setLevelOfHero(afterLvlUp);
         }
         
         else {
             //do stuff for the Paladin
-             //get before stats (with getters) that you want to change(health, Mana, and str)
+             //get before stats (with getters) that you want to change(health, Mana, and str,level)
+             
+            int beforeHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
+            int beforeStrength = MountKabru.getCurrentGame().getHero().getStrength();
+            int beforeMana = MountKabru.getCurrentGame().getHero().getMana();
+            int beforeLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
             //add stuff and set them to new variables
+            
+            int afterHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
+            int afterStrength = MountKabru.getCurrentGame().getHero().getStrength();
+            int afterMana = MountKabru.getCurrentGame().getHero().getMana();
+            int afterLvlUp = MountKabru.getCurrentGame().getHero().getLevelOfHero();
+            
+            
             //set the new variables to the hero stats with a "setter"
+            MountKabru.getCurrentGame().getHero().setMaxHitPoints(afterHealth);
+            MountKabru.getCurrentGame().getHero().setStrength(afterStrength);
+            MountKabru.getCurrentGame().getHero().setLevelOfHero(afterLvlUp);
+            MountKabru.getCurrentGame().getHero().setMana(afterMana);
         }
         
         
@@ -228,22 +271,6 @@ public class GameControl {
         
         
         
-        // The point of this function is to raise the level of the hero
-        // The first thing I need to do is find the current level
-        //After I find to current level I need to know the experience
-        int currentLevel = MountKabru.getCurrentGame().getHero().getLevelOfHero();
-        int currentXP = MountKabru.getCurrentGame().getHero().getExperience();
-
-        // After I find the two I need to compare the XP to a list of levels.
-        // I need to set it up so that every Time I level up my Experience I raise a level
-        //After 30 xp I will raise my level
-
-        if (currentXP >= 30){
-            //Raise the level of the hero by one.
-            currentLevel = +1;
-
-            MountKabru.getCurrentGame().getHero().setLevelOfHero(currentLevel);
-        }
 
 
 

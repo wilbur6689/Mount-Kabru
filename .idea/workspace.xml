@@ -80,8 +80,8 @@
       <file leaf-file-name="GameControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2511628">
-              <caret line="229" column="8" selection-start-line="229" selection-start-column="8" selection-end-line="229" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.8604651">
+              <caret line="263" column="69" selection-start-line="263" selection-start-column="69" selection-end-line="263" selection-end-column="69" />
               <folding>
                 <element signature="method#createHero#0;class#GameControl#0" expanded="false" />
               </folding>
@@ -1127,7 +1127,7 @@
       <workItem from="1458913719098" duration="13454000" />
       <workItem from="1458970213882" duration="4000" />
       <workItem from="1459177647648" duration="8474000" />
-      <workItem from="1459347616899" duration="4106000" />
+      <workItem from="1459347616899" duration="4641000" />
     </task>
     <task id="LOCAL-00001" summary="Created Monster List: Orson C Badger">
       <created>1458255575891</created>
@@ -1303,11 +1303,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459350781557</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Worked on the Level function&#10;&#10;3-30-16">
+      <created>1459352140486</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1459352140486</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67271000" />
+    <option name="totallyTimeSpent" value="67806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="1" width="1368" height="768" extended-state="6" />
@@ -1844,8 +1850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/GameControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2511628">
-          <caret line="229" column="8" selection-start-line="229" selection-start-column="8" selection-end-line="229" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.8604651">
+          <caret line="263" column="69" selection-start-line="263" selection-start-column="69" selection-end-line="263" selection-end-column="69" />
           <folding>
             <element signature="method#createHero#0;class#GameControl#0" expanded="false" />
           </folding>

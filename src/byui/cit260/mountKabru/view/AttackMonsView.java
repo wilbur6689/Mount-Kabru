@@ -172,7 +172,7 @@ public class AttackMonsView extends View{
         int damageDoneToMonster = 0;
         
         try { 
-         damageDoneToMonster = ActorControl.meleeDamage(attack, mana, opponentDefense);
+         damageDoneToMonster = ActorControl.spellDamage(attack, mana, opponentDefense);
         this.console.println("\n*** You Cast a spell at the       ***"
                          + "\n*** monster          ***"
                          + "\n*** You do " + damageDoneToMonster + " Damage    ***");

@@ -8,11 +8,11 @@ import java.io.Serializable;
 public enum Item implements Serializable{
 
     
-    bareHands("Bare Hands", "Easy, Cheap, and always avaliable", 5,0,0,0,0,0),
+    bareHands("Bare Hands", "Easy, Cheap, and always avaliable", 10,0,0,0,0,0),
     stick("Stick", "A scary looking Stick",10,0,300,200,0,0),
     kukri("Kukri", "This is a short stubby looking sword, to be used for removing your head",40,0,1000,800,0,0),
     battleAxe("battleAxe","This thing is sharp enough to kill you just looking at it", 80,0,3000,2500,0,0),
-    scythe("scythe","I dont think this was used to harvest grain... just saying",120,0,7000,5500,0,0),
+    scythe("scythe","I dont think this was used to harvest grain... just saying",1200,0,7000,5500,0,0),
     clothes("clothes","Plain, simple, and comfortable clothes", 0,5,0,0,0,0),
     leatherArmor("leatherArmor","light weight, sturdy, and smells good, what more could you want?",0,10,300,200,0,0),
     scaleMail("scaleMail","A little more protection for not a bad price",0,40,1000,800,0,0),

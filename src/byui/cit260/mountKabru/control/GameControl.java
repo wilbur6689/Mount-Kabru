@@ -189,6 +189,40 @@ public class GameControl {
         MountKabru.setCurrentGame(game);
     }
 
+
+
+
+
+    public static void raisetheLevelDamnit(){
+
+
+        // The point of this function is to raise the level of the hero
+        // The first thing I need to do is find the current level
+        //After I find to current level I need to know the experience
+        int currentLevel = MountKabru.getCurrentGame().getHero().getLevelOfHero();
+        int currentXP = MountKabru.getCurrentGame().getHero().getExperience();
+
+        // After I find the two I need to compare the XP to a list of levels.
+        // I need to set it up so that every Time I level up my Experience I raise a level
+        //After 30 xp I will raise my level
+
+        if (currentXP >= 30){
+            //Raise the level of the hero by one.
+            currentLevel = +1;
+
+            MountKabru.getCurrentGame().getHero().setLevelOfHero();
+        }
+
+
+
+
+
+
+
+    }
+
+
+
     }
 
 

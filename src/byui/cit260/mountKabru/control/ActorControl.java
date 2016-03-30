@@ -41,7 +41,7 @@ public class ActorControl {
         plainsActors[1] = banshee;
         Actor evilRabbits = new Actor("EvilRabbits", 60, 15, 3, 0, 16, 4, 30);
         plainsActors[2] = evilRabbits;
-        Actor wolves = new Actor("Wolves", 60, 9, 3, 0, 6, 6, 40);
+        Actor wolves = new Actor("Wolves", 60, 9, 6, 0, 6, 6, 40);
         plainsActors[3] = wolves;
         actors[0] = plainsActors;
 
@@ -53,7 +53,7 @@ public class ActorControl {
         jungleActors[1] = manticore;
         Actor gators = new Actor("Gators", 200, 30, 8, 0, 18, 3, 37);
         jungleActors[2] = gators;
-        Actor largeSpider = new Actor("Large Spider", 240, 24, 6, 0, 14, 6, 60);
+        Actor largeSpider = new Actor("Large Spider", 240, 24, 10, 0, 14, 6, 60);
         jungleActors[3] = largeSpider;
         actors[1] = jungleActors;
 

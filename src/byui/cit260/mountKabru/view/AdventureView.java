@@ -107,8 +107,10 @@ public class AdventureView extends View {
     }
 
     private void usePotion() {
-        this.console.println("\n*** you look into your potion pouch and  ***"
-                + "\n*** remember you dont have any potions   ***");
+        
+        
+        
+        
     }
 
     private void checkStats() {

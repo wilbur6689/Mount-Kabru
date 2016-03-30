@@ -32,23 +32,23 @@ public class ActorControl {
 
         //plains Monsters
         Actor[] plainsActors = new Actor[4];
-        Actor gnome = new Actor("Gnome", 100, 8, 4, 0, 3, 2, 7);
+        Actor gnome = new Actor("Gnome", 45, 8, 4, 0, 3, 2, 7);
         plainsActors[0] = gnome;
-        Actor banshee = new Actor("Banshee", 120, 12, 5, 0, 5, 2, 12);
+        Actor banshee = new Actor("Banshee", 50, 12, 5, 0, 5, 2, 12);
         plainsActors[1] = banshee;
-        Actor evilRabbits = new Actor("EvilRabbits", 140, 15, 3, 0, 16, 4, 30);
+        Actor evilRabbits = new Actor("EvilRabbits", 60, 15, 3, 0, 16, 4, 30);
         plainsActors[2] = evilRabbits;
-        Actor wolves = new Actor("Wolves", 160, 9, 3, 0, 6, 6, 40);
+        Actor wolves = new Actor("Wolves", 60, 9, 3, 0, 6, 6, 40);
         plainsActors[3] = wolves;
         actors[0] = plainsActors;
 
         //Jungle Monsters
         Actor[] jungleActors = new Actor[4];
-        Actor frogs = new Actor("Frogs", 200, 20, 5, 0, 15, 3, 45);
+        Actor frogs = new Actor("Frogs", 100, 20, 5, 0, 15, 3, 45);
         jungleActors[0] = frogs;
-        Actor manticore = new Actor("Manticore", 350, 25, 7, 0, 17, 3, 100);
+        Actor manticore = new Actor("Manticore", 150, 25, 7, 0, 17, 3, 100);
         jungleActors[1] = manticore;
-        Actor gators = new Actor("Gators", 300, 30, 8, 0, 18, 3, 37);
+        Actor gators = new Actor("Gators", 200, 30, 8, 0, 18, 3, 37);
         jungleActors[2] = gators;
         Actor largeSpider = new Actor("Large Spider", 240, 24, 6, 0, 14, 6, 60);
         jungleActors[3] = largeSpider;

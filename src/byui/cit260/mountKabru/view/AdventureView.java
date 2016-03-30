@@ -29,8 +29,6 @@ public class AdventureView extends View {
                 + "\nS - [S]earch for a monster"
                 + "\nP - use a [P]otion"
                 + "\nC - [C]heck your stats"
-                + "\nL - What is my [L]ocation?"
-                + "\nX - Change location events...(FOR DEBUG ONLY)"
                 + "\nR - [R]eturn back to Map"
                 + "\n--------------------------------------");
     }
@@ -43,6 +41,9 @@ public class AdventureView extends View {
         switch (choice) {
             case "S": // go kill stuff in the Jungle
                 this.searchForMonster();
+                if (MountKabru.getCurrentGame().isEndOfGame()){
+                    return true;
+                }
                 break;
             case "P": // use a potion
                 this.usePotion();
@@ -80,6 +81,7 @@ public class AdventureView extends View {
             AttackMonsView attackMonsView = new AttackMonsView();
             //display the Attack Monster view
             attackMonsView.display();
+            return;
         } else {
             int[] goldEvents = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getGoldEvent();
 
@@ -119,10 +121,12 @@ public class AdventureView extends View {
         int heroCurrentHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
         int heroDefence = MountKabru.getCurrentGame().getHero().getDefence();
         int heroAttack = MountKabru.getCurrentGame().getHero().getAttack();
+        int heroSpellAttack = MountKabru.getCurrentGame().getHero().getSpellAttack();
         int heroChanceToHit = MountKabru.getCurrentGame().getHero().getXpGained();
         int heroGold = MountKabru.getCurrentGame().getHero().getGold();
         String weaponSlot = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
         String armorSlot = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getName();
+        String spellSlot = MountKabru.getCurrentGame().getHero().getInventory().getSpellSlot().getName();
         String healthPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
         String manaPotion = MountKabru.getCurrentGame().getHero().getInventory().getManaPotionSlot().getName();
         
@@ -137,11 +141,13 @@ public class AdventureView extends View {
                 + "\n Hitpoints:   " + heroCurrentHP 
                 + "\n Defence:     " + heroDefence
                 + "\n Attack:      " + heroAttack
+                + "\n Spell Atk    " + heroSpellAttack
                 + "\n To Hit:      " + heroChanceToHit
                 + "\n Gold:        " + heroGold
                 + "\n"
                 + "\n Weapon:      " + weaponSlot
                 + "\n Armor:       " + armorSlot
+                + "\n Spell:       " + spellSlot
                 + "\n HP Potion:   " + healthPotion
                 + "\n Mana Potion: " + manaPotion
         );

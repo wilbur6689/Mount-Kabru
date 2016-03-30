@@ -22,6 +22,7 @@ public class Actor implements Serializable{
     private int currentHitPoints;
     private int defence;
     private int attack;
+    private int spellAttack;
     private int xpGained;
     private int gold;
     
@@ -32,15 +33,18 @@ public class Actor implements Serializable{
         
     }
 
-    public Actor(String name, int maxHitPoints, int currentHitPoints, int defence, int attack, int xpGained, int gold) {
+    public Actor(String name, int maxHitPoints, int currentHitPoints, int defence, int attack, int spellAttack, int xpGained, int gold) {
         this.name = name;
         this.maxHitPoints = maxHitPoints;
         this.currentHitPoints = currentHitPoints;
         this.defence = defence;
         this.attack = attack;
+        this.spellAttack = spellAttack;
         this.xpGained = xpGained;
         this.gold = gold;
     }
+
+    
 
     
     
@@ -101,6 +105,15 @@ public class Actor implements Serializable{
     public void setAttack(int attack) {
         this.attack = attack;
     }
+
+    public int getSpellAttack() {
+        return spellAttack;
+    }
+
+    public void setSpellAttack(int spellAttack) {
+        this.spellAttack = spellAttack;
+    }
+    
 
     public int getXpGained() {
         return xpGained;

@@ -60,6 +60,9 @@ public class GameMenuView extends View {
         switch (value) {
             case "A": // go kill stuff on an adventure
                 this.goAdventure();
+                if (MountKabru.getCurrentGame().isEndOfGame()){
+                    return true;
+                }
                 break;
             case "T": // visit the tavern in town
                 this.goTavern();
@@ -165,6 +168,7 @@ public class GameMenuView extends View {
         int heroCurrentHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
         int heroDefence = MountKabru.getCurrentGame().getHero().getDefence();
         int heroAttack = MountKabru.getCurrentGame().getHero().getAttack();
+        int heroSpellAttack = MountKabru.getCurrentGame().getHero().getSpellAttack();
         int heroChanceToHit = MountKabru.getCurrentGame().getHero().getXpGained();
         int heroGold = MountKabru.getCurrentGame().getHero().getGold();
         String weaponSlot = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getName();
@@ -184,6 +188,7 @@ public class GameMenuView extends View {
                 + "\n Hitpoints:   " + heroCurrentHP 
                 + "\n Defence:     " + heroDefence
                 + "\n Attack:      " + heroAttack
+                + "\n Spell Atk    " + heroSpellAttack
                 + "\n To Hit:      " + heroChanceToHit
                 + "\n Gold:        " + heroGold
                 + "\n"

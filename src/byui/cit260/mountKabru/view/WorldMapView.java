@@ -60,6 +60,9 @@ public class WorldMapView extends View {
         Location location = WorldControl.getLocation(row, column);
         MountKabru.getCurrentGame().getHero().setCurrentLocation(location);
         this.Adventure();
+        if (MountKabru.getCurrentGame().isEndOfGame()){
+                    return true;
+                }
         
         return false;
     }
@@ -69,6 +72,7 @@ public class WorldMapView extends View {
     private void Adventure() {
         AdventureView adventureView = new AdventureView();
         adventureView.display();
+        
     }
 
 }

@@ -90,8 +90,8 @@
       <file leaf-file-name="ActorControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/ActorControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44651163">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.6139535">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding>
                 <element signature="method#newHero#0;class#ActorControl#0" expanded="false" />
                 <element signature="method#avgMonsterHP#0;class#ActorControl#0" expanded="false" />
@@ -1140,7 +1140,7 @@
       <workItem from="1458913719098" duration="13454000" />
       <workItem from="1458970213882" duration="4000" />
       <workItem from="1459177647648" duration="8474000" />
-      <workItem from="1459347616899" duration="6490000" />
+      <workItem from="1459347616899" duration="6529000" />
     </task>
     <task id="LOCAL-00001" summary="Created Monster List: Orson C Badger">
       <created>1458255575891</created>
@@ -1340,11 +1340,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459369432460</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Worked on the Level function and finished&#10;&#10;3-30-16">
+      <created>1459369858642</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1459369858642</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69655000" />
+    <option name="totallyTimeSpent" value="69694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="1" width="1368" height="768" extended-state="6" />
@@ -1845,8 +1851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/byui/cit260/mountKabru/control/ActorControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44651163">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.6139535">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding>
             <element signature="method#newHero#0;class#ActorControl#0" expanded="false" />
             <element signature="method#avgMonsterHP#0;class#ActorControl#0" expanded="false" />

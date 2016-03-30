@@ -20,6 +20,7 @@ public class ActorControl {
 
     public static Actor[][] createActors() {
 
+
 //        private String name;
 //    private int hitPoints;
 //    private int defence;
@@ -27,6 +28,8 @@ public class ActorControl {
 //    private int spellAttack;
 //    private int chanceToHit;
 //    private int gold;
+
+
         //Create the list of Actors
         Actor[][] actors = new Actor[4][1];
 

@@ -116,6 +116,14 @@ public class PrintReportView extends View {
             output.writeObject(monsterReport); //write game to object File
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (output != null) {
+                try {
+                    output.close();
+                } catch (IOException ex2) {
+                    this.console.println("Error closing file!!!");
+                }
+            }
         }
         
         
@@ -174,6 +182,14 @@ public class PrintReportView extends View {
         } catch (IOException e) {
             e.printStackTrace();
             
+        }finally {
+            if (output != null) {
+                try {
+                    output.close();
+                } catch (IOException ex2) {
+                    this.console.println("Error closing file!!!");
+                }
+            }
         }
         
        this.console.println(heroReport +"\n This is the message you get when it works YAY!");

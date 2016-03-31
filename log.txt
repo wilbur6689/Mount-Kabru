@@ -1,0 +1,3 @@
+MainMenuView - byui.cit260.mountKabru.model.Actor; local class incompatible: stream classdesc serialVersionUID = 2377019117469796295, local class serialVersionUID = 3379406396874781303
+MainMenuView - saveGames\fred (The system cannot find the file specified)
+World Map View - You entered the wrong number

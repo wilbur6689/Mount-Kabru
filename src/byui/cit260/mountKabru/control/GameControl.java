@@ -151,7 +151,9 @@ public class GameControl {
             output.writeObject(game); //write game to object File
         } catch (Exception e) {
             throw new GameControlException(e.getMessage());
-        }
+        } 
+            
+        
     }
 
     public static void loadGame(String fileName) throws GameControlException {

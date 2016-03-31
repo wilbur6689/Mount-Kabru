@@ -27,7 +27,7 @@ public class AttackMonsView extends View {
     public AttackMonsView() {
         super("\n"
                 + "\n---------------------------------------"
-                + "\n|  You found a " + MountKabru.getCurrentGame().getHero().getFoundMonster().getName() + "    "
+                + "\n|  You found " + MountKabru.getCurrentGame().getHero().getFoundMonster().getName() + "    "
                 + "\n|  "
                 + "\n|  "
                 + "\n|  "
@@ -80,7 +80,7 @@ public class AttackMonsView extends View {
 
         int attack = MountKabru.getCurrentGame().getHero().getAttack();
         int strength = MountKabru.getCurrentGame().getHero().getStrength();
-        int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefence();
+        int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefense();
         int damageDoneToMonster = 0;
 
         try {
@@ -142,7 +142,7 @@ public class AttackMonsView extends View {
             //Monster attacks you back
             
             int monsAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getAttack();
-            int playerDef = MountKabru.getCurrentGame().getHero().getDefence();
+            int playerDef = MountKabru.getCurrentGame().getHero().getDefense();
             int beforeHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
             
             int monsDamage = ActorControl.monsterAttack(monsAttack, playerDef);
@@ -202,7 +202,7 @@ public class AttackMonsView extends View {
 
         int spellAttack = MountKabru.getCurrentGame().getHero().getSpellAttack();
         int mana = MountKabru.getCurrentGame().getHero().getMana();
-        int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefence();
+        int opponentDefense = MountKabru.getCurrentGame().getHero().getFoundMonster().getDefense();
         int damageDoneToMonster = 0;
 
         try {
@@ -266,7 +266,7 @@ public class AttackMonsView extends View {
             //Monster attacks you back
             
             int monsAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getAttack();
-            int playerDef = MountKabru.getCurrentGame().getHero().getDefence();
+            int playerDef = MountKabru.getCurrentGame().getHero().getDefense();
             int beforeHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
             
             int monsDamage = ActorControl.monsterAttack(monsAttack, playerDef);

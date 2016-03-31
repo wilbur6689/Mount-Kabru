@@ -10,6 +10,39 @@ import mountkabru.MountKabru;
 import static java.lang.Integer.parseInt;
 import static java.lang.Integer.parseInt;
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 /**
  *
@@ -171,7 +204,7 @@ public class BuyFromBlacksmithView extends View {
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.leatherArmor);
 
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
         this.console.println("Its been a pleasure to serve you"
@@ -190,7 +223,7 @@ public class BuyFromBlacksmithView extends View {
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.scaleMail);
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
 
@@ -212,7 +245,7 @@ public class BuyFromBlacksmithView extends View {
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.carbonFiber);
 
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
         MountKabru.getCurrentGame().getHero().setAttack(defense);
         this.console.println("Its been a pleasure to serve you"
@@ -232,9 +265,9 @@ public class BuyFromBlacksmithView extends View {
         
         MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.dragonBoneArmor);
 
-        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenceValue();
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(defense);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
                         + "\nThank you for your Business ");
         

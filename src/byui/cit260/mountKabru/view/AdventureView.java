@@ -10,6 +10,7 @@ import byui.cit260.mountKabru.control.EventControl;
 import byui.cit260.mountKabru.control.WorldControl;
 import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Event;
+import byui.cit260.mountKabru.model.Item;
 import byui.cit260.mountKabru.model.Location;
 import byui.cit260.mountKabru.model.World;
 import mountkabru.MountKabru;
@@ -108,7 +109,13 @@ public class AdventureView extends View {
 
     private void usePotion() {
         
+        String potion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
         
+        if (potion.equals("healthPotion10")) {
+            this.console.println("you used a HP10");
+        } else if (potion.equals("healthPotion20")){
+            this.console.println("you used a HP10");
+        }
         
         
     }
@@ -121,7 +128,7 @@ public class AdventureView extends View {
         int heroStrength = MountKabru.getCurrentGame().getHero().getStrength();
         int heroMana = MountKabru.getCurrentGame().getHero().getMana();
         int heroCurrentHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
-        int heroDefence = MountKabru.getCurrentGame().getHero().getDefence();
+        int heroDefence = MountKabru.getCurrentGame().getHero().getDefense();
         int heroAttack = MountKabru.getCurrentGame().getHero().getAttack();
         int heroSpellAttack = MountKabru.getCurrentGame().getHero().getSpellAttack();
         int heroChanceToHit = MountKabru.getCurrentGame().getHero().getXpGained();

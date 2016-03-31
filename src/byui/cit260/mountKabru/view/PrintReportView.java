@@ -145,7 +145,7 @@ public class PrintReportView extends View {
                 + "\n-----------    -------------------         --------------"
                 + "\n Name                  NULL                " + MountKabru.getCurrentGame().getHero().getHeroName()
                 + "\n HitPoints             NULL                " + MountKabru.getCurrentGame().getHero().getMaxHitPoints()
-                + "\n Defense               NULL                " + MountKabru.getCurrentGame().getHero().getDefence()
+                + "\n Defense               NULL                " + MountKabru.getCurrentGame().getHero().getDefense()
                 + "\n Attack                NULL                " + MountKabru.getCurrentGame().getHero().getAttack()
                 + "\n Gold                  NULL                " + MountKabru.getCurrentGame().getHero().getGold()
                 + "\n  "

@@ -6,14 +6,9 @@
 package byui.cit260.mountKabru.view;
 
 import byui.cit260.mountKabru.control.TavernControl;
-import byui.cit260.mountKabru.exceptions.GameControlException;
-import byui.cit260.mountKabru.exceptions.TavernControlException;
 import byui.cit260.mountKabru.model.Item;
-import static java.lang.Integer.parseInt;
-
-import java.util.Scanner;
 import mountkabru.MountKabru;
-import static java.lang.Integer.parseInt;
+
 import static java.lang.Integer.parseInt;
 
 /**
@@ -131,7 +126,7 @@ public class TavernView extends View{
 
     private void buyManaPotion() {
        int beforeGold = MountKabru.getCurrentGame().getHero().getGold();
-        int mPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getManaValue();
+        int mPotion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getSpellAttackValue();
         
         if (mPotion == 10) {
             this.console.println("Sorry, but you already have a potion.");

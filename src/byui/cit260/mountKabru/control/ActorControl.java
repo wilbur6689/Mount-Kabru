@@ -35,9 +35,9 @@ public class ActorControl {
 
         //plains Monsters
         Actor[] plainsActors = new Actor[4];
-        Actor gnome = new Actor("Gnome", 45, 8, 4, 0, 3, 2, 7);
+        Actor gnome = new Actor("Naughty Gnomes", 45, 8, 4, 0, 3, 2, 7);
         plainsActors[0] = gnome;
-        Actor banshee = new Actor("Banshee", 50, 12, 5, 0, 5, 2, 12);
+        Actor banshee = new Actor("Banshees", 50, 12, 5, 0, 5, 2, 12);
         plainsActors[1] = banshee;
         Actor evilRabbits = new Actor("EvilRabbits", 60, 15, 3, 0, 16, 4, 30);
         plainsActors[2] = evilRabbits;
@@ -49,35 +49,35 @@ public class ActorControl {
         Actor[] jungleActors = new Actor[4];
         Actor frogs = new Actor("Frogs", 100, 20, 5, 0, 15, 3, 45);
         jungleActors[0] = frogs;
-        Actor manticore = new Actor("Manticore", 150, 25, 7, 0, 17, 3, 100);
+        Actor manticore = new Actor("Manticores", 150, 25, 7, 0, 17, 3, 100);
         jungleActors[1] = manticore;
         Actor gators = new Actor("Gators", 200, 30, 8, 0, 18, 3, 37);
         jungleActors[2] = gators;
-        Actor largeSpider = new Actor("Large Spider", 240, 24, 10, 0, 14, 6, 60);
+        Actor largeSpider = new Actor("Large Spiders", 240, 24, 10, 0, 14, 6, 60);
         jungleActors[3] = largeSpider;
         actors[1] = jungleActors;
 
         //DarkForest Monsters
         Actor[] forestActors = new Actor[4];
-        Actor werewolves = new Actor("Werewolves", 350, 35, 15, 0, 45, 4, 125);
+        Actor werewolves = new Actor("Werewolves", 450, 35, 15, 0, 45, 4, 125);
         forestActors[0] = werewolves;
-        Actor dryad = new Actor("Dryad", 400, 40, 25, 0, 55, 5, 250);
+        Actor dryad = new Actor("Group Dryads", 500, 40, 25, 0, 55, 5, 250);
         forestActors[1] = dryad;
-        Actor theUndead = new Actor("TheUndead", 500, 50, 34, 0, 67, 7, 650);
+        Actor theUndead = new Actor("The Undead", 600, 50, 34, 0, 67, 7, 650);
         forestActors[2] = theUndead;
-        Actor centaurs = new Actor("Centaurs", 450, 45, 28, 0, 48, 6, 450);
+        Actor centaurs = new Actor("Centaurs", 550, 45, 28, 0, 48, 6, 450);
         forestActors[3] = centaurs;
         actors[2] = forestActors;
 
         //HighMountain
         Actor[] mountainActors = new Actor[4];
-        Actor dragon = new Actor("Dragon", 2500, 60, 45, 0, 55, 34, 250);
+        Actor dragon = new Actor("a Dragon", 2500, 60, 45, 0, 55, 34, 2500);
         mountainActors[0] = dragon;
-        Actor hydra = new Actor("Hydra", 3500, 70, 67, 0, 100, 34, 9000);
+        Actor hydra = new Actor("a Hydra", 3500, 70, 67, 0, 100, 34, 9000);
         mountainActors[1] = hydra;
-        Actor giant = new Actor("Giant", 1500, 150, 75, 0, 46, 34, 40000);
+        Actor giant = new Actor("a Giant", 1500, 150, 75, 0, 46, 34, 1500);
         mountainActors[2] = giant;
-        Actor master = new Actor("Master", 1, 1, 1, 0, 1, 0, 9999999);
+        Actor master = new Actor("The Master", 1, 1, 1, 0, 1, 0, -20000);
         mountainActors[3] = master;
         actors[3] = mountainActors;
 

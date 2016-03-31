@@ -20,7 +20,7 @@ public class Actor implements Serializable{
     private String name;
     private int maxHitPoints;
     private int currentHitPoints;
-    private int defence;
+    private int defense;
     private int attack;
     private int spellAttack;
     private int xpGained;
@@ -37,7 +37,7 @@ public class Actor implements Serializable{
         this.name = name;
         this.maxHitPoints = maxHitPoints;
         this.currentHitPoints = currentHitPoints;
-        this.defence = defence;
+        this.defense = defence;
         this.attack = attack;
         this.spellAttack = spellAttack;
         this.xpGained = xpGained;
@@ -90,12 +90,12 @@ public class Actor implements Serializable{
         this.currentHitPoints = currentHitPoints;
     }
 
-    public int getDefence() {
-        return defence;
+    public int getDefense() {
+        return defense;
     }
 
-    public void setDefence(int defence) {
-        this.defence = defence;
+    public void setDefense(int defense) {
+        this.defense = defense;
     }
 
     public int getAttack() {
@@ -136,7 +136,7 @@ public class Actor implements Serializable{
         int hash = 5;
         hash = 37 * hash + Objects.hashCode(this.name);
         hash = 37 * hash + this.maxHitPoints;
-        hash = 37 * hash + this.defence;
+        hash = 37 * hash + this.defense;
         hash = 37 * hash + this.attack;
         hash = 37 * hash + this.xpGained;
         hash = 37 * hash + this.gold;
@@ -158,7 +158,7 @@ public class Actor implements Serializable{
         if (this.maxHitPoints != other.maxHitPoints) {
             return false;
         }
-        if (this.defence != other.defence) {
+        if (this.defense != other.defense) {
             return false;
         }
         if (this.attack != other.attack) {
@@ -178,7 +178,7 @@ public class Actor implements Serializable{
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defence=" + defence + ", attack=" + attack + ", chanceToHit=" + xpGained + ", gold=" + gold + '}';
+        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defence=" + defense + ", attack=" + attack + ", chanceToHit=" + xpGained + ", gold=" + gold + '}';
     }
 
     

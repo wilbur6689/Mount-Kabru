@@ -71,11 +71,11 @@ public class ActorControl {
 
         //HighMountain
         Actor[] mountainActors = new Actor[4];
-        Actor dragon = new Actor("a Dragon", 2500, 60, 45, 0, 55, 34, 2500);
+        Actor dragon = new Actor("a Dragon", 2500, 160, 145, 0, 55, 34, 2500);
         mountainActors[0] = dragon;
-        Actor hydra = new Actor("a Hydra", 3500, 70, 67, 0, 100, 34, 9000);
+        Actor hydra = new Actor("a Hydra", 3500, 170, 167, 0, 100, 34, 9000);
         mountainActors[1] = hydra;
-        Actor giant = new Actor("a Giant", 1500, 150, 75, 0, 46, 34, 1500);
+        Actor giant = new Actor("a Giant", 1500, 250, 185, 0, 46, 34, 1500);
         mountainActors[2] = giant;
         Actor master = new Actor("The Master", 1, 1, 1, 0, 1, 0, -20000);
         mountainActors[3] = master;
@@ -268,13 +268,18 @@ public class ActorControl {
 
         int manaDamage = (spellAttack + mana - opponentDefense) + (int) (Math.random() * 10);
 
+        if (manaDamage < 0) {
+            manaDamage = 0;
+        }
         return manaDamage;
 
     }
 
     public static int monsterAttack(int attack, int opponentDefense) {
         int monsterDamage = attack - opponentDefense + (int) (Math.random() * 10);
-        
+        if (monsterDamage < 0) {
+            monsterDamage = 0;
+        }
         return monsterDamage;
     }
     

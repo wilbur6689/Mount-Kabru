@@ -112,10 +112,35 @@ public class AdventureView extends View {
         String potion = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getName();
         
         if (potion.equals("healthPotion10")) {
-            this.console.println("you used a HP10");
+            int healAmount = MountKabru.getCurrentGame().getHero().getInventory().getHealthPotionSlot().getHealthValue();
+            int currentHealth = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
+            int maxHealth = MountKabru.getCurrentGame().getHero().getMaxHitPoints();
+            
+            int healedHealth = currentHealth + healAmount;
+            
+            if (healedHealth > maxHealth) {
+                healedHealth = maxHealth;
+            }
+            
+            MountKabru.getCurrentGame().getHero().setCurrentHitPoints(healedHealth);
+            MountKabru.getCurrentGame().getHero().getInventory().setHealthPotionSlot(Item.bareHands);
+            
+            this.console.println("\nyou drink down your health potion and feel refreshed!"
+                    + "\n"
+                    + "\n Your Current Hit Points are now: " + MountKabru.getCurrentGame().getHero().getCurrentHitPoints());
+            
+            
+            
         } else if (potion.equals("healthPotion20")){
             this.console.println("you used a HP10");
+        } else if (potion.equals("healthPotion30")){
+            this.console.println("you used a HP10");
+        } else if (potion.equals("healthPotion40")){
+            this.console.println("you used a HP40");
+        } else {
+            this.console.println("you dont have a potion");
         }
+        
         
         
     }

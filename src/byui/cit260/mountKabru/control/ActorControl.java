@@ -211,7 +211,7 @@ public class ActorControl {
 
     public static int meleeDamage(int attack, int strength, int opponentDefense) throws ActorControlException {
 
-        if (attack < 0 || attack > 200) {
+        if (attack < 0 || attack > 5000) {
             if (attack > 100) {
                 throw new ActorControlException("The attack was to large of a number.");
             }

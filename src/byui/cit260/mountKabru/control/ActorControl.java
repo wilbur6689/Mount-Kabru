@@ -234,6 +234,10 @@ public class ActorControl {
         }
 
         int meleeDamage = attack + strength - opponentDefense + (int) (Math.random() * 10);
+        
+        if (meleeDamage < 0) {
+            meleeDamage = 0;
+        }
 
         return meleeDamage;
 

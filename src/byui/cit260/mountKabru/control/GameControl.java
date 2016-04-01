@@ -103,7 +103,7 @@ public class GameControl {
         hero.setStrength(strength);
         hero.setMana(mana);
         hero.setMaxHitPoints(20);
-        hero.setCurrentHitPoints(10);
+        hero.setCurrentHitPoints(20);
         hero.setGold(startGold);
 
         if (strength == 30) {

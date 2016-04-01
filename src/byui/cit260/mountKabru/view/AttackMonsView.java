@@ -10,7 +10,6 @@ import byui.cit260.mountKabru.control.EventControl;
 import byui.cit260.mountKabru.control.GameControl;
 import byui.cit260.mountKabru.control.WorldControl;
 import byui.cit260.mountKabru.exceptions.ActorControlException;
-import byui.cit260.mountKabru.model.Actor;
 import byui.cit260.mountKabru.model.Event;
 import byui.cit260.mountKabru.model.Location;
 import byui.cit260.mountKabru.model.World;

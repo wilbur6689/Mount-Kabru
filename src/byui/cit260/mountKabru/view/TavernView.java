@@ -10,6 +10,9 @@ import byui.cit260.mountKabru.model.Item;
 import mountkabru.MountKabru;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
 
 /**
  *

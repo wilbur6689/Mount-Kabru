@@ -20,8 +20,9 @@ public class BlacksmithView extends View {
                 + "\n|  You straggle into the blacksmith  |"
                 + "\n|  hoping to make a deal...          |"
                 + "\n--------------------------------------"
-                + "\nB - [B]uy weapons and Armor"
-                + "\nS - [S]ell weapons and armor"
+                + "\nW - buy a [W]eapon"
+                + "\nA - buy some [A]rmor"
+                + "\nS - [S]ell to the Blacksmith"
                 + "\nQ - [Q]uit"
                 + "\n--------------------------------------");
     }
@@ -36,8 +37,11 @@ public class BlacksmithView extends View {
         value = value.toUpperCase(); //convert choice to upper case
         
         switch (value) {
-            case "B": // Buy weapons and armor from the blacksmith
-                this.buyFromBlacksmith();
+            case "W": // Buy weapons and armor from the blacksmith
+                this.buyWeapon();
+                return true;
+            case "A": // Buy weapons and armor from the blacksmith
+                this.buyArmor();
                 return true;
             case "S": // Sell your weapons or armor to the blacksmith
                 this.sellToBlacksmith();
@@ -51,13 +55,16 @@ public class BlacksmithView extends View {
         return false;
     }
 
-    private void buyFromBlacksmith() {
-        BuyFromBlacksmithView buyFromBlacksmithView = new BuyFromBlacksmithView();
-        buyFromBlacksmithView.display();
-        
-        
+    private void buyWeapon() {
+        BuyWeaponView buyWeapon = new BuyWeaponView();
+        buyWeapon.display();
     }
 
+    private void buyArmor() {
+        BuyArmorView buyArmor = new BuyArmorView();
+        buyArmor.display();
+    }
+    
     private void sellToBlacksmith() {
         SellToBlacksmithView sellToBlacksmith = new SellToBlacksmithView();
         

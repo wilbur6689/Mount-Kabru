@@ -39,10 +39,10 @@ public class BlacksmithView extends View {
         switch (value) {
             case "W": // Buy weapons and armor from the blacksmith
                 this.buyWeapon();
-                return true;
+                break;
             case "A": // Buy weapons and armor from the blacksmith
                 this.buyArmor();
-                return true;
+                break;
             case "S": // Sell your weapons or armor to the blacksmith
                 this.sellToBlacksmith();
                 return true;

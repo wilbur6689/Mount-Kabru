@@ -55,42 +55,43 @@ public class BuyArmorView extends View{
         switch (realNumber) {
             case 1: // Buy weapons and armor from the blacksmith
                 this.buyThick();
-                break;
+                return true;
             case 2: // Sell your weapons or armor to the blacksmith
                 this.buyLeather();
-                break;
+                return true;
             case 3: // Buy weapons and armor from the blacksmith
                 this.buyStudded();
-                break;
+                return true;
             case 4: // Sell your weapons or armor to the blacksmith
                 this.buyChain();
-                break;
+                return true;
             case 5: // Buy weapons and armor from the blacksmith
                 this.buyBreastPlate();
-                break;
+                return true;
             case 6: // Sell your weapons or armor to the blacksmith
                 this.buyCuirasses();
-                break;
+                return true;
             case 7: // Buy weapons and armor from the blacksmith
                 this.buyScale();
-                break;
+                return true;
             case 8: // Sell your weapons or armor to the blacksmith
                 this.buySteelHalf();
+                return true;
             case 9: // Sell your weapons or armor to the blacksmith
                 this.buySteelFull();
-                break;
+                return true;
             case 10: // Buy weapons and armor from the blacksmith
                 this.buyCarbon();
-                break;
+                return true;
             case 11: // Sell your weapons or armor to the blacksmith
                 this.buyDiamondHalf();
-                break;
+                return true;
             case 12: // Buy weapons and armor from the blacksmith
                 this.buyDiamondFull();
-                break;
+                return true;
             case 13: // Sell your weapons or armor to the blacksmith
                 this.buyDragonBone();
-                break;
+                return true;
                         
             default:
                 this.console.println("\n*** Invalid selection *** Try again");

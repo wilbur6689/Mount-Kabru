@@ -58,42 +58,43 @@ public class BuyWeaponView extends View{
         switch (realNumber) {
             case 1: // Buy weapons and armor from the blacksmith
                 this.buyStick();
-                break;
+                return true;
             case 2: // Sell your weapons or armor to the blacksmith
                 this.buyClub();
-                break;
+                return true;
             case 3: // Buy weapons and armor from the blacksmith
                 this.buyDagger();
-                break;
+                return true;
             case 4: // Sell your weapons or armor to the blacksmith
                 this.buyMace();
-                break;
+                return true;
             case 5: // Buy weapons and armor from the blacksmith
                 this.buyShortSword();
-                break;
+                return true;
             case 6: // Sell your weapons or armor to the blacksmith
                 this.buyKukri();
-                break;
+                return true;
             case 7: // Buy weapons and armor from the blacksmith
                 this.buyRapier();
-                break;
+                return true;
             case 8: // Sell your weapons or armor to the blacksmith
                 this.buyAxe();
+                return true;
             case 9: // Sell your weapons or armor to the blacksmith
                 this.buyLongSword();
-                break;
+                return true;
             case 10: // Buy weapons and armor from the blacksmith
                 this.buyClaymore();
-                break;
+                return true;
             case 11: // Sell your weapons or armor to the blacksmith
                 this.buyBattleAxe();
-                break;
+                return true;
             case 12: // Buy weapons and armor from the blacksmith
                 this.buyScythe();
-                break;
+                return true;
             case 13: // Sell your weapons or armor to the blacksmith
                 this.buyWarHammer();
-                break;
+                return true;
                         
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
@@ -118,7 +119,11 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
+       
     }
 
     private void buyClub() {
@@ -135,7 +140,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyDagger() {
@@ -152,7 +160,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyMace() {
@@ -169,7 +180,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyShortSword() {
@@ -186,7 +200,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyKukri() {
@@ -203,7 +220,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyRapier() {
@@ -220,7 +240,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyAxe() {
@@ -237,7 +260,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyLongSword() {
@@ -254,7 +280,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyClaymore() {
@@ -271,7 +300,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyBattleAxe() {
@@ -288,7 +320,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
     
     private void buyScythe() {
@@ -305,7 +340,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyWarHammer() {
@@ -322,7 +360,10 @@ public class BuyWeaponView extends View{
 
         MountKabru.getCurrentGame().getHero().setAttack(attack);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
     
     

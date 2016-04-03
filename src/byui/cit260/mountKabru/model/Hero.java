@@ -47,12 +47,8 @@ public class Hero extends Actor implements  Serializable  {
         this.inventory = inventory;
     }
 
-    
-
-    public Hero(String heroName, String heroClassType, int levelOfHero, int xpToNextLevel, int experience, int mana,
-                int strength, Player player, Inventory inventory, String name, int maxHitPoints,
-                int currentHitPoints, int defence, int attack, int spellAttack, int chanceToHit, int gold) {
-        super(name, maxHitPoints, currentHitPoints, defence, attack, spellAttack, chanceToHit, gold);
+    public Hero(String heroName, String heroClassType, int levelOfHero, int xpToNextLevel, int experience, int mana, int strength, Player player, Inventory inventory, String name, int currentHitPoints, int defence, int attack, int spellAttack, int xpGained, int gold) {
+        super(name, currentHitPoints, defence, attack, spellAttack, xpGained, gold);
         this.heroName = heroName;
         this.heroClassType = heroClassType;
         this.levelOfHero = levelOfHero;
@@ -63,6 +59,12 @@ public class Hero extends Actor implements  Serializable  {
         this.player = player;
         this.inventory = inventory;
     }
+
+    
+
+    
+
+    
 
     public Hero(String heroName, String heroClassType, int levelOfHero, int experience, int mana, int strength) {
         this.heroName = heroName;

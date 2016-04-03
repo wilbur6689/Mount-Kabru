@@ -186,10 +186,10 @@ public class GameControl {
             int beforeXpToNextLevel = MountKabru.getCurrentGame().getHero().getXpToNextLevel();
 
             //add stuff and set them to new variables
-            int afterHealth = beforeHealth + 50;
+            int afterHealth = beforeHealth + 40;
             int afterStrength = beforeStrength + 2;
             int afterLvlUp = beforeLvlUp + 1;
-            int afterXpToNextLevel = beforeXpToNextLevel + 200;
+            int afterXpToNextLevel = beforeXpToNextLevel + beforeHealth + 100;
             //set the new variables to the hero stats with a "setter"
 
             MountKabru.getCurrentGame().getHero().setMaxHitPoints(afterHealth);

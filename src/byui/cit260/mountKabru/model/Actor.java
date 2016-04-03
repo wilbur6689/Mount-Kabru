@@ -33,7 +33,7 @@ public class Actor implements Serializable{
         
     }
 
-    public Actor(String name, int maxHitPoints, int currentHitPoints, int defence, int attack, int spellAttack, int xpGained, int gold) {
+    public Actor(String name, int currentHitPoints, int defence, int attack, int spellAttack, int xpGained, int gold) {
         this.name = name;
         this.maxHitPoints = maxHitPoints;
         this.currentHitPoints = currentHitPoints;
@@ -178,9 +178,10 @@ public class Actor implements Serializable{
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defence=" + defense + ", attack=" + attack + ", chanceToHit=" + xpGained + ", gold=" + gold + '}';
+        return "Actor{" + "name=" + name + ", maxHitPoints=" + maxHitPoints + ", currentHitPoints=" + currentHitPoints + ", defense=" + defense + ", attack=" + attack + ", spellAttack=" + spellAttack + ", xpGained=" + xpGained + ", gold=" + gold + '}';
     }
 
+    
     
     
     

@@ -141,10 +141,11 @@ public class AttackMonsView extends View {
             //Monster attacks you back
             
             int monsAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getAttack();
+            int spellAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getSpellAttack();
             int playerDef = MountKabru.getCurrentGame().getHero().getDefense();
             int beforeHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
             
-            int monsDamage = ActorControl.monsterAttack(monsAttack, playerDef);
+            int monsDamage = ActorControl.monsterAttack(spellAttack, monsAttack, playerDef);
             int afterHP = beforeHP - monsDamage;
             
             this.console.println("\n--------------------------------------------------"
@@ -265,10 +266,11 @@ public class AttackMonsView extends View {
             //Monster attacks you back
             
             int monsAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getAttack();
+            int monsSpellAttack = MountKabru.getCurrentGame().getHero().getFoundMonster().getSpellAttack();
             int playerDef = MountKabru.getCurrentGame().getHero().getDefense();
             int beforeHP = MountKabru.getCurrentGame().getHero().getCurrentHitPoints();
             
-            int monsDamage = ActorControl.monsterAttack(monsAttack, playerDef);
+            int monsDamage = ActorControl.monsterAttack(monsSpellAttack, monsAttack, playerDef);
             int afterHP = beforeHP - monsDamage;
             
             this.console.println("\n--------------------------------------------------"

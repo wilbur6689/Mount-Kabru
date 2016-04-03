@@ -69,27 +69,27 @@ public class GameControl {
         //calculate Answer1
 
         if (answer1.equals("M")) {
-            strength += 10;
+            strength += 2;
         } else if (answer1.equals("W")) {
-            mana += 10;
+            mana += 2;
         } else {
             return null;
         }
 
         //Caclulate Answer2
         if (answer2.equals("M")) {
-            strength += 10;
+            strength += 2;
         } else if (answer2.equals("W")) {
-            mana += 10;
+            mana += 2;
         } else {
             return null;
         }
 
         //Caclulate Answer3
         if (answer3.equals("M")) {
-            strength += 10;
+            strength += 2;
         } else if (answer3.equals("W")) {
-            mana += 10;
+            mana += 2;
         } else {
             return null;
         }

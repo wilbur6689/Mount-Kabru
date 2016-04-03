@@ -93,11 +93,11 @@ public class ActorControl {
             plainsActors2[0] = giantAnt;
             plainsActors2[1] = giantAnt;
             plainsActors2[2] = giantAnt;
-            plainsActors2[3] = gnome;
+            plainsActors2[3] = giantAnt;
             plainsActors2[4] = gnome;
             plainsActors2[5] = gnome;
-            plainsActors2[6] = gremlins;
-            plainsActors2[7] = gremlins;
+            plainsActors2[6] = gnome;
+            plainsActors2[7] = gnome;
         actors[1] = plainsActors2;
         
         Actor[] plainsActors3 = new Actor[8];
@@ -205,8 +205,8 @@ public class ActorControl {
             jungleActors3[3] = frogs;
             jungleActors3[4] = spider;
             jungleActors3[5] = spider;
-            jungleActors3[6] = gators;
-            jungleActors3[7] = gators;
+            jungleActors3[6] = curupira;
+            jungleActors3[7] = curupira;
         actors[10] = jungleActors3;
         
         Actor[] jungleActors4 = new Actor[8];
@@ -672,14 +672,22 @@ public class ActorControl {
         
         
         
-        if (randomNumber < 3) {
+        if (randomNumber <= 3) {
             numberReturn = 0;
-        } else if (randomNumber < 6) {
+        } else if (randomNumber <= 4) {
             numberReturn = 1;
-        } else if (randomNumber < 8) {
+        } else if (randomNumber <= 5) {
             numberReturn = 2;
-        } else {
+        } else if (randomNumber <= 6) {
             numberReturn = 3;
+        } else if (randomNumber <= 7) {
+            numberReturn = 4;
+        } else if (randomNumber <= 8) {
+            numberReturn = 5;
+        } else if (randomNumber <= 9) {
+            numberReturn = 6;
+        } else {
+            numberReturn = 7;
         }
         
         return numberReturn;

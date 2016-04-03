@@ -292,14 +292,14 @@ public class EventControl {
 
     }
 
-    public static int pickRandomNumber() {
+    public static int pickRandomEvent() {
         
         int numberReturn;
         int randomNumber = (int) (Math.random() * 10);
         
         
         
-        if (randomNumber < 3) {
+        if (randomNumber < 5) {
             numberReturn = 0;
         } else {
             numberReturn = 1;

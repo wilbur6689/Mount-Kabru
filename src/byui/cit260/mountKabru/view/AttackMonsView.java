@@ -23,15 +23,30 @@ import mountkabru.MountKabru;
  */
 public class AttackMonsView extends View {
 
+//    private String name;
+//    private int maxHitPoints;
+//    private int currentHitPoints;
+//    private int defense;
+//    private int attack;
+//    private int spellAttack;
+//    private int xpGained;
+//    private int gold;
+    
     public AttackMonsView() {
         super("\n"
                 + "\n---------------------------------------"
                 + "\n|  You found " + MountKabru.getCurrentGame().getHero().getFoundMonster().getName() + "    "
                 + "\n|  "
-                + "\n|  it has this much life: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getCurrentHitPoints()
-                + "\n|  "
-                + "\n|"
-                + "\n|                                   "
+                + "\n|  it has this much max life: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getMaxHitPoints()
+                + "\n|  it has this much current life: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getCurrentHitPoints()
+                + "\n|  it has this much defense: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getDefense()
+                + "\n|  it has this much attack: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getAttack()
+                + "\n|  it has this much spell attack: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getSpellAttack()
+                + "\n|  it gives you this much XP: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getXpGained()
+                + "\n|  it gives you this much gold: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getGold()
+                + "\n| "
+                + "\n| "
+                + "\n| "
                 + "\n|  Prepare to fight                   "
                 + "\n---------------------------------------"
                 + "\nA - [A]ttack"

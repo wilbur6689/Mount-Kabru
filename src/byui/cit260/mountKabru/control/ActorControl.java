@@ -33,10 +33,10 @@ public class ActorControl {
     //Create the list of Actors
         Actor[][] actors = new Actor[32][1];
     //Plains Actors
-        Actor giantAnt = new Actor("Giant Ants"     , 30, 30, 5, 5, 50, 3, 7);
-        Actor gnome = new Actor("Naughty Gnomes"    , 35, 35, 5, 7, 50, 3, 8);
-        Actor gremlins = new Actor("Gremlins"       , 40, 40, 5, 9, 50, 4, 12);
-        Actor wolves = new Actor("Wolves"           , 45, 45, 10, 11, 50, 5, 15);
+        Actor giantAnt = new Actor("Giant Ants"     , 30, 30, 5, 5, 0, 3, 7);
+        Actor gnome = new Actor("Naughty Gnomes"    , 35, 35, 5, 7, 0, 3, 8);
+        Actor gremlins = new Actor("Gremlins"       , 40, 40, 5, 9, 0, 4, 12);
+        Actor wolves = new Actor("Wolves"           , 45, 45, 10, 11, 0, 5, 15);
         Actor evilRabbits = new Actor("EvilRabbits" , 50, 50, 10, 13, 0, 6, 20);
         Actor kabold = new Actor("Kabold"           , 55, 55, 10, 16, 0, 6, 23);
         Actor banshee = new Actor("Banshees"        , 60, 60, 15, 17, 0, 8, 27);

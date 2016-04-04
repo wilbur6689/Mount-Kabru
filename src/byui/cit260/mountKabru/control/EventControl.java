@@ -299,7 +299,7 @@ public class EventControl {
         
         
         
-        if (randomNumber < 5) {
+        if (randomNumber < 3) {
             numberReturn = 0;
         } else {
             numberReturn = 1;

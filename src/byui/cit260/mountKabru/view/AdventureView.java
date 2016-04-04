@@ -86,7 +86,7 @@ public class AdventureView extends View {
         } else {
             int[] goldEvents = MountKabru.getCurrentGame().getHero().getCurrentLocation().getEvent().getGoldEvent();
 
-            int goldFound = goldEvents[ActorControl.pickRandomMonster()];
+            int goldFound = goldEvents[ActorControl.pickRandomGold()];
             this.console.println("You Found this much GOLD: " + goldFound);
             int givePlayerGold = MountKabru.getCurrentGame().getHero().getGold() + goldFound;
             MountKabru.getCurrentGame().getHero().setGold(givePlayerGold);

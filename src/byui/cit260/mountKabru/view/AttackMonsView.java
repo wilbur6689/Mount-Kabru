@@ -28,7 +28,7 @@ public class AttackMonsView extends View {
                 + "\n---------------------------------------"
                 + "\n|  You found " + MountKabru.getCurrentGame().getHero().getFoundMonster().getName() + "    "
                 + "\n|  "
-                + "\n|  "
+                + "\n|  it has this much life: " + MountKabru.getCurrentGame().getHero().getFoundMonster().getCurrentHitPoints()
                 + "\n|  "
                 + "\n|"
                 + "\n|                                   "

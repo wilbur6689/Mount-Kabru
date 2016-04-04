@@ -33,16 +33,18 @@ public class Actor implements Serializable{
         
     }
 
-    public Actor(String name, int currentHitPoints, int defence, int attack, int spellAttack, int xpGained, int gold) {
+    public Actor(String name, int maxHitPoints, int currentHitPoints, int defense, int attack, int spellAttack, int xpGained, int gold) {
         this.name = name;
         this.maxHitPoints = maxHitPoints;
         this.currentHitPoints = currentHitPoints;
-        this.defense = defence;
+        this.defense = defense;
         this.attack = attack;
         this.spellAttack = spellAttack;
         this.xpGained = xpGained;
         this.gold = gold;
     }
+
+    
 
     
 

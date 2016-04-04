@@ -111,12 +111,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.thickGarment);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.thickGarment);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "
+                        + "\n"
+                        + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()
+                        + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyLeather() {
@@ -128,12 +131,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.leatherArmor);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.leatherArmor);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business " 
+                        + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyStudded() {
@@ -145,12 +151,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.studdedLeatherArmor);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.studdedLeatherArmor);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyChain() {
@@ -162,12 +171,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.chainMail);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.chainMail);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyBreastPlate() {
@@ -179,12 +191,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.breastPlate);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.breastPlate);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyCuirasses() {
@@ -196,12 +211,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.cuirasses);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.cuirasses);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyScale() {
@@ -213,12 +231,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.scaleMail);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.scaleMail);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buySteelHalf() {
@@ -230,12 +251,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.steelHalfPlate);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.steelHalfPlate);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buySteelFull() {
@@ -247,12 +271,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.steelFullPlate);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.steelFullPlate);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
     
     private void buyCarbon() {
@@ -264,12 +291,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.carbonFiber);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.carbonFiber);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyDiamondHalf() {
@@ -281,12 +311,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.diamondHalfPlate);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.diamondHalfPlate);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyDiamondFull() {
@@ -298,12 +331,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.diamondFullPlate);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.diamondFullPlate);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
 
     private void buyDragonBone() {
@@ -315,12 +351,15 @@ public class BuyArmorView extends View{
             MountKabru.getCurrentGame().getHero().setGold(gold);
         } else { this.console.println("Sorry, you dont have enough gold.");}
         
-        MountKabru.getCurrentGame().getHero().getInventory().setWeaponSlot(Item.dragonBoneArmor);
-        int attack = MountKabru.getCurrentGame().getHero().getInventory().getWeaponSlot().getAttackValue();
+        MountKabru.getCurrentGame().getHero().getInventory().setArmorSlot(Item.dragonBoneArmor);
+        int defense = MountKabru.getCurrentGame().getHero().getInventory().getArmorSlot().getDefenseValue();
 
-        MountKabru.getCurrentGame().getHero().setAttack(attack);
+        MountKabru.getCurrentGame().getHero().setDefense(defense);
         this.console.println("Its been a pleasure to serve you"
-                        + "\nThank you for your Business ");
+                        + "\nThank you for your Business "                        
+                + "\n"                        
+                + "\n Your attack is now:   " + MountKabru.getCurrentGame().getHero().getAttack()                        
+                + "\n Your Defense is now:  " + MountKabru.getCurrentGame().getHero().getDefense());
     }
     
     

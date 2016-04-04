@@ -33,46 +33,46 @@ public class ActorControl {
     //Create the list of Actors
         Actor[][] actors = new Actor[32][1];
     //Plains Actors
-        Actor giantAnt = new Actor("Giant Ants"     , 30, 5, 5, 0, 3, 7);
-        Actor gnome = new Actor("Naughty Gnomes"    , 35, 5, 7, 0, 3, 8);
-        Actor gremlins = new Actor("Gremlins"       , 40, 5, 9, 0, 4, 12);
-        Actor wolves = new Actor("Wolves"           , 45, 10, 11, 0, 5, 15);
-        Actor evilRabbits = new Actor("EvilRabbits" , 50, 10, 13, 0, 6, 20);
-        Actor kabold = new Actor("Kabold"           , 55, 10, 16, 0, 6, 23);
-        Actor banshee = new Actor("Banshees"        , 60, 15, 17, 0, 8, 27);
-        Actor goblin = new Actor("Mod of Goblins"   , 65, 15, 20, 0, 10, 30);        
+        Actor giantAnt = new Actor("Giant Ants"     , 30, 30, 5, 5, 50, 3, 7);
+        Actor gnome = new Actor("Naughty Gnomes"    , 35, 35, 5, 7, 50, 3, 8);
+        Actor gremlins = new Actor("Gremlins"       , 40, 40, 5, 9, 50, 4, 12);
+        Actor wolves = new Actor("Wolves"           , 45, 45, 10, 11, 50, 5, 15);
+        Actor evilRabbits = new Actor("EvilRabbits" , 50, 50, 10, 13, 0, 6, 20);
+        Actor kabold = new Actor("Kabold"           , 55, 55, 10, 16, 0, 6, 23);
+        Actor banshee = new Actor("Banshees"        , 60, 60, 15, 17, 0, 8, 27);
+        Actor goblin = new Actor("Mod of Goblins"   , 65, 65, 15, 20, 0, 10, 30);        
         
     //Jungle Actors
-        Actor flies = new Actor("Sworm of Flies"    , 100, 20, 40, 0, 8, 40);
-        Actor frogs = new Actor("Frogs"             , 120, 20, 50, 0, 10, 45);
-        Actor spider = new Actor("Large Spiders"    , 140, 20, 60, 0, 12, 50);
-        Actor curupira = new Actor("Curupira"       , 160, 40, 70, 0, 14, 55);
-        Actor snake = new Actor("Snakes"            , 180, 40, 70, 0, 18, 60);
-        Actor manticore = new Actor("Manticores"    , 200, 50, 80, 0, 20, 65);
-        Actor panther = new Actor("Black Panthers"  , 215, 50, 90, 0, 25, 70);
-        Actor gators = new Actor("Gators"           , 250, 40, 100, 0, 30, 80);
+        Actor flies = new Actor("Sworm of Flies"     , 100, 100, 20, 40, 0, 8, 40);
+        Actor frogs = new Actor("Frogs"             , 120, 120, 20, 50, 0, 10, 45);
+        Actor spider = new Actor("Large Spiders"    , 140, 140, 20, 60, 0, 12, 50);
+        Actor curupira = new Actor("Curupira"       , 160, 160, 40, 70, 0, 14, 55);
+        Actor snake = new Actor("Snakes"            , 180, 180, 40, 70, 0, 18, 60);
+        Actor manticore = new Actor("Manticores"    , 200, 200, 50, 80, 0, 20, 65);
+        Actor panther = new Actor("Black Panthers"  , 215, 215, 50, 90, 0, 25, 70);
+        Actor gators = new Actor("Gators"           , 250, 250, 40, 100, 0, 30, 80);
         
         
     //Dark Forest Actors
-        Actor cougar = new Actor("Cougars"          , 300, 50, 100, 0, 35, 90);
-        Actor darkElves = new Actor("Dark Elves"    , 330, 50, 110, 0, 40, 95);
-        Actor dirtySatyr = new Actor("Dirty Satyrs" , 350, 55, 120, 0, 45, 100);
-        Actor dryad = new Actor("Group of Dryads"   , 360, 55, 120, 0, 50, 110);
-        Actor centaurs = new Actor("Centaurs"       , 390, 60, 130, 0, 55, 120);
-        Actor werewolves = new Actor("Werewolves"   , 420, 60, 130, 0, 60, 130);
-        Actor leshy = new Actor("Group of Leshiye"  , 600, 50, 140, 0, 65, 140);
-        Actor theUndead = new Actor("The Undead"    , 1600, 20, 50, 50, 70, 200);
+        Actor cougar = new Actor("Cougars"          , 300, 300, 50, 100, 0, 35, 90);
+        Actor darkElves = new Actor("Dark Elves"    , 330, 330, 50, 110, 0, 40, 95);
+        Actor dirtySatyr = new Actor("Dirty Satyrs" , 350, 350, 55, 120, 0, 45, 100);
+        Actor dryad = new Actor("Group of Dryads"   , 360, 360, 55, 120, 0, 50, 110);
+        Actor centaurs = new Actor("Centaurs"       , 390, 390, 60, 130, 0, 55, 120);
+        Actor werewolves = new Actor("Werewolves"   , 420, 420, 60, 130, 0, 60, 130);
+        Actor leshy = new Actor("Group of Leshiye"  , 600, 600, 50, 140, 0, 65, 140);
+        Actor theUndead = new Actor("The Undead"    , 1600, 1600, 20, 50, 50, 70, 200);
         
         
     //High Mountain Actors
-        Actor troll = new Actor("trolls"            , 1000, 70, 120, 0, 34, 320);
-        Actor wraith = new Actor("a Wraith"         , 1500, 70, 130, 0, 34, 340);
-        Actor golem = new Actor("Magical Golems"    , 2000, 80, 140, 0, 34, 360);
-        Actor demon = new Actor("a Monstrous Demon" , 2500, 90, 150, 0, 34, 380);
-        Actor dragon = new Actor("a Dragon"         , 3500, 110, 150, 0, 34, 400);
-        Actor hydra = new Actor("a Hydra with 6 Heads", 4800, 130, 160, 0, 34, 500);
-        Actor giant = new Actor("a Giant"           , 6000, 150,170, 0, 34, 600);
-        Actor master = new Actor("The Master"       , 1, 1, 0, 1, 0, -20000);
+        Actor troll = new Actor("trolls"            , 1000, 1000, 70, 120, 0, 34, 320);
+        Actor wraith = new Actor("a Wraith"         , 1500, 1500, 70, 130, 0, 34, 340);
+        Actor golem = new Actor("Magical Golems"    , 2000, 2000, 80, 140, 0, 34, 360);
+        Actor demon = new Actor("a Monstrous Demon" , 2500, 2500, 90, 150, 0, 34, 380);
+        Actor dragon = new Actor("a Dragon"         , 3500, 3500, 110, 150, 0, 34, 400);
+        Actor hydra = new Actor("a Hydra with 6 Heads", 4800, 4800, 130, 160, 0, 34, 500);
+        Actor giant = new Actor("a Giant"           , 6000, 6000, 150,170, 0, 34, 600);
+        Actor master = new Actor("The Master"       , 1, 1, 1, 0, 1, 0, -20000);
         
         
     //plains Monsters
@@ -689,6 +689,26 @@ public class ActorControl {
         } else {
             numberReturn = 7;
         }
+        
+        return numberReturn;
+    }
+    
+    public static int pickRandomGold() {
+        
+        int numberReturn;
+        int randomNumber = (int) (Math.random() * 10);
+        
+        
+        
+        if (randomNumber < 3) {
+            numberReturn = 0;
+        } else if (randomNumber < 5) {
+            numberReturn = 1;
+        } else if (randomNumber < 8) {
+            numberReturn = 2;
+        } else {
+            numberReturn = 3;
+        } 
         
         return numberReturn;
     }

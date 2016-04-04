@@ -197,10 +197,10 @@ public class EventControl {
             //creates a random number and adds it to the players gold
             
             int[] plainsGoldEvent = new int[4];
-            int goldAmountPlains1 = (int) (Math.random() * 10 + 5);
-            int goldAmountPlains2 = (int) (Math.random() * 10 + 15);      
+            int goldAmountPlains1 = (int) (Math.random() * 10 + 15);
+            int goldAmountPlains2 = (int) (Math.random() * 10 + 25);      
             int goldAmountPlains3 = (int) (Math.random() * 10 + 30);             
-            int goldAmountPlains4 = (int) (Math.random() * 10 + 50);  
+            int goldAmountPlains4 = (int) (Math.random() * 10 + 60);  
 
             plainsGoldEvent[0] = goldAmountPlains1;
             plainsGoldEvent[1] = goldAmountPlains2;  
@@ -209,10 +209,10 @@ public class EventControl {
         goldEvents[0] = plainsGoldEvent;
              
             int[] jungleGoldEvent = new int[4];
-            int goldAmountjungle1 = (int) (Math.random() * 10 + 5);
-            int goldAmountjungle2 = (int) (Math.random() * 10 + 15);      
-            int goldAmountjungle3 = (int) (Math.random() * 10 + 30);             
-            int goldAmountjungle4 = (int) (Math.random() * 10 + 50);  
+            int goldAmountjungle1 = (int) (Math.random() * 10 + 50);
+            int goldAmountjungle2 = (int) (Math.random() * 10 + 150);      
+            int goldAmountjungle3 = (int) (Math.random() * 10 + 300);             
+            int goldAmountjungle4 = (int) (Math.random() * 10 + 500);  
 
             jungleGoldEvent[0] = goldAmountjungle1;
             jungleGoldEvent[1] = goldAmountjungle2;  
@@ -222,10 +222,10 @@ public class EventControl {
                 
             int[] forestGoldEvent = new int[4];
             
-            int goldAmountForest1 = (int) (Math.random() * 10 + 50);
-            int goldAmountForest2 = (int) (Math.random() * 10 + 50);      
-            int goldAmountForest3 = (int) (Math.random() * 10 + 50);             
-            int goldAmountForest4 = (int) (Math.random() * 10 + 50);  
+            int goldAmountForest1 = (int) (Math.random() * 10 + 500);
+            int goldAmountForest2 = (int) (Math.random() * 10 + 600);      
+            int goldAmountForest3 = (int) (Math.random() * 10 + 700);             
+            int goldAmountForest4 = (int) (Math.random() * 10 + 800);  
 
             forestGoldEvent[0] = goldAmountForest1;
             forestGoldEvent[1] = goldAmountForest2;  
@@ -234,10 +234,10 @@ public class EventControl {
         goldEvents[2] = forestGoldEvent; 
                 
             int[] mountainGoldEvent = new int[4];
-            int goldAmountMountain1 = (int) (Math.random() * 10 + 50);
-            int goldAmountMountain2 = (int) (Math.random() * 10 + 50);      
-            int goldAmountMountain3 = (int) (Math.random() * 10 + 50);             
-            int goldAmountMountain4 = (int) (Math.random() * 10 + 50);  
+            int goldAmountMountain1 = (int) (Math.random() * 10 + 400);
+            int goldAmountMountain2 = (int) (Math.random() * 10 + 600);      
+            int goldAmountMountain3 = (int) (Math.random() * 10 + 800);             
+            int goldAmountMountain4 = (int) (Math.random() * 10 + 1000);  
 
             mountainGoldEvent[0] = goldAmountMountain1;
             mountainGoldEvent[1] = goldAmountMountain2;  

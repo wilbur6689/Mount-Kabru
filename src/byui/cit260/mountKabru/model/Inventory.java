@@ -1,3 +1,4 @@
+
 package byui.cit260.mountKabru.model;
 
 import java.io.Serializable;

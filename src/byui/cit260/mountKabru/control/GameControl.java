@@ -106,12 +106,12 @@ public class GameControl {
         hero.setCurrentHitPoints(20);
         hero.setGold(startGold);
 
-        if (strength == 30) {
+        if (strength == 6) {
             hero.setHeroClassType("Warrior");
-        } else if (mana == 30) {
+        } else if (mana == 6) {
             hero.setHeroClassType("Wizard");
         } else {
-            hero.setHeroClassType("Paladin");
+                hero.setHeroClassType("Paladin");
         }
 
         MountKabru.getCurrentGame().setHero(hero);

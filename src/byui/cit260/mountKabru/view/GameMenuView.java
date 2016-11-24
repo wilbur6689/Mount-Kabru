@@ -73,9 +73,6 @@ public class GameMenuView extends View {
             case "C": // visit the blacksmith in town
                 this.goCharStats();
                 break;
-            case "G": // Get Information about the game
-                this.goGameInfo();
-                break;
             case "H": //help menu
                 this.displayHelpMenu();
                 break;
@@ -197,12 +194,6 @@ public class GameMenuView extends View {
         );
     }
     
-    private void goGameInfo() {
-        GameInfoView gameInfoView = new GameInfoView();
-        
-        gameInfoView.display();
-        
-    }
     
     public void displayHelpMenu() {
         

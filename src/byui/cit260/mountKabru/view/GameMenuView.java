@@ -153,7 +153,7 @@ public class GameMenuView extends View {
     
     private void goCharStats() {
         
-        String heroName = MountKabru.getCurrentGame().getHero().getName();
+        String heroName = MountKabru.getCurrentGame().getHero().getHeroName();
         String heroClass = MountKabru.getCurrentGame().getHero().getHeroClassType();
         int heroLevel = MountKabru.getCurrentGame().getHero().getLevelOfHero();
         int heroExperience = MountKabru.getCurrentGame().getHero().getExperience();

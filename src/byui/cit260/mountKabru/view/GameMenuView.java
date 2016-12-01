@@ -38,7 +38,6 @@ public class GameMenuView extends View {
                + "\n  SC- Visit the [S]pell[C]aster"
                + "\n  P - Visit the [P]rint Shop"
                + "\n  C - [C]haracter stats"
-               + "\n  G - [G]et Information from the Old Man"
                + "\n  H - please [H]elp!"
                + "\n  S - [S]ave Game"
                + "\n  L - [L]oad Game"

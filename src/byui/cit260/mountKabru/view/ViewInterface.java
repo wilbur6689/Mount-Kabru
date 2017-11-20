@@ -14,6 +14,6 @@ public interface ViewInterface {
      void display();
      
      boolean doAction(String value);
-    
+
     
 }

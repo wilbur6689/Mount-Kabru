@@ -41,7 +41,7 @@ public class GameControl {
         return player;
     }
 
-    public static Hero createHero(String name, String answer1, String answer2, String answer3, String startingGold) throws GameControlException {
+    public static Hero createHero(String name, String answer1, String answer2, String answer3) throws GameControlException {
 
         if (name == null) {
             throw new GameControlException("The name variable was null.");
@@ -57,15 +57,10 @@ public class GameControl {
             throw new GameControlException("The third Answer was null.");
         }
 
-        int startGold = 50;
+        int startGold = 15000;
         int strength = 0;
         int mana = 0;
 
-        try {
-            startGold = parseInt(startingGold);
-        } catch (NumberFormatException nf) {
-            ErrorView.display("GameControl", "Error is in startingGold. You must enter a value number");
-        }
         //calculate Answer1
 
         if (answer1.equals("M")) {

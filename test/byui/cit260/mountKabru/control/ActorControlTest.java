@@ -16,7 +16,8 @@ import static org.junit.Assert.*;
  *
  * @author wibur
  */
-public class ActorControlTest {
+public class
+ActorControlTest {
     
     public ActorControlTest() {
     }
